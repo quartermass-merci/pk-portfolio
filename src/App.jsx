@@ -51,8 +51,22 @@ export default function App() {
     );
   };
 
-  // Video embed — handles YouTube (thumbnail + link) and Vimeo (iframe)
+  // Video embed — handles YouTube (thumbnail + link), Vimeo (iframe), and MP4 (native)
   const VideoEmbed = ({ url }) => {
+    // MP4 / local video
+    if (url.endsWith('.mp4') || url.endsWith('.webm')) {
+      return (
+        <div className="aspect-video w-full my-6 bg-black overflow-hidden">
+          <video
+            src={url}
+            className="w-full h-full object-contain"
+            controls
+            playsInline
+            preload="metadata"
+          />
+        </div>
+      );
+    }
     // Vimeo embed
     const vimeoMatch = url.match(/player\.vimeo\.com\/video\/(\d+)/);
     if (vimeoMatch) {
@@ -430,7 +444,6 @@ export default function App() {
                   <li><a href="https://culturalcartography.substack.com/p/reassembling-the-strategist" target="_blank" rel="noreferrer" className="underline hover:opacity-70">"Reassembling the Strategist"</a> — The flagship essay. Proposes Cultural Cartography as a new theory and method for practicing strategy. 74 likes, most popular post. Accompanied by a 22-page Field Guide for paid subscribers.</li>
                   <li><a href="https://culturalcartography.substack.com/p/reassembling-the-consumer" target="_blank" rel="noreferrer" className="underline hover:opacity-70">"Reassembling the Consumer"</a> — "The Consumer" is a fiction that enters the marketing process early and hardens into organizational infrastructure. Uses the Stanley thermos trend as a case study.</li>
                   <li><a href="https://culturalcartography.substack.com/p/glazed-and-confused-how-ai-is-rewriting" target="_blank" rel="noreferrer" className="underline hover:opacity-70">"Glazed and Confused: How AI Is Rewriting Human Trust in Real Time"</a> — The ChatGPT-4o "glazing" controversy analyzed through Latour.</li>
-                  <li><a href="https://culturalcartography.substack.com/p/capital-hates-creative" target="_blank" rel="noreferrer" className="underline hover:opacity-70">"Capital Hates Creative"</a> — Applies Lazzarato's capitalism critique to the ad industry. Average agency tenure has shrunk to roughly 12 months.</li>
                   <li><a href="https://culturalcartography.substack.com/p/ai-serves-power-not-people" target="_blank" rel="noreferrer" className="underline hover:opacity-70">"AI Serves Power, Not People"</a> — Technology is never neutral. DOGE as a case study.</li>
                   <li><a href="https://culturalcartography.substack.com/p/are-you-a-strategist-or-are-you-just" target="_blank" rel="noreferrer" className="underline hover:opacity-70">"Are You a Strategist, or Are You Just a Human Algorithm with Good Taste?"</a> — Whether the strategy function has been reduced to pattern recognition and taste arbitrage.</li>
                   <li><a href="https://culturalcartography.substack.com/p/notes-from-the-underground" target="_blank" rel="noreferrer" className="underline hover:opacity-70">"Notes from the Underground" (Parts 1 & 2)</a> — Intellectual autobiography. From punk scenes in Winnipeg through a sociology PhD to the ad world.</li>
@@ -524,10 +537,10 @@ export default function App() {
               <div>
                 <p className="font-bold border-b border-black pb-1 mb-3">Bands & Projects</p>
                 <ul className="list-disc pl-5 space-y-4">
-                  <li><strong>Ketamines (1996–2015; 2023-Current):</strong> Bass, vocals, principal songwriter. Long-running garage-pop project with James Leroy, originating in Lethbridge and evolving through multiple lineups across three cities. Released records on HoZac (Chicago), Southpaw, Mammoth Cave, Mint Records, and Hosehead. Pitchfork gave Spaced Out a 7.0. PopMatters named You Can't Serve Two Masters #15 Best Canadian Album of 2013. Oprah tweeted about the band. Target used a song in a US commercial. 128+ documented shows including SXSW, Sled Island, Pop Montreal, NXNE, HoZac BlackOut Fest. NEW LP OUT 2026!</li>
-                  <li><strong>Century Palm (2014–2017):</strong> Bass, vocals. Toronto post-punk with Andrew Payne (Zebrassieres), Penny Clark (Tough Age), Jesse Locke (Dirty Beaches), and Alex Hamlyn. Debut LP Meet You on Deranged Records, mixed by Jay Arner, mastered by Mikey Young. Premiered on Stereogum. Album of the Day on Bandcamp Daily. CLRVYNT called it "a crash course in post-punk."</li>
-                  <li><strong>Myelin Sheaths (~2008–2010):</strong> Drums, vocals. Lethbridge garage-punk. Two 7" singles on HoZac and Bachelor Records. LP Get On Your Nerves on Southpaw: Weird Canada called it "the most realized piece of psy-fi punk shreddery from the camp that put Alberta on the map."</li>
-                  <li><strong>The Moby Dicks (2009–2011):</strong> Bass, vocals. Lethbridge bar-rock. Self-titled 7" on Southpaw, split with Needles//Pins, collaborative 7" with B.A. Johnston on Mammoth Cave.</li>
+                  <li><strong><a href="https://ketamines.bandcamp.com/" target="_blank" rel="noreferrer" className="underline hover:opacity-70">Ketamines</a> (1996–2015; 2023-Current):</strong> Bass, vocals, principal songwriter. Long-running garage-pop project with James Leroy, originating in Lethbridge and evolving through multiple lineups across three cities. Released records on HoZac (Chicago), Southpaw, Mammoth Cave, Mint Records, and Hosehead. Pitchfork gave Spaced Out a 7.0. PopMatters named You Can't Serve Two Masters #15 Best Canadian Album of 2013. Oprah tweeted about the band. Target used a song in a US commercial. 128+ documented shows including SXSW, Sled Island, Pop Montreal, NXNE, HoZac BlackOut Fest. NEW LP OUT 2026!</li>
+                  <li><strong><a href="https://centurypalm.bandcamp.com/" target="_blank" rel="noreferrer" className="underline hover:opacity-70">Century Palm</a> (2014–2017):</strong> Bass, vocals. Toronto post-punk with Andrew Payne (Zebrassieres), Penny Clark (Tough Age), Jesse Locke (Dirty Beaches), and Alex Hamlyn. Debut LP Meet You on Deranged Records, mixed by Jay Arner, mastered by Mikey Young. Premiered on Stereogum. Album of the Day on Bandcamp Daily. CLRVYNT called it "a crash course in post-punk."</li>
+                  <li><strong><a href="https://myelinsheaths.bandcamp.com/" target="_blank" rel="noreferrer" className="underline hover:opacity-70">Myelin Sheaths</a> (~2008–2010):</strong> Drums, vocals. Lethbridge garage-punk. Two 7" singles on HoZac and Bachelor Records. LP Get On Your Nerves on Southpaw: Weird Canada called it "the most realized piece of psy-fi punk shreddery from the camp that put Alberta on the map."</li>
+                  <li><strong><a href="https://themobydicks.bandcamp.com/" target="_blank" rel="noreferrer" className="underline hover:opacity-70">The Moby Dicks</a> (2009–2011):</strong> Bass, vocals. Lethbridge bar-rock. Self-titled 7" on Southpaw, split with Needles//Pins, collaborative 7" with B.A. Johnston on Mammoth Cave.</li>
                   <li><strong>Also:</strong> Tough Age (touring bassist, Mint Records, 2013–2015), Red Mass (touring guitar player) Don't Bother, Endangered Ape, Radians, Pentagon, Mean Tikes, Complex Cities, James Leroy and the Giant, Ran, Kill Credo, 10% Gain.</li>
                 </ul>
               </div>
@@ -535,8 +548,8 @@ export default function App() {
               <div>
                 <p className="font-bold border-b border-black pb-1 mb-3 mt-8">Record Labels</p>
                 <ul className="list-disc pl-5 space-y-4">
-                  <li><strong>Mammoth Cave Recording Co. (2008–2015):</strong> Co-founded with Evan Van Reekum. Nearly four dozen releases, 7"s, LP and cassettes that defined a specific era of Canadian DIY. FFWD Magazine voted it Best Record Label for three consecutive years (2010, 2011, 2012). B.A. Johnston's Shit Sucks was longlisted for the Polaris Prize. Catalogue includes B.A. Johnston, Fist City, The Famines, Needles//Pins, Korean Gut, Krang, Strange Attractor, Nervous Talk, Lab Coast. Reissued legacy recordings by Simply Saucer and Shadowy Men on a Shadowy Planet. The Bloodstains Across... compilation series documented punk scenes province-by-province, featuring White Lung, Nü Sensae (now: Orville Peck), and an unreleased Shadowy Men track. I got to meet Tonetta once. This is one thing I did in my life that earned me a Wikipedia page. Eulogized by Exclaim! and National Post when I decided to shut the label down over pressing plant backlogs, the weakening Canadian dollar, and the impact of Record Store Day on independent manufacturers.</li>
-                  <li><strong>Pleasence Records (2016–2022):</strong> And then, almost immediately, I bought into the amazing Toronto underground experimental label with James Lindsay. The story is that I did freelance brand strategy for Precision Pressing plant in Burlington, ON, in exchange for production credit. This helped guide the label through a prolific period Profiled by NOW Toronto on the label's evolving approach to sustainability in indie music. Catalogue: TRAITRS, Fake Palms, Isla Craig, Petra Glynt, WHIMM, Aidan Baker, Feel Alright, Germaphobes, Man Made Hill. TRAITRS might be the most successful band I've ever worked with; they generated an insane amount of money on streaming music.</li>
+                  <li><strong><a href="https://mammothcave.bandcamp.com/" target="_blank" rel="noreferrer" className="underline hover:opacity-70">Mammoth Cave Recording Co.</a> (2008–2015):</strong> Co-founded with Evan Van Reekum. Nearly four dozen releases, 7"s, LP and cassettes that defined a specific era of Canadian DIY. FFWD Magazine voted it Best Record Label for three consecutive years (2010, 2011, 2012). B.A. Johnston's Shit Sucks was longlisted for the Polaris Prize. Catalogue includes B.A. Johnston, Fist City, The Famines, Needles//Pins, Korean Gut, Krang, Strange Attractor, Nervous Talk, Lab Coast. Reissued legacy recordings by Simply Saucer and Shadowy Men on a Shadowy Planet. The Bloodstains Across... compilation series documented punk scenes province-by-province, featuring White Lung, Nü Sensae (now: Orville Peck), and an unreleased Shadowy Men track. I got to meet Tonetta once. This is one thing I did in my life that earned me a Wikipedia page. Eulogized by Exclaim! and National Post when I decided to shut the label down over pressing plant backlogs, the weakening Canadian dollar, and the impact of Record Store Day on independent manufacturers.</li>
+                  <li><strong><a href="https://pleasencerecords.bandcamp.com/" target="_blank" rel="noreferrer" className="underline hover:opacity-70">Pleasence Records</a> (2016–2022):</strong> And then, almost immediately, I bought into the amazing Toronto underground experimental label with James Lindsay. The story is that I did freelance brand strategy for Precision Pressing plant in Burlington, ON, in exchange for production credit. This helped guide the label through a prolific period Profiled by NOW Toronto on the label's evolving approach to sustainability in indie music. Catalogue: TRAITRS, Fake Palms, Isla Craig, Petra Glynt, WHIMM, Aidan Baker, Feel Alright, Germaphobes, Man Made Hill. TRAITRS might be the most successful band I've ever worked with; they generated an insane amount of money on streaming music.</li>
                 </ul>
               </div>
 
@@ -549,8 +562,8 @@ export default function App() {
                 <p className="font-bold border-b border-black pb-1 mb-3 mt-8">Writing & Cultural Criticism</p>
                 <ul className="list-disc pl-5 space-y-4">
                   <li><strong>Slagging Off (2013):</strong> In February 2013, I started an anonymous Tumblr blog reviewing every band playing Canadian Music Week (CMW) as a joke for my friends. I decided to review every single band from A-Z with jokes because, at the time, I was taking stand-up comedy writing lessons at Second City. I was learning how to structure a joke! But then it went viral, so with the attention on me, I dropped a long, data-driven investigation into how FACTOR was distributing public arts funding. The blog hit 10,000+ daily views. CBC dubbed me "The Most Hated Man in Canadian Music." I was asked to come on DAY6 to debate FACTOR's president, but that coward refused to sit in the same studio with me, so they interviewed me. What gets lost in the "most hated" framing is the advocacy underneath. The project was an attempt to help non-Toronto musicians access better funding coverage, to address the collapse of touring infrastructure, and to argue for a more equitable system. From Husky House Zine #1 (2025), reflecting a decade later: "If there is one thing I regret, it was waging the battle solo. Everything I had learned about Canadian music is that the power came from community, and we were building a very strong infrastructure that was benefiting many people. By doing Slagging Off, I damaged the community I was trying to advocate for. Even if I was right, all I really did was teach the industry how to hide their tracks."</li>
-                  <li><strong>Weird Canada (2009–2014):</strong> Writer, editor, board member, grant writer. Winner of the 2011 CBC Radio 3 Searchlight Award for Best Canadian Music Website. Co-organized Wyrd Fest.</li>
-                  <li><strong>New Feeling (2020–present):</strong> Founding member. Multi-stakeholder cooperative of Canadian music journalists. Cited by Liz Pelly in Mood Machine as "one of the most interesting models of co-op music" journalism in Canada.</li>
+                  <li><strong><a href="https://en.wikipedia.org/wiki/Weird_Canada" target="_blank" rel="noreferrer" className="underline hover:opacity-70">Weird Canada</a> (2009–2014):</strong> Writer, editor, board member, grant writer. Winner of the 2011 CBC Radio 3 Searchlight Award for Best Canadian Music Website. Co-organized Wyrd Fest.</li>
+                  <li><strong><a href="https://www.newfeeling.ca/" target="_blank" rel="noreferrer" className="underline hover:opacity-70">New Feeling</a> (2020–present):</strong> Founding member. Multi-stakeholder cooperative of Canadian music journalists. Cited by Liz Pelly in Mood Machine as "one of the most interesting models of co-op music" journalism in Canada.</li>
                   <li><strong>BeatRoute Magazine:</strong> Monthly punk 7" review column. "A column convinced no one actually read."</li>
                   <li><strong>Toast Life, Weird Canada, New Feeling:</strong> Various criticism and reviews.</li>
                 </ul>
@@ -564,13 +577,13 @@ export default function App() {
               <div>
                 <p className="font-bold border-b border-black pb-1 mb-3 mt-8">Selected Press (Music & Culture)</p>
                 <ul className="list-disc pl-5 space-y-1">
-                  <li>The Globe and Mail (2013) — "Why Indie-Rock Mediocrity Rules in Canada"</li>
-                  <li>VICE (2013) — "Meet the Guy Who's Slagging Off the Canadian Music Industry"</li>
-                  <li>CBC Day 6 (2013) — "The Most Hated Man in Canadian Music"</li>
+                  <li><a href="https://www.theglobeandmail.com/arts/music/why-indie-rock-mediocrity-rules-in-canada-according-to-one-insider/article11170577/" target="_blank" rel="noreferrer" className="underline hover:opacity-70">The Globe and Mail (2013) — "Why Indie-Rock Mediocrity Rules in Canada"</a></li>
+                  <li><a href="https://www.vice.com/en/article/meet-the-guy-whos-slagging-off-the-canadian-music-industry/" target="_blank" rel="noreferrer" className="underline hover:opacity-70">VICE (2013) — "Meet the Guy Who's Slagging Off the Canadian Music Industry"</a></li>
+                  <li><a href="https://www.cbc.ca/player/play/audio/1.1541637" target="_blank" rel="noreferrer" className="underline hover:opacity-70">CBC Day 6 (2013) — "The Most Hated Man in Canadian Music"</a></li>
                   <li>National Post (2013, 2015) — Music industry profiles</li>
-                  <li>Ominocity (2013) — Full Slagging Off timeline</li>
-                  <li>CANADALAND Ep. 87 (2015) — "Canadian Music (Is Horribly Broken) Week"</li>
-                  <li>NOW Toronto (2018) — "How Pleasence Records Is Rethinking the Label Model"</li>
+                  <li><a href="https://www.ominocity.com/2013/04/30/how-paul-lawton-became-the-most-hated-man-in-canadian-music-timeline/" target="_blank" rel="noreferrer" className="underline hover:opacity-70">Ominocity (2013) — Full Slagging Off timeline</a></li>
+                  <li><a href="https://www.canadaland.com/podcast/canadian-music-horribly-broken-week/" target="_blank" rel="noreferrer" className="underline hover:opacity-70">CANADALAND Ep. 87 (2015) — "Canadian Music (Is Horribly Broken) Week"</a></li>
+                  <li><a href="https://nowtoronto.com/music/features/pleasence-records-indie-record-label-podcast-festival" target="_blank" rel="noreferrer" className="underline hover:opacity-70">NOW Toronto (2018) — "How Pleasence Records Is Rethinking the Label Model"</a></li>
                   <li>Husky House Zine #1 (2025) — "Slagging Off: Ten Years Later"</li>
                 </ul>
               </div>
@@ -636,10 +649,15 @@ export default function App() {
             
             <div className="space-y-8 mb-12">
               {activeProject?.sections?.map((s, i) => (
-                <div key={i}>
-                  <h3 className="uppercase tracking-widest text-xs font-bold border-b border-black pb-1 mb-3">{s.heading}</h3>
-                  <p className="whitespace-pre-wrap leading-relaxed">{s.text}</p>
-                </div>
+                <React.Fragment key={i}>
+                  {activeProject.sectionVideos && activeProject.sectionVideos[s.heading] && (
+                    <VideoEmbed url={activeProject.sectionVideos[s.heading]} />
+                  )}
+                  <div>
+                    <h3 className="uppercase tracking-widest text-xs font-bold border-b border-black pb-1 mb-3">{s.heading}</h3>
+                    <p className="whitespace-pre-wrap leading-relaxed">{s.text}</p>
+                  </div>
+                </React.Fragment>
               ))}
             </div>
 
@@ -647,6 +665,13 @@ export default function App() {
             {activeProject.midVideos && activeProject.midVideos.length > 0 && (
               <div className="mb-10">
                 {activeProject.midVideos.map((v, i) => <VideoEmbed key={i} url={v} />)}
+              </div>
+            )}
+
+            {/* Video above proof */}
+            {activeProject.proofVideo && (
+              <div className="mb-10">
+                <VideoEmbed url={activeProject.proofVideo} />
               </div>
             )}
             

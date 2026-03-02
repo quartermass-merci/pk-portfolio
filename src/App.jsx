@@ -360,27 +360,7 @@ export default function App() {
               <p>Adweek · Forbes · Ad Age · Strategy · Campaign Canada · Financial Post · Clio · LBB · Muse by Clios · TrendHunter · Ads of the World · MediaPost · B&T Australia · Honeysuckle Magazine · mg Magazine</p>
             </div>
 
-            {/* Images moved to bottom per request */}
-            <ImageGrid urls={[
-              'https://cdn.prod.website-files.com/688121381a3801b69772f9bc/68829c2154c28432fc1501ef_SM_Logo_RGB__Monogram_HeavyBlack.png',
-              'https://cdn.prod.website-files.com/688121381a3801b69772f9bc/688293c5ddcb789b9802c493_SM-Website_VisualsArtboard-1-copy-2.png',
-              'https://cdn.prod.website-files.com/688121381a3801b69772f9bc/689e02bb3734dd96550b81ea_ezgif-337cc23b0f3970.gif',
-              'https://resized-media.entries.clios.com/companies/1446/media/7d7b53cb-2b3c-4fef-f679-08db9ab4efdb-large.jpg.webp',
-              'https://resized-media.entries.clios.com/companies/1446/media/2e76a4f1-3358-4023-f649-08db9ab4efdb-large.jpg.webp',
-              '/images/sister-merci/download.jpg',
-              '/images/sister-merci/download-1.jpg',
-              '/images/sister-merci/download-2.jpg',
-              '/images/sister-merci/download-3.jpg',
-              '/images/sister-merci/download-4.jpg',
-              '/images/sister-merci/download-5.jpg',
-              '/images/sister-merci/download-6.jpg',
-              '/images/sister-merci/download-7.jpg',
-              '/images/sister-merci/download-8.jpg',
-              '/images/sister-merci/download-9.jpg',
-              '/images/sister-merci/download-10.jpg',
-              '/images/sister-merci/f_yFUaMu_400x400.jpg',
-              '/images/sister-merci/images.jpg'
-            ]} />
+
           </div>
         )}
 
@@ -430,7 +410,7 @@ export default function App() {
               </div>
             </div>
 
-            <ImageGrid urls={['https://continuing.mcmaster.ca/app/uploads/2024/04/Paul-Lawton.jpg']} />
+
           </div>
         )}
 
@@ -447,27 +427,27 @@ export default function App() {
                 <p className="mb-4">A newsletter and forthcoming book applying Actor-Network Theory, critical theory, and institutional ethnography to brand strategy.</p>
                 <p className="font-bold uppercase tracking-widest text-xs mb-2 mt-4">Selected Essays</p>
                 <ul className="list-disc pl-5 space-y-2">
-                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">"Reassembling the Strategist"</a> — The flagship essay. Proposes Cultural Cartography as a new theory and method for practicing strategy. 74 likes, most popular post. Accompanied by a 22-page Field Guide for paid subscribers.</li>
-                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">"Reassembling the Consumer"</a> — "The Consumer" is a fiction that enters the marketing process early and hardens into organizational infrastructure. Uses the Stanley thermos trend as a case study.</li>
-                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">"Glazed and Confused: How AI Is Rewriting Human Trust in Real Time"</a> — The ChatGPT-4o "glazing" controversy analyzed through Latour.</li>
-                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">"Capital Hates Creative"</a> — Applies Lazzarato's capitalism critique to the ad industry. Average agency tenure has shrunk to roughly 12 months.</li>
-                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">"AI Serves Power, Not People"</a> — Technology is never neutral. DOGE as a case study.</li>
-                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">"Are You a Strategist, or Are You Just a Human Algorithm with Good Taste?"</a> — Whether the strategy function has been reduced to pattern recognition and taste arbitrage.</li>
-                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">"Notes from the Underground" (Parts 1 & 2)</a> — Intellectual autobiography. From punk scenes in Winnipeg through a sociology PhD to the ad world.</li>
-                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">"Taste Won't Save You: On Maintaining Subscriptions"</a> — Creative professionals have to actively maintain cultural engagement. Accumulated taste is not a static asset.</li>
+                  <li><a href="https://culturalcartography.substack.com/p/reassembling-the-strategist" target="_blank" rel="noreferrer" className="underline hover:opacity-70">"Reassembling the Strategist"</a> — The flagship essay. Proposes Cultural Cartography as a new theory and method for practicing strategy. 74 likes, most popular post. Accompanied by a 22-page Field Guide for paid subscribers.</li>
+                  <li><a href="https://culturalcartography.substack.com/p/reassembling-the-consumer" target="_blank" rel="noreferrer" className="underline hover:opacity-70">"Reassembling the Consumer"</a> — "The Consumer" is a fiction that enters the marketing process early and hardens into organizational infrastructure. Uses the Stanley thermos trend as a case study.</li>
+                  <li><a href="https://culturalcartography.substack.com/p/glazed-and-confused-how-ai-is-rewriting" target="_blank" rel="noreferrer" className="underline hover:opacity-70">"Glazed and Confused: How AI Is Rewriting Human Trust in Real Time"</a> — The ChatGPT-4o "glazing" controversy analyzed through Latour.</li>
+                  <li><a href="https://culturalcartography.substack.com/p/capital-hates-creative" target="_blank" rel="noreferrer" className="underline hover:opacity-70">"Capital Hates Creative"</a> — Applies Lazzarato's capitalism critique to the ad industry. Average agency tenure has shrunk to roughly 12 months.</li>
+                  <li><a href="https://culturalcartography.substack.com/p/ai-serves-power-not-people" target="_blank" rel="noreferrer" className="underline hover:opacity-70">"AI Serves Power, Not People"</a> — Technology is never neutral. DOGE as a case study.</li>
+                  <li><a href="https://culturalcartography.substack.com/p/are-you-a-strategist-or-are-you-just" target="_blank" rel="noreferrer" className="underline hover:opacity-70">"Are You a Strategist, or Are You Just a Human Algorithm with Good Taste?"</a> — Whether the strategy function has been reduced to pattern recognition and taste arbitrage.</li>
+                  <li><a href="https://culturalcartography.substack.com/p/notes-from-the-underground" target="_blank" rel="noreferrer" className="underline hover:opacity-70">"Notes from the Underground" (Parts 1 & 2)</a> — Intellectual autobiography. From punk scenes in Winnipeg through a sociology PhD to the ad world.</li>
+                  <li><a href="https://culturalcartography.substack.com/p/taste-wont-save-you-on-maintaining" target="_blank" rel="noreferrer" className="underline hover:opacity-70">"Taste Won't Save You: On Maintaining Subscriptions"</a> — Creative professionals have to actively maintain cultural engagement. Accumulated taste is not a static asset.</li>
                 </ul>
               </div>
               
               <div>
                 <p className="font-bold border-b border-black pb-1 mb-3 mt-8">Trade Publications & Op-Eds</p>
                 <ul className="list-disc pl-5 space-y-2">
-                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">"The Secret Playbook of Cannabis Brands That Win"</a> — LBBOnline (2025). Six years of agency experience across 150+ cannabis brands distilled.</li>
-                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">"Entering the Age of Health-Conscious Hedonism"</a> — LBBOnline (2026). Emerging beverage trends and what they mean for regulated categories.</li>
-                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">"How Hype Analysis Lets Companies Find Value in Customer Excitement"</a> — Quirk's Marketing Research Review (2024). Co-authored with Marcelo Bursztein. Introduces hype analysis as a methodology beyond traditional social listening.</li>
-                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">"Content Ecology: Understanding the Consequences of Garbage Content"</a> — LinkedIn Pulse (2024).</li>
-                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">"In a Hyper-Politicized World, Brands Must Stay True to Themselves"</a> — The Globe and Mail (2017). Co-authored with Cameron Summers (SVP, Weber Shandwick Canada).</li>
-                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">"For Brands, Fake News Is an Existential Threat"</a> — The Globe and Mail (2016). Co-authored with Cameron Summers.</li>
-                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">"How Outrage Culture Changes the Rules for Crisis Management"</a> — Marketing Magazine (2015). Co-authored with David Gordon (Managing Partner, Cohn & Wolfe).</li>
+                  <li><a href="https://lbbonline.com/news/the-secret-playbook-of-cannabis-brands-that-win" target="_blank" rel="noreferrer" className="underline hover:opacity-70">"The Secret Playbook of Cannabis Brands That Win"</a> — LBBOnline (2025). Six years of agency experience across 150+ cannabis brands distilled.</li>
+                  <li><a href="https://lbbonline.com/news/Entering-the-Age-of-Health-Conscious-Hedonism" target="_blank" rel="noreferrer" className="underline hover:opacity-70">"Entering the Age of Health-Conscious Hedonism"</a> — LBBOnline (2026). Emerging beverage trends and what they mean for regulated categories.</li>
+                  <li><a href="https://www.quirks.com/articles/how-hype-analysis-lets-companies-find-value-in-customer-excitement" target="_blank" rel="noreferrer" className="underline hover:opacity-70">"How Hype Analysis Lets Companies Find Value in Customer Excitement"</a> — Quirk's Marketing Research Review (2024). Co-authored with Marcelo Bursztein. Introduces hype analysis as a methodology beyond traditional social listening.</li>
+                  <li><a href="https://www.linkedin.com/pulse/content-ecology-understanding-consequences-garbage-paul-k-lawton-ywehc" target="_blank" rel="noreferrer" className="underline hover:opacity-70">"Content Ecology: Understanding the Consequences of Garbage Content"</a> — LinkedIn Pulse (2024).</li>
+                  <li><a href="https://www.theglobeandmail.com/report-on-business/rob-commentary/in-a-hyper-politicized-world-should-brands-take-a-stand/article34138902/" target="_blank" rel="noreferrer" className="underline hover:opacity-70">"In a Hyper-Politicized World, Brands Must Stay True to Themselves"</a> — The Globe and Mail (2017). Co-authored with Cameron Summers (SVP, Weber Shandwick Canada).</li>
+                  <li><a href="https://www.theglobeandmail.com/report-on-business/rob-commentary/for-brands-fake-news-is-an-existential-threat/article33109539/" target="_blank" rel="noreferrer" className="underline hover:opacity-70">"For Brands, Fake News Is an Existential Threat"</a> — The Globe and Mail (2016). Co-authored with Cameron Summers.</li>
+                  <li><a href="http://marketingmag.ca/media/how-outrage-culture-changes-the-rules-for-crisis-management-155353/" target="_blank" rel="noreferrer" className="underline hover:opacity-70">"How Outrage Culture Changes the Rules for Crisis Management"</a> — Marketing Magazine (2015). Co-authored with David Gordon (Managing Partner, Cohn & Wolfe).</li>
                 </ul>
               </div>
 
@@ -520,19 +500,16 @@ export default function App() {
               <div>
                 <p className="font-bold border-b border-black pb-1 mb-3 mt-8">Selected Press (Strategy & Cannabis)</p>
                 <ul className="list-disc pl-5 space-y-1">
-                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">McMaster Continuing Education (2024) — Institutional profile</a></li>
-                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">Strategy Online (2023) — "Homegrown cannabis brand building cred" agency profile</a></li>
-                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">Strategy Online (2020) — COVID-era cannabis marketing advice</a></li>
-                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">Authority Magazine (2020) — "All Gut, No Glory" extended interview</a></li>
-                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">Campaign Canada (2019) — Agency launch coverage</a></li>
+                  <li><a href="https://continuing.mcmaster.ca/meet-paul-lawton-developing-your-brand-with-style-and-confidence/" target="_blank" rel="noreferrer" className="underline hover:opacity-70">McMaster Continuing Education (2024) — Institutional profile</a></li>
+                  <li><a href="https://strategyonline.ca/2023/01/19/homegrown-cannabis-brand-building-cred/" target="_blank" rel="noreferrer" className="underline hover:opacity-70">Strategy Online (2023) — "Homegrown cannabis brand building cred" agency profile</a></li>
+                  <li><a href="https://strategyonline.ca/2020/03/20/cannabis-industry-copes-with-social-distancing/" target="_blank" rel="noreferrer" className="underline hover:opacity-70">Strategy Online (2020) — COVID-era cannabis marketing advice</a></li>
+                  <li><a href="https://medium.com/authority-magazine/marketing-strategies-from-the-top-all-gut-no-glory-with-paul-lawton-chief-strategy-officer-at-90de1dc3bf7d" target="_blank" rel="noreferrer" className="underline hover:opacity-70">Authority Magazine (2020) — "All Gut, No Glory" extended interview</a></li>
+                  <li><a href="https://www.campaigncanada.ca/article/sister-merci-vows-to-solve-the-challenges-of-cannabis-marketing/4685qg6nyt1a9xkvm4sq4jjyxm" target="_blank" rel="noreferrer" className="underline hover:opacity-70">Campaign Canada (2019) — Agency launch coverage</a></li>
                 </ul>
               </div>
             </div>
             
-            <ImageGrid urls={[
-              'https://substack-post-media.s3.amazonaws.com/public/images/ea0ab3a2-6ba7-4ec7-920c-32045d08f0d6_1024x1024.png',
-              'https://adage.com/resizer/v2/T6WAW5QVXZC5LLPOVBBRLYC2VE.jpg'
-            ]} />
+
           </div>
         )}
 

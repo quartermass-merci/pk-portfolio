@@ -147,7 +147,17 @@ const portfolioData = [
     images: [
       'https://scontent-yyz1-1.xx.fbcdn.net/v/t39.30808-6/467394198_18145488322348735_5836426376033989475_n.jpg?stp=dst-jpg_s1080x2048_tt6&_nc_cat=103&ccb=1-7&_nc_sid=13d280&_nc_ohc=iqaRmh799FUQ7kNvwEzw77h&_nc_oc=AdmxXHW6Wuh8ebJeehXISj5TwcTL276xK_GZCu9FerDpl14ulTyljRBXPeZq88x-DhQ&_nc_zt=23&_nc_ht=scontent-yyz1-1.xx&_nc_gid=VhXhZ8EUTvjKGGF43HFT_A&_nc_ss=8&oh=00_Afxth1z9Jz5Xx0P63vA44kvvZlfquLcLz33OWecp4oQxxA&oe=69AAB987',
       'https://scontent-yyz1-1.xx.fbcdn.net/v/t39.30808-6/467314585_18145488376348735_3006361451666194417_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=13d280&_nc_ohc=Ny5ekufoR6sQ7kNvwEDR1Li&_nc_oc=AdlGiv3OD8MMflaGwWwHPzyVaRUQ4jAoSP4-BfemEbgqel5eitF4iqL_XxCLQH23KYU&_nc_zt=23&_nc_ht=scontent-yyz1-1.xx&_nc_gid=AYp-G-wg55lvyscF9AgFpw&_nc_ss=8&oh=00_Afxp-yIOMhhnA2s68lcnYVT4_V_w9BS4hqKIclLPPMPGhw&oe=69AAB4F2',
-      'https://scontent-yyz1-1.xx.fbcdn.net/v/t39.30808-6/467445551_18145488223348735_3774512950698256015_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=13d280&_nc_ohc=jb1G5ZktI7sQ7kNvwEBSj5r&_nc_oc=AdktR5xzPxHqJTuO_apwQO98MyxKtwD2ygPKFr29FUgqA579-EmiNPpIfsm9NukRegg&_nc_zt=23&_nc_ht=scontent-yyz1-1.xx&_nc_gid=AYp-G-wg55lvyscF9AgFpw&_nc_ss=8&oh=00_AfyA7fNbo6tb_xpFB5H2hT8JFwtrTMwAISFxy_khzMrv7A&oe=69AAA77D'
+      'https://scontent-yyz1-1.xx.fbcdn.net/v/t39.30808-6/467445551_18145488223348735_3774512950698256015_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=13d280&_nc_ohc=jb1G5ZktI7sQ7kNvwEBSj5r&_nc_oc=AdktR5xzPxHqJTuO_apwQO98MyxKtwD2ygPKFr29FUgqA579-EmiNPpIfsm9NukRegg&_nc_zt=23&_nc_ht=scontent-yyz1-1.xx&_nc_gid=AYp-G-wg55lvyscF9AgFpw&_nc_ss=8&oh=00_AfyA7fNbo6tb_xpFB5H2hT8JFwtrTMwAISFxy_khzMrv7A&oe=69AAA77D',
+      '/images/casino-time/casino-time-1.jpg',
+      '/images/casino-time/casino-time-2.jpg',
+      '/images/casino-time/casino-time-3.png',
+      '/images/casino-time/casino-time-4.png',
+      '/images/casino-time/casino-time-5.jpg',
+      '/images/casino-time/casino-time-6.jpg',
+      '/images/casino-time/casino-time-7.png',
+      '/images/casino-time/casino-time-8.png',
+      '/images/casino-time/casino-time-9.png',
+      '/images/casino-time/casino-time-10.png'
     ],
     videos: [
       'https://www.youtube.com/watch?v=3Fj8UUIrDR0',
@@ -220,7 +230,13 @@ const portfolioData = [
       'https://profectio.com/wp-content/uploads/2023/08/JR-Strain-KIND-Summer-Fair-scaled.jpg',
       'https://profectio.com/wp-content/uploads/2023/08/JR-Strain-Campaign-Image.png',
       'https://www.campaigncanada.ca/media/Article/News/Screen-Shot-2023-08-15-at-10.00.25-AM.png?width=1248',
-      'https://offlinehbpl.hbpl.co.uk/news/ACC/Screen-Shot-2023-08-16-at-1.16.36-PM-239x300.png'
+      'https://offlinehbpl.hbpl.co.uk/news/ACC/Screen-Shot-2023-08-16-at-1.16.36-PM-239x300.png',
+      '/images/jr-strain/jr-strain-1.png',
+      '/images/jr-strain/jr-strain-2.png',
+      '/images/jr-strain/jr-strain-3.png',
+      '/images/jr-strain/jr-strain-4.jpg',
+      '/images/jr-strain/jr-strain-5.jpg',
+      '/images/jr-strain/jr-strain-6.png'
     ]
   },
   {
@@ -357,7 +373,11 @@ const portfolioData = [
       '/images/up-cannabis/up-20percent.png',
       '/images/up-cannabis/up-smoked-meat.png',
       '/images/up-cannabis/up-sorry-bud.png',
-      '/images/up-cannabis/up-mulligan.jpg'
+      '/images/up-cannabis/up-mulligan.jpg',
+      '/images/up-cannabis/up-cannabis-1.png',
+      '/images/up-cannabis/up-cannabis-2.jpg',
+      '/images/up-cannabis/up-cannabis-3.jpg',
+      '/images/up-cannabis/up-cannabis-4.png'
     ]
   },
   {
@@ -665,7 +685,19 @@ const portfolioData = [
     ],
     images: [
       'https://www.madegoodfoods.com/cdn/shop/files/MGUS_SHOPALL_HERO_DESKTOP.png',
-      'https://cdn.prod.website-files.com/688121391a3801b69772fa7d/689b83bb4ee355629d7d2d44_MadeGood_projectArtboard-1.png'
+      'https://cdn.prod.website-files.com/688121391a3801b69772fa7d/689b83bb4ee355629d7d2d44_MadeGood_projectArtboard-1.png',
+      '/images/madegood/madegood-1.jpg',
+      '/images/madegood/madegood-2.jpg',
+      '/images/madegood/madegood-3.png',
+      '/images/madegood/madegood-4.jpg',
+      '/images/madegood/madegood-5.jpg',
+      '/images/madegood/madegood-6.png',
+      '/images/madegood/madegood-7.png',
+      '/images/madegood/madegood-8.png',
+      '/images/madegood/madegood-9.png',
+      '/images/madegood/madegood-10.png',
+      '/images/madegood/madegood-11.png',
+      '/images/madegood/madegood-12.jpg'
     ]
   },
   {
@@ -776,7 +808,14 @@ const portfolioData = [
       'CM Ruiz, Designer',
       'Cannabis Act compliance (Canada)'
     ],
-    images: []
+    images: [
+      '/images/far-out-crops/far-out-crops-1.png',
+      '/images/far-out-crops/far-out-crops-2.png',
+      '/images/far-out-crops/far-out-crops-3.png',
+      '/images/far-out-crops/far-out-crops-4.png',
+      '/images/far-out-crops/far-out-crops-5.png',
+      '/images/far-out-crops/far-out-crops-6.png'
+    ]
   },
   {
     id: 'highly-dutch',
@@ -832,7 +871,9 @@ const portfolioData = [
       'Oli Bell, VP, Marketing and Brand',
       'Cannabis Act compliance (Canada)'
     ],
-    images: []
+    images: [
+      '/images/highly-dutch/highly-dutch-1.png'
+    ]
   },
   {
     id: 'neighborgoods',
@@ -890,7 +931,14 @@ const portfolioData = [
       'Ben Gaines, Director of Marketing, Wyld Cannabis',
       'Chris Joseph, Founder/CMO, Wyld Cannabis'
     ],
-    images: []
+    images: [
+      '/images/neighborgoods/neighborgoods-1.png',
+      '/images/neighborgoods/neighborgoods-2.jpg',
+      '/images/neighborgoods/neighborgoods-3.png',
+      '/images/neighborgoods/neighborgoods-4.png',
+      '/images/neighborgoods/neighborgoods-5.png',
+      '/images/neighborgoods/neighborgoods-6.png'
+    ]
   },
   {
     id: 'holy-mountain',
@@ -950,7 +998,13 @@ const portfolioData = [
       'Mark McKay, Organigram, Director of Communications and Digital Strategy',
       'Cannabis Act compliance (Canada)'
     ],
-    images: []
+    images: [
+      '/images/holy-mountain/holy-mountain-1.jpg',
+      '/images/holy-mountain/holy-mountain-2.jpg',
+      '/images/holy-mountain/holy-mountain-3.png',
+      '/images/holy-mountain/holy-mountain-4.jpg',
+      '/images/holy-mountain/holy-mountain-5.png'
+    ]
   },
   {
     id: 'shred',
@@ -1017,7 +1071,19 @@ const portfolioData = [
       'Cannabis Act compliance (Canada)'
     ],
     images: [
-      'https://i0.wp.com/douglasdalecannabis.com/wp-content/uploads/2020/12/Gnarberry.jpg'
+      'https://i0.wp.com/douglasdalecannabis.com/wp-content/uploads/2020/12/Gnarberry.jpg',
+      '/images/shred/shred-1.png',
+      '/images/shred/shred-2.png',
+      '/images/shred/shred-3.jpg',
+      '/images/shred/shred-4.png',
+      '/images/shred/shred-5.png',
+      '/images/shred/shred-6.png',
+      '/images/shred/shred-7.png',
+      '/images/shred/shred-8.jpg',
+      '/images/shred/shred-9.png',
+      '/images/shred/shred-10.jpg',
+      '/images/shred/shred-11.jpg',
+      '/images/shred/shred-12.png'
     ]
   },
   {
@@ -1071,7 +1137,17 @@ const portfolioData = [
       'Melissa Eshaghbeigi, Strategy',
       'Craig Ritchie, Creative Director'
     ],
-    images: []
+    images: [
+      '/images/solesavy/solesavy-1.png',
+      '/images/solesavy/solesavy-2.png',
+      '/images/solesavy/solesavy-3.png',
+      '/images/solesavy/solesavy-4.jpg',
+      '/images/solesavy/solesavy-5.jpg',
+      '/images/solesavy/solesavy-6.jpg',
+      '/images/solesavy/solesavy-7.jpg',
+      '/images/solesavy/solesavy-8.jpg',
+      '/images/solesavy/solesavy-9.jpg'
+    ]
   },
   {
     id: 'wyld',
@@ -1133,7 +1209,14 @@ const portfolioData = [
       'Chris Joseph, Founder/CMO, Wyld Cannabis',
       'Cannabis Act compliance (Canada); Provincial regulatory requirements'
     ],
-    images: []
+    images: [
+      '/images/wyld/wyld-1.jpg',
+      '/images/wyld/wyld-2.png',
+      '/images/wyld/wyld-3.png',
+      '/images/wyld/wyld-4.jpg',
+      '/images/wyld/wyld-5.jpg',
+      '/images/wyld/wyld-6.png'
+    ]
   },
   {
     id: 'cruuzy',
@@ -1194,7 +1277,20 @@ const portfolioData = [
       'Day Job, Production',
       'Cannabis Act compliance (Canada)'
     ],
-    images: []
+    images: [
+      '/images/cruuzy/cruuzy-1.png',
+      '/images/cruuzy/cruuzy-2.jpg',
+      '/images/cruuzy/cruuzy-3.png',
+      '/images/cruuzy/cruuzy-4.png',
+      '/images/cruuzy/cruuzy-5.png',
+      '/images/cruuzy/cruuzy-6.jpg',
+      '/images/cruuzy/cruuzy-7.png',
+      '/images/cruuzy/cruuzy-8.jpg',
+      '/images/cruuzy/cruuzy-9.jpg',
+      '/images/cruuzy/cruuzy-10.jpg',
+      '/images/cruuzy/cruuzy-11.png',
+      '/images/cruuzy/cruuzy-12.png'
+    ]
   },
   {
     id: 'offside',
@@ -1306,7 +1402,11 @@ const portfolioData = [
       'Maya Visnyei, Photographer',
       'Cannabis Act compliance (Canada)'
     ],
-    images: []
+    images: [
+      '/images/simply-bare/simply-bare-1.jpg',
+      '/images/simply-bare/simply-bare-2.jpg',
+      '/images/simply-bare/simply-bare-3.png'
+    ]
   },
   {
     id: 'herbert-labs',
@@ -1361,7 +1461,11 @@ const portfolioData = [
       'Cannabis Act compliance (Canada)'
     ],
     images: [
-      'https://cdn.prod.website-files.com/688121391a3801b69772fa7d/68a48956a60a466c5f2d7d81_Herbert_projectArtboard-1.png'
+      'https://cdn.prod.website-files.com/688121391a3801b69772fa7d/68a48956a60a466c5f2d7d81_Herbert_projectArtboard-1.png',
+      '/images/herbert/herbert-1.jpg',
+      '/images/herbert/herbert-2.jpg',
+      '/images/herbert/herbert-3.png',
+      '/images/herbert/herbert-4.jpg'
     ]
   },
 

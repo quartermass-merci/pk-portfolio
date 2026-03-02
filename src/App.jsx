@@ -1710,20 +1710,27 @@ export default function App() {
     );
   };
 
-  // YouTube embed from URL
+  // YouTube video — clickable thumbnail that opens YouTube (works for age-gated videos)
   const YouTubeEmbed = ({ url }) => {
     const match = url.match(/(?:v=|\/embed\/|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
     if (!match) return null;
+    const videoId = match[1];
     return (
-      <div className="aspect-video w-full my-6">
-        <iframe
-          src={`https://www.youtube.com/embed/${match[1]}`}
-          className="w-full h-full"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          title="Video"
+      <a href={url} target="_blank" rel="noreferrer" className="block aspect-video w-full my-6 relative group bg-black overflow-hidden">
+        <img
+          src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
+          alt="Video thumbnail"
+          className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
         />
-      </div>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-16 h-16 bg-red-600 rounded-xl flex items-center justify-center group-hover:bg-red-500 transition-colors shadow-lg">
+            <svg viewBox="0 0 24 24" fill="white" className="w-8 h-8 ml-1"><polygon points="5,3 19,12 5,21" /></svg>
+          </div>
+        </div>
+        <div className="absolute bottom-3 right-3 bg-black/70 text-white text-xs px-2 py-1 font-mono uppercase tracking-wider">
+          Watch on YouTube →
+        </div>
+      </a>
     );
   };
 

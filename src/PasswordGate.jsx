@@ -14,7 +14,7 @@ export default function PasswordGate({ children }) {
         <p className="text-sm text-gray-500 mb-8">Portfolio — Enter password to continue</p>
         <form onSubmit={(e) => {
           e.preventDefault();
-          if (input === 'LETTUCEIN') { setUnlocked(true); setError(false); }
+          if (input === 'LAWTON') { setUnlocked(true); setError(false); }
           else { setError(true); setInput(''); }
         }}>
           <input

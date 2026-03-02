@@ -1633,19 +1633,30 @@ const portfolioData = [
 
 export default function App() {
   const [activeProject, setActiveProject] = useState(null);
-  const [view, setView] = useState('about'); 
+  const [view, setView] = useState(null); 
   const [zoomImg, setZoomImg] = useState(null);
+  const [panelOpen, setPanelOpen] = useState(false);
 
   const [expandedCategories, setExpandedCategories] = useState({
-    'Background': true,
-    'Campaign Strategy': true,
-    'Brand Architecture': true,
-    'Corporate Comms': true
+    'Background': false,
+    'Campaign Strategy': false,
+    'Brand Architecture': false,
+    'Corporate Comms': false
   });
 
   const categories = useMemo(() => ['Campaign Strategy', 'Brand Architecture', 'Corporate Comms'], []);
 
-  const handleProjectClick = (p) => { setView('project'); setActiveProject(p); };
+  const openPanel = (newView, project = null) => {
+    setView(newView);
+    setActiveProject(project);
+    setPanelOpen(true);
+  };
+
+  const closePanel = () => {
+    setPanelOpen(false);
+  };
+
+  const handleProjectClick = (p) => { openPanel('project', p); };
 
   const backgroundSections = [
     { id: 'timeline', title: 'Career Timeline' },
@@ -1670,7 +1681,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-black font-mono text-[13px] leading-tight flex flex-col md:flex-row">
+    <div className="min-h-screen bg-white text-black font-mono text-[14px] leading-tight relative">
       
       {/* Lightbox Overlay */}
       {zoomImg && (
@@ -1681,24 +1692,22 @@ export default function App() {
       )}
 
       {/* Navigation */}
-      <div className="w-full md:w-1/2 lg:w-5/12 md:border-r border-black p-4 md:p-6 flex flex-col h-auto md:h-screen md:overflow-y-auto">
-        <div className="grid grid-cols-2 gap-4 mb-12">
-          <div className="pr-4"><p>PK Lawton is the Co-Founder and Chief Strategy Officer at Sister Merci, based in Hamilton (ON).</p></div>
-          <div>
-            <p className="mb-1">Inquiries:</p>
-            <ul className="list-none space-y-0.5 underline decoration-1">
-              <li><a href="mailto:pklawton@gmail.com" className="hover:opacity-50">Email</a></li>
-              <li><a href="https://linkedin.com/in/paulklawton" target="_blank" rel="noreferrer" className="hover:opacity-50">LinkedIn</a></li>
-              <li><a href="https://culturalcartography.substack.com" target="_blank" rel="noreferrer" className="hover:opacity-50">Substack</a></li>
-            </ul>
+      <div className="w-full max-w-5xl mx-auto p-6 md:p-10 flex flex-col min-h-screen">
+        <div className="mb-16">
+          <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">PK Lawton</h1>
+          <p className="text-sm md:text-base text-gray-600 mb-6 max-w-xl">Co-Founder & Chief Strategy Officer at Sister Merci. Brand strategist, researcher, educator, cultural critic. Based in Hamilton, ON.</p>
+          <div className="flex gap-6 text-sm underline decoration-1">
+            <a href="mailto:pklawton@gmail.com" className="hover:opacity-50">Email</a>
+            <a href="https://linkedin.com/in/paulklawton" target="_blank" rel="noreferrer" className="hover:opacity-50">LinkedIn</a>
+            <a href="https://culturalcartography.substack.com" target="_blank" rel="noreferrer" className="hover:opacity-50">Substack</a>
           </div>
         </div>
 
-        <button onClick={() => { setView('about'); setActiveProject(null); }} className={`flex items-center gap-2 mb-8 hover:opacity-50 transition-opacity ${view === 'about' ? 'font-bold' : ''}`}>
+        <button onClick={() => openPanel('about')} className={`flex items-center gap-2 mb-10 hover:opacity-50 transition-opacity ${view === 'about' && panelOpen ? 'font-bold' : ''}`}>
           <span className="text-xl">●</span> AN INTRODUCTION
         </button>
 
-        <nav className="flex-1">
+        <nav className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-0 items-start">
           {/* Background Nav */}
           <div className="mb-8">
             <button onClick={() => setExpandedCategories(p=>({...p, Background: !p.Background}))} className="w-full bg-black text-white flex justify-between px-1.5 py-0.5 mb-1 text-xs uppercase tracking-widest hover:opacity-80 transition-opacity">
@@ -1708,7 +1717,7 @@ export default function App() {
             {expandedCategories.Background && (
               <ul className="border-t border-black">
                 {backgroundSections.map((item) => (
-                  <li key={item.id} onClick={() => { setView(item.id); setActiveProject(null); }} className={`border-b border-black py-2 px-1 flex justify-between cursor-pointer hover:bg-gray-100 transition-colors ${view === item.id ? 'bg-gray-100 font-bold' : ''}`}>
+                  <li key={item.id} onClick={() => openPanel(item.id)} className={`border-b border-black py-2 px-1 flex justify-between cursor-pointer hover:bg-gray-100 transition-colors ${view === item.id && panelOpen ? 'bg-gray-100 font-bold' : ''}`}>
                     <span className="truncate pr-4">{item.title}</span>
                   </li>
                 ))}
@@ -1726,7 +1735,7 @@ export default function App() {
               {expandedCategories[category] && (
                 <ul className="border-t border-black">
                   {portfolioData.filter((p) => p.category === category).map((project) => (
-                    <li key={project.id} onClick={() => handleProjectClick(project)} className={`border-b border-black py-2 px-1 flex justify-between cursor-pointer hover:bg-gray-100 transition-colors ${activeProject?.id === project.id && view === 'project' ? 'bg-gray-100 font-bold' : ''}`}>
+                    <li key={project.id} onClick={() => handleProjectClick(project)} className={`border-b border-black py-2 px-1 flex justify-between cursor-pointer hover:bg-gray-100 transition-colors ${activeProject?.id === project.id && view === 'project' && panelOpen ? 'bg-gray-100 font-bold' : ''}`}>
                       <span className={`truncate pr-4 ${project.forceBold ? 'font-bold underline decoration-2' : ''}`}>{project.title}</span>
                       <span className="whitespace-nowrap flex gap-2">
                         <span>{project.year}</span>
@@ -1740,8 +1749,17 @@ export default function App() {
         </nav>
       </div>
 
-      {/* Main Content Pane */}
-      <div className="w-full md:w-1/2 lg:w-7/12 p-4 md:p-8 h-auto md:h-screen md:sticky top-0 overflow-y-auto custom-scrollbar">
+      {/* Backdrop */}
+      {panelOpen && (
+        <div className="fixed inset-0 z-30 bg-black/20 backdrop-blur-sm transition-opacity" onClick={closePanel} />
+      )}
+
+      {/* Slide-out Content Panel */}
+      <div className={`fixed top-0 right-0 z-40 h-full w-full md:w-3/5 bg-white border-l border-black shadow-2xl transform transition-transform duration-300 ease-in-out overflow-y-auto ${panelOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+        <div className="p-6 md:p-10">
+          <button onClick={closePanel} className="mb-8 text-sm font-mono uppercase tracking-widest hover:opacity-50 transition-opacity flex items-center gap-2">
+            <span>←</span> Back
+          </button>
         
         {/* BACKGROUND SECTIONS */}
         {view === 'about' && (
@@ -2212,6 +2230,7 @@ export default function App() {
             {activeProject.images && activeProject.images.length > 0 && <ImageGrid urls={activeProject.images} />}
           </div>
         )}
+        </div>
       </div>
 
     </div>

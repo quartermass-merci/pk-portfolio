@@ -51,11 +51,28 @@ export default function App() {
     );
   };
 
-  // YouTube video — clickable thumbnail that opens YouTube (works for age-gated videos)
-  const YouTubeEmbed = ({ url }) => {
-    const match = url.match(/(?:v=|\/embed\/|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
-    if (!match) return null;
-    const videoId = match[1];
+  // Video embed — handles YouTube (thumbnail + link) and Vimeo (iframe)
+  const VideoEmbed = ({ url }) => {
+    // Vimeo embed
+    const vimeoMatch = url.match(/player\.vimeo\.com\/video\/(\d+)/);
+    if (vimeoMatch) {
+      return (
+        <div className="aspect-video w-full my-6 bg-black overflow-hidden">
+          <iframe
+            src={url}
+            className="w-full h-full"
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+            title="Vimeo video"
+          />
+        </div>
+      );
+    }
+    // YouTube thumbnail (works for age-gated videos)
+    const ytMatch = url.match(/(?:v=|\/embed\/|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+    if (!ytMatch) return null;
+    const videoId = ytMatch[1];
     return (
       <a href={url} target="_blank" rel="noreferrer" className="block aspect-video w-full my-6 relative group bg-black overflow-hidden">
         <img
@@ -636,7 +653,7 @@ export default function App() {
             {/* Videos */}
             {activeProject.videos && activeProject.videos.length > 0 && (
               <div className="mb-10">
-                {activeProject.videos.map((v, i) => <YouTubeEmbed key={i} url={v} />)}
+                {activeProject.videos.map((v, i) => <VideoEmbed key={i} url={v} />)}
               </div>
             )}
             
@@ -648,6 +665,13 @@ export default function App() {
                 </div>
               ))}
             </div>
+
+            {/* Mid-case videos */}
+            {activeProject.midVideos && activeProject.midVideos.length > 0 && (
+              <div className="mb-10">
+                {activeProject.midVideos.map((v, i) => <VideoEmbed key={i} url={v} />)}
+              </div>
+            )}
             
             {activeProject?.proof && activeProject.proof.length > 0 && (
               <div className="mb-12">

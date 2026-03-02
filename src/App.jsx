@@ -33,6 +33,8 @@ export default function App() {
     { id: 'timeline', title: 'Career Timeline' },
     { id: 'education', title: 'Education' },
     { id: 'agency', title: 'Agency as Lab: Sister Merci' },
+    { id: 'square', title: 'Developing Square Shaped Strategists' },
+    { id: 'cartography', title: 'Cultural Cartography' },
     { id: 'teaching', title: 'Teaching & Research' },
     { id: 'published', title: 'Published & Spoken' },
     { id: 'music', title: 'Music & Culture' }
@@ -405,6 +407,94 @@ export default function App() {
             </div>
 
 
+          </div>
+        )}
+
+
+        {view === 'square' && (
+          <div className="max-w-2xl font-mono text-sm leading-relaxed pb-20">
+            <h2 className="text-xl mb-2 font-bold uppercase tracking-widest">DEVELOPING SQUARE SHAPED STRATEGISTS</h2>
+            <h3 className="font-bold uppercase tracking-widest text-xs mb-8 text-gray-500">THE SQUARE-SHAPED STRATEGIST</h3>
+
+            <div className="space-y-6 mb-12">
+              <p>The industry has long focused on T-shaped people, experts in one area, with a little knowledge in others. But that approach falls short when you need to analyze a brand tracker one day, test a cultural insight the next, and defend an attribution model by the end of the week.</p>
+              <p>It also doesn't work in the age of AI, where the strategist has more opportunities to expand their skill set and invest time in going both wide AND deep. It is my belief that the age of specialization in agencies is over, and that our people, if they are to thrive in a new environment, need broader exposure to theory and practice across the board.</p>
+              <p className="font-bold mt-8">The square-shaped strategist can master four corners:</p>
+              <div className="space-y-4 ml-4">
+                <p><strong>Problem Clarification.</strong> Most briefs show up already 'solved.' Clients often give you a deliverable before anyone has agreed on what the real issue is. Your job is to start with the actual problem and work backward, instead of just delivering what was first requested.</p>
+                <p><strong>Insight Development.</strong> Data is everywhere, but not everyone can spot the tension that changes how you see a problem and makes a brief valuable. You need to be comfortable with both quantitative and qualitative methods, and be clear about which one you're relying on.</p>
+                <p><strong>Strategic Approach.</strong> This is where you earn trust in the room. If a strategy can't be compressed into a sentence, it won't survive a creative review. Clarity isn't dumbing it down. It's the harder work of making the complex feel inevitable.</p>
+                <p><strong>Effectiveness.</strong> Your job doesn't end at launch. You're also responsible for KPIs, attribution, and optimization. If you can't prove your work made a difference, you haven't finished the job.</p>
+              </div>
+            </div>
+
+            <div className="space-y-6 mb-12">
+              <h4 className="font-bold border-b border-black pb-1 mb-3">My Coaching Tree</h4>
+              <p>Strategists I've trained now hold:</p>
+              <ul className="list-disc pl-5 space-y-2">
+                <li>Global Social Lead & Brand, McDonald's Global</li>
+                <li>Head of Strategy, Zeno Group</li>
+                <li>Strategy Director, GUT</li>
+                <li>Head of Strategy, Courage</li>
+                <li>SVP Strategy, Lifelong Crush</li>
+              </ul>
+              <p>All of these strategists have the qualities of a square-shaped strategist. They are just as skilled with an econometric model as they are with reading cultural signals. That kind of range gets them invited into important meetings and helps them lead those rooms.</p>
+              <p>A Square-Shaped Strategist knows how to make work stand out, how to make it effective, and, just as importantly, how to sell the work and build trust with clients and partners.</p>
+            </div>
+
+            <div className="aspect-video w-full my-6 bg-gray-100 overflow-hidden rounded">
+              <iframe
+                src="https://www.canva.com/design/DAHCz5-pAFQ/--EKhbQ4MR4hhxGFW5ExjA/view?embed"
+                className="w-full h-full border-0"
+                allowFullScreen
+                title="Square Shaped Strategist presentation"
+              />
+            </div>
+          </div>
+        )}
+
+        {view === 'cartography' && (
+          <div className="max-w-2xl font-mono text-sm leading-relaxed pb-20">
+            <h2 className="text-xl mb-2 font-bold uppercase tracking-widest">CULTURAL CARTOGRAPHY</h2>
+            <h3 className="font-bold uppercase tracking-widest text-xs mb-8 text-gray-500">A PHILOSOPHY OF STRATEGIC PLANNING</h3>
+
+            <div className="space-y-6 mb-12">
+              <p>Strategy has lost its way. Strategists used to be creative partners, shaping the work as it unfolded. Now, their role often comes at the end: they arrive after the main thinking, fit ideas into templates, and mention the right names to make everyone feel aligned. We were so close!</p>
+              <p>Generative AI is speeding up this shift. As desk research and synthesis become automated, strategists who only read reports and write positioning slides are becoming unnecessary. The person who quotes Sharp or Binet just to sound credible, instead of digging into the problem, is giving a performance, not real analysis.</p>
+              <p>Cultural Cartography is my answer to that drift, situating strategy as a theory/method that starts in the field, not in the deck.</p>
+            </div>
+
+            <div className="space-y-6 mb-12">
+              <h4 className="font-bold border-b border-black pb-1 mb-3">How Strategy Got Flattened</h4>
+              <p>The industry has made strategy so stable that it's almost invisible. Three patterns are responsible for this.</p>
+              <p><strong>PowerPoint shapes our thinking.</strong> Slides encourage linear stories and safe bullet points, but real people and markets don't work that way. Latour called this inscription—the idea that tools shape the knowledge we create. Every strategist knows the feeling: you open a deck template, and your ideas start to fit its mold.</p>
+              <p><strong>Ritualized methods are common.</strong> The insight slide is filled out before any real insight appears. Competitive audits use the same template no matter the category. These routines create order, but they also remove the friction needed for creative breakthroughs. John Law's work on method assemblages explains this well: the tools we use to study a situation shape what we can see.</p>
+              <p><strong>Citation has become a ritual.</strong> There's nothing wrong with Binet and Field or Byron Sharp. The issue is that their work is used to end the discussion instead of starting it. When people say "the science says" instead of asking "what's happening here," strategy becomes routine. And routines don't adapt.</p>
+            </div>
+
+            <div className="space-y-6 mb-12">
+              <h4 className="font-bold border-b border-black pb-1 mb-3">What Cultural Cartography Actually Does</h4>
+              <p>Rather than analyzing from afar, you follow how meaning moves through a system. The focus isn't just on "the consumer" or "the brand." It's on the network of things already influencing the situation.</p>
+              <p><strong>You identify actors.</strong> An actor can be anything that changes the situation: a person, a platform algorithm, a budget limit, a regulatory rule, or even a Reddit thread that changes a brand's story overnight. In the cannabis industry, I've seen a single Health Canada compliance memo change an entire category's creative work in just weeks. That memo is an actor. Ignoring it because it doesn't fit on a slide is a mistake.</p>
+              <p><strong>You look for friction.</strong> Strategy happens where systems clash: where policy, culture, and business meet, not in the safe center of a brand model. In fast-changing fields, brands live in regulatory documents and online comments just as much as in briefs.</p>
+              <p><strong>You avoid forcing things to fit too soon.</strong> Agencies often want to tidy up quickly, but Cultural Cartography stays with the complexity longer. It maps what's already happening before trying to explain it. Clarity comes after complexity. There are no shortcuts.</p>
+            </div>
+
+            <div className="space-y-6 mb-12">
+              <h4 className="font-bold border-b border-black pb-1 mb-3">The Stalker Problem</h4>
+              <p>In Tarkovsky's Stalker, there's a scene where the guide says, "You can't walk straight through the Zone!" The direct path is dangerous. You throw a bolt, see where it lands, and follow it. The landscape has its own rules and changes as you move.</p>
+              <p>That's what the strategic process can increase relevance. Algorithms change. Regulations shift. Culture moves so fast that last quarter's insight can become a problem. The old maps don't just have gaps; they describe a place that no longer exists.</p>
+              <p>The strategist who succeeds now isn't the one with the best map. It's the one who has the courage to move when things change and the patience to study new ground before acting. Mastery isn't the right word for this. Attunement fits better.</p>
+            </div>
+
+            <div className="aspect-video w-full my-6 bg-gray-100 overflow-hidden rounded">
+              <iframe
+                src="https://www.canva.com/design/DAGmrey6WcQ/XiV4VUIzkBj0PMohFrxZSw/view?embed"
+                className="w-full h-full border-0"
+                allowFullScreen
+                title="Cultural Cartography presentation"
+              />
+            </div>
           </div>
         )}
 

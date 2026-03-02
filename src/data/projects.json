@@ -761,7 +761,37 @@
       "Jennifer Dunaj, Creative Director",
       "Rachel Boykins, Head of Brand Strategy, Pangea"
     ],
-    "images": []
+    "images": [],
+    "videoPairs": [
+      {
+        "label": "Holiday Visa — Group Chat (English / Spanish)",
+        "videos": [
+          {
+            "url": "/images/pangea/groupchat-en.mp4",
+            "label": "English"
+          },
+          {
+            "url": "/images/pangea/groupchat-sp.mp4",
+            "label": "Spanish"
+          }
+        ]
+      }
+    ],
+    "midVideoPairs": [
+      {
+        "label": "Holiday Visa — Cohetes (English / Spanish)",
+        "videos": [
+          {
+            "url": "/images/pangea/cohetes-en.mp4",
+            "label": "English"
+          },
+          {
+            "url": "/images/pangea/cohetes-sp.mp4",
+            "label": "Spanish"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "far-out-crops",

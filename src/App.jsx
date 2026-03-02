@@ -106,6 +106,30 @@ export default function App() {
     );
   };
 
+  // Side-by-side vertical video pair (for portrait videos like 1080x1350)
+  const VideoPairEmbed = ({ videos, label }) => {
+    if (!videos || videos.length < 2) return null;
+    return (
+      <div className="my-6">
+        {label && <p className="text-xs uppercase tracking-widest font-bold text-gray-500 mb-2">{label}</p>}
+        <div className="grid grid-cols-2 gap-3">
+          {videos.map((v, i) => (
+            <div key={i} className="aspect-[9/11] bg-black overflow-hidden rounded">
+              <video
+                src={v.url}
+                className="w-full h-full object-cover"
+                controls
+                playsInline
+                preload="metadata"
+              />
+              {v.label && <p className="text-xs text-center text-gray-500 mt-1">{v.label}</p>}
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  };
+
   const ImageGrid = ({ urls }) => {
     if (!urls || urls.length === 0) return null;
     return (
@@ -646,6 +670,13 @@ export default function App() {
                 {activeProject.videos.map((v, i) => <VideoEmbed key={i} url={v} />)}
               </div>
             )}
+
+            {/* Video pairs (side-by-side portrait videos) */}
+            {activeProject.videoPairs && activeProject.videoPairs.length > 0 && (
+              <div className="mb-10">
+                {activeProject.videoPairs.map((pair, i) => <VideoPairEmbed key={i} videos={pair.videos} label={pair.label} />)}
+              </div>
+            )}
             
             <div className="space-y-8 mb-12">
               {activeProject?.sections?.map((s, i) => (
@@ -665,6 +696,13 @@ export default function App() {
             {activeProject.midVideos && activeProject.midVideos.length > 0 && (
               <div className="mb-10">
                 {activeProject.midVideos.map((v, i) => <VideoEmbed key={i} url={v} />)}
+              </div>
+            )}
+
+            {/* Mid-case video pairs */}
+            {activeProject.midVideoPairs && activeProject.midVideoPairs.length > 0 && (
+              <div className="mb-10">
+                {activeProject.midVideoPairs.map((pair, i) => <VideoPairEmbed key={i} videos={pair.videos} label={pair.label} />)}
               </div>
             )}
 

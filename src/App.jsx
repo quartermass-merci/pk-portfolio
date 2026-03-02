@@ -148,6 +148,13 @@ const portfolioData = [
       'https://scontent-yyz1-1.xx.fbcdn.net/v/t39.30808-6/467394198_18145488322348735_5836426376033989475_n.jpg?stp=dst-jpg_s1080x2048_tt6&_nc_cat=103&ccb=1-7&_nc_sid=13d280&_nc_ohc=iqaRmh799FUQ7kNvwEzw77h&_nc_oc=AdmxXHW6Wuh8ebJeehXISj5TwcTL276xK_GZCu9FerDpl14ulTyljRBXPeZq88x-DhQ&_nc_zt=23&_nc_ht=scontent-yyz1-1.xx&_nc_gid=VhXhZ8EUTvjKGGF43HFT_A&_nc_ss=8&oh=00_Afxth1z9Jz5Xx0P63vA44kvvZlfquLcLz33OWecp4oQxxA&oe=69AAB987',
       'https://scontent-yyz1-1.xx.fbcdn.net/v/t39.30808-6/467314585_18145488376348735_3006361451666194417_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=13d280&_nc_ohc=Ny5ekufoR6sQ7kNvwEDR1Li&_nc_oc=AdlGiv3OD8MMflaGwWwHPzyVaRUQ4jAoSP4-BfemEbgqel5eitF4iqL_XxCLQH23KYU&_nc_zt=23&_nc_ht=scontent-yyz1-1.xx&_nc_gid=AYp-G-wg55lvyscF9AgFpw&_nc_ss=8&oh=00_Afxp-yIOMhhnA2s68lcnYVT4_V_w9BS4hqKIclLPPMPGhw&oe=69AAB4F2',
       'https://scontent-yyz1-1.xx.fbcdn.net/v/t39.30808-6/467445551_18145488223348735_3774512950698256015_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=13d280&_nc_ohc=jb1G5ZktI7sQ7kNvwEBSj5r&_nc_oc=AdktR5xzPxHqJTuO_apwQO98MyxKtwD2ygPKFr29FUgqA579-EmiNPpIfsm9NukRegg&_nc_zt=23&_nc_ht=scontent-yyz1-1.xx&_nc_gid=AYp-G-wg55lvyscF9AgFpw&_nc_ss=8&oh=00_AfyA7fNbo6tb_xpFB5H2hT8JFwtrTMwAISFxy_khzMrv7A&oe=69AAA77D'
+    ],
+    videos: [
+      'https://www.youtube.com/watch?v=3Fj8UUIrDR0',
+      'https://www.youtube.com/watch?v=QHp57imwKrg',
+      'https://www.youtube.com/watch?v=gyQlPDw8cyQ',
+      'https://www.youtube.com/watch?v=BV8jOl_wdeI',
+      'https://www.youtube.com/watch?v=pM2aMqm0D5g'
     ]
   },
   {
@@ -286,7 +293,8 @@ const portfolioData = [
       '/images/collective-arts/56d1af106719649.Y3JvcCwxNjMxLDEyNzYsMjQsMjA.jpg',
       '/images/collective-arts/download.jpg',
       '/images/collective-arts/MZE5YUOORFA5TJIODCYIHGDAHE.avif'
-    ]
+    ],
+    videos: ['https://www.youtube.com/watch?v=it5omoE8KMI']
   },
   {
     id: 'up-cannabis',
@@ -410,7 +418,11 @@ const portfolioData = [
       'Client: Scotiabank (Clinton Braganza, CMO; Mike Tasevski, Sponsorship Marketing)',
       'Partners: Sportsnet/Rogers (Broadcast), Hot Docs (Streaming)'
     ],
-    images: []
+    images: [
+      'https://mma.prnewswire.com/media/1026263/Scotiabank_Lace_up_your_skates_and_grab_your_camera__Scotiabank.jpg?p=facebook',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjHTFMoTD6fbNas_57wGTLos2hxzdcS_2T_Q&s'
+    ],
+    videos: ['https://www.youtube.com/watch?v=habAwdCOQHk']
   },
   {
     id: 'tweed',
@@ -1685,6 +1697,36 @@ export default function App() {
     { id: 'music', title: 'Music & Culture' }
   ];
 
+  // Auto-link URLs in text
+  const Linkify = ({ text }) => {
+    const urlRegex = /(https?:\/\/[^\s)]+)/g;
+    const parts = text.split(urlRegex);
+    return parts.map((part, i) =>
+      urlRegex.test(part) ? (
+        <a key={i} href={part} target="_blank" rel="noreferrer" className="underline hover:opacity-50 break-all">{part}</a>
+      ) : (
+        <span key={i}>{part}</span>
+      )
+    );
+  };
+
+  // YouTube embed from URL
+  const YouTubeEmbed = ({ url }) => {
+    const match = url.match(/(?:v=|\/embed\/|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+    if (!match) return null;
+    return (
+      <div className="aspect-video w-full my-6">
+        <iframe
+          src={`https://www.youtube.com/embed/${match[1]}`}
+          className="w-full h-full"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          title="Video"
+        />
+      </div>
+    );
+  };
+
   const ImageGrid = ({ urls }) => {
     if (!urls || urls.length === 0) return null;
     return (
@@ -2040,27 +2082,27 @@ export default function App() {
                 <p className="mb-4">A newsletter and forthcoming book applying Actor-Network Theory, critical theory, and institutional ethnography to brand strategy.</p>
                 <p className="font-bold uppercase tracking-widest text-xs mb-2 mt-4">Selected Essays</p>
                 <ul className="list-disc pl-5 space-y-2">
-                  <li><a href="#" target="_blank" rel="noreferrer" className="underline hover:opacity-50">"Reassembling the Strategist"</a> — The flagship essay. Proposes Cultural Cartography as a new theory and method for practicing strategy. 74 likes, most popular post. Accompanied by a 22-page Field Guide for paid subscribers.</li>
-                  <li><a href="#" target="_blank" rel="noreferrer" className="underline hover:opacity-50">"Reassembling the Consumer"</a> — "The Consumer" is a fiction that enters the marketing process early and hardens into organizational infrastructure. Uses the Stanley thermos trend as a case study.</li>
-                  <li><a href="#" target="_blank" rel="noreferrer" className="underline hover:opacity-50">"Glazed and Confused: How AI Is Rewriting Human Trust in Real Time"</a> — The ChatGPT-4o "glazing" controversy analyzed through Latour.</li>
-                  <li><a href="#" target="_blank" rel="noreferrer" className="underline hover:opacity-50">"Capital Hates Creative"</a> — Applies Lazzarato's capitalism critique to the ad industry. Average agency tenure has shrunk to roughly 12 months.</li>
-                  <li><a href="#" target="_blank" rel="noreferrer" className="underline hover:opacity-50">"AI Serves Power, Not People"</a> — Technology is never neutral. DOGE as a case study.</li>
-                  <li><a href="#" target="_blank" rel="noreferrer" className="underline hover:opacity-50">"Are You a Strategist, or Are You Just a Human Algorithm with Good Taste?"</a> — Whether the strategy function has been reduced to pattern recognition and taste arbitrage.</li>
-                  <li><a href="#" target="_blank" rel="noreferrer" className="underline hover:opacity-50">"Notes from the Underground" (Parts 1 & 2)</a> — Intellectual autobiography. From punk scenes in Winnipeg through a sociology PhD to the ad world.</li>
-                  <li><a href="#" target="_blank" rel="noreferrer" className="underline hover:opacity-50">"Taste Won't Save You: On Maintaining Subscriptions"</a> — Creative professionals have to actively maintain cultural engagement. Accumulated taste is not a static asset.</li>
+                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">"Reassembling the Strategist"</a> — The flagship essay. Proposes Cultural Cartography as a new theory and method for practicing strategy. 74 likes, most popular post. Accompanied by a 22-page Field Guide for paid subscribers.</li>
+                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">"Reassembling the Consumer"</a> — "The Consumer" is a fiction that enters the marketing process early and hardens into organizational infrastructure. Uses the Stanley thermos trend as a case study.</li>
+                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">"Glazed and Confused: How AI Is Rewriting Human Trust in Real Time"</a> — The ChatGPT-4o "glazing" controversy analyzed through Latour.</li>
+                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">"Capital Hates Creative"</a> — Applies Lazzarato's capitalism critique to the ad industry. Average agency tenure has shrunk to roughly 12 months.</li>
+                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">"AI Serves Power, Not People"</a> — Technology is never neutral. DOGE as a case study.</li>
+                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">"Are You a Strategist, or Are You Just a Human Algorithm with Good Taste?"</a> — Whether the strategy function has been reduced to pattern recognition and taste arbitrage.</li>
+                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">"Notes from the Underground" (Parts 1 & 2)</a> — Intellectual autobiography. From punk scenes in Winnipeg through a sociology PhD to the ad world.</li>
+                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">"Taste Won't Save You: On Maintaining Subscriptions"</a> — Creative professionals have to actively maintain cultural engagement. Accumulated taste is not a static asset.</li>
                 </ul>
               </div>
               
               <div>
                 <p className="font-bold border-b border-black pb-1 mb-3 mt-8">Trade Publications & Op-Eds</p>
                 <ul className="list-disc pl-5 space-y-2">
-                  <li><a href="#" target="_blank" rel="noreferrer" className="underline hover:opacity-50">"The Secret Playbook of Cannabis Brands That Win"</a> — LBBOnline (2025). Six years of agency experience across 150+ cannabis brands distilled.</li>
-                  <li><a href="#" target="_blank" rel="noreferrer" className="underline hover:opacity-50">"Entering the Age of Health-Conscious Hedonism"</a> — LBBOnline (2026). Emerging beverage trends and what they mean for regulated categories.</li>
-                  <li><a href="#" target="_blank" rel="noreferrer" className="underline hover:opacity-50">"How Hype Analysis Lets Companies Find Value in Customer Excitement"</a> — Quirk's Marketing Research Review (2024). Co-authored with Marcelo Bursztein. Introduces hype analysis as a methodology beyond traditional social listening.</li>
-                  <li><a href="#" target="_blank" rel="noreferrer" className="underline hover:opacity-50">"Content Ecology: Understanding the Consequences of Garbage Content"</a> — LinkedIn Pulse (2024).</li>
-                  <li><a href="#" target="_blank" rel="noreferrer" className="underline hover:opacity-50">"In a Hyper-Politicized World, Brands Must Stay True to Themselves"</a> — The Globe and Mail (2017). Co-authored with Cameron Summers (SVP, Weber Shandwick Canada).</li>
-                  <li><a href="#" target="_blank" rel="noreferrer" className="underline hover:opacity-50">"For Brands, Fake News Is an Existential Threat"</a> — The Globe and Mail (2016). Co-authored with Cameron Summers.</li>
-                  <li><a href="#" target="_blank" rel="noreferrer" className="underline hover:opacity-50">"How Outrage Culture Changes the Rules for Crisis Management"</a> — Marketing Magazine (2015). Co-authored with David Gordon (Managing Partner, Cohn & Wolfe).</li>
+                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">"The Secret Playbook of Cannabis Brands That Win"</a> — LBBOnline (2025). Six years of agency experience across 150+ cannabis brands distilled.</li>
+                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">"Entering the Age of Health-Conscious Hedonism"</a> — LBBOnline (2026). Emerging beverage trends and what they mean for regulated categories.</li>
+                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">"How Hype Analysis Lets Companies Find Value in Customer Excitement"</a> — Quirk's Marketing Research Review (2024). Co-authored with Marcelo Bursztein. Introduces hype analysis as a methodology beyond traditional social listening.</li>
+                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">"Content Ecology: Understanding the Consequences of Garbage Content"</a> — LinkedIn Pulse (2024).</li>
+                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">"In a Hyper-Politicized World, Brands Must Stay True to Themselves"</a> — The Globe and Mail (2017). Co-authored with Cameron Summers (SVP, Weber Shandwick Canada).</li>
+                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">"For Brands, Fake News Is an Existential Threat"</a> — The Globe and Mail (2016). Co-authored with Cameron Summers.</li>
+                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">"How Outrage Culture Changes the Rules for Crisis Management"</a> — Marketing Magazine (2015). Co-authored with David Gordon (Managing Partner, Cohn & Wolfe).</li>
                 </ul>
               </div>
 
@@ -2113,11 +2155,11 @@ export default function App() {
               <div>
                 <p className="font-bold border-b border-black pb-1 mb-3 mt-8">Selected Press (Strategy & Cannabis)</p>
                 <ul className="list-disc pl-5 space-y-1">
-                  <li><a href="#" target="_blank" rel="noreferrer" className="underline hover:opacity-50">McMaster Continuing Education (2024) — Institutional profile</a></li>
-                  <li><a href="#" target="_blank" rel="noreferrer" className="underline hover:opacity-50">Strategy Online (2023) — "Homegrown cannabis brand building cred" agency profile</a></li>
-                  <li><a href="#" target="_blank" rel="noreferrer" className="underline hover:opacity-50">Strategy Online (2020) — COVID-era cannabis marketing advice</a></li>
-                  <li><a href="#" target="_blank" rel="noreferrer" className="underline hover:opacity-50">Authority Magazine (2020) — "All Gut, No Glory" extended interview</a></li>
-                  <li><a href="#" target="_blank" rel="noreferrer" className="underline hover:opacity-50">Campaign Canada (2019) — Agency launch coverage</a></li>
+                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">McMaster Continuing Education (2024) — Institutional profile</a></li>
+                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">Strategy Online (2023) — "Homegrown cannabis brand building cred" agency profile</a></li>
+                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">Strategy Online (2020) — COVID-era cannabis marketing advice</a></li>
+                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">Authority Magazine (2020) — "All Gut, No Glory" extended interview</a></li>
+                  <li><a href="javascript:void(0)" className="underline cursor-default opacity-70">Campaign Canada (2019) — Agency launch coverage</a></li>
                 </ul>
               </div>
             </div>
@@ -2242,6 +2284,13 @@ export default function App() {
           <div className="max-w-3xl pb-20">
             <h1 className="text-2xl mb-2 font-bold">{activeProject.title}</h1>
             <p className="text-gray-500 mb-8 italic">{activeProject.summary}</p>
+
+            {/* Videos */}
+            {activeProject.videos && activeProject.videos.length > 0 && (
+              <div className="mb-10">
+                {activeProject.videos.map((v, i) => <YouTubeEmbed key={i} url={v} />)}
+              </div>
+            )}
             
             <div className="space-y-8 mb-12">
               {activeProject?.sections?.map((s, i) => (
@@ -2255,14 +2304,14 @@ export default function App() {
             {activeProject?.proof && activeProject.proof.length > 0 && (
               <div className="mb-12">
                 <h3 className="uppercase tracking-widest text-xs font-bold border-b border-black pb-1 mb-3">Proof & Results</h3>
-                <ul className="list-disc pl-5 space-y-2">{activeProject.proof.map((p, i) => <li key={i}>{p}</li>)}</ul>
+                <ul className="list-disc pl-5 space-y-2">{activeProject.proof.map((p, i) => <li key={i}><Linkify text={p} /></li>)}</ul>
               </div>
             )}
 
             {activeProject?.team && activeProject.team.length > 0 && (
               <div className="mb-12">
                 <h3 className="uppercase tracking-widest text-xs font-bold border-b border-black pb-1 mb-3">Team & Credits</h3>
-                <ul className="list-disc pl-5 space-y-2">{activeProject.team.map((t, i) => <li key={i}>{t}</li>)}</ul>
+                <ul className="list-disc pl-5 space-y-2">{activeProject.team.map((t, i) => <li key={i}><Linkify text={t} /></li>)}</ul>
               </div>
             )}
 

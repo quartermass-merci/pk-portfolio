@@ -229,7 +229,7 @@ export default function App() {
           <div className="max-w-2xl font-mono text-sm leading-relaxed pb-20">
             <h2 className="text-xl mb-6 font-bold uppercase tracking-widest">HI, I'M PK</h2>
             <div className="space-y-6">
-              <p>Hello! I am the Co-Founder and Chief Strategy Officer at Sister Merci, a strategy-led creative agency that won the 2023 Clio Cannabis Agency of the Year. I co-founded Sister Merci with my friend Katie Waterman in 2019, after stints at Cossette, Weber Shandwick, and Cohn & Wolfe, where I led brand strategy and integrated media for clients including Canopy Growth, Air Canada, RBC, and Mondelez.</p>
+              <p>I am the Co-Founder and Chief Strategy Officer at Sister Merci, a strategy-led creative agency that won the 2023 Clio Cannabis Agency of the Year. I co-founded Sister Merci with my friend Katie Waterman in 2019, after stints at Cossette, Weber Shandwick, and Cohn & Wolfe, where I led brand strategy and integrated media for clients including Canopy Growth, Air Canada, RBC, and Mondelez.</p>
               <p>My approach to strategy comes from a background that doesn't fit neatly on a resume. I spent an entire decade in academia, undertaking sociological research on the emerging field of digital culture (MA from the University of Lethbridge, PhD work at the University of Calgary); I've been part of running two indie record labels and have released close to 100 records; I've toured North America as a musician and promoter. In 2013, an anonymous music criticism blog I started went viral, and CBC called me "The Most Hated Man in Canadian Music" for it (actually, I am not that hateful, but it's a provocative title, no?). But that drive to say the thing has carried through everything since.</p>
               <p>At Sister Merci, I've led strategy for over 150 brands across cannabis, iGaming, AI, beverage alcohol, health tech, and financial services. Our little agency has taken home seven Clios, been named Agency of the Year three times, and grown from four founders to a 30-person team with offices in Toronto and Chicago. During this period, I spent a year as the Fractional CMO (FTE model) at Galaxie Brands, bringing WYLD gummies to the Canadian market and building the CRUUZY brand from scratch.</p>
               <p>I also teach brand strategy, market research, and consumer research courses at McMaster Continuing Education, where I have been rethinking the curriculum in light of platform fragmentation and AI. I am a co-founding editor of Rebrief: A Canadian Journal of Advertising, set to launch in April 2026, and I sometimes publish on my Substack site, Cultural Cartography (mostly about strategy as field practice, drawing on the social theory of Pierre Bourdieu, Actor-Network Theory, and Institutional ethnography).</p>
@@ -243,13 +243,19 @@ export default function App() {
             <ImageGrid urls={[
               'https://mytoastlife.com/wp-content/uploads/2020/08/Paul-Lawton.jpg',
               '/images/personal/623189004_18170246671387407_872038208662811001_n.jpg',
-              '/images/personal/629475347_18171368608387407_657306813332588271_n.jpg',
               '/images/personal/IMG_0372.JPG',
-              '/images/personal/IMG_0950.JPG',
-              '/images/personal/download-3.jpg',
-              '/images/personal/download-4.jpg',
-              '/images/personal/download-5.jpg',
-              '/images/personal/download.jpg'
+              'https://i.discogs.com/o4ywk6xy6S5JPxqmU-DeRwh2O_5Ej4Sm9gu_qUSMdYs/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2NTg5/MDItMTQwNjQ4MjM5/OS0xNzEyLmpwZWc.jpeg',
+              'https://f4.bcbits.com/img/a1848651623_2.jpg',
+              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyoCGYedvklS8gptv5R1l0YPngZUTPFlCoNc6czxac4w&s',
+              'https://media.licdn.com/dms/image/v2/D5603AQHNNyceJwIZ1A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1729259711794?e=2147483647&v=beta&t=NVaxLNW8bYxoGVXGoDl_gl9vdo_Uk-vsFV2-FBpok2U',
+              'https://media.licdn.com/dms/image/v2/D5622AQHD2R8hnP6udw/feedshare-shrink_800/feedshare-shrink_800/0/1697555138518?e=2147483647&v=beta&t=1jqELpma7CYUnyQPe834vq-15t9wbxD3I-QaIW4vPtE',
+              'https://nowtoronto.com/wp-content/uploads/2020/05/Print-0246.jpg',
+              'https://www.popmatters.com/wp-content/uploads/2021/01/img-53318.jpg',
+              'https://smartcdn.gprod.postmedia.digital/nationalpost/wp-content/uploads/2015/03/jamesmacdonald_paullawton9_26970907.jpg?quality=90&strip=all&w=288&sig=IEt9Qp5vgbEaEByd3vU2dw',
+              'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwqBK8bmFy8fAQjL8hkfreSXclE0ht43938g&s',
+              'https://i.discogs.com/PsOe9TRHDGHQwsU-ynYTDyBrNeDHYv24hFXotqnXvAg/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIzNzY4/ODAtMTU0ODAzODE0/Mi05NzI5LmpwZWc.jpeg',
+              'https://antidotemag.com/wp-content/uploads/2017/03/centurypalmconverted-390x293.jpg',
+              'https://f4.bcbits.com/img/0012089568_25.jpg'
             ]} />
           </div>
         )}

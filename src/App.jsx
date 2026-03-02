@@ -198,7 +198,8 @@ const portfolioData = [
       '2,000 additional units in retail purchase orders directly attributed to campaign',
       '3M+ targeted Ontario impressions and 2,000 page engagements in three weeks',
       '134K OOH impressions under Cannabis Act restrictions',
-      '48K organic impressions from Twitter and Reddit cannabis communities'
+      '48K organic impressions from Twitter and Reddit cannabis communities',
+      'Coverage: Campaign Canada (https://www.campaigncanada.ca/article/cannabis-brand-j-r-strain-shows-off-its-roots/476bhytgn4t9x1zwxwbed7ftd3)'
     ],
     team: [
       'Paul Lawton: Qualitative and quantitative research, campaign strategy, strategic unlock, brand architecture',
@@ -208,7 +209,12 @@ const portfolioData = [
       'Media: The Flower Agency',
       'Cannabis Act compliance'
     ],
-    images: []
+    images: [
+      'https://profectio.com/wp-content/uploads/2023/08/JR-Strain-KIND-Summer-Fair-scaled.jpg',
+      'https://profectio.com/wp-content/uploads/2023/08/JR-Strain-Campaign-Image.png',
+      'https://www.campaigncanada.ca/media/Article/News/Screen-Shot-2023-08-15-at-10.00.25-AM.png?width=1248',
+      'https://offlinehbpl.hbpl.co.uk/news/ACC/Screen-Shot-2023-08-16-at-1.16.36-PM-239x300.png'
+    ]
   },
   {
     id: 'collective-arts',

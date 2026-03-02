@@ -273,7 +273,14 @@ const portfolioData = [
       'Toni Shelton, Brand Director, Collective Arts',
       'Production: Feather Studio'
     ],
-    images: []
+    images: [
+      '/images/collective-arts/mario_carpe_art_director_graphic_designer_illustrator_craft_beer_canada_collective_arts_brewing_design_illustration_ipa_packaging_presentation_15.jpg',
+      '/images/collective-arts/mario_carpe_art_director_graphic_designer_illustrator_craft_beer_canada_collective_arts_brewing_design_illustration_ipa_packaging_presentation_15-1.jpg',
+      '/images/collective-arts/mario_carpe_art_director_graphic_designer_illustrator_craft_beer_canada_collective_arts_brewing_design_illustration_ipa_packaging_presentation_15-2.jpg',
+      '/images/collective-arts/56d1af106719649.Y3JvcCwxNjMxLDEyNzYsMjQsMjA.jpg',
+      '/images/collective-arts/download.jpg',
+      '/images/collective-arts/MZE5YUOORFA5TJIODCYIHGDAHE.avif'
+    ]
   },
   {
     id: 'up-cannabis',
@@ -332,7 +339,12 @@ const portfolioData = [
       'Jessica Harkes, CMO, HEXO',
       'Cannabis Act compliance'
     ],
-    images: []
+    images: [
+      '/images/up-cannabis/up-20percent.png',
+      '/images/up-cannabis/up-smoked-meat.png',
+      '/images/up-cannabis/up-sorry-bud.png',
+      '/images/up-cannabis/up-mulligan.jpg'
+    ]
   },
   {
     id: 'scotiabank',
@@ -1777,7 +1789,17 @@ export default function App() {
               <p>Some people will say, "But PK, aren't you worried about moving away from music?" and I tell them that the infrastructure of community building is the same, no matter the medium.</p>
               <p>I currently live in Hamilton, Ontario, where you can sometimes find me on a Sunday afternoon working at a local indie bookstore (The City and The City), just so I can talk to more people about literature. I've been learning the trade of book selling because my entire goal in life is to retire, move out to the rural Maritimes, and run a small bookstore, and there is no better way to learn than to do. I promise you one thing: I will start a book club with you as soon as I get the chance. This site is a rundown of my life in the 21st century. If you have any questions, hit me up, here is my cell number: 6472412575. I promise to respond.</p>
             </div>
-            <ImageGrid urls={['https://mytoastlife.com/wp-content/uploads/2020/08/Paul-Lawton.jpg']} />
+            <ImageGrid urls={[
+              'https://mytoastlife.com/wp-content/uploads/2020/08/Paul-Lawton.jpg',
+              '/images/personal/623189004_18170246671387407_872038208662811001_n.jpg',
+              '/images/personal/629475347_18171368608387407_657306813332588271_n.jpg',
+              '/images/personal/IMG_0372.JPG',
+              '/images/personal/IMG_0950.JPG',
+              '/images/personal/download-3.jpg',
+              '/images/personal/download-4.jpg',
+              '/images/personal/download-5.jpg',
+              '/images/personal/download.jpg'
+            ]} />
           </div>
         )}
 
@@ -1932,7 +1954,19 @@ export default function App() {
               'https://cdn.prod.website-files.com/688121381a3801b69772f9bc/689e02bb3734dd96550b81ea_ezgif-337cc23b0f3970.gif',
               'https://resized-media.entries.clios.com/companies/1446/media/7d7b53cb-2b3c-4fef-f679-08db9ab4efdb-large.jpg.webp',
               'https://resized-media.entries.clios.com/companies/1446/media/2e76a4f1-3358-4023-f649-08db9ab4efdb-large.jpg.webp',
-              'https://scontent-yyz1-1.xx.fbcdn.net/v/t51.75761-15/483141421_18156658843348735_6721367620663951408_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=13d280&_nc_ohc=vg2RQJkLqJ0Q7kNvwHAtjGC&_nc_oc=AdmCMCLCgdLDtzDCwjcu0E1htbjQh4px9XAXrEvP7XOwOF0dThEVVHvRBz3WkiCZg9c&_nc_zt=23&_nc_ht=scontent-yyz1-1.xx&_nc_gid=OJ0Ml55LY_-b7lOJvnXO6Q&_nc_ss=8&oh=00_Afx-0M_PmrWYaV-Z0qjJ0v5n4AKUgQZhfj4mYjQYMUX-gQ&oe=69AA9890'
+              '/images/sister-merci/download.jpg',
+              '/images/sister-merci/download-1.jpg',
+              '/images/sister-merci/download-2.jpg',
+              '/images/sister-merci/download-3.jpg',
+              '/images/sister-merci/download-4.jpg',
+              '/images/sister-merci/download-5.jpg',
+              '/images/sister-merci/download-6.jpg',
+              '/images/sister-merci/download-7.jpg',
+              '/images/sister-merci/download-8.jpg',
+              '/images/sister-merci/download-9.jpg',
+              '/images/sister-merci/download-10.jpg',
+              '/images/sister-merci/f_yFUaMu_400x400.jpg',
+              '/images/sister-merci/images.jpg'
             ]} />
           </div>
         )}

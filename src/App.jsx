@@ -33,6 +33,7 @@ export default function App() {
     { id: 'timeline', title: 'Career Timeline' },
     { id: 'education', title: 'Education' },
     { id: 'agency', title: 'Agency as Lab: Sister Merci' },
+    { id: 'counsel', title: 'Strategic Counsel & Growth' },
     { id: 'square', title: 'Developing Square Shaped Strategists' },
     { id: 'cartography', title: 'Cultural Cartography' },
     { id: 'teaching', title: 'Teaching & Research' },
@@ -288,17 +289,17 @@ export default function App() {
               <div>
                 <div className="flex justify-between border-b border-black mb-2 pb-1 font-bold"><span>Cossette</span><span>2018–2019</span></div>
                 <p className="uppercase text-xs tracking-tighter text-gray-500 mb-2">Vice President, Strategy</p>
-                <p>Led market insights and brand strategy for the Canopy Growth portfolio during legalization. Brand strategy for Tweed, DNA Genetics, and Foria. Managed a team of 20 strategists.</p>
+                <p>Led brand strategy and market insights for the Canopy Growth portfolio ($50M+ account) during Canada's cannabis legalization. Developed the positioning for Tweed that helped establish it as the country's most recognized cannabis brand. Worked alongside Rosie Gentile (now Global EVP, FCB) and Kevin McHugh (now CSO, Dentsu) in a three-person senior strategy unit. Strategy work on the Canopy Growth portfolio directly contributed to CMO David Bigioni being named Canada's Marketer of the Year (2019). Also led brand strategy for DNA Genetics and Foria.</p>
               </div>
               <div>
                 <div className="flex justify-between border-b border-black mb-2 pb-1 font-bold"><span>Weber Shandwick</span><span>2016–2018</span></div>
-                <p className="uppercase text-xs tracking-tighter text-gray-500 mb-2">VP, Strategic Planning</p>
-                <p>Led strategic planning for Air Canada, RBC, Mondelez, and Chevrolet. Agency won consecutive Holmes Report Agency of the Year during tenure.</p>
+                <p className="uppercase text-xs tracking-tighter text-gray-500 mb-2">VP, Strategic Planning & Head of Paid Media</p>
+                <p>Led strategic planning for Air Canada, RBC, Mondelez, and Chevrolet. Five direct reports, 20-person integrated media team. Transformed the corporate practice by leading with audience analysis, digital ethnography, and participant-observation rather than traditional creds presentations. Won the Air Canada account by interviewing loyalty program members and presenting their stories instead of agency credentials — the client stopped the 100-page pitch deck midway through and awarded the business. Contributed to an average of 10 competitive pitches per year with a 65% win rate on contributed pitches. Agency won consecutive Holmes Report Agency of the Year during tenure.</p>
               </div>
               <div>
                 <div className="flex justify-between border-b border-black mb-2 pb-1 font-bold"><span>Cohn & Wolfe</span><span>2013–2016</span></div>
                 <p className="uppercase text-xs tracking-tighter text-gray-500 mb-2">Senior Counsellor & Digital Lead</p>
-                <p>Built the agency's first analytics and measurement framework. Integrated media for Nissan, Nintendo, CN Rail, Dell. Employee of the Year 2015.</p>
+                <p>Built the agency's first analytics and measurement framework. Integrated media strategy for Nissan, Nintendo, CN Rail, and Dell. Brought earned media discipline together with paid and owned channels at a time when most PR agencies treated them as separate functions. Employee of the Year 2015.</p>
               </div>
             </div>
             <ImageGrid urls={['https://webershandwick.asia/wp-content/uploads/2018/05/2.-Sophie-Shin-Paul-Lawton-Fatma-Othman-640x640.jpg']} />
@@ -343,7 +344,7 @@ export default function App() {
               <h4 className="font-bold border-b border-black pb-1 mb-3">The Sister Merci Timeline</h4>
               <div>
                 <p className="font-bold">2019: The Experiment Begins</p>
-                <p>Three agency veterans: Katie Waterman, PK Lawton, and Amanda Wood, leave nice jobs from major Canadian agencies to build something no one had attempted: a strategy-led creative agency with a niche focus on emerging, highly regulated "vice" categories like cannabis and iGaming. BlackShire Capital puts up $1.5M in seed funding. The bet: regulatory constraint as creative advantage.</p>
+                <p>Three agency veterans — Katie Waterman (CEO), PK Lawton (CSO), and Amanda Wood (CCO) — leave established roles at major Canadian agencies to build something no one had attempted: a strategy-led creative agency focused on emerging, highly regulated categories like cannabis and iGaming. PK plays a key role in securing a $1.5M seed round from BlackShire Capital and partners with BlackShire and Canopy Rivers on strategic diligence — evaluating brand viability, audience alignment, and market-entry logic for U.S. companies entering Canada. The bet: regulatory constraint as creative advantage.</p>
               </div>
               <div>
                 <p className="font-bold">2020: Don't Turn off the Lights…</p>
@@ -368,8 +369,8 @@ export default function App() {
                 <p>Hearst Media runs "I'm High Right Now" in its Super Bowl preview issue. Men's Health, Good Housekeeping, Vanity Fair, Town & Country. PK delivers the APG Canada keynote on the future of market research and the Cannabis Council of Canada keynote on Reddit's impact on brand performance.</p>
               </div>
               <div>
-                <p className="font-bold">2025: The Playbook Goes Public</p>
-                <p>Two major thought-leadership pieces on LBB Online. "I'm High Right Now" Phase 2 launches on Meta targeting 55+ audiences. Sister Merci expands into tech, health and fintech brands, deploying our unique strategy-first approach to startups like MosaicAI, NiaHealth, Doodle and, most recently, Manulife.</p>
+                <p className="font-bold">2025–2026: The Playbook Goes Public</p>
+                <p>Two major thought-leadership pieces on LBB Online. "I'm High Right Now" Phase 2 launches on Meta targeting 55+ audiences. Sister Merci expands into tech, health, and fintech brands, deploying our strategy-first approach to startups like MosaicAI, NiaHealth, and Doodle — the latter won through a global competitive pitch. Manulife comes on board in 2026, a relationship built on a decade of trust with their Head of Communications, who PK first worked with at Weber Shandwick. 85%+ client retention on top-tier accounts across the agency's history.</p>
               </div>
             </div>
             
@@ -410,6 +411,48 @@ export default function App() {
           </div>
         )}
 
+
+        {view === 'counsel' && (
+          <div className="max-w-2xl font-mono text-sm leading-relaxed pb-20">
+            <h2 className="text-xl mb-2 font-bold uppercase tracking-widest">STRATEGIC COUNSEL & GROWTH</h2>
+            <h3 className="font-bold uppercase tracking-widest text-xs mb-8 text-gray-500">HOW RELATIONSHIPS, RESEARCH, AND RESULTS BUILD BUSINESS</h3>
+
+            <div className="space-y-6 mb-12">
+              <h4 className="font-bold border-b border-black pb-1 mb-3">Trusted Advisor, Not Just Strategist</h4>
+              <p>The best client relationships I've built have followed people across companies and decades. When Sister Merci landed Manulife in 2026, it was because of a relationship that started at Weber Shandwick on McDonald's Canada, continued through RBC and Juul Labs, and arrived at Manulife's Head of Communications. That's the pattern: deliver results, make the client look good, and the relationship compounds.</p>
+              <p>At Cossette, the strategy work on the Canopy Growth portfolio directly contributed to CMO David Bigioni being named Canada's Marketer of the Year in 2019. At Sister Merci, the Organigram relationship grew out of trust built with senior Canopy Growth executives during legalization. Most of our largest client relationships — Organigram, CasinoTime, Nuvona, Sunnyside — were built on the same principle: strategy that makes leadership look smart and makes the business move.</p>
+              <p>Sister Merci maintains 85%+ client retention on top-tier accounts. That number reflects what happens when you treat every engagement as counsel, not just a deliverable.</p>
+            </div>
+
+            <div className="space-y-6 mb-12">
+              <h4 className="font-bold border-b border-black pb-1 mb-3">New Business & Growth</h4>
+              <p>At Sister Merci, I've led strategy on an average of five competitive pitches per year with an 85% win rate. Most recently, we won a global pitch for the Doodle.com rebrand. At Weber Shandwick, I contributed to roughly 10 pitches per year at a 65% win rate.</p>
+              <p>The Air Canada win at Weber Shandwick reshaped how I think about pitching. The brief asked for creds and case studies. Instead, I convinced the team to let me interview Aeroplan members — regular people who were loyalty points fiends. We learned that for many of them, messing with their points was a ticking time bomb of negative sentiment. We built a 100-page deck around their stories. The client stopped the presentation partway through and awarded Weber the business. That moment changed the pitch process across the agency from "tell them about us" to "show them a mirror and point out their weak spots."</p>
+              <p>Beyond pitching, I played a key role in Sister Merci's $1.5M seed raise from BlackShire Capital. I also partnered with BlackShire Capital and Canopy Rivers on strategic diligence — evaluating companies beyond the balance sheet. My focus was brand viability, audience alignment, market-entry logic, and strategic fit, particularly for U.S. businesses establishing themselves in Canada. The work sat at the intersection of investment evaluation, consumer insight, and go-to-market strategy.</p>
+            </div>
+
+            <div className="space-y-6 mb-12">
+              <h4 className="font-bold border-b border-black pb-1 mb-3">Building Teams & Building an Agency</h4>
+              <p>As a co-founder of Sister Merci, I've been responsible for standing up the agency from four people to 30 across Toronto and Chicago. That includes hiring, performance management, and building a pipeline of freelancers, contractors, and specialist vendors we've developed long-term mutual relationships with.</p>
+              <p>We operate a "core plus cast" model: a permanent core team supplemented by specialist talent in legal, professional services, production, and media who flex in based on client needs. This lets us punch above our weight on complex engagements while staying lean. The model has scaled through the Receptor Brands acquisition and our expansion into the U.S. market.</p>
+              <p>Strategists I've trained now hold senior positions at McDonald's Global, Zeno Group, GUT, Courage, and Lifelong Crush. I've managed teams of up to 20 at Weber Shandwick and five direct reports at Cossette, where I worked alongside strategists who are now Global EVP at FCB and CSO at Dentsu.</p>
+            </div>
+
+            <div className="space-y-6 mb-12">
+              <h4 className="font-bold border-b border-black pb-1 mb-3">Trust-Building at Industry Scale</h4>
+              <p>Cannabis pulled me back into earned-media-first, reputation-driven work. With most paid channels restricted or unavailable, we had to build brand through trust: government relations, investor relations, policy advocacy, and community intelligence.</p>
+              <p>I chaired the Marketing & Advertising Committee of the National Cannabis Industry Association (2025), where I helped pivot the organization from a "plant-touching" focus to broader relationships with ancillary services and retailers. I served as a Strategic Advisor to the Cannabis Standards Alliance of Canada, an industry-government collaboration funded by Ontario to level the playing field by advocating for tighter testing controls to curb THC inflation.</p>
+              <p>I've worked with the Cannabis Media Council, Cannabis Council of Canada, The Last Prisoner Project, and Cannabis Amnesty. The CMC's "I'm High Right Now" campaign — which I led strategy on — became the first cannabis advertisement in Vanity Fair, the first on Spotify, and the first on Pornhub, proving to mainstream publishers that cannabis advertising could be sophisticated enough for their brands.</p>
+              <p>Through it all, I've run bi-annual consumer surveys and qualitative research with online cannabis communities on Reddit, translating those insights to corporate leaders across the industry in Canada and the U.S. That research has directly driven business strategy at Organigram, one of the largest cannabis companies globally.</p>
+            </div>
+
+            <div className="space-y-6 mb-12">
+              <h4 className="font-bold border-b border-black pb-1 mb-3">Cross-Practice Integration</h4>
+              <p>I've spent my career crossing practice lines that most agencies keep separate. At Weber Shandwick, I was hired as a strategist and Head of Paid Media — initially seen as a "consumer" skill — but my work ended up transforming the corporate vertical. Air Canada, one of Weber's biggest clients, was won because I brought audience-first research methods into a practice that had relied on credentials presentations. That bridge between consumer insight and corporate reputation has been a through-line ever since.</p>
+              <p>At Cohn & Wolfe, I built the agency's first analytics and measurement framework, connecting earned media to paid and owned at a time when most PR agencies treated them as entirely separate functions. At Sister Merci, that integration instinct became the operating model: strategy, creative, media, and research working as a single unit rather than sequential handoffs.</p>
+            </div>
+          </div>
+        )}
 
         {view === 'square' && (
           <div className="max-w-2xl font-mono text-sm leading-relaxed pb-20">

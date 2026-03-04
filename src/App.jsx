@@ -33,7 +33,7 @@ export default function App() {
     { id: 'timeline', title: 'Career Timeline' },
     { id: 'education', title: 'Education' },
     { id: 'agency', title: 'Agency as Lab: Sister Merci' },
-    { id: 'counsel', title: 'Strategic Counsel & Growth' },
+    { id: 'counsel', title: 'What Is a Strategy-Led Agency Model?' },
     { id: 'square', title: 'Developing Square Shaped Strategists' },
     { id: 'cartography', title: 'Cultural Cartography' },
     { id: 'teaching', title: 'Teaching & Research' },
@@ -414,42 +414,41 @@ export default function App() {
 
         {view === 'counsel' && (
           <div className="max-w-2xl font-mono text-sm leading-relaxed pb-20">
-            <h2 className="text-xl mb-2 font-bold uppercase tracking-widest">STRATEGIC COUNSEL & GROWTH</h2>
-            <h3 className="font-bold uppercase tracking-widest text-xs mb-8 text-gray-500">HOW RELATIONSHIPS, RESEARCH, AND RESULTS BUILD BUSINESS</h3>
+            <h2 className="text-xl mb-2 font-bold uppercase tracking-widest">What Is a Strategy-Led Agency Model?</h2>
+            <h3 className="font-bold uppercase tracking-widest text-xs mb-8 text-gray-500">THE STRATEGIST AS PERFORMANCE ENGINE</h3>
+
+            <p className="mb-8">What a strategy-led agency looks like when the strategist is properly embedded in the practice.</p>
+
+            <p className="mb-12">Most agencies use strategists like seasoning. A little insight sprinkled on before the creative team does the real cooking. That's a waste of the most versatile role in the building. The embedded strategist drives business growth, client retention, and agency integration.</p>
 
             <div className="space-y-6 mb-12">
-              <h4 className="font-bold border-b border-black pb-1 mb-3">Trusted Advisor, Not Just Strategist</h4>
-              <p>The best client relationships I've built have followed people across companies and decades. When Sister Merci landed Manulife in 2026, it was because of a relationship that started at Weber Shandwick on McDonald's Canada, continued through RBC and Juul Labs, and arrived at Manulife's Head of Communications. That's the pattern: deliver results, make the client look good, and the relationship compounds.</p>
-              <p>At Cossette, the strategy work on the Canopy Growth portfolio directly contributed to CMO David Bigioni being named Canada's Marketer of the Year in 2019. At Sister Merci, the Organigram relationship grew out of trust built with senior Canopy Growth executives during legalization. Most of our largest client relationships — Organigram, CasinoTime, Nuvona, Sunnyside — were built on the same principle: strategy that makes leadership look smart and makes the business move.</p>
-              <p>Sister Merci maintains 85%+ client retention on top-tier accounts. That number reflects what happens when you treat every engagement as counsel, not just a deliverable.</p>
+              <h4 className="font-bold border-b border-black pb-1 mb-3">First Revenue Line, Not a Cost Center</h4>
+              <p>A good strategist reframes the pitch from "here's what we do" to "here's what you're missing." At Sister Merci, I've led roughly five competitive pitches per year at an 85% win rate, including a global win for the Doodle.com rebrand. At Weber Shandwick, about 10 per year at 65%. The Air Canada pitch was won on audience research before the creative section even started. Strategy didn't support the sale. It was the sale.</p>
             </div>
 
             <div className="space-y-6 mb-12">
-              <h4 className="font-bold border-b border-black pb-1 mb-3">New Business & Growth</h4>
-              <p>At Sister Merci, I've led strategy on an average of five competitive pitches per year with an 85% win rate. Most recently, we won a global pitch for the Doodle.com rebrand. At Weber Shandwick, I contributed to roughly 10 pitches per year at a 65% win rate.</p>
-              <p>The Air Canada win at Weber Shandwick reshaped how I think about pitching. The brief asked for creds and case studies. Instead, I convinced the team to let me interview Aeroplan members — regular people who were loyalty points fiends. We learned that for many of them, messing with their points was a ticking time bomb of negative sentiment. We built a 100-page deck around their stories. The client stopped the presentation partway through and awarded Weber the business. That moment changed the pitch process across the agency from "tell them about us" to "show them a mirror and point out their weak spots."</p>
-              <p>Beyond pitching, I played a key role in Sister Merci's $1.5M seed raise from BlackShire Capital. I also partnered with BlackShire Capital and Canopy Rivers on strategic diligence — evaluating companies beyond the balance sheet. My focus was brand viability, audience alignment, market-entry logic, and strategic fit, particularly for U.S. businesses establishing themselves in Canada. The work sat at the intersection of investment evaluation, consumer insight, and go-to-market strategy.</p>
+              <h4 className="font-bold border-b border-black pb-1 mb-3">Trust Builder</h4>
+              <p>When Sister Merci landed Manulife in 2026, it was because of a relationship that started on McDonald's Canada at Weber Shandwick, and that relationship has reliably brought in business through three companies over 10 years. Sister Merci maintains 85%+ retention on top-tier accounts. That number comes from consistently being ahead of where the client expected it to be; strategy helps the agency overdeliver without costly overages.</p>
             </div>
 
             <div className="space-y-6 mb-12">
-              <h4 className="font-bold border-b border-black pb-1 mb-3">Building Teams & Building an Agency</h4>
-              <p>As a co-founder of Sister Merci, I've been responsible for standing up the agency from four people to 30 across Toronto and Chicago. That includes hiring, performance management, and building a pipeline of freelancers, contractors, and specialist vendors we've developed long-term mutual relationships with.</p>
-              <p>We operate a "core plus cast" model: a permanent core team supplemented by specialist talent in legal, professional services, production, and media who flex in based on client needs. This lets us punch above our weight on complex engagements while staying lean. The model has scaled through the Receptor Brands acquisition and our expansion into the U.S. market.</p>
-              <p>Strategists I've trained now hold senior positions at McDonald's Global, Zeno Group, GUT, Courage, and Lifelong Crush. I've managed teams of up to 20 at Weber Shandwick and five direct reports at Cossette, where I worked alongside strategists who are now Global EVP at FCB and CSO at Dentsu.</p>
+              <h4 className="font-bold border-b border-black pb-1 mb-3">Effectiveness Driver</h4>
+              <p>If you let creative run before you've defined what "working" means, you'll spend six months optimizing against the wrong metric. The strategist's job is to set the measurement logic before the budget moves. I built frameworks at Cohn & Wolfe connecting earned to paid and owned when most PR agencies treated them as separate P&Ls. At Sister Merci, cannabis restrictions forced this discipline early. You can't buy your way to equity when the channels don't exist, so you define success on your own terms or you don't have a strategy at all.</p>
             </div>
 
             <div className="space-y-6 mb-12">
-              <h4 className="font-bold border-b border-black pb-1 mb-3">Trust-Building at Industry Scale</h4>
-              <p>Cannabis pulled me back into earned-media-first, reputation-driven work. With most paid channels restricted or unavailable, we had to build brand through trust: government relations, investor relations, policy advocacy, and community intelligence.</p>
-              <p>I chaired the Marketing & Advertising Committee of the National Cannabis Industry Association (2025), where I helped pivot the organization from a "plant-touching" focus to broader relationships with ancillary services and retailers. I served as a Strategic Advisor to the Cannabis Standards Alliance of Canada, an industry-government collaboration funded by Ontario to level the playing field by advocating for tighter testing controls to curb THC inflation.</p>
-              <p>I've worked with the Cannabis Media Council, Cannabis Council of Canada, The Last Prisoner Project, and Cannabis Amnesty. The CMC's "I'm High Right Now" campaign — which I led strategy on — became the first cannabis advertisement in Vanity Fair, the first on Spotify, and the first on Pornhub, proving to mainstream publishers that cannabis advertising could be sophisticated enough for their brands.</p>
-              <p>Through it all, I've run bi-annual consumer surveys and qualitative research with online cannabis communities on Reddit, translating those insights to corporate leaders across the industry in Canada and the U.S. That research has directly driven business strategy at Organigram, one of the largest cannabis companies globally.</p>
+              <h4 className="font-bold border-b border-black pb-1 mb-3">Silo Buster</h4>
+              <p>The embedded strategist translates between the client and the agency, the account and the creative, and the data and the narrative. Inside the agency, they connect departments that most shops keep walled off. Outside, they're the continuity between the client's business problem and every team that touches the work. At Weber Shandwick, I was hired for a consumer role (Strategy, Head of Paid Media), and I ended up completely reshaping how the corporate team won business and organically grew client scopes. At Sister Merci, strategy, creative, media, and research teams operate as one unit because the strategist sits at the center, not at the start of a handoff chain. I've also done strategic due diligence with BlackShire Capital and Canopy Rivers, evaluating brand viability and market-entry logic for investors. Wherever the thinking is needed, that's where the role goes.</p>
             </div>
 
             <div className="space-y-6 mb-12">
-              <h4 className="font-bold border-b border-black pb-1 mb-3">Cross-Practice Integration</h4>
-              <p>I've spent my career crossing practice lines that most agencies keep separate. At Weber Shandwick, I was hired as a strategist and Head of Paid Media — initially seen as a "consumer" skill — but my work ended up transforming the corporate vertical. Air Canada, one of Weber's biggest clients, was won because I brought audience-first research methods into a practice that had relied on credentials presentations. That bridge between consumer insight and corporate reputation has been a through-line ever since.</p>
-              <p>At Cohn & Wolfe, I built the agency's first analytics and measurement framework, connecting earned media to paid and owned at a time when most PR agencies treated them as entirely separate functions. At Sister Merci, that integration instinct became the operating model: strategy, creative, media, and research working as a single unit rather than sequential handoffs.</p>
+              <h4 className="font-bold border-b border-black pb-1 mb-3">Internal Growth Engine</h4>
+              <p>Strategists I've trained now hold senior positions at McDonald's Global, Zeno Group, GUT, Courage, and Lifelong Crush. I've managed teams of up to 20 at Weber Shandwick and 30 at Cossette. The job of a strategy lead is to make the next generation dangerous. Set a clear standard, build the environment, and enable strong decision-making, hard skills development, and a winning mindset by creating a culture of high performers who carry more work.</p>
+            </div>
+
+            <div className="space-y-6 mb-12">
+              <h4 className="font-bold border-b border-black pb-1 mb-3">External Growth Engine</h4>
+              <p>Sister Merci grew from four founders to 30 across Toronto and Chicago on a model I helped design. Core team plus specialist talent who flex based on client needs. No bloat, no diffused accountability. I led the agency's $1.5M seed raise from BlackShire Capital. A strategist who only faces the client is half a strategist.</p>
             </div>
           </div>
         )}

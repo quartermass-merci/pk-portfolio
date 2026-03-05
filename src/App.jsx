@@ -38,7 +38,8 @@ export default function App() {
     { id: 'cartography', title: 'Cultural Cartography' },
     { id: 'teaching', title: 'Teaching & Research' },
     { id: 'published', title: 'Published & Spoken' },
-    { id: 'music', title: 'Music & Culture' }
+    { id: 'music', title: 'Music & Culture' },
+    { id: 'testimonials', title: 'Eye Witness Accounts' }
   ];
 
   // Auto-link URLs in text
@@ -791,6 +792,71 @@ export default function App() {
               'https://64.media.tumblr.com/tumblr_m82064Toac1qzofx4o1_500.jpg',
               'https://64.media.tumblr.com/tumblr_m5xgdjix6X1qzofx4o1_1280.jpg'
             ]} />
+          </div>
+        )}
+
+        {view === 'testimonials' && (
+          <div className="max-w-2xl font-mono text-sm leading-relaxed pb-20">
+            <h2 className="text-xl mb-2 font-bold uppercase tracking-widest">Eye Witness Accounts</h2>
+            <h3 className="font-bold uppercase tracking-widest text-xs mb-8 text-gray-500">A SELECTION OF PERSONAL RECOMMENDATIONS FROM MY CLIENTS, PEERS AND FORMER STRATEGY TEAMMATES</h3>
+
+            <div className="space-y-6 mb-12">
+              <h4 className="font-bold border-b border-black pb-1 mb-3">Client Testimonials</h4>
+
+              <div className="mb-8">
+                <p className="font-bold mb-2">Eric Williams | Organigram / Canopy Growth</p>
+                <p>I had the opportunity to work with Paul across two chapters of my career, first while he was at Cossette supporting Canopy Growth, and later with Sister Merci, after I moved to Organigram. Few creative leaders combine strategic rigour and cultural fluency the way Paul does. His background in ethnographic research gives him a genuine feel for consumers and the communities that shape the category, allowing him to uncover insights many others miss. What that ultimately leads to is differentiated work. In a category where many brands end up looking and sounding the same, Paul consistently pushes for ideas that feel authentic to cannabis culture while still grounded in strong marketing fundamentals. He understands how brands are built, how creative needs to perform in the real world, and how to translate consumer insight into work that actually stands apart and drives business performance.</p>
+              </div>
+
+              <div className="mb-8">
+                <p className="font-bold mb-2">Nicole Bleiwas | Vapium / GreenHouse Juice (Herbert) / Riverside Foods (MadeGood, CookiePal)</p>
+                <p>Paul brings both intellectual rigour and genuine curiosity to strategy. He has a way of digging beneath the obvious to understand the cultural and behavioural forces shaping a category, which consistently leads to insights others miss. That perspective translates into clear, differentiated brand positioning and creative work that truly stands apart. Just as important, he is an excellent partner. He challenges thinking constructively and elevates the work through real collaboration. The result is a strategy that is distinctive, grounded in insight, and capable of moving a business and brand forward.</p>
+              </div>
+
+              <div className="mb-8">
+                <p className="font-bold mb-2">Mark McKay | Organigram</p>
+                <p>Paul is quite simply one of the best strategists I have ever worked with. He operates more like a cultural anthropologist than a marketing leader. He doesn't just track trends; he understands the fundamental shifts in audience behaviour before they even happen. During our time together at Organigram, Paul and his team brought a level of insight to our content and campaigns that moved the needle because they truly "got it." Our partnership yielded incredible success. Paul's ability to find the cultural pulse allowed us to connect with audiences in a way that felt both authentic and daring. Under his guidance, our portfolio became the most engaged-with brands on social media within our competitive set: a level of success that's incredibly rare in a category where most brands stay invisible to avoid risk. The quality of work coming from Paul and his team is in a category of its own. He is always my first call for new projects and I am constantly looking for opportunities to work together again.</p>
+              </div>
+
+              <div className="mb-8">
+                <p className="font-bold mb-2">Rachel Boykins | Pangea Money Transfer</p>
+                <p>PK and team were great strategic partners as we built out our new brand. From identifying the target audience to crafting the brand voice, he utilized various sources and exercises to ensure we collaborated on solutions quickly. I loved working with PK and hope to partner with him again.</p>
+              </div>
+
+              <div className="mb-8">
+                <p className="font-bold mb-2">Jesse Ikeman | CCO at Vortex Media</p>
+                <p>We had the pleasure of working with Paul to help us with our digital media strategy and social media outreach. Paul excelled at both. He has a deep understanding of the social media landscape. He was reliable and executed with speed and diligence. I'd highly recommend Paul for social media and other digital media projects.</p>
+              </div>
+            </div>
+
+            <div className="space-y-6 mb-12">
+              <h4 className="font-bold border-b border-black pb-1 mb-3">People With Whom I've Been in the Proverbial Foxhole</h4>
+
+              <div className="mb-8">
+                <p className="font-bold mb-2">Lindsay Peterson | Current: Managing Director, GOLIN Canada</p>
+                <p>Paul is a rare breed. Multi-talented, uber smart and truly the most fun to work with. He is collaborative, quick and knows more than the average human. He unlocks insights that can take the team from zero to 100 in no time. I had the pleasure of developing several pitches with Paul — some of the best work I've ever seen/done.</p>
+              </div>
+
+              <div className="mb-8">
+                <p className="font-bold mb-2">Melissa Eshaghbeigi | Current: Strategy Director, AKQA London</p>
+                <p>PK has been instrumental to my growth as a strategic thinker. Drawing on his deep academic background, he has a rare ability to help you find and sharpen your own unique point of view, rather than simply handing you frameworks, he creates the conditions for you to develop them yourself. He is the ultimate sparring partner. Whether you're stress-testing a half-formed idea or working through a complex cultural observation, PK is always genuinely engaged and ready to dig in. He is collaborative and generous with his time. Over the years we've worked together across a remarkably diverse range of projects, from writing white papers on sneakerheads to deep digital ethnography. Our shared love of digital observation even led us to launch a podcast exploring how the internet is reshaping culture at large. Across it all, his understanding of digital culture is rigorous and instinctive. PK pushes me to become a sharper, more confident strategist, and I'm grateful to have him in my corner.</p>
+              </div>
+
+              <div className="mb-8">
+                <p className="font-bold mb-2">Matt Weir | Current: Senior Strategist at Gut Toronto</p>
+                <p>Paul gave me my first full-time shot in strategy, converting my internship at Cossette into a full-time role, and later bringing me on as his first strategic hire at Sister Merci. It absolutely changed the trajectory of my life, not just as a planner but as a person. What sets Paul apart is his commitment to long-term brand building in an industry obsessed with short-term gains. He seldom relies on desktop research, he gets in the dirt, talks to real people, and uncovers truths others miss. As a mentor, he's helped many a planner find their own strategic voices, grounded in his sharp strategic fundamentals. Legend.</p>
+              </div>
+
+              <div className="mb-8">
+                <p className="font-bold mb-2">Yemina Kaiman | Senior Strategy Director, Cossette</p>
+                <p>Paul is everything a leader should be: thoughtful, approachable, invested in his employees' success and a wealth of knowledge and thought leadership. Most of all Paul is an exceptional strategist who brings a dynamic perspective. His voracious thirst for knowledge means he's always got a book, a podcast, or a website to recommend, and he's always got a POV on that book, podcast, or website. His energy and good vibes are contagious which results in a profound and indelible impact on any room he walks into. Everyone I know who's worked with Paul considers themselves lucky to have gotten the chance.</p>
+              </div>
+
+              <div className="mb-8">
+                <p className="font-bold mb-2">Lauren Harrison | Current: Senior Director, GCI</p>
+                <p>I had the opportunity to work very closely with Paul for about two years, in which time I learned a great deal from him, specifically in the social and digital media landscape. Paul's determination and intrigue in social media analysis enabled our team to gain meaningful insights, which allowed us to provide our client base with a deeply enriched campaign analysis. His persistence in challenging the status quo created a positive, growing environment, both internally for me and externally for our clients.</p>
+              </div>
+            </div>
           </div>
         )}
 

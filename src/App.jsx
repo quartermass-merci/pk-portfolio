@@ -33,7 +33,7 @@ export default function App() {
     { id: 'timeline', title: 'Career Timeline' },
     { id: 'education', title: 'Education' },
     { id: 'agency', title: 'Agency as Lab: Sister Merci' },
-    { id: 'counsel', title: 'What Is a Strategy-Led Agency Model?' },
+    { id: 'counsel', title: 'The Embedded Strategist' },
     { id: 'square', title: 'Developing Square Shaped Strategists' },
     { id: 'cartography', title: 'Cultural Cartography' },
     { id: 'teaching', title: 'Teaching & Research' },
@@ -414,21 +414,19 @@ export default function App() {
 
         {view === 'counsel' && (
           <div className="max-w-2xl font-mono text-sm leading-relaxed pb-20">
-            <h2 className="text-xl mb-2 font-bold uppercase tracking-widest">What Is a Strategy-Led Agency Model?</h2>
-            <h3 className="font-bold uppercase tracking-widest text-xs mb-8 text-gray-500">THE STRATEGIST AS PERFORMANCE ENGINE</h3>
+            <h2 className="text-xl mb-2 font-bold uppercase tracking-widest">The Embedded Strategist</h2>
+            <h3 className="font-bold uppercase tracking-widest text-xs mb-8 text-gray-500">A STRATEGY-LED AGENCY MODEL</h3>
 
-            <p className="mb-8">What a strategy-led agency looks like when the strategist is properly embedded in the practice.</p>
-
-            <p className="mb-12">Most agencies use strategists like seasoning. A little insight sprinkled on before the creative team does the real cooking. That's a waste of the most versatile role in the building. The embedded strategist drives business growth, client retention, and agency integration.</p>
+            <p className="mb-12">When we started Sister Merci, we decided early to lead with the frame of "a strategy-led creative agency" because we believe the properly embedded strategist is an agency multiplier — driving new business wins and organic client growth by deepening client relationships and working our way upstream into the C-Suite. As Sister Merci enters our 8th year as of March 2026, here are some of the results we've seen putting strategists in the middle of agency operations as opposed to the periphery.</p>
 
             <div className="space-y-6 mb-12">
               <h4 className="font-bold border-b border-black pb-1 mb-3">First Revenue Line, Not a Cost Center</h4>
-              <p>A good strategist reframes the pitch from "here's what we do" to "here's what you're missing." At Sister Merci, I've led roughly five competitive pitches per year at an 85% win rate, including a global win for the Doodle.com rebrand. At Weber Shandwick, about 10 per year at 65%. The Air Canada pitch was won on audience research before the creative section even started. Strategy didn't support the sale. It was the sale.</p>
+              <p>A good strategist reframes the pitch from "here's what we do" to "here's what you're missing." At Sister Merci, I've led roughly five competitive pitches per year at an 85% win rate, including a global win for the Doodle.com rebrand. At Weber Shandwick, about 10 per year at 65%.</p>
             </div>
 
             <div className="space-y-6 mb-12">
               <h4 className="font-bold border-b border-black pb-1 mb-3">Trust Builder</h4>
-              <p>When Sister Merci landed Manulife in 2026, it was because of a relationship that started on McDonald's Canada at Weber Shandwick, and that relationship has reliably brought in business through three companies over 10 years. Sister Merci maintains 85%+ retention on top-tier accounts. That number comes from consistently being ahead of where the client expected it to be; strategy helps the agency overdeliver without costly overages.</p>
+              <p>When Sister Merci landed at Manulife in 2026, it was because of a client-strategist relationship that began at McDonald's Canada at Weber Shandwick and grew across three companies over 10 years. That is what happens when strategy consistently makes the client look right. Sister Merci maintains 85%+ retention on top-tier accounts, and our business is more likely to grow when a client moves into a new role and brings us in because of their level of trust. The strategist's job is to be ahead of the brief so the agency overdelivers without overages.</p>
             </div>
 
             <div className="space-y-6 mb-12">

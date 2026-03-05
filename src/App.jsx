@@ -857,6 +857,61 @@ export default function App() {
                 <p>I had the opportunity to work very closely with Paul for about two years, in which time I learned a great deal from him, specifically in the social and digital media landscape. Paul's determination and intrigue in social media analysis enabled our team to gain meaningful insights, which allowed us to provide our client base with a deeply enriched campaign analysis. His persistence in challenging the status quo created a positive, growing environment, both internally for me and externally for our clients.</p>
               </div>
             </div>
+
+            <div className="space-y-6 mb-12">
+              <h4 className="font-bold border-b border-black pb-1 mb-3">RateMyProfessors.com — University of Lethbridge, Sociology</h4>
+              <p className="text-sm italic mb-4">Selected reviews from 29 ratings (4.3 / 5 overall). Unedited.</p>
+
+              <div className="mb-6 pl-4 border-l-2 border-gray-300">
+                <p className="italic">"Paul Lawton is among the best scholars today. Make no mistake, this guy is going to leave his mark on the field. Witty yet subtle. Intelligent yet comprehensible. Brilliant yet grounded. Take one of his courses before Princeton or Oxford snatches him up! Trust me, Lawton is going places..."</p>
+                <p className="text-sm text-gray-500 mt-1">— SOCY2000, May 2009 | Quality: 5.0 | Difficulty: 5.0</p>
+              </div>
+
+              <div className="mb-6 pl-4 border-l-2 border-gray-300">
+                <p className="italic">"Professor Lawton is a very nice man. He made me understand the sociology of cyberspace, and I want to know more now. It is very cool, and one day during our lecture, we opened a portal to exciting new fields of learning. Yes. He has shown that the future is scary, but with Prof. Lawton leading the way, we will survive. Don't fear the reaper."</p>
+                <p className="text-sm text-gray-500 mt-1">— ACCT202, Dec 2008 | Quality: 3.5 | Difficulty: 2.0</p>
+              </div>
+
+              <div className="mb-6 pl-4 border-l-2 border-gray-300">
+                <p className="italic">"promfessor lawton is extremely tough, you will work hard and not alswyas get what you want. At one time, he got very upset with the class, and I thought there would be some to leave, but no, all was oK at the end. You will work hard and presentations are hard too but if you can get by his hard shell, a soft cookie lays beneath. Excellent class"</p>
+                <p className="text-sm text-gray-500 mt-1">— COMMS101, Jan 2013 | Quality: 2.0 | Difficulty: 5.0</p>
+              </div>
+
+              <div className="mb-6 pl-4 border-l-2 border-gray-300">
+                <p className="italic">"A very nice man, pleasant and helpful. Not at all scary, because I heard he was. I got to see his band play live! Talk about cool. He reminds me of the cool dean from that Simpson's episode, you know, he dean, your a stoopid head! Ha, Homer, he is funny."</p>
+                <p className="text-sm text-gray-500 mt-1">— SOCIXXX, Aug 2009 | Quality: 3.0 | Difficulty: 4.0</p>
+              </div>
+
+              <div className="mb-6 pl-4 border-l-2 border-gray-300">
+                <p className="italic">"WOW!! It was like the coolest, and also further to that, Mr Lanton is a great teacher, and explained things in an easy to understand form of explanation. Also, and this is true to most, he is quite the funny!! Most recommending!"</p>
+                <p className="text-sm text-gray-500 mt-1">— SOCI2000, Apr 2009 | Quality: 5.0 | Difficulty: 3.0</p>
+              </div>
+
+              <div className="mb-6 pl-4 border-l-2 border-gray-300">
+                <p className="italic">"Paul is extremely interesting, but class discussions are squashed by blank stares from people looking for easy grades."</p>
+                <p className="text-sm text-gray-500 mt-1">— SOCIO3700, May 2008 | Quality: 4.5 | Difficulty: 3.0</p>
+              </div>
+
+              <div className="mb-6 pl-4 border-l-2 border-gray-300">
+                <p className="italic">"Workload was heavy (lots of reading), but Paul does a good job compensating with being totally available (I emailed him once on a Saturday and he had a full page response an hour later) and with lots of flexibility in turning in assignments. Seems to actually give a**** about his students."</p>
+                <p className="text-sm text-gray-500 mt-1">— SOC3390, Jan 2008 | Quality: 4.0 | Difficulty: 4.0</p>
+              </div>
+
+              <div className="mb-6 pl-4 border-l-2 border-gray-300">
+                <p className="italic">"Very knowledgeable in his field. There is a lot of reading but that's expected in a 3rd year course. He is new to teaching so there is a lot of glitches in his teaching but that does not overshadow the fact that he is a good prof, who will eventually become better. Also, he's pretty cool because he's in a punk band that sound pretty good."</p>
+                <p className="text-sm text-gray-500 mt-1">— SOC3XXX, Nov 2008 | Quality: 5.0 | Difficulty: 4.0</p>
+              </div>
+
+              <div className="mb-6 pl-4 border-l-2 border-gray-300">
+                <p className="italic">"Paul really disappointed me. Just because he has a good sense of humour doesn't mean he is a great prof. He makes you the do the most USELESS readings. You get to do a group presentation but then he wants you to rate the LEAST valuable person. This was supposed to be an easy A for me as Soci is BS but Paul made it hard for no reason."</p>
+                <p className="text-sm text-gray-500 mt-1">— SOCI3390, Apr 2009 | Quality: 2.0 | Difficulty: 3.0</p>
+              </div>
+
+              <div className="mb-6 pl-4 border-l-2 border-gray-300">
+                <p className="italic">"No Comments"</p>
+                <p className="text-sm text-gray-500 mt-1">— SOCY3740, Dec 2007 | Quality: 1.0 | Difficulty: 2.0</p>
+              </div>
+            </div>
           </div>
         )}
 

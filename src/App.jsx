@@ -25,16 +25,7 @@ export default function App() {
 
   const categories = useMemo(() => ['Campaign Strategy', 'Brand Architecture', 'Corporate Comms'], []);
 
-  // Collect all images per category for the image-reveal hover
-  const categoryImages = useMemo(() => {
-    const map = {};
-    for (const cat of categories) {
-      map[cat] = portfolioData
-        .filter((p) => p.category === cat)
-        .flatMap((p) => p.images || []);
-    }
-    return map;
-  }, [categories]);
+
 
   const openPanel = (newView, project = null) => {
     setView(newView);
@@ -249,28 +240,28 @@ export default function App() {
           {/* Categories Nav */}
           {categories.map((category) => (
             <div key={category} className="mb-8">
-              <ImageRevealHeader images={categoryImages[category]}>
-                <button onClick={() => setExpandedCategories(p=>({...p, [category]: !p[category]}))} className="w-full bg-black text-white flex justify-between px-1.5 py-0.5 mb-1 text-xs uppercase tracking-widest hover:opacity-80 transition-opacity">
-                  <span>{expandedCategories[category] ? '↓' : '→'} {category}</span>
-                  <span>{expandedCategories[category] ? '↓' : '→'}</span>
-                </button>
-              </ImageRevealHeader>
+              <button onClick={() => setExpandedCategories(p=>({...p, [category]: !p[category]}))} className="w-full bg-black text-white flex justify-between px-1.5 py-0.5 mb-1 text-xs uppercase tracking-widest hover:opacity-80 transition-opacity">
+                <span>{expandedCategories[category] ? '↓' : '→'} {category}</span>
+                <span>{expandedCategories[category] ? '↓' : '→'}</span>
+              </button>
               {expandedCategories[category] && (
                 <ul className="border-t border-black">
                   {portfolioData.filter((p) => p.category === category).map((project) => (
-                    <li key={project.id} onClick={() => handleProjectClick(project)} className={`border-b border-black py-2 px-1 flex justify-between cursor-pointer hover:bg-gray-100 transition-colors ${activeProject?.id === project.id && view === 'project' && panelOpen ? 'bg-gray-100 font-bold' : ''}`}>
-                      <VariableFontHoverByLetter
-                        label={project.title}
-                        fromFontVariationSettings={project.forceBold ? "'wght' 700" : "'wght' 400"}
-                        toFontVariationSettings="'wght' 700"
-                        staggerDuration={0.015}
-                        staggerFrom="first"
-                        className={`truncate pr-4 cursor-pointer ${project.forceBold ? 'underline decoration-2' : ''}`}
-                      />
-                      <span className="whitespace-nowrap flex gap-2">
-                        <span>{project.year}</span>
-                      </span>
-                    </li>
+                    <ImageRevealHeader key={project.id} images={project.images || []}>
+                      <li onClick={() => handleProjectClick(project)} className={`border-b border-black py-2 px-1 flex justify-between cursor-pointer hover:bg-gray-100 transition-colors ${activeProject?.id === project.id && view === 'project' && panelOpen ? 'bg-gray-100 font-bold' : ''}`}>
+                        <VariableFontHoverByLetter
+                          label={project.title}
+                          fromFontVariationSettings={project.forceBold ? "'wght' 700" : "'wght' 400"}
+                          toFontVariationSettings="'wght' 700"
+                          staggerDuration={0.015}
+                          staggerFrom="first"
+                          className={`truncate pr-4 cursor-pointer ${project.forceBold ? 'underline decoration-2' : ''}`}
+                        />
+                        <span className="whitespace-nowrap flex gap-2">
+                          <span>{project.year}</span>
+                        </span>
+                      </li>
+                    </ImageRevealHeader>
                   ))}
                 </ul>
               )}
@@ -286,16 +277,7 @@ export default function App() {
 
       {/* Slide-out Content Panel */}
       <div className={`fixed top-0 right-0 z-40 h-full w-full md:w-3/5 bg-[#f5f5f0] border-l border-black shadow-2xl transform transition-transform duration-300 ease-in-out overflow-y-auto ${panelOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-        {/* PixelTrail background for panel — sticky so it stays visible while scrolling */}
-        <div className="sticky top-0 left-0 w-full h-screen pointer-events-auto" style={{ zIndex: 0, marginBottom: '-100vh' }}>
-          <PixelTrail
-            pixelSize={screenSize.lessThan('md') ? 40 : 60}
-            fadeDuration={0}
-            delay={600}
-            pixelClassName="rounded-full bg-black/[0.03]"
-          />
-        </div>
-        <div className="p-6 md:p-10 relative z-10">
+        <div className="p-6 md:p-10 relative">
           <button onClick={closePanel} className="mb-8 text-sm font-mono uppercase tracking-widest hover:opacity-50 transition-opacity flex items-center gap-2">
             <span>←</span> Back
           </button>

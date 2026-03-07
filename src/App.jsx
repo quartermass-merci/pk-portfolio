@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import portfolioData from './data/projects.json';
+import ResearchStack from './ResearchStack';
 
 
 export default function App() {
@@ -33,6 +34,7 @@ export default function App() {
     { id: 'timeline', title: 'Career Timeline' },
     { id: 'education', title: 'Education' },
     { id: 'agency', title: 'Agency as Lab: Sister Merci' },
+    { id: 'research-stack', title: 'Research Stack' },
     { id: 'counsel', title: 'The Embedded Strategist' },
     { id: 'square', title: 'Developing Square Shaped Strategists' },
     { id: 'cartography', title: 'Cultural Cartography' },
@@ -412,6 +414,7 @@ export default function App() {
           </div>
         )}
 
+        {view === 'research-stack' && <ResearchStack />}
 
         {view === 'counsel' && (
           <div className="max-w-2xl font-mono text-sm leading-relaxed pb-20">

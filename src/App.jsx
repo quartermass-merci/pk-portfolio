@@ -3,6 +3,8 @@ import portfolioData from './data/projects.json';
 import ResearchStack from './ResearchStack';
 import PixelTrail from './components/PixelTrail';
 import { useScreenSize } from './components/hooks/useScreenSize';
+import AnimatedLink from './components/AnimatedLink';
+import { VariableFontHoverByLetter } from './components/VariableFontHover';
 
 
 export default function App() {
@@ -53,7 +55,7 @@ export default function App() {
     const parts = text.split(urlRegex);
     return parts.map((part, i) =>
       urlRegex.test(part) ? (
-        <a key={i} href={part} target="_blank" rel="noreferrer" className="underline hover:opacity-50 break-all">{part}</a>
+        <AnimatedLink key={i} href={part} target="_blank" rel="noreferrer" variant="center" className="break-all">{part}</AnimatedLink>
       ) : (
         <span key={i}>{part}</span>
       )
@@ -178,15 +180,23 @@ export default function App() {
         <div className="mb-16">
           <img src="/images/pk-logo.png" alt="PK Lawton — Strategy × Culture" className="w-full max-w-[560px] h-auto mb-8" />
           <p className="text-sm md:text-base text-gray-600 mb-6 max-w-xl">Co-Founder & Chief Strategy Officer at Sister Merci. Brand strategist, researcher, educator, cultural critic. Based in Hamilton, ON.</p>
-          <div className="flex gap-6 text-sm underline decoration-1">
-            <a href="mailto:pklawton@gmail.com" className="hover:opacity-50">Email</a>
-            <a href="https://linkedin.com/in/paulklawton" target="_blank" rel="noreferrer" className="hover:opacity-50">LinkedIn</a>
-            <a href="https://culturalcartography.substack.com" target="_blank" rel="noreferrer" className="hover:opacity-50">Substack</a>
+          <div className="flex gap-6 text-sm" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+            <AnimatedLink href="mailto:pklawton@gmail.com" variant="goesOut">Email</AnimatedLink>
+            <AnimatedLink href="https://linkedin.com/in/paulklawton" target="_blank" rel="noreferrer" variant="center">LinkedIn</AnimatedLink>
+            <AnimatedLink href="https://culturalcartography.substack.com" target="_blank" rel="noreferrer" variant="comesIn">Substack</AnimatedLink>
           </div>
         </div>
 
-        <button onClick={() => openPanel('about')} className={`flex items-center gap-2 mb-10 hover:opacity-50 transition-opacity ${view === 'about' && panelOpen ? 'font-bold' : ''}`}>
-          <span className="text-xl">●</span> AN INTRODUCTION
+        <button onClick={() => openPanel('about')} className={`flex items-center gap-2 mb-10 transition-opacity ${view === 'about' && panelOpen ? 'font-bold' : ''}`}>
+          <span className="text-xl">●</span>
+          <VariableFontHoverByLetter
+            label="AN INTRODUCTION"
+            fromFontVariationSettings="'wght' 400"
+            toFontVariationSettings="'wght' 700"
+            staggerDuration={0.02}
+            staggerFrom="first"
+            className="cursor-pointer"
+          />
         </button>
 
         <nav className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-0 items-start">
@@ -200,7 +210,14 @@ export default function App() {
               <ul className="border-t border-black">
                 {backgroundSections.map((item) => (
                   <li key={item.id} onClick={() => openPanel(item.id)} className={`border-b border-black py-2 px-1 flex justify-between cursor-pointer hover:bg-gray-100 transition-colors ${view === item.id && panelOpen ? 'bg-gray-100 font-bold' : ''}`}>
-                    <span className="truncate pr-4">{item.title}</span>
+                    <VariableFontHoverByLetter
+                      label={item.title}
+                      fromFontVariationSettings="'wght' 400"
+                      toFontVariationSettings="'wght' 700"
+                      staggerDuration={0.015}
+                      staggerFrom="first"
+                      className="truncate pr-4 cursor-pointer"
+                    />
                   </li>
                 ))}
               </ul>
@@ -218,7 +235,14 @@ export default function App() {
                 <ul className="border-t border-black">
                   {portfolioData.filter((p) => p.category === category).map((project) => (
                     <li key={project.id} onClick={() => handleProjectClick(project)} className={`border-b border-black py-2 px-1 flex justify-between cursor-pointer hover:bg-gray-100 transition-colors ${activeProject?.id === project.id && view === 'project' && panelOpen ? 'bg-gray-100 font-bold' : ''}`}>
-                      <span className={`truncate pr-4 ${project.forceBold ? 'font-bold underline decoration-2' : ''}`}>{project.title}</span>
+                      <VariableFontHoverByLetter
+                        label={project.title}
+                        fromFontVariationSettings={project.forceBold ? "'wght' 700" : "'wght' 400"}
+                        toFontVariationSettings="'wght' 700"
+                        staggerDuration={0.015}
+                        staggerFrom="first"
+                        className={`truncate pr-4 cursor-pointer ${project.forceBold ? 'underline decoration-2' : ''}`}
+                      />
                       <span className="whitespace-nowrap flex gap-2">
                         <span>{project.year}</span>
                       </span>
@@ -618,26 +642,26 @@ export default function App() {
                 <p className="mb-4">A newsletter and forthcoming book applying Actor-Network Theory, critical theory, and institutional ethnography to brand strategy.</p>
                 <p className="font-bold uppercase tracking-widest text-xs mb-2 mt-4">Selected Essays</p>
                 <ul className="list-disc pl-5 space-y-2">
-                  <li><a href="https://culturalcartography.substack.com/p/reassembling-the-strategist" target="_blank" rel="noreferrer" className="underline hover:opacity-70">"Reassembling the Strategist"</a> — The flagship essay. Proposes Cultural Cartography as a new theory and method for practicing strategy. 74 likes, most popular post. Accompanied by a 22-page Field Guide for paid subscribers.</li>
-                  <li><a href="https://culturalcartography.substack.com/p/reassembling-the-consumer" target="_blank" rel="noreferrer" className="underline hover:opacity-70">"Reassembling the Consumer"</a> — "The Consumer" is a fiction that enters the marketing process early and hardens into organizational infrastructure. Uses the Stanley thermos trend as a case study.</li>
-                  <li><a href="https://culturalcartography.substack.com/p/glazed-and-confused-how-ai-is-rewriting" target="_blank" rel="noreferrer" className="underline hover:opacity-70">"Glazed and Confused: How AI Is Rewriting Human Trust in Real Time"</a> — The ChatGPT-4o "glazing" controversy analyzed through Latour.</li>
-                  <li><a href="https://culturalcartography.substack.com/p/ai-serves-power-not-people" target="_blank" rel="noreferrer" className="underline hover:opacity-70">"AI Serves Power, Not People"</a> — Technology is never neutral. DOGE as a case study.</li>
-                  <li><a href="https://culturalcartography.substack.com/p/are-you-a-strategist-or-are-you-just" target="_blank" rel="noreferrer" className="underline hover:opacity-70">"Are You a Strategist, or Are You Just a Human Algorithm with Good Taste?"</a> — Whether the strategy function has been reduced to pattern recognition and taste arbitrage.</li>
-                  <li><a href="https://culturalcartography.substack.com/p/notes-from-the-underground" target="_blank" rel="noreferrer" className="underline hover:opacity-70">"Notes from the Underground" (Parts 1 & 2)</a> — Intellectual autobiography. From punk scenes in Winnipeg through a sociology PhD to the ad world.</li>
-                  <li><a href="https://culturalcartography.substack.com/p/taste-wont-save-you-on-maintaining" target="_blank" rel="noreferrer" className="underline hover:opacity-70">"Taste Won't Save You: On Maintaining Subscriptions"</a> — Creative professionals have to actively maintain cultural engagement. Accumulated taste is not a static asset.</li>
+                  <li><AnimatedLink href="https://culturalcartography.substack.com/p/reassembling-the-strategist" target="_blank" rel="noreferrer" variant="center">"Reassembling the Strategist"</AnimatedLink> — The flagship essay. Proposes Cultural Cartography as a new theory and method for practicing strategy. 74 likes, most popular post. Accompanied by a 22-page Field Guide for paid subscribers.</li>
+                  <li><AnimatedLink href="https://culturalcartography.substack.com/p/reassembling-the-consumer" target="_blank" rel="noreferrer" variant="center">"Reassembling the Consumer"</AnimatedLink> — "The Consumer" is a fiction that enters the marketing process early and hardens into organizational infrastructure. Uses the Stanley thermos trend as a case study.</li>
+                  <li><AnimatedLink href="https://culturalcartography.substack.com/p/glazed-and-confused-how-ai-is-rewriting" target="_blank" rel="noreferrer" variant="center">"Glazed and Confused: How AI Is Rewriting Human Trust in Real Time"</AnimatedLink> — The ChatGPT-4o "glazing" controversy analyzed through Latour.</li>
+                  <li><AnimatedLink href="https://culturalcartography.substack.com/p/ai-serves-power-not-people" target="_blank" rel="noreferrer" variant="center">"AI Serves Power, Not People"</AnimatedLink> — Technology is never neutral. DOGE as a case study.</li>
+                  <li><AnimatedLink href="https://culturalcartography.substack.com/p/are-you-a-strategist-or-are-you-just" target="_blank" rel="noreferrer" variant="center">"Are You a Strategist, or Are You Just a Human Algorithm with Good Taste?"</AnimatedLink> — Whether the strategy function has been reduced to pattern recognition and taste arbitrage.</li>
+                  <li><AnimatedLink href="https://culturalcartography.substack.com/p/notes-from-the-underground" target="_blank" rel="noreferrer" variant="center">"Notes from the Underground" (Parts 1 & 2)</AnimatedLink> — Intellectual autobiography. From punk scenes in Winnipeg through a sociology PhD to the ad world.</li>
+                  <li><AnimatedLink href="https://culturalcartography.substack.com/p/taste-wont-save-you-on-maintaining" target="_blank" rel="noreferrer" variant="center">"Taste Won't Save You: On Maintaining Subscriptions"</AnimatedLink> — Creative professionals have to actively maintain cultural engagement. Accumulated taste is not a static asset.</li>
                 </ul>
               </div>
               
               <div>
                 <p className="font-bold border-b border-black pb-1 mb-3 mt-8">Trade Publications & Op-Eds</p>
                 <ul className="list-disc pl-5 space-y-2">
-                  <li><a href="https://lbbonline.com/news/the-secret-playbook-of-cannabis-brands-that-win" target="_blank" rel="noreferrer" className="underline hover:opacity-70">"The Secret Playbook of Cannabis Brands That Win"</a> — LBBOnline (2025). Six years of agency experience across 150+ cannabis brands distilled.</li>
-                  <li><a href="https://lbbonline.com/news/Entering-the-Age-of-Health-Conscious-Hedonism" target="_blank" rel="noreferrer" className="underline hover:opacity-70">"Entering the Age of Health-Conscious Hedonism"</a> — LBBOnline (2026). Emerging beverage trends and what they mean for regulated categories.</li>
-                  <li><a href="https://www.quirks.com/articles/how-hype-analysis-lets-companies-find-value-in-customer-excitement" target="_blank" rel="noreferrer" className="underline hover:opacity-70">"How Hype Analysis Lets Companies Find Value in Customer Excitement"</a> — Quirk's Marketing Research Review (2024). Co-authored with Marcelo Bursztein. Introduces hype analysis as a methodology beyond traditional social listening.</li>
-                  <li><a href="https://www.linkedin.com/pulse/content-ecology-understanding-consequences-garbage-paul-k-lawton-ywehc" target="_blank" rel="noreferrer" className="underline hover:opacity-70">"Content Ecology: Understanding the Consequences of Garbage Content"</a> — LinkedIn Pulse (2024).</li>
-                  <li><a href="https://www.theglobeandmail.com/report-on-business/rob-commentary/in-a-hyper-politicized-world-should-brands-take-a-stand/article34138902/" target="_blank" rel="noreferrer" className="underline hover:opacity-70">"In a Hyper-Politicized World, Brands Must Stay True to Themselves"</a> — The Globe and Mail (2017). Co-authored with Cameron Summers (SVP, Weber Shandwick Canada).</li>
-                  <li><a href="https://www.theglobeandmail.com/report-on-business/rob-commentary/for-brands-fake-news-is-an-existential-threat/article33109539/" target="_blank" rel="noreferrer" className="underline hover:opacity-70">"For Brands, Fake News Is an Existential Threat"</a> — The Globe and Mail (2016). Co-authored with Cameron Summers.</li>
-                  <li><a href="http://marketingmag.ca/media/how-outrage-culture-changes-the-rules-for-crisis-management-155353/" target="_blank" rel="noreferrer" className="underline hover:opacity-70">"How Outrage Culture Changes the Rules for Crisis Management"</a> — Marketing Magazine (2015). Co-authored with David Gordon (Managing Partner, Cohn & Wolfe).</li>
+                  <li><AnimatedLink href="https://lbbonline.com/news/the-secret-playbook-of-cannabis-brands-that-win" target="_blank" rel="noreferrer" variant="center">"The Secret Playbook of Cannabis Brands That Win"</AnimatedLink> — LBBOnline (2025). Six years of agency experience across 150+ cannabis brands distilled.</li>
+                  <li><AnimatedLink href="https://lbbonline.com/news/Entering-the-Age-of-Health-Conscious-Hedonism" target="_blank" rel="noreferrer" variant="center">"Entering the Age of Health-Conscious Hedonism"</AnimatedLink> — LBBOnline (2026). Emerging beverage trends and what they mean for regulated categories.</li>
+                  <li><AnimatedLink href="https://www.quirks.com/articles/how-hype-analysis-lets-companies-find-value-in-customer-excitement" target="_blank" rel="noreferrer" variant="center">"How Hype Analysis Lets Companies Find Value in Customer Excitement"</AnimatedLink> — Quirk's Marketing Research Review (2024). Co-authored with Marcelo Bursztein. Introduces hype analysis as a methodology beyond traditional social listening.</li>
+                  <li><AnimatedLink href="https://www.linkedin.com/pulse/content-ecology-understanding-consequences-garbage-paul-k-lawton-ywehc" target="_blank" rel="noreferrer" variant="center">"Content Ecology: Understanding the Consequences of Garbage Content"</AnimatedLink> — LinkedIn Pulse (2024).</li>
+                  <li><AnimatedLink href="https://www.theglobeandmail.com/report-on-business/rob-commentary/in-a-hyper-politicized-world-should-brands-take-a-stand/article34138902/" target="_blank" rel="noreferrer" variant="center">"In a Hyper-Politicized World, Brands Must Stay True to Themselves"</AnimatedLink> — The Globe and Mail (2017). Co-authored with Cameron Summers (SVP, Weber Shandwick Canada).</li>
+                  <li><AnimatedLink href="https://www.theglobeandmail.com/report-on-business/rob-commentary/for-brands-fake-news-is-an-existential-threat/article33109539/" target="_blank" rel="noreferrer" variant="center">"For Brands, Fake News Is an Existential Threat"</AnimatedLink> — The Globe and Mail (2016). Co-authored with Cameron Summers.</li>
+                  <li><AnimatedLink href="http://marketingmag.ca/media/how-outrage-culture-changes-the-rules-for-crisis-management-155353/" target="_blank" rel="noreferrer" variant="center">"How Outrage Culture Changes the Rules for Crisis Management"</AnimatedLink> — Marketing Magazine (2015). Co-authored with David Gordon (Managing Partner, Cohn & Wolfe).</li>
                 </ul>
               </div>
 
@@ -690,11 +714,11 @@ export default function App() {
               <div>
                 <p className="font-bold border-b border-black pb-1 mb-3 mt-8">Selected Press (Strategy & Cannabis)</p>
                 <ul className="list-disc pl-5 space-y-1">
-                  <li><a href="https://continuing.mcmaster.ca/meet-paul-lawton-developing-your-brand-with-style-and-confidence/" target="_blank" rel="noreferrer" className="underline hover:opacity-70">McMaster Continuing Education (2024) — Institutional profile</a></li>
-                  <li><a href="https://strategyonline.ca/2023/01/19/homegrown-cannabis-brand-building-cred/" target="_blank" rel="noreferrer" className="underline hover:opacity-70">Strategy Online (2023) — "Homegrown cannabis brand building cred" agency profile</a></li>
-                  <li><a href="https://strategyonline.ca/2020/03/20/cannabis-industry-copes-with-social-distancing/" target="_blank" rel="noreferrer" className="underline hover:opacity-70">Strategy Online (2020) — COVID-era cannabis marketing advice</a></li>
-                  <li><a href="https://medium.com/authority-magazine/marketing-strategies-from-the-top-all-gut-no-glory-with-paul-lawton-chief-strategy-officer-at-90de1dc3bf7d" target="_blank" rel="noreferrer" className="underline hover:opacity-70">Authority Magazine (2020) — "All Gut, No Glory" extended interview</a></li>
-                  <li><a href="https://www.campaigncanada.ca/article/sister-merci-vows-to-solve-the-challenges-of-cannabis-marketing/4685qg6nyt1a9xkvm4sq4jjyxm" target="_blank" rel="noreferrer" className="underline hover:opacity-70">Campaign Canada (2019) — Agency launch coverage</a></li>
+                  <li><AnimatedLink href="https://continuing.mcmaster.ca/meet-paul-lawton-developing-your-brand-with-style-and-confidence/" target="_blank" rel="noreferrer" variant="center">McMaster Continuing Education (2024) — Institutional profile</AnimatedLink></li>
+                  <li><AnimatedLink href="https://strategyonline.ca/2023/01/19/homegrown-cannabis-brand-building-cred/" target="_blank" rel="noreferrer" variant="center">Strategy Online (2023) — "Homegrown cannabis brand building cred" agency profile</AnimatedLink></li>
+                  <li><AnimatedLink href="https://strategyonline.ca/2020/03/20/cannabis-industry-copes-with-social-distancing/" target="_blank" rel="noreferrer" variant="center">Strategy Online (2020) — COVID-era cannabis marketing advice</AnimatedLink></li>
+                  <li><AnimatedLink href="https://medium.com/authority-magazine/marketing-strategies-from-the-top-all-gut-no-glory-with-paul-lawton-chief-strategy-officer-at-90de1dc3bf7d" target="_blank" rel="noreferrer" variant="center">Authority Magazine (2020) — "All Gut, No Glory" extended interview</AnimatedLink></li>
+                  <li><AnimatedLink href="https://www.campaigncanada.ca/article/sister-merci-vows-to-solve-the-challenges-of-cannabis-marketing/4685qg6nyt1a9xkvm4sq4jjyxm" target="_blank" rel="noreferrer" variant="center">Campaign Canada (2019) — Agency launch coverage</AnimatedLink></li>
                 </ul>
               </div>
             </div>
@@ -714,10 +738,10 @@ export default function App() {
               <div>
                 <p className="font-bold border-b border-black pb-1 mb-3">Bands & Projects</p>
                 <ul className="list-disc pl-5 space-y-4">
-                  <li><strong><a href="https://ketamines.bandcamp.com/" target="_blank" rel="noreferrer" className="underline hover:opacity-70">Ketamines</a> (1996–2015; 2023-Current):</strong> Bass, vocals, principal songwriter. Long-running garage-pop project with James Leroy, originating in Lethbridge and evolving through multiple lineups across three cities. Released records on HoZac (Chicago), Southpaw, Mammoth Cave, Mint Records, and Hosehead. Pitchfork gave Spaced Out a 7.0. PopMatters named You Can't Serve Two Masters #15 Best Canadian Album of 2013. Oprah tweeted about the band. Target used a song in a US commercial. 128+ documented shows including SXSW, Sled Island, Pop Montreal, NXNE, HoZac BlackOut Fest. NEW LP OUT 2026!</li>
-                  <li><strong><a href="https://centurypalm.bandcamp.com/" target="_blank" rel="noreferrer" className="underline hover:opacity-70">Century Palm</a> (2014–2017):</strong> Bass, vocals. Toronto post-punk with Andrew Payne (Zebrassieres), Penny Clark (Tough Age), Jesse Locke (Dirty Beaches), and Alex Hamlyn. Debut LP Meet You on Deranged Records, mixed by Jay Arner, mastered by Mikey Young. Premiered on Stereogum. Album of the Day on Bandcamp Daily. CLRVYNT called it "a crash course in post-punk."</li>
-                  <li><strong><a href="https://myelinsheaths.bandcamp.com/" target="_blank" rel="noreferrer" className="underline hover:opacity-70">Myelin Sheaths</a> (~2008–2010):</strong> Drums, vocals. Lethbridge garage-punk. Two 7" singles on HoZac and Bachelor Records. LP Get On Your Nerves on Southpaw: Weird Canada called it "the most realized piece of psy-fi punk shreddery from the camp that put Alberta on the map."</li>
-                  <li><strong><a href="https://themobydicks.bandcamp.com/" target="_blank" rel="noreferrer" className="underline hover:opacity-70">The Moby Dicks</a> (2009–2011):</strong> Bass, vocals. Lethbridge bar-rock. Self-titled 7" on Southpaw, split with Needles//Pins, collaborative 7" with B.A. Johnston on Mammoth Cave.</li>
+                  <li><strong><AnimatedLink href="https://ketamines.bandcamp.com/" target="_blank" rel="noreferrer" variant="center">Ketamines</AnimatedLink> (1996–2015; 2023-Current):</strong> Bass, vocals, principal songwriter. Long-running garage-pop project with James Leroy, originating in Lethbridge and evolving through multiple lineups across three cities. Released records on HoZac (Chicago), Southpaw, Mammoth Cave, Mint Records, and Hosehead. Pitchfork gave Spaced Out a 7.0. PopMatters named You Can't Serve Two Masters #15 Best Canadian Album of 2013. Oprah tweeted about the band. Target used a song in a US commercial. 128+ documented shows including SXSW, Sled Island, Pop Montreal, NXNE, HoZac BlackOut Fest. NEW LP OUT 2026!</li>
+                  <li><strong><AnimatedLink href="https://centurypalm.bandcamp.com/" target="_blank" rel="noreferrer" variant="center">Century Palm</AnimatedLink> (2014–2017):</strong> Bass, vocals. Toronto post-punk with Andrew Payne (Zebrassieres), Penny Clark (Tough Age), Jesse Locke (Dirty Beaches), and Alex Hamlyn. Debut LP Meet You on Deranged Records, mixed by Jay Arner, mastered by Mikey Young. Premiered on Stereogum. Album of the Day on Bandcamp Daily. CLRVYNT called it "a crash course in post-punk."</li>
+                  <li><strong><AnimatedLink href="https://myelinsheaths.bandcamp.com/" target="_blank" rel="noreferrer" variant="center">Myelin Sheaths</AnimatedLink> (~2008–2010):</strong> Drums, vocals. Lethbridge garage-punk. Two 7" singles on HoZac and Bachelor Records. LP Get On Your Nerves on Southpaw: Weird Canada called it "the most realized piece of psy-fi punk shreddery from the camp that put Alberta on the map."</li>
+                  <li><strong><AnimatedLink href="https://themobydicks.bandcamp.com/" target="_blank" rel="noreferrer" variant="center">The Moby Dicks</AnimatedLink> (2009–2011):</strong> Bass, vocals. Lethbridge bar-rock. Self-titled 7" on Southpaw, split with Needles//Pins, collaborative 7" with B.A. Johnston on Mammoth Cave.</li>
                   <li><strong>Also:</strong> Tough Age (touring bassist, Mint Records, 2013–2015), Red Mass (touring guitar player) Don't Bother, Endangered Ape, Radians, Pentagon, Mean Tikes, Complex Cities, James Leroy and the Giant, Ran, Kill Credo, 10% Gain.</li>
                 </ul>
               </div>
@@ -725,8 +749,8 @@ export default function App() {
               <div>
                 <p className="font-bold border-b border-black pb-1 mb-3 mt-8">Record Labels</p>
                 <ul className="list-disc pl-5 space-y-4">
-                  <li><strong><a href="https://mammothcave.bandcamp.com/" target="_blank" rel="noreferrer" className="underline hover:opacity-70">Mammoth Cave Recording Co.</a> (2008–2015):</strong> Co-founded with Evan Van Reekum. Nearly four dozen releases, 7"s, LP and cassettes that defined a specific era of Canadian DIY. FFWD Magazine voted it Best Record Label for three consecutive years (2010, 2011, 2012). B.A. Johnston's Shit Sucks was longlisted for the Polaris Prize. Catalogue includes B.A. Johnston, Fist City, The Famines, Needles//Pins, Korean Gut, Krang, Strange Attractor, Nervous Talk, Lab Coast. Reissued legacy recordings by Simply Saucer and Shadowy Men on a Shadowy Planet. The Bloodstains Across... compilation series documented punk scenes province-by-province, featuring White Lung, Nü Sensae (now: Orville Peck), and an unreleased Shadowy Men track. I got to meet Tonetta once. This is one thing I did in my life that earned me a Wikipedia page. Eulogized by Exclaim! and National Post when I decided to shut the label down over pressing plant backlogs, the weakening Canadian dollar, and the impact of Record Store Day on independent manufacturers.</li>
-                  <li><strong><a href="https://pleasencerecords.bandcamp.com/" target="_blank" rel="noreferrer" className="underline hover:opacity-70">Pleasence Records</a> (2016–2022):</strong> And then, almost immediately, I bought into the amazing Toronto underground experimental label with James Lindsay. The story is that I did freelance brand strategy for Precision Pressing plant in Burlington, ON, in exchange for production credit. This helped guide the label through a prolific period Profiled by NOW Toronto on the label's evolving approach to sustainability in indie music. Catalogue: TRAITRS, Fake Palms, Isla Craig, Petra Glynt, WHIMM, Aidan Baker, Feel Alright, Germaphobes, Man Made Hill. TRAITRS might be the most successful band I've ever worked with; they generated an insane amount of money on streaming music.</li>
+                  <li><strong><AnimatedLink href="https://mammothcave.bandcamp.com/" target="_blank" rel="noreferrer" variant="center">Mammoth Cave Recording Co.</AnimatedLink> (2008–2015):</strong> Co-founded with Evan Van Reekum. Nearly four dozen releases, 7"s, LP and cassettes that defined a specific era of Canadian DIY. FFWD Magazine voted it Best Record Label for three consecutive years (2010, 2011, 2012). B.A. Johnston's Shit Sucks was longlisted for the Polaris Prize. Catalogue includes B.A. Johnston, Fist City, The Famines, Needles//Pins, Korean Gut, Krang, Strange Attractor, Nervous Talk, Lab Coast. Reissued legacy recordings by Simply Saucer and Shadowy Men on a Shadowy Planet. The Bloodstains Across... compilation series documented punk scenes province-by-province, featuring White Lung, Nü Sensae (now: Orville Peck), and an unreleased Shadowy Men track. I got to meet Tonetta once. This is one thing I did in my life that earned me a Wikipedia page. Eulogized by Exclaim! and National Post when I decided to shut the label down over pressing plant backlogs, the weakening Canadian dollar, and the impact of Record Store Day on independent manufacturers.</li>
+                  <li><strong><AnimatedLink href="https://pleasencerecords.bandcamp.com/" target="_blank" rel="noreferrer" variant="center">Pleasence Records</AnimatedLink> (2016–2022):</strong> And then, almost immediately, I bought into the amazing Toronto underground experimental label with James Lindsay. The story is that I did freelance brand strategy for Precision Pressing plant in Burlington, ON, in exchange for production credit. This helped guide the label through a prolific period Profiled by NOW Toronto on the label's evolving approach to sustainability in indie music. Catalogue: TRAITRS, Fake Palms, Isla Craig, Petra Glynt, WHIMM, Aidan Baker, Feel Alright, Germaphobes, Man Made Hill. TRAITRS might be the most successful band I've ever worked with; they generated an insane amount of money on streaming music.</li>
                 </ul>
               </div>
 
@@ -739,8 +763,8 @@ export default function App() {
                 <p className="font-bold border-b border-black pb-1 mb-3 mt-8">Writing & Cultural Criticism</p>
                 <ul className="list-disc pl-5 space-y-4">
                   <li><strong>Slagging Off (2013):</strong> In February 2013, I started an anonymous Tumblr blog reviewing every band playing Canadian Music Week (CMW) as a joke for my friends. I decided to review every single band from A-Z with jokes because, at the time, I was taking stand-up comedy writing lessons at Second City. I was learning how to structure a joke! But then it went viral, so with the attention on me, I dropped a long, data-driven investigation into how FACTOR was distributing public arts funding. The blog hit 10,000+ daily views. CBC dubbed me "The Most Hated Man in Canadian Music." I was asked to come on DAY6 to debate FACTOR's president, but that coward refused to sit in the same studio with me, so they interviewed me. What gets lost in the "most hated" framing is the advocacy underneath. The project was an attempt to help non-Toronto musicians access better funding coverage, to address the collapse of touring infrastructure, and to argue for a more equitable system. From Husky House Zine #1 (2025), reflecting a decade later: "If there is one thing I regret, it was waging the battle solo. Everything I had learned about Canadian music is that the power came from community, and we were building a very strong infrastructure that was benefiting many people. By doing Slagging Off, I damaged the community I was trying to advocate for. Even if I was right, all I really did was teach the industry how to hide their tracks."</li>
-                  <li><strong><a href="https://en.wikipedia.org/wiki/Weird_Canada" target="_blank" rel="noreferrer" className="underline hover:opacity-70">Weird Canada</a> (2009–2014):</strong> Writer, editor, board member, grant writer. Winner of the 2011 CBC Radio 3 Searchlight Award for Best Canadian Music Website. Co-organized Wyrd Fest.</li>
-                  <li><strong><a href="https://www.newfeeling.ca/" target="_blank" rel="noreferrer" className="underline hover:opacity-70">New Feeling</a> (2020–present):</strong> Founding member. Multi-stakeholder cooperative of Canadian music journalists. Cited by Liz Pelly in Mood Machine as "one of the most interesting models of co-op music" journalism in Canada.</li>
+                  <li><strong><AnimatedLink href="https://en.wikipedia.org/wiki/Weird_Canada" target="_blank" rel="noreferrer" variant="center">Weird Canada</AnimatedLink> (2009–2014):</strong> Writer, editor, board member, grant writer. Winner of the 2011 CBC Radio 3 Searchlight Award for Best Canadian Music Website. Co-organized Wyrd Fest.</li>
+                  <li><strong><AnimatedLink href="https://www.newfeeling.ca/" target="_blank" rel="noreferrer" variant="center">New Feeling</AnimatedLink> (2020–present):</strong> Founding member. Multi-stakeholder cooperative of Canadian music journalists. Cited by Liz Pelly in Mood Machine as "one of the most interesting models of co-op music" journalism in Canada.</li>
                   <li><strong>BeatRoute Magazine:</strong> Monthly punk 7" review column. "A column convinced no one actually read."</li>
                   <li><strong>Toast Life, Weird Canada, New Feeling:</strong> Various criticism and reviews.</li>
                 </ul>
@@ -754,13 +778,13 @@ export default function App() {
               <div>
                 <p className="font-bold border-b border-black pb-1 mb-3 mt-8">Selected Press (Music & Culture)</p>
                 <ul className="list-disc pl-5 space-y-1">
-                  <li><a href="https://www.theglobeandmail.com/arts/music/why-indie-rock-mediocrity-rules-in-canada-according-to-one-insider/article11170577/" target="_blank" rel="noreferrer" className="underline hover:opacity-70">The Globe and Mail (2013) — "Why Indie-Rock Mediocrity Rules in Canada"</a></li>
-                  <li><a href="https://www.vice.com/en/article/meet-the-guy-whos-slagging-off-the-canadian-music-industry/" target="_blank" rel="noreferrer" className="underline hover:opacity-70">VICE (2013) — "Meet the Guy Who's Slagging Off the Canadian Music Industry"</a></li>
-                  <li><a href="https://www.cbc.ca/player/play/audio/1.1541637" target="_blank" rel="noreferrer" className="underline hover:opacity-70">CBC Day 6 (2013) — "The Most Hated Man in Canadian Music"</a></li>
+                  <li><AnimatedLink href="https://www.theglobeandmail.com/arts/music/why-indie-rock-mediocrity-rules-in-canada-according-to-one-insider/article11170577/" target="_blank" rel="noreferrer" variant="center">The Globe and Mail (2013) — "Why Indie-Rock Mediocrity Rules in Canada"</AnimatedLink></li>
+                  <li><AnimatedLink href="https://www.vice.com/en/article/meet-the-guy-whos-slagging-off-the-canadian-music-industry/" target="_blank" rel="noreferrer" variant="center">VICE (2013) — "Meet the Guy Who's Slagging Off the Canadian Music Industry"</AnimatedLink></li>
+                  <li><AnimatedLink href="https://www.cbc.ca/player/play/audio/1.1541637" target="_blank" rel="noreferrer" variant="center">CBC Day 6 (2013) — "The Most Hated Man in Canadian Music"</AnimatedLink></li>
                   <li>National Post (2013, 2015) — Music industry profiles</li>
-                  <li><a href="https://www.ominocity.com/2013/04/30/how-paul-lawton-became-the-most-hated-man-in-canadian-music-timeline/" target="_blank" rel="noreferrer" className="underline hover:opacity-70">Ominocity (2013) — Full Slagging Off timeline</a></li>
-                  <li><a href="https://www.canadaland.com/podcast/canadian-music-horribly-broken-week/" target="_blank" rel="noreferrer" className="underline hover:opacity-70">CANADALAND Ep. 87 (2015) — "Canadian Music (Is Horribly Broken) Week"</a></li>
-                  <li><a href="https://nowtoronto.com/music/features/pleasence-records-indie-record-label-podcast-festival" target="_blank" rel="noreferrer" className="underline hover:opacity-70">NOW Toronto (2018) — "How Pleasence Records Is Rethinking the Label Model"</a></li>
+                  <li><AnimatedLink href="https://www.ominocity.com/2013/04/30/how-paul-lawton-became-the-most-hated-man-in-canadian-music-timeline/" target="_blank" rel="noreferrer" variant="center">Ominocity (2013) — Full Slagging Off timeline</AnimatedLink></li>
+                  <li><AnimatedLink href="https://www.canadaland.com/podcast/canadian-music-horribly-broken-week/" target="_blank" rel="noreferrer" variant="center">CANADALAND Ep. 87 (2015) — "Canadian Music (Is Horribly Broken) Week"</AnimatedLink></li>
+                  <li><AnimatedLink href="https://nowtoronto.com/music/features/pleasence-records-indie-record-label-podcast-festival" target="_blank" rel="noreferrer" variant="center">NOW Toronto (2018) — "How Pleasence Records Is Rethinking the Label Model"</AnimatedLink></li>
                   <li>Husky House Zine #1 (2025) — "Slagging Off: Ten Years Later"</li>
                 </ul>
               </div>

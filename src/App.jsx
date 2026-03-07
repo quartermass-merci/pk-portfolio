@@ -285,8 +285,17 @@ export default function App() {
       )}
 
       {/* Slide-out Content Panel */}
-      <div className={`fixed top-0 right-0 z-40 h-full w-full md:w-3/5 bg-white border-l border-black shadow-2xl transform transition-transform duration-300 ease-in-out overflow-y-auto ${panelOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-        <div className="p-6 md:p-10">
+      <div className={`fixed top-0 right-0 z-40 h-full w-full md:w-3/5 bg-[#f5f5f0] border-l border-black shadow-2xl transform transition-transform duration-300 ease-in-out overflow-y-auto ${panelOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+        {/* PixelTrail background for panel — sticky so it stays visible while scrolling */}
+        <div className="sticky top-0 left-0 w-full h-screen pointer-events-auto" style={{ zIndex: 0, marginBottom: '-100vh' }}>
+          <PixelTrail
+            pixelSize={screenSize.lessThan('md') ? 40 : 60}
+            fadeDuration={0}
+            delay={600}
+            pixelClassName="rounded-full bg-black/[0.03]"
+          />
+        </div>
+        <div className="p-6 md:p-10 relative z-10">
           <button onClick={closePanel} className="mb-8 text-sm font-mono uppercase tracking-widest hover:opacity-50 transition-opacity flex items-center gap-2">
             <span>←</span> Back
           </button>

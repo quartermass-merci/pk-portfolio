@@ -5,8 +5,7 @@ import PixelTrail from './components/PixelTrail';
 import { useScreenSize } from './components/hooks/useScreenSize';
 import AnimatedLink from './components/AnimatedLink';
 import { VariableFontHoverByLetter } from './components/VariableFontHover';
-import ElasticLine from './components/ElasticLine';
-import ImageRevealHeader from './components/ImageRevealHeader';
+
 
 
 export default function App() {
@@ -203,15 +202,6 @@ export default function App() {
           />
         </button>
 
-        {/* Elastic divider */}
-        <div className="w-full h-6 mb-6 text-black/30">
-          <ElasticLine
-            releaseThreshold={40}
-            strokeWidth={1}
-            animateInTransition={{ type: 'spring', stiffness: 300, damping: 30, delay: 0.2 }}
-          />
-        </div>
-
         <nav className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-0 items-start">
           {/* Background Nav */}
           <div className="mb-8">
@@ -247,21 +237,19 @@ export default function App() {
               {expandedCategories[category] && (
                 <ul className="border-t border-black">
                   {portfolioData.filter((p) => p.category === category).map((project) => (
-                    <ImageRevealHeader key={project.id} images={project.images || []}>
-                      <li onClick={() => handleProjectClick(project)} className={`border-b border-black py-2 px-1 flex justify-between cursor-pointer hover:bg-gray-100 transition-colors ${activeProject?.id === project.id && view === 'project' && panelOpen ? 'bg-gray-100 font-bold' : ''}`}>
-                        <VariableFontHoverByLetter
-                          label={project.title}
-                          fromFontVariationSettings={project.forceBold ? "'wght' 700" : "'wght' 400"}
-                          toFontVariationSettings="'wght' 700"
-                          staggerDuration={0.015}
-                          staggerFrom="first"
-                          className={`truncate pr-4 cursor-pointer ${project.forceBold ? 'underline decoration-2' : ''}`}
-                        />
-                        <span className="whitespace-nowrap flex gap-2">
-                          <span>{project.year}</span>
-                        </span>
-                      </li>
-                    </ImageRevealHeader>
+                    <li key={project.id} onClick={() => handleProjectClick(project)} className={`border-b border-black py-2 px-1 flex justify-between cursor-pointer hover:bg-gray-100 transition-colors ${activeProject?.id === project.id && view === 'project' && panelOpen ? 'bg-gray-100 font-bold' : ''}`}>
+                      <VariableFontHoverByLetter
+                        label={project.title}
+                        fromFontVariationSettings={project.forceBold ? "'wght' 700" : "'wght' 400"}
+                        toFontVariationSettings="'wght' 700"
+                        staggerDuration={0.015}
+                        staggerFrom="first"
+                        className={`truncate pr-4 cursor-pointer ${project.forceBold ? 'underline decoration-2' : ''}`}
+                      />
+                      <span className="whitespace-nowrap flex gap-2">
+                        <span>{project.year}</span>
+                      </span>
+                    </li>
                   ))}
                 </ul>
               )}

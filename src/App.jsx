@@ -5,6 +5,8 @@ import PixelTrail from './components/PixelTrail';
 import { useScreenSize } from './components/hooks/useScreenSize';
 import AnimatedLink from './components/AnimatedLink';
 import { VariableFontHoverByLetter } from './components/VariableFontHover';
+import ElasticLine from './components/ElasticLine';
+import ImageRevealHeader from './components/ImageRevealHeader';
 
 
 export default function App() {
@@ -22,6 +24,17 @@ export default function App() {
   });
 
   const categories = useMemo(() => ['Campaign Strategy', 'Brand Architecture', 'Corporate Comms'], []);
+
+  // Collect all images per category for the image-reveal hover
+  const categoryImages = useMemo(() => {
+    const map = {};
+    for (const cat of categories) {
+      map[cat] = portfolioData
+        .filter((p) => p.category === cat)
+        .flatMap((p) => p.images || []);
+    }
+    return map;
+  }, [categories]);
 
   const openPanel = (newView, project = null) => {
     setView(newView);
@@ -199,6 +212,15 @@ export default function App() {
           />
         </button>
 
+        {/* Elastic divider */}
+        <div className="w-full h-6 mb-6 text-black/30">
+          <ElasticLine
+            releaseThreshold={40}
+            strokeWidth={1}
+            animateInTransition={{ type: 'spring', stiffness: 300, damping: 30, delay: 0.2 }}
+          />
+        </div>
+
         <nav className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-0 items-start">
           {/* Background Nav */}
           <div className="mb-8">
@@ -227,10 +249,12 @@ export default function App() {
           {/* Categories Nav */}
           {categories.map((category) => (
             <div key={category} className="mb-8">
-              <button onClick={() => setExpandedCategories(p=>({...p, [category]: !p[category]}))} className="w-full bg-black text-white flex justify-between px-1.5 py-0.5 mb-1 text-xs uppercase tracking-widest hover:opacity-80 transition-opacity">
-                <span>{expandedCategories[category] ? '↓' : '→'} {category}</span>
-                <span>{expandedCategories[category] ? '↓' : '→'}</span>
-              </button>
+              <ImageRevealHeader images={categoryImages[category]}>
+                <button onClick={() => setExpandedCategories(p=>({...p, [category]: !p[category]}))} className="w-full bg-black text-white flex justify-between px-1.5 py-0.5 mb-1 text-xs uppercase tracking-widest hover:opacity-80 transition-opacity">
+                  <span>{expandedCategories[category] ? '↓' : '→'} {category}</span>
+                  <span>{expandedCategories[category] ? '↓' : '→'}</span>
+                </button>
+              </ImageRevealHeader>
               {expandedCategories[category] && (
                 <ul className="border-t border-black">
                   {portfolioData.filter((p) => p.category === category).map((project) => (

@@ -1,12 +1,15 @@
 import React, { useState, useMemo } from 'react';
 import portfolioData from './data/projects.json';
 import ResearchStack from './ResearchStack';
+import PixelTrail from './components/PixelTrail';
+import { useScreenSize } from './components/hooks/useScreenSize';
 
 
 export default function App() {
   const [activeProject, setActiveProject] = useState(null);
   const [view, setView] = useState(null); 
   const [zoomImg, setZoomImg] = useState(null);
+  const screenSize = useScreenSize();
   const [panelOpen, setPanelOpen] = useState(false);
 
   const [expandedCategories, setExpandedCategories] = useState({
@@ -150,8 +153,18 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-black font-mono text-[14px] leading-tight relative">
+    <div className="min-h-screen bg-[#f5f5f0] text-black font-mono text-[14px] leading-tight relative">
       
+      {/* Pixel trail background */}
+      <div className="fixed inset-0 z-0 pointer-events-auto">
+        <PixelTrail
+          pixelSize={screenSize.lessThan('md') ? 48 : 72}
+          fadeDuration={0}
+          delay={800}
+          pixelClassName="rounded-full bg-black/[0.04]"
+        />
+      </div>
+
       {/* Lightbox Overlay */}
       {zoomImg && (
         <div className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4 cursor-zoom-out" onClick={() => setZoomImg(null)}>
@@ -161,7 +174,7 @@ export default function App() {
       )}
 
       {/* Navigation */}
-      <div className="w-full max-w-5xl mx-auto p-6 md:p-10 flex flex-col min-h-screen">
+      <div className="w-full max-w-5xl mx-auto p-6 md:p-10 flex flex-col min-h-screen relative z-10">
         <div className="mb-16">
           <img src="/images/pk-logo.png" alt="PK Lawton — Strategy × Culture" className="w-full max-w-[560px] h-auto mb-8" />
           <p className="text-sm md:text-base text-gray-600 mb-6 max-w-xl">Co-Founder & Chief Strategy Officer at Sister Merci. Brand strategist, researcher, educator, cultural critic. Based in Hamilton, ON.</p>

@@ -161,7 +161,7 @@ export default function App() {
       {/* Navigation */}
       <div className="w-full max-w-5xl mx-auto p-6 md:p-10 flex flex-col min-h-screen">
         <div className="mb-16">
-          <img src="/images/pk-logo.png" alt="PK Lawton — Strategy × Culture" className="h-10 md:h-12 w-auto mb-4" />
+          <img src="/images/pk-logo.png" alt="PK Lawton — Strategy × Culture" className="w-[70vw] max-w-[420px] md:max-w-[480px] h-auto mb-6" />
           <p className="text-sm md:text-base text-gray-600 mb-6 max-w-xl">Co-Founder & Chief Strategy Officer at Sister Merci. Brand strategist, researcher, educator, cultural critic. Based in Hamilton, ON.</p>
           <div className="flex gap-6 text-sm underline decoration-1">
             <a href="mailto:pklawton@gmail.com" className="hover:opacity-50">Email</a>

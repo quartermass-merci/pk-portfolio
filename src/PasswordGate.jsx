@@ -13,7 +13,7 @@ export default function PasswordGate({ children }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (input === 'LAWTON') {
+    if (input.toUpperCase() === 'LAWTON') {
       setUnlocked(true);
       setError(false);
     } else {
@@ -57,17 +57,21 @@ export default function PasswordGate({ children }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
         >
+          <label htmlFor="pk-password" className="sr-only">Password</label>
           <input
+            id="pk-password"
             type="password"
             value={input}
             onChange={(e) => { setInput(e.target.value); setError(false); }}
             placeholder="Enter password"
             autoFocus
+            autoComplete="off"
             className="w-full h-11 px-4 text-sm font-mono outline-none transition-all duration-200 bg-[#FAF8F4]/80 backdrop-blur-sm border border-[#C4B99A] rounded-md text-[#362318] placeholder-[#A89B86] focus:border-[#565D4F]"
           />
           {error && (
             <motion.p
               className="text-xs text-center text-[#DB3E36]"
+              role="alert"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >

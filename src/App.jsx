@@ -1,5 +1,5 @@
-import React, { useState, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useMemo, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import portfolioData from './data/projects.json';
 import ResearchStack from './ResearchStack';
 import PixelTrail from './components/PixelTrail';
@@ -11,10 +11,16 @@ import { VariableFontHoverByLetter } from './components/VariableFontHover';
 
 export default function App() {
   const [activeProject, setActiveProject] = useState(null);
-  const [view, setView] = useState(null); 
+  const [view, setView] = useState(null);
   const [zoomImg, setZoomImg] = useState(null);
   const screenSize = useScreenSize();
   const [panelOpen, setPanelOpen] = useState(false);
+  const prefersReducedMotion = useReducedMotion();
+
+  // Motion-aware transition defaults
+  const motionProps = prefersReducedMotion
+    ? { initial: false, transition: { duration: 0 } }
+    : {};
 
 
   const categories = useMemo(() => ['Campaign Strategy', 'Brand Architecture', 'Corporate Comms'], []);
@@ -27,11 +33,23 @@ export default function App() {
     setPanelOpen(true);
   };
 
-  const closePanel = () => {
+  const closePanel = useCallback(() => {
     setPanelOpen(false);
-  };
+  }, []);
 
   const handleProjectClick = (p) => { openPanel('project', p); };
+
+  // Keyboard: Escape closes lightbox or panel
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        if (zoomImg) setZoomImg(null);
+        else if (panelOpen) closePanel();
+      }
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [zoomImg, panelOpen, closePanel]);
 
   const backgroundSections = [
     { id: 'timeline', title: 'Career Timeline' },
@@ -61,8 +79,8 @@ export default function App() {
   };
 
   // Split images for interleaving with case study sections
-  const splitProjectImages = (images = [], sectionCount = 0) => {
-    if (!images.length) return { hero: null, distributed: [], remaining: [] };
+  const splitProjectImages = (images, sectionCount = 0) => {
+    if (!images || !images.length) return { hero: null, distributed: [], remaining: [] };
     const hero = images[0];
     const rest = images.slice(1);
     const distributeCount = Math.min(rest.length, Math.max(0, sectionCount - 1));
@@ -73,6 +91,7 @@ export default function App() {
 
   // Video embed — handles YouTube (thumbnail + link), Vimeo (iframe), and MP4 (native)
   const VideoEmbed = ({ url }) => {
+    if (!url) return null;
     // MP4 / local video
     if (url.endsWith('.mp4') || url.endsWith('.webm')) {
       return (
@@ -155,9 +174,20 @@ export default function App() {
     return (
       <div className="grid grid-cols-2 md:grid-cols-3 gap-3 my-8 pt-8 border-t border-[#C4B99A]">
         {urls.map((url, i) => (
-          <div key={i} className="aspect-square bg-[#F0EDE7] overflow-hidden cursor-zoom-in" onClick={() => setZoomImg(url)}>
-            <img src={url} className="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500" alt={`Gallery item ${i + 1}`} />
-          </div>
+          <button
+            key={i}
+            className="aspect-square bg-[#F0EDE7] overflow-hidden cursor-zoom-in border-0 p-0"
+            onClick={() => setZoomImg(url)}
+            aria-label={`View image ${i + 1} full size`}
+          >
+            <img
+              src={url}
+              className="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500"
+              alt=""
+              loading="lazy"
+              onError={(e) => { e.target.style.display = 'none'; }}
+            />
+          </button>
         ))}
       </div>
     );
@@ -178,9 +208,18 @@ export default function App() {
 
       {/* Lightbox Overlay */}
       {zoomImg && (
-        <div className="fixed inset-0 z-50 bg-[#362318]/95 flex items-center justify-center p-4 cursor-zoom-out" onClick={() => setZoomImg(null)}>
+        <div
+          className="fixed inset-0 z-50 bg-[#362318]/95 flex items-center justify-center p-4 cursor-zoom-out"
+          role="dialog"
+          aria-label="Image zoom"
+          onClick={() => setZoomImg(null)}
+        >
           <img src={zoomImg} className="max-w-full max-h-full object-contain" alt="Zoomed view" />
-          <button className="absolute top-6 right-6 text-white text-xl hover:opacity-50">✕</button>
+          <button
+            className="absolute top-4 right-4 min-w-[44px] min-h-[44px] flex items-center justify-center text-white text-xl hover:opacity-50"
+            aria-label="Close zoom"
+            onClick={(e) => { e.stopPropagation(); setZoomImg(null); }}
+          >✕</button>
         </div>
       )}
 
@@ -218,7 +257,14 @@ export default function App() {
             <h3 className="text-[10px] uppercase tracking-[0.2em] text-[#565D4F] border-b border-[#C4B99A] pb-1 mb-1">Background</h3>
             <ul>
               {backgroundSections.map((item) => (
-                <li key={item.id} onClick={() => openPanel(item.id)} className={`border-b border-[#C4B99A]/40 py-1.5 px-1 cursor-pointer hover:bg-[#F0EDE7] transition-colors ${view === item.id && panelOpen ? 'bg-[#F0EDE7] font-bold' : ''}`}>
+                <li
+                  key={item.id}
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => openPanel(item.id)}
+                  onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openPanel(item.id); } }}
+                  className={`border-b border-[#C4B99A]/40 py-1.5 px-1 cursor-pointer hover:bg-[#F0EDE7] transition-colors ${view === item.id && panelOpen ? 'bg-[#F0EDE7] font-bold' : ''}`}
+                >
                   <VariableFontHoverByLetter
                     label={item.title}
                     fromFontVariationSettings="'wght' 400"
@@ -238,7 +284,14 @@ export default function App() {
               <h3 className="text-[10px] uppercase tracking-[0.2em] text-[#565D4F] border-b border-[#C4B99A] pb-1 mb-1">{category}</h3>
               <ul>
                 {portfolioData.filter((p) => p.category === category).map((project) => (
-                  <li key={project.id} onClick={() => handleProjectClick(project)} className={`border-b border-[#C4B99A]/40 py-1.5 px-1 flex justify-between cursor-pointer hover:bg-[#F0EDE7] transition-colors ${activeProject?.id === project.id && view === 'project' && panelOpen ? 'bg-[#F0EDE7] font-bold' : ''}`}>
+                  <li
+                    key={project.id}
+                    role="button"
+                    tabIndex={0}
+                    onClick={() => handleProjectClick(project)}
+                    onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleProjectClick(project); } }}
+                    className={`border-b border-[#C4B99A]/40 py-1.5 px-1 flex justify-between cursor-pointer hover:bg-[#F0EDE7] transition-colors ${activeProject?.id === project.id && view === 'project' && panelOpen ? 'bg-[#F0EDE7] font-bold' : ''}`}
+                  >
                     <VariableFontHoverByLetter
                       label={project.title}
                       fromFontVariationSettings={project.forceBold ? "'wght' 700" : "'wght' 400"}
@@ -989,7 +1042,13 @@ export default function App() {
             {/* Hero image */}
             {hero && (
               <div className="mb-10">
-                <img src={hero} alt="" className="w-full rounded-md grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer" onClick={() => setZoomImg(hero)} />
+                <img
+                  src={hero}
+                  alt=""
+                  className="w-full rounded-md grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer"
+                  onClick={() => setZoomImg(hero)}
+                  onError={(e) => { e.target.parentElement.style.display = 'none'; }}
+                />
               </div>
             )}
 
@@ -1020,7 +1079,14 @@ export default function App() {
                   </div>
                   {distributed[i] && (
                     <div className="my-4">
-                      <img src={distributed[i]} alt="" className="w-full rounded-md grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer" onClick={() => setZoomImg(distributed[i])} />
+                      <img
+                        src={distributed[i]}
+                        alt=""
+                        className="w-full rounded-md grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer"
+                        loading="lazy"
+                        onClick={() => setZoomImg(distributed[i])}
+                        onError={(e) => { e.target.parentElement.style.display = 'none'; }}
+                      />
                     </div>
                   )}
                 </React.Fragment>

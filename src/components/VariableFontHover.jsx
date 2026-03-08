@@ -1,6 +1,16 @@
-import { useState } from 'react';
+import { useState, useRef, useCallback } from 'react';
 import { motion, stagger, useAnimate } from 'framer-motion';
-import { debounce } from 'lodash';
+
+function debounce(fn, ms) {
+  let timer;
+  const debounced = (...args) => {
+    clearTimeout(timer);
+    if (!timer) fn(...args); // leading call
+    timer = setTimeout(() => { timer = null; fn(...args); }, ms);
+  };
+  debounced.cancel = () => clearTimeout(timer);
+  return debounced;
+}
 
 export function VariableFontHoverByLetter({
   label,
@@ -21,7 +31,7 @@ export function VariableFontHoverByLetter({
     delay: stagger(staggerDuration, { from: staggerFrom }),
   });
 
-  const hoverStart = debounce(
+  const hoverStart = useCallback(debounce(
     () => {
       if (isHovered) return;
       setIsHovered(true);
@@ -31,11 +41,10 @@ export function VariableFontHoverByLetter({
         mergeTransition(transition)
       );
     },
-    100,
-    { leading: true, trailing: true }
-  );
+    100
+  ), [isHovered, animate, toFontVariationSettings, transition]);
 
-  const hoverEnd = debounce(
+  const hoverEnd = useCallback(debounce(
     () => {
       setIsHovered(false);
       animate(
@@ -44,9 +53,8 @@ export function VariableFontHoverByLetter({
         mergeTransition(transition)
       );
     },
-    100,
-    { leading: true, trailing: true }
-  );
+    100
+  ), [animate, fromFontVariationSettings, transition]);
 
   return (
     <motion.span

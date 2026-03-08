@@ -1,6 +1,5 @@
 import React, { useCallback, useMemo, useRef } from 'react';
 import { motion, useAnimationControls } from 'framer-motion';
-import { v4 as uuidv4 } from 'uuid';
 import { useDimensions } from './hooks/useDebouncedDimensions';
 
 function PixelDot({ id, size, fadeDuration, delay, className }) {
@@ -41,7 +40,7 @@ export default function PixelTrail({
 }) {
   const containerRef = useRef(null);
   const dimensions = useDimensions(containerRef);
-  const trailId = useRef(uuidv4());
+  const trailId = useRef(crypto.randomUUID());
 
   const handleMouseMove = useCallback(
     (e) => {

@@ -16,12 +16,6 @@ export default function App() {
   const screenSize = useScreenSize();
   const [panelOpen, setPanelOpen] = useState(false);
 
-  const [expandedCategories, setExpandedCategories] = useState({
-    'Background': false,
-    'Campaign Strategy': false,
-    'Brand Architecture': false,
-    'Corporate Comms': false
-  });
 
   const categories = useMemo(() => ['Campaign Strategy', 'Brand Architecture', 'Corporate Comms'], []);
 
@@ -64,6 +58,17 @@ export default function App() {
         <span key={i}>{part}</span>
       )
     );
+  };
+
+  // Split images for interleaving with case study sections
+  const splitProjectImages = (images = [], sectionCount = 0) => {
+    if (!images.length) return { hero: null, distributed: [], remaining: [] };
+    const hero = images[0];
+    const rest = images.slice(1);
+    const distributeCount = Math.min(rest.length, Math.max(0, sectionCount - 1));
+    const distributed = rest.slice(0, distributeCount);
+    const remaining = rest.slice(distributeCount);
+    return { hero, distributed, remaining };
   };
 
   // Video embed — handles YouTube (thumbnail + link), Vimeo (iframe), and MP4 (native)
@@ -189,6 +194,10 @@ export default function App() {
             <AnimatedLink href="https://linkedin.com/in/paulklawton" target="_blank" rel="noreferrer" variant="center">LinkedIn</AnimatedLink>
             <AnimatedLink href="https://culturalcartography.substack.com" target="_blank" rel="noreferrer" variant="comesIn">Substack</AnimatedLink>
           </div>
+
+          <p className="mt-6 text-xs tracking-wide text-[#565D4F]" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+            150+ brands across 27 campaigns · 7 Clios · 3× Agency of the Year · 85% pitch win rate
+          </p>
         </div>
 
         <button onClick={() => openPanel('about')} className={`flex items-center gap-2 mb-10 transition-opacity ${view === 'about' && panelOpen ? 'font-bold' : ''}`}>
@@ -204,56 +213,44 @@ export default function App() {
         </button>
 
         <nav className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-0 items-start">
-          {/* Background Nav */}
+          {/* Background */}
           <div className="mb-8">
-            <button onClick={() => setExpandedCategories(p=>({...p, Background: !p.Background}))} className="w-full bg-[#362318] text-[#E0D3A8] flex justify-between px-1.5 py-0.5 mb-1 text-xs uppercase tracking-widest hover:opacity-80 transition-opacity">
-              <span>{expandedCategories.Background ? '↓' : '→'} Background</span>
-              <span>{expandedCategories.Background ? '↓' : '→'}</span>
-            </button>
-            {expandedCategories.Background && (
-              <ul className="border-t border-[#C4B99A]">
-                {backgroundSections.map((item) => (
-                  <li key={item.id} onClick={() => openPanel(item.id)} className={`border-b border-[#C4B99A] py-2 px-1 flex justify-between cursor-pointer hover:bg-[#F0EDE7] transition-colors ${view === item.id && panelOpen ? 'bg-[#F0EDE7] font-bold' : ''}`}>
+            <h3 className="text-[10px] uppercase tracking-[0.2em] text-[#565D4F] border-b border-[#C4B99A] pb-1 mb-1">Background</h3>
+            <ul>
+              {backgroundSections.map((item) => (
+                <li key={item.id} onClick={() => openPanel(item.id)} className={`border-b border-[#C4B99A]/40 py-1.5 px-1 cursor-pointer hover:bg-[#F0EDE7] transition-colors ${view === item.id && panelOpen ? 'bg-[#F0EDE7] font-bold' : ''}`}>
+                  <VariableFontHoverByLetter
+                    label={item.title}
+                    fromFontVariationSettings="'wght' 400"
+                    toFontVariationSettings="'wght' 700"
+                    staggerDuration={0.015}
+                    staggerFrom="first"
+                    className="truncate pr-4 cursor-pointer"
+                  />
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Case Study Categories */}
+          {categories.map((category) => (
+            <div key={category} className="mb-8">
+              <h3 className="text-[10px] uppercase tracking-[0.2em] text-[#565D4F] border-b border-[#C4B99A] pb-1 mb-1">{category}</h3>
+              <ul>
+                {portfolioData.filter((p) => p.category === category).map((project) => (
+                  <li key={project.id} onClick={() => handleProjectClick(project)} className={`border-b border-[#C4B99A]/40 py-1.5 px-1 flex justify-between cursor-pointer hover:bg-[#F0EDE7] transition-colors ${activeProject?.id === project.id && view === 'project' && panelOpen ? 'bg-[#F0EDE7] font-bold' : ''}`}>
                     <VariableFontHoverByLetter
-                      label={item.title}
-                      fromFontVariationSettings="'wght' 400"
+                      label={project.title}
+                      fromFontVariationSettings={project.forceBold ? "'wght' 700" : "'wght' 400"}
                       toFontVariationSettings="'wght' 700"
                       staggerDuration={0.015}
                       staggerFrom="first"
-                      className="truncate pr-4 cursor-pointer"
+                      className={`truncate pr-4 cursor-pointer ${project.forceBold ? 'underline decoration-2' : ''}`}
                     />
+                    <span className="whitespace-nowrap text-[#A89B86] text-sm">{project.year}</span>
                   </li>
                 ))}
               </ul>
-            )}
-          </div>
-
-          {/* Categories Nav */}
-          {categories.map((category) => (
-            <div key={category} className="mb-8">
-              <button onClick={() => setExpandedCategories(p=>({...p, [category]: !p[category]}))} className="w-full bg-[#362318] text-[#E0D3A8] flex justify-between px-1.5 py-0.5 mb-1 text-xs uppercase tracking-widest hover:opacity-80 transition-opacity">
-                <span>{expandedCategories[category] ? '↓' : '→'} {category}</span>
-                <span>{expandedCategories[category] ? '↓' : '→'}</span>
-              </button>
-              {expandedCategories[category] && (
-                <ul className="border-t border-[#C4B99A]">
-                  {portfolioData.filter((p) => p.category === category).map((project) => (
-                    <li key={project.id} onClick={() => handleProjectClick(project)} className={`border-b border-[#C4B99A] py-2 px-1 flex justify-between cursor-pointer hover:bg-[#F0EDE7] transition-colors ${activeProject?.id === project.id && view === 'project' && panelOpen ? 'bg-[#F0EDE7] font-bold' : ''}`}>
-                      <VariableFontHoverByLetter
-                        label={project.title}
-                        fromFontVariationSettings={project.forceBold ? "'wght' 700" : "'wght' 400"}
-                        toFontVariationSettings="'wght' 700"
-                        staggerDuration={0.015}
-                        staggerFrom="first"
-                        className={`truncate pr-4 cursor-pointer ${project.forceBold ? 'underline decoration-2' : ''}`}
-                      />
-                      <span className="whitespace-nowrap flex gap-2">
-                        <span>{project.year}</span>
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              )}
             </div>
           ))}
         </nav>
@@ -982,10 +979,19 @@ export default function App() {
         )}
 
         {/* PROJECT CASE STUDIES */}
-        {view === 'project' && activeProject && (
+        {view === 'project' && activeProject && (() => {
+          const { hero, distributed, remaining } = splitProjectImages(activeProject.images, activeProject.sections?.length || 0);
+          return (
           <div className="max-w-3xl pb-20">
             <h1 className="text-3xl mb-2 font-bold font-display">{activeProject.title}</h1>
             <p className="text-[#6B5D52] mb-8 italic">{activeProject.summary}</p>
+
+            {/* Hero image */}
+            {hero && (
+              <div className="mb-10">
+                <img src={hero} alt="" className="w-full rounded-md grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer" onClick={() => setZoomImg(hero)} />
+              </div>
+            )}
 
             {/* Videos */}
             {activeProject.videos && activeProject.videos.length > 0 && (
@@ -994,13 +1000,14 @@ export default function App() {
               </div>
             )}
 
-            {/* Video pairs (side-by-side portrait videos) */}
+            {/* Video pairs */}
             {activeProject.videoPairs && activeProject.videoPairs.length > 0 && (
               <div className="mb-10">
                 {activeProject.videoPairs.map((pair, i) => <VideoPairEmbed key={i} videos={pair.videos} label={pair.label} />)}
               </div>
             )}
-            
+
+            {/* Sections interleaved with images */}
             <div className="space-y-8 mb-12">
               {activeProject?.sections?.map((s, i) => (
                 <React.Fragment key={i}>
@@ -1011,6 +1018,11 @@ export default function App() {
                     <h3 className="uppercase tracking-widest text-xs font-bold border-b border-[#C4B99A] pb-1 mb-3">{s.heading}</h3>
                     <p className="whitespace-pre-wrap leading-relaxed">{s.text}</p>
                   </div>
+                  {distributed[i] && (
+                    <div className="my-4">
+                      <img src={distributed[i]} alt="" className="w-full rounded-md grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer" onClick={() => setZoomImg(distributed[i])} />
+                    </div>
+                  )}
                 </React.Fragment>
               ))}
             </div>
@@ -1029,13 +1041,16 @@ export default function App() {
               </div>
             )}
 
+            {/* Remaining images */}
+            {remaining.length > 0 && <ImageGrid urls={remaining} />}
+
             {/* Video above proof */}
             {activeProject.proofVideo && (
               <div className="mb-10">
                 <VideoEmbed url={activeProject.proofVideo} />
               </div>
             )}
-            
+
             {activeProject?.proof && activeProject.proof.length > 0 && (
               <div className="mb-12">
                 <h3 className="uppercase tracking-widest text-xs font-bold border-b border-[#C4B99A] pb-1 mb-3">Proof & Results</h3>
@@ -1050,10 +1065,33 @@ export default function App() {
               </div>
             )}
 
-            {/* Images explicitly placed at the bottom */}
-            {activeProject.images && activeProject.images.length > 0 && <ImageGrid urls={activeProject.images} />}
+            {/* Prev / Next navigation */}
+            {(() => {
+              const siblings = portfolioData.filter(p => p.category === activeProject.category);
+              const idx = siblings.findIndex(p => p.id === activeProject.id);
+              const prev = idx > 0 ? siblings[idx - 1] : null;
+              const next = idx < siblings.length - 1 ? siblings[idx + 1] : null;
+              if (!prev && !next) return null;
+              return (
+                <nav className="flex justify-between items-start border-t border-[#C4B99A] pt-6 mt-8" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+                  {prev ? (
+                    <button onClick={() => { setActiveProject(prev); document.querySelector('.overflow-y-auto')?.scrollTo(0, 0); }} className="text-left group cursor-pointer">
+                      <span className="text-[10px] uppercase tracking-widest text-[#A89B86]">← Previous</span>
+                      <span className="block text-sm text-[#565D4F] group-hover:text-[#362318] transition-colors">{prev.title}</span>
+                    </button>
+                  ) : <span />}
+                  {next ? (
+                    <button onClick={() => { setActiveProject(next); document.querySelector('.overflow-y-auto')?.scrollTo(0, 0); }} className="text-right group cursor-pointer">
+                      <span className="text-[10px] uppercase tracking-widest text-[#A89B86]">Next →</span>
+                      <span className="block text-sm text-[#565D4F] group-hover:text-[#362318] transition-colors">{next.title}</span>
+                    </button>
+                  ) : <span />}
+                </nav>
+              );
+            })()}
           </div>
-        )}
+          );
+        })()}
             </motion.div>
           </motion.div>
         )}

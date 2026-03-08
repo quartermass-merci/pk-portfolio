@@ -50,6 +50,11 @@ body {
   font-optical-sizing: auto;
 }
 
+/* UI font class (nav, labels, metadata) */
+.font-ui {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+}
+
 /* Reduced motion: disable animations for vestibular sensitivity */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

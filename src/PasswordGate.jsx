@@ -22,14 +22,14 @@ export default function PasswordGate({ children }) {
     }
   };
   return (
-    <div className="relative w-full min-h-screen bg-[#f5f5f0] flex flex-col items-center justify-center overflow-hidden">
+    <div className="relative w-full min-h-screen bg-[#FAF8F4] flex flex-col items-center justify-center overflow-hidden pk-grain">
       {/* Pixel trail background */}
       <div className="absolute inset-0 z-0">
         <PixelTrail
           pixelSize={screenSize.lessThan('md') ? 48 : 72}
           fadeDuration={0}
           delay={1000}
-          pixelClassName="rounded-full bg-black/[0.06]"
+          pixelClassName="rounded-full bg-[#565D4F]/[0.10]"
         />
       </div>
 
@@ -56,17 +56,18 @@ export default function PasswordGate({ children }) {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-        >          <input
+        >
+          <input
             type="password"
             value={input}
             onChange={(e) => { setInput(e.target.value); setError(false); }}
             placeholder="Enter password"
             autoFocus
-            className="w-full h-11 px-4 text-sm font-mono outline-none transition-all duration-200 bg-white/80 backdrop-blur-sm border border-black/10 rounded-md text-black placeholder-gray-400 focus:border-black/30"
+            className="w-full h-11 px-4 text-sm font-mono outline-none transition-all duration-200 bg-[#FAF8F4]/80 backdrop-blur-sm border border-[#C4B99A] rounded-md text-[#362318] placeholder-[#A89B86] focus:border-[#565D4F]"
           />
           {error && (
             <motion.p
-              className="text-xs text-center text-red-600"
+              className="text-xs text-center text-[#DB3E36]"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
@@ -75,7 +76,7 @@ export default function PasswordGate({ children }) {
           )}
           <button
             type="submit"
-            className="h-10 text-xs font-mono uppercase tracking-widest bg-black text-white rounded-md hover:bg-black/80 transition-colors cursor-pointer"
+            className="h-10 text-xs font-mono uppercase tracking-widest bg-[#362318] text-[#E0D3A8] rounded-md hover:bg-[#4A3F35] transition-colors cursor-pointer"
           >
             Enter
           </button>
@@ -83,7 +84,7 @@ export default function PasswordGate({ children }) {
 
         {/* Footer */}
         <motion.p
-          className="mt-10 text-[10px] uppercase tracking-widest text-black/25"
+          className="mt-10 text-[10px] uppercase tracking-widest text-[#C4B99A]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.4, delay: 0.9 }}

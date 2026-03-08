@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import portfolioData from './data/projects.json';
 import ResearchStack from './ResearchStack';
 import PixelTrail from './components/PixelTrail';
@@ -125,7 +126,7 @@ export default function App() {
     if (!videos || videos.length < 2) return null;
     return (
       <div className="my-6">
-        {label && <p className="text-xs uppercase tracking-widest font-bold text-gray-500 mb-2">{label}</p>}
+        {label && <p className="text-xs uppercase tracking-widest font-bold text-[#6B5D52] mb-2">{label}</p>}
         <div className="grid grid-cols-2 gap-3">
           {videos.map((v, i) => (
             <div key={i} className="aspect-[9/11] bg-black overflow-hidden rounded">
@@ -136,7 +137,7 @@ export default function App() {
                 playsInline
                 preload="metadata"
               />
-              {v.label && <p className="text-xs text-center text-gray-500 mt-1">{v.label}</p>}
+              {v.label && <p className="text-xs text-center text-[#6B5D52] mt-1">{v.label}</p>}
             </div>
           ))}
         </div>
@@ -147,9 +148,9 @@ export default function App() {
   const ImageGrid = ({ urls }) => {
     if (!urls || urls.length === 0) return null;
     return (
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-3 my-8 pt-8 border-t border-black">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-3 my-8 pt-8 border-t border-[#C4B99A]">
         {urls.map((url, i) => (
-          <div key={i} className="aspect-square bg-gray-100 overflow-hidden cursor-zoom-in" onClick={() => setZoomImg(url)}>
+          <div key={i} className="aspect-square bg-[#F0EDE7] overflow-hidden cursor-zoom-in" onClick={() => setZoomImg(url)}>
             <img src={url} className="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500" alt={`Gallery item ${i + 1}`} />
           </div>
         ))}
@@ -158,7 +159,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f5f5f0] text-black font-mono text-[14px] leading-tight relative">
+    <div className="min-h-screen bg-[#FAF8F4] text-[#362318] font-mono text-[14px] leading-tight relative pk-grain">
       
       {/* Pixel trail background */}
       <div className="fixed inset-0 z-0 pointer-events-auto">
@@ -166,13 +167,13 @@ export default function App() {
           pixelSize={screenSize.lessThan('md') ? 48 : 72}
           fadeDuration={0}
           delay={800}
-          pixelClassName="rounded-full bg-black/[0.04]"
+          pixelClassName="rounded-full bg-[#565D4F]/[0.10]"
         />
       </div>
 
       {/* Lightbox Overlay */}
       {zoomImg && (
-        <div className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4 cursor-zoom-out" onClick={() => setZoomImg(null)}>
+        <div className="fixed inset-0 z-50 bg-[#362318]/95 flex items-center justify-center p-4 cursor-zoom-out" onClick={() => setZoomImg(null)}>
           <img src={zoomImg} className="max-w-full max-h-full object-contain" alt="Zoomed view" />
           <button className="absolute top-6 right-6 text-white text-xl hover:opacity-50">✕</button>
         </div>
@@ -182,7 +183,7 @@ export default function App() {
       <div className="w-full max-w-5xl mx-auto p-6 md:p-10 flex flex-col min-h-screen relative z-10">
         <div className="mb-16">
           <img src="/images/pk-logo.png" alt="PK Lawton — Strategy × Culture" className="w-full max-w-[560px] h-auto mb-8" />
-          <p className="text-sm md:text-base text-gray-600 mb-6 max-w-xl">Co-Founder & Chief Strategy Officer at Sister Merci. Brand strategist, researcher, educator, cultural critic. Based in Hamilton, ON.</p>
+          <p className="text-sm md:text-base text-[#6B5D52] mb-6 max-w-xl">Co-Founder & Chief Strategy Officer at Sister Merci. Brand strategist, researcher, educator, cultural critic. Based in Hamilton, ON.</p>
           <div className="flex gap-6 text-sm" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
             <AnimatedLink href="mailto:pklawton@gmail.com" variant="goesOut">Email</AnimatedLink>
             <AnimatedLink href="https://linkedin.com/in/paulklawton" target="_blank" rel="noreferrer" variant="center">LinkedIn</AnimatedLink>
@@ -191,7 +192,7 @@ export default function App() {
         </div>
 
         <button onClick={() => openPanel('about')} className={`flex items-center gap-2 mb-10 transition-opacity ${view === 'about' && panelOpen ? 'font-bold' : ''}`}>
-          <span className="text-xl">●</span>
+          <span className="text-xl text-[#DB3E36]">●</span>
           <VariableFontHoverByLetter
             label="AN INTRODUCTION"
             fromFontVariationSettings="'wght' 400"
@@ -205,14 +206,14 @@ export default function App() {
         <nav className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-0 items-start">
           {/* Background Nav */}
           <div className="mb-8">
-            <button onClick={() => setExpandedCategories(p=>({...p, Background: !p.Background}))} className="w-full bg-black text-white flex justify-between px-1.5 py-0.5 mb-1 text-xs uppercase tracking-widest hover:opacity-80 transition-opacity">
+            <button onClick={() => setExpandedCategories(p=>({...p, Background: !p.Background}))} className="w-full bg-[#362318] text-[#E0D3A8] flex justify-between px-1.5 py-0.5 mb-1 text-xs uppercase tracking-widest hover:opacity-80 transition-opacity">
               <span>{expandedCategories.Background ? '↓' : '→'} Background</span>
               <span>{expandedCategories.Background ? '↓' : '→'}</span>
             </button>
             {expandedCategories.Background && (
-              <ul className="border-t border-black">
+              <ul className="border-t border-[#C4B99A]">
                 {backgroundSections.map((item) => (
-                  <li key={item.id} onClick={() => openPanel(item.id)} className={`border-b border-black py-2 px-1 flex justify-between cursor-pointer hover:bg-gray-100 transition-colors ${view === item.id && panelOpen ? 'bg-gray-100 font-bold' : ''}`}>
+                  <li key={item.id} onClick={() => openPanel(item.id)} className={`border-b border-[#C4B99A] py-2 px-1 flex justify-between cursor-pointer hover:bg-[#F0EDE7] transition-colors ${view === item.id && panelOpen ? 'bg-[#F0EDE7] font-bold' : ''}`}>
                     <VariableFontHoverByLetter
                       label={item.title}
                       fromFontVariationSettings="'wght' 400"
@@ -230,14 +231,14 @@ export default function App() {
           {/* Categories Nav */}
           {categories.map((category) => (
             <div key={category} className="mb-8">
-              <button onClick={() => setExpandedCategories(p=>({...p, [category]: !p[category]}))} className="w-full bg-black text-white flex justify-between px-1.5 py-0.5 mb-1 text-xs uppercase tracking-widest hover:opacity-80 transition-opacity">
+              <button onClick={() => setExpandedCategories(p=>({...p, [category]: !p[category]}))} className="w-full bg-[#362318] text-[#E0D3A8] flex justify-between px-1.5 py-0.5 mb-1 text-xs uppercase tracking-widest hover:opacity-80 transition-opacity">
                 <span>{expandedCategories[category] ? '↓' : '→'} {category}</span>
                 <span>{expandedCategories[category] ? '↓' : '→'}</span>
               </button>
               {expandedCategories[category] && (
-                <ul className="border-t border-black">
+                <ul className="border-t border-[#C4B99A]">
                   {portfolioData.filter((p) => p.category === category).map((project) => (
-                    <li key={project.id} onClick={() => handleProjectClick(project)} className={`border-b border-black py-2 px-1 flex justify-between cursor-pointer hover:bg-gray-100 transition-colors ${activeProject?.id === project.id && view === 'project' && panelOpen ? 'bg-gray-100 font-bold' : ''}`}>
+                    <li key={project.id} onClick={() => handleProjectClick(project)} className={`border-b border-[#C4B99A] py-2 px-1 flex justify-between cursor-pointer hover:bg-[#F0EDE7] transition-colors ${activeProject?.id === project.id && view === 'project' && panelOpen ? 'bg-[#F0EDE7] font-bold' : ''}`}>
                       <VariableFontHoverByLetter
                         label={project.title}
                         fromFontVariationSettings={project.forceBold ? "'wght' 700" : "'wght' 400"}
@@ -259,21 +260,43 @@ export default function App() {
       </div>
 
       {/* Backdrop */}
-      {panelOpen && (
-        <div className="fixed inset-0 z-30 bg-black/20 backdrop-blur-sm transition-opacity" onClick={closePanel} />
-      )}
+      <AnimatePresence>
+        {panelOpen && (
+          <motion.div
+            className="fixed inset-0 z-30 bg-[#362318]/20 backdrop-blur-sm"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            onClick={closePanel}
+          />
+        )}
+      </AnimatePresence>
 
       {/* Slide-out Content Panel */}
-      <div className={`fixed top-0 right-0 z-40 h-full w-full md:w-3/5 bg-[#f5f5f0] border-l border-black shadow-2xl transform transition-transform duration-300 ease-in-out overflow-y-auto ${panelOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-        <div className="p-6 md:p-10 relative">
-          <button onClick={closePanel} className="mb-8 text-sm font-mono uppercase tracking-widest hover:opacity-50 transition-opacity flex items-center gap-2">
-            <span>←</span> Back
-          </button>
+      <AnimatePresence>
+        {panelOpen && (
+          <motion.div
+            className="fixed top-0 right-0 z-40 h-full w-full md:w-3/5 bg-[#FAF8F4] border-l border-[#C4B99A] shadow-2xl overflow-y-auto"
+            initial={{ x: '100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '100%' }}
+            transition={{ type: 'spring', damping: 30, stiffness: 300 }}
+          >
+            <motion.div
+              className="p-6 md:p-10 relative"
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.15, duration: 0.4 }}
+            >
+              <button onClick={closePanel} className="mb-8 text-sm font-mono uppercase tracking-widest text-[#6B5D52] hover:text-[#362318] transition-colors flex items-center gap-2">
+                <span>←</span> Back
+              </button>
         
         {/* BACKGROUND SECTIONS */}
         {view === 'about' && (
           <div className="max-w-2xl font-mono text-sm leading-relaxed pb-20">
-            <h2 className="text-xl mb-6 font-bold uppercase tracking-widest">Hi, I'm PK</h2>
+            <h2 className="text-2xl mb-6 font-bold uppercase tracking-widest font-display">Hi, I'm PK</h2>
             <div className="space-y-6">
               <p>I'm Co-Founder and Chief Strategy Officer at Sister Merci, a creative agency that won the 2023 Clio Cannabis Agency of the Year. I started Sister Merci in 2019 with my friends Katie Waterman (CEO) and Amanda Wood (CCO). Before that, I led brand strategy and integrated media at Cossette, Weber Shandwick, and Cohn & Wolfe for clients like Canopy Growth, Air Canada, RBC, and Mondelez.</p>
               <p>Sister Merci has been the big one. I've led strategy for over 150 brands across cannabis, iGaming, AI, beverage alcohol, health tech, and financial services. Seven Clios, Agency of the Year three times. We started as four founders, and now we're 30 people in Toronto and Chicago.</p>
@@ -308,40 +331,40 @@ export default function App() {
 
         {view === 'timeline' && (
           <div className="max-w-2xl font-mono text-sm leading-relaxed pb-20">
-            <h2 className="text-xl mb-8 font-bold uppercase tracking-widest">Career Timeline</h2>
+            <h2 className="text-2xl mb-8 font-bold uppercase tracking-widest font-display">Career Timeline</h2>
             <div className="space-y-12">
               <div>
-                <div className="flex justify-between border-b border-black mb-2 pb-1 font-bold"><span>Sister Merci</span><span>2019–Present</span></div>
-                <p className="uppercase text-xs tracking-tighter text-gray-500 mb-2">Co-Founder & Chief Strategy Officer</p>
+                <div className="flex justify-between border-b border-[#C4B99A] mb-2 pb-1 font-bold"><span>Sister Merci</span><span>2019–Present</span></div>
+                <p className="uppercase text-xs tracking-tighter text-[#6B5D52] mb-2">Co-Founder & Chief Strategy Officer</p>
                 <p>Co-founded with Katie Waterman. Built from four founders to 30+ staff across Toronto and Chicago. Led strategy for 150+ brands across cannabis, iGaming, AI, beverage alcohol, health tech, and financial services. 2023 Clio Cannabis Agency of the Year. Seven Clios total. Three-time Agency of the Year.</p>
               </div>
               <div>
-                <div className="flex justify-between border-b border-black mb-2 pb-1 font-bold"><span>McMaster Continuing Education</span><span>2020–Present</span></div>
-                <p className="uppercase text-xs tracking-tighter text-gray-500 mb-2">Adjunct Professor</p>
+                <div className="flex justify-between border-b border-[#C4B99A] mb-2 pb-1 font-bold"><span>McMaster Continuing Education</span><span>2020–Present</span></div>
+                <p className="uppercase text-xs tracking-tighter text-[#6B5D52] mb-2">Adjunct Professor</p>
                 <p>Teaching Brand Strategy, Consumer Research, Introduction to Marketing, Personal Branding, and Effective Presentations. Redesigning curriculum for platform fragmentation and AI. Partnered with the Canadian Marketing Association to create an accelerated pathway to the Chartered Marketer designation.</p>
               </div>
               <div>
-                <div className="flex justify-between border-b border-black mb-2 pb-1 font-bold"><span>National Cannabis Industry Association</span><span>2023–2025</span></div>
-                <p className="uppercase text-xs tracking-tighter text-gray-500 mb-2">Officer, Marketing & Advertising Committee</p>
+                <div className="flex justify-between border-b border-[#C4B99A] mb-2 pb-1 font-bold"><span>National Cannabis Industry Association</span><span>2023–2025</span></div>
+                <p className="uppercase text-xs tracking-tighter text-[#6B5D52] mb-2">Officer, Marketing & Advertising Committee</p>
                 <p>Coordinator (2023), Vice Chair (2024), Chair (2025).</p>
               </div>
               <div>
-                <div className="flex justify-between border-b border-black mb-2 pb-1 font-bold"><span>Cannabis Standards Alliance of Canada</span><span>2024–2025</span></div>
-                <p className="uppercase text-xs tracking-tighter text-gray-500 mb-2">Strategic Advisor</p>
+                <div className="flex justify-between border-b border-[#C4B99A] mb-2 pb-1 font-bold"><span>Cannabis Standards Alliance of Canada</span><span>2024–2025</span></div>
+                <p className="uppercase text-xs tracking-tighter text-[#6B5D52] mb-2">Strategic Advisor</p>
               </div>
               <div>
-                <div className="flex justify-between border-b border-black mb-2 pb-1 font-bold"><span>Cossette</span><span>2018–2019</span></div>
-                <p className="uppercase text-xs tracking-tighter text-gray-500 mb-2">Vice President, Strategy</p>
+                <div className="flex justify-between border-b border-[#C4B99A] mb-2 pb-1 font-bold"><span>Cossette</span><span>2018–2019</span></div>
+                <p className="uppercase text-xs tracking-tighter text-[#6B5D52] mb-2">Vice President, Strategy</p>
                 <p>Led brand strategy and market insights for the Canopy Growth portfolio ($50M+ account) during Canada's cannabis legalization. Developed the positioning for Tweed that helped establish it as the country's most recognized cannabis brand. Worked alongside Rosie Gentile (now Global EVP, FCB) and Kevin McHugh (now CSO, Dentsu) in a three-person senior strategy unit. Strategy work on the Canopy Growth portfolio directly contributed to CMO David Bigioni being named Canada's Marketer of the Year (2019). Also led brand strategy for DNA Genetics and Foria.</p>
               </div>
               <div>
-                <div className="flex justify-between border-b border-black mb-2 pb-1 font-bold"><span>Weber Shandwick</span><span>2016–2018</span></div>
-                <p className="uppercase text-xs tracking-tighter text-gray-500 mb-2">VP, Strategic Planning & Head of Paid Media</p>
+                <div className="flex justify-between border-b border-[#C4B99A] mb-2 pb-1 font-bold"><span>Weber Shandwick</span><span>2016–2018</span></div>
+                <p className="uppercase text-xs tracking-tighter text-[#6B5D52] mb-2">VP, Strategic Planning & Head of Paid Media</p>
                 <p>Led strategic planning for Air Canada, RBC, Mondelez, and Chevrolet. Five direct reports, 20-person integrated media team. Transformed the corporate practice by leading with audience analysis, digital ethnography, and participant-observation rather than traditional creds presentations. Won the Air Canada account by interviewing loyalty program members and presenting their stories instead of agency credentials — the client stopped the 100-page pitch deck midway through and awarded the business. Contributed to an average of 10 competitive pitches per year with a 65% win rate on contributed pitches. Agency won consecutive Holmes Report Agency of the Year during tenure.</p>
               </div>
               <div>
-                <div className="flex justify-between border-b border-black mb-2 pb-1 font-bold"><span>Cohn & Wolfe</span><span>2013–2016</span></div>
-                <p className="uppercase text-xs tracking-tighter text-gray-500 mb-2">Senior Counsellor & Digital Lead</p>
+                <div className="flex justify-between border-b border-[#C4B99A] mb-2 pb-1 font-bold"><span>Cohn & Wolfe</span><span>2013–2016</span></div>
+                <p className="uppercase text-xs tracking-tighter text-[#6B5D52] mb-2">Senior Counsellor & Digital Lead</p>
                 <p>Built the agency's first analytics and measurement framework. Integrated media strategy for Nissan, Nintendo, CN Rail, and Dell. Brought earned media discipline together with paid and owned channels at a time when most PR agencies treated them as separate functions. Employee of the Year 2015.</p>
               </div>
             </div>
@@ -351,7 +374,7 @@ export default function App() {
 
         {view === 'education' && (
           <div className="max-w-2xl font-mono text-sm leading-relaxed pb-20">
-            <h2 className="text-xl mb-6 font-bold uppercase tracking-widest">Education</h2>
+            <h2 className="text-2xl mb-6 font-bold uppercase tracking-widest font-display">Education</h2>
             <div className="space-y-8">
               <div>
                 <p className="font-bold">PhD (ABD), Sociology : University of Calgary, 2006–2010</p>
@@ -371,11 +394,11 @@ export default function App() {
 
         {view === 'agency' && (
           <div className="max-w-2xl font-mono text-sm leading-relaxed pb-20">
-            <h2 className="text-xl mb-2 font-bold uppercase tracking-widest">AGENCY AS LAB: SISTER MERCI</h2>
-            <h3 className="font-bold uppercase tracking-widest text-xs mb-8 text-gray-500">EXPERIMENT UNTIL EXTRAORDINARY</h3>
+            <h2 className="text-2xl mb-2 font-bold uppercase tracking-widest font-display">AGENCY AS LAB: SISTER MERCI</h2>
+            <h3 className="font-bold uppercase tracking-widest text-xs mb-8 text-[#6B5D52]">EXPERIMENT UNTIL EXTRAORDINARY</h3>
             
             <div className="space-y-6 mb-12">
-              <h4 className="font-bold border-b border-black pb-1 mb-3">The Thesis</h4>
+              <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">The Thesis</h4>
               <p>The most restricted marketing environment in North America would produce the sharpest creative thinking, not the weakest.</p>
               <p>Sister Merci started as a hypothesis: the disciplines forced by cannabis marketing, specifically: compliance as creative fuel, budtender ecosystems as distribution channels, ethnographic research as the basis for every brief, would transfer to any high-stakes, emerging, or restricted category.</p>
               <p>Seven years later, the hypothesis has been tested across cannabis, iGaming, craft beverages, CPG, fintech, and pharma. Three Agency of the Year awards from three different organizations. A reverse-takeover that created a North American footprint. Constraints don't limit creativity. They sharpen it.</p>
@@ -384,7 +407,7 @@ export default function App() {
             </div>
 
             <div className="space-y-6 mb-12">
-              <h4 className="font-bold border-b border-black pb-1 mb-3">The Sister Merci Timeline</h4>
+              <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">The Sister Merci Timeline</h4>
               <div>
                 <p className="font-bold">2019: The Experiment Begins</p>
                 <p>Three agency veterans — Katie Waterman (CEO), PK Lawton (CSO), and Amanda Wood (CCO) — leave established roles at major Canadian agencies to build something no one had attempted: a strategy-led creative agency focused on emerging, highly regulated categories like cannabis and iGaming. PK plays a key role in securing a $1.5M seed round from BlackShire Capital and partners with BlackShire and Canopy Rivers on strategic diligence — evaluating brand viability, audience alignment, and market-entry logic for U.S. companies entering Canada. The bet: regulatory constraint as creative advantage.</p>
@@ -418,7 +441,7 @@ export default function App() {
             </div>
             
             <div className="space-y-4 mb-12">
-              <h4 className="font-bold border-b border-black pb-1 mb-3">Some Random Industry Firsts</h4>
+              <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">Some Random Industry Firsts</h4>
               <ul className="list-disc pl-5 space-y-1">
                 <li>First cannabis campaign on Pornhub</li>
                 <li>First cannabis campaign on Spotify</li>
@@ -428,7 +451,7 @@ export default function App() {
             </div>
 
             <div className="space-y-4 mb-12">
-              <h4 className="font-bold border-b border-black pb-1 mb-3">Selected Agency Awards</h4>
+              <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">Selected Agency Awards</h4>
               <ul className="space-y-2">
                 <li><span className="font-bold">Clio Cannabis</span> — Agency of the Year (2023)</li>
                 <li><span className="font-bold">ADCANN</span> — Cannabis Agency of the Year (Canada) (2022)</li>
@@ -446,7 +469,7 @@ export default function App() {
             </div>
 
             <div className="space-y-4">
-              <h4 className="font-bold border-b border-black pb-1 mb-3">As Covered In</h4>
+              <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">As Covered In</h4>
               <p>Adweek · Forbes · Ad Age · Strategy · Campaign Canada · Financial Post · Clio · LBB · Muse by Clios · TrendHunter · Ads of the World · MediaPost · B&T Australia · Honeysuckle Magazine · mg Magazine</p>
             </div>
 
@@ -458,38 +481,38 @@ export default function App() {
 
         {view === 'counsel' && (
           <div className="max-w-2xl font-mono text-sm leading-relaxed pb-20">
-            <h2 className="text-xl mb-2 font-bold uppercase tracking-widest">The Embedded Strategist</h2>
-            <h3 className="font-bold uppercase tracking-widest text-xs mb-8 text-gray-500">A STRATEGY-LED AGENCY MODEL</h3>
+            <h2 className="text-2xl mb-2 font-bold uppercase tracking-widest font-display">The Embedded Strategist</h2>
+            <h3 className="font-bold uppercase tracking-widest text-xs mb-8 text-[#6B5D52]">A STRATEGY-LED AGENCY MODEL</h3>
 
             <p className="mb-12">When we started Sister Merci, we decided early to lead with the frame of "a strategy-led creative agency" because we believe the properly embedded strategist is an agency multiplier — driving new business wins and organic client growth by deepening client relationships and working our way upstream into the C-Suite. As Sister Merci enters our 8th year as of March 2026, here are some of the results we've seen putting strategists in the middle of agency operations as opposed to the periphery.</p>
 
             <div className="space-y-6 mb-12">
-              <h4 className="font-bold border-b border-black pb-1 mb-3">First Revenue Line, Not a Cost Center</h4>
+              <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">First Revenue Line, Not a Cost Center</h4>
               <p>A good strategist reframes the pitch from "here's what we do" to "here's what you're missing." At Sister Merci, I've led roughly five competitive pitches per year at an 85% win rate, including a global win for the Doodle.com rebrand. At Weber Shandwick, about 10 per year at 65%.</p>
             </div>
 
             <div className="space-y-6 mb-12">
-              <h4 className="font-bold border-b border-black pb-1 mb-3">Trust Builder</h4>
+              <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">Trust Builder</h4>
               <p>When Sister Merci landed at Manulife in 2026, it was because of a client-strategist relationship that began at McDonald's Canada at Weber Shandwick and grew across three companies over 10 years. That is what happens when strategy consistently makes the client look right. Sister Merci maintains 85%+ retention on top-tier accounts, and our business is more likely to grow when a client moves into a new role and brings us in because of their level of trust. The strategist's job is to be ahead of the brief so the agency overdelivers without overages.</p>
             </div>
 
             <div className="space-y-6 mb-12">
-              <h4 className="font-bold border-b border-black pb-1 mb-3">Effectiveness Driver</h4>
+              <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">Effectiveness Driver</h4>
               <p>If you let creative run before you've defined what "working" means, you'll spend six months optimizing against the wrong metric. The strategist's job is to set the measurement logic before the budget moves. I built frameworks at Cohn & Wolfe connecting earned to paid and owned when most PR agencies treated them as separate P&Ls. At Sister Merci, cannabis restrictions forced this discipline early. You can't buy your way to equity when the channels don't exist, so you define success on your own terms or you don't have a strategy at all.</p>
             </div>
 
             <div className="space-y-6 mb-12">
-              <h4 className="font-bold border-b border-black pb-1 mb-3">Silo Buster</h4>
+              <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">Silo Buster</h4>
               <p>The embedded strategist translates between the client and the agency, the account and the creative, and the data and the narrative. Inside the agency, they connect departments that most shops keep walled off. Outside, they're the continuity between the client's business problem and every team that touches the work. At Weber Shandwick, I was hired for a consumer role (Strategy, Head of Paid Media), and I ended up completely reshaping how the corporate team won business and organically grew client scopes. At Sister Merci, strategy, creative, media, and research teams operate as one unit because the strategist sits at the center, not at the start of a handoff chain. I've also done strategic due diligence with BlackShire Capital and Canopy Rivers, evaluating brand viability and market-entry logic for investors. Wherever the thinking is needed, that's where the role goes.</p>
             </div>
 
             <div className="space-y-6 mb-12">
-              <h4 className="font-bold border-b border-black pb-1 mb-3">Internal Growth Engine</h4>
+              <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">Internal Growth Engine</h4>
               <p>Strategists I've trained now hold senior positions at McDonald's Global, Zeno Group, GUT, Courage, and Lifelong Crush. I've managed teams of up to 20 at Weber Shandwick and 30 at Cossette. The job of a strategy lead is to make the next generation dangerous. Set a clear standard, build the environment, and enable strong decision-making, hard skills development, and a winning mindset by creating a culture of high performers who carry more work.</p>
             </div>
 
             <div className="space-y-6 mb-12">
-              <h4 className="font-bold border-b border-black pb-1 mb-3">External Growth Engine</h4>
+              <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">External Growth Engine</h4>
               <p>Sister Merci grew from four founders to 30 across Toronto and Chicago on a model I helped design. Core team plus specialist talent who flex based on client needs. No bloat, no diffused accountability. I led the agency's $1.5M seed raise from BlackShire Capital. A strategist who only faces the client is half a strategist.</p>
             </div>
           </div>
@@ -497,8 +520,8 @@ export default function App() {
 
         {view === 'square' && (
           <div className="max-w-2xl font-mono text-sm leading-relaxed pb-20">
-            <h2 className="text-xl mb-2 font-bold uppercase tracking-widest">DEVELOPING SQUARE SHAPED STRATEGISTS</h2>
-            <h3 className="font-bold uppercase tracking-widest text-xs mb-8 text-gray-500">THE SQUARE-SHAPED STRATEGIST</h3>
+            <h2 className="text-2xl mb-2 font-bold uppercase tracking-widest font-display">DEVELOPING SQUARE SHAPED STRATEGISTS</h2>
+            <h3 className="font-bold uppercase tracking-widest text-xs mb-8 text-[#6B5D52]">THE SQUARE-SHAPED STRATEGIST</h3>
 
             <div className="space-y-6 mb-12">
               <p>The industry has long focused on T-shaped people, experts in one area, with a little knowledge in others. But that approach falls short when you need to analyze a brand tracker one day, test a cultural insight the next, and defend an attribution model by the end of the week.</p>
@@ -513,7 +536,7 @@ export default function App() {
             </div>
 
             <div className="space-y-6 mb-12">
-              <h4 className="font-bold border-b border-black pb-1 mb-3">My Coaching Tree</h4>
+              <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">My Coaching Tree</h4>
               <p>Strategists I've trained now hold:</p>
               <ul className="list-disc pl-5 space-y-2">
                 <li>Global Social Lead & Brand, McDonald's Global</li>
@@ -526,7 +549,7 @@ export default function App() {
               <p>A Square-Shaped Strategist knows how to make work stand out, how to make it effective, and, just as importantly, how to sell the work and build trust with clients and partners.</p>
             </div>
 
-            <div className="aspect-video w-full my-6 bg-gray-100 overflow-hidden rounded">
+            <div className="aspect-video w-full my-6 bg-[#F0EDE7] overflow-hidden rounded">
               <iframe
                 src="https://www.canva.com/design/DAHCz5-pAFQ/--EKhbQ4MR4hhxGFW5ExjA/view?embed"
                 className="w-full h-full border-0"
@@ -539,8 +562,8 @@ export default function App() {
 
         {view === 'cartography' && (
           <div className="max-w-2xl font-mono text-sm leading-relaxed pb-20">
-            <h2 className="text-xl mb-2 font-bold uppercase tracking-widest">CULTURAL CARTOGRAPHY</h2>
-            <h3 className="font-bold uppercase tracking-widest text-xs mb-8 text-gray-500">A PHILOSOPHY OF STRATEGIC PLANNING</h3>
+            <h2 className="text-2xl mb-2 font-bold uppercase tracking-widest font-display">CULTURAL CARTOGRAPHY</h2>
+            <h3 className="font-bold uppercase tracking-widest text-xs mb-8 text-[#6B5D52]">A PHILOSOPHY OF STRATEGIC PLANNING</h3>
 
             <div className="space-y-6 mb-12">
               <p>Strategy has lost its way. Strategists used to be creative partners, shaping the work as it unfolded. Now, their role often comes at the end: they arrive after the main thinking, fit ideas into templates, and mention the right names to make everyone feel aligned. We were so close!</p>
@@ -549,7 +572,7 @@ export default function App() {
             </div>
 
             <div className="space-y-6 mb-12">
-              <h4 className="font-bold border-b border-black pb-1 mb-3">How Strategy Got Flattened</h4>
+              <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">How Strategy Got Flattened</h4>
               <p>The industry has made strategy so stable that it's almost invisible. Three patterns are responsible for this.</p>
               <p><strong>PowerPoint shapes our thinking.</strong> Slides encourage linear stories and safe bullet points, but real people and markets don't work that way. Latour called this inscription—the idea that tools shape the knowledge we create. Every strategist knows the feeling: you open a deck template, and your ideas start to fit its mold.</p>
               <p><strong>Ritualized methods are common.</strong> The insight slide is filled out before any real insight appears. Competitive audits use the same template no matter the category. These routines create order, but they also remove the friction needed for creative breakthroughs. John Law's work on method assemblages explains this well: the tools we use to study a situation shape what we can see.</p>
@@ -557,7 +580,7 @@ export default function App() {
             </div>
 
             <div className="space-y-6 mb-12">
-              <h4 className="font-bold border-b border-black pb-1 mb-3">What Cultural Cartography Actually Does</h4>
+              <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">What Cultural Cartography Actually Does</h4>
               <p>Rather than analyzing from afar, you follow how meaning moves through a system. The focus isn't just on "the consumer" or "the brand." It's on the network of things already influencing the situation.</p>
               <p><strong>You identify actors.</strong> An actor can be anything that changes the situation: a person, a platform algorithm, a budget limit, a regulatory rule, or even a Reddit thread that changes a brand's story overnight. In the cannabis industry, I've seen a single Health Canada compliance memo change an entire category's creative work in just weeks. That memo is an actor. Ignoring it because it doesn't fit on a slide is a mistake.</p>
               <p><strong>You look for friction.</strong> Strategy happens where systems clash: where policy, culture, and business meet, not in the safe center of a brand model. In fast-changing fields, brands live in regulatory documents and online comments just as much as in briefs.</p>
@@ -565,13 +588,13 @@ export default function App() {
             </div>
 
             <div className="space-y-6 mb-12">
-              <h4 className="font-bold border-b border-black pb-1 mb-3">The Stalker Problem</h4>
+              <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">The Stalker Problem</h4>
               <p>In Tarkovsky's Stalker, there's a scene where the guide says, "You can't walk straight through the Zone!" The direct path is dangerous. You throw a bolt, see where it lands, and follow it. The landscape has its own rules and changes as you move.</p>
               <p>That's what the strategic process can increase relevance. Algorithms change. Regulations shift. Culture moves so fast that last quarter's insight can become a problem. The old maps don't just have gaps; they describe a place that no longer exists.</p>
               <p>The strategist who succeeds now isn't the one with the best map. It's the one who has the courage to move when things change and the patience to study new ground before acting. Mastery isn't the right word for this. Attunement fits better.</p>
             </div>
 
-            <div className="aspect-video w-full my-6 bg-gray-100 overflow-hidden rounded">
+            <div className="aspect-video w-full my-6 bg-[#F0EDE7] overflow-hidden rounded">
               <iframe
                 src="https://www.canva.com/design/DAGmrey6WcQ/XiV4VUIzkBj0PMohFrxZSw/view?embed"
                 className="w-full h-full border-0"
@@ -584,12 +607,12 @@ export default function App() {
 
         {view === 'teaching' && (
           <div className="max-w-2xl font-mono text-sm leading-relaxed pb-20">
-            <h2 className="text-xl mb-2 font-bold uppercase tracking-widest">TEACHING & RESEARCH</h2>
-            <h3 className="font-bold uppercase tracking-widest text-xs mb-8 text-gray-500">FROM SOCIOLOGY TO STRATEGY AND BACK AGAIN</h3>
+            <h2 className="text-2xl mb-2 font-bold uppercase tracking-widest font-display">TEACHING & RESEARCH</h2>
+            <h3 className="font-bold uppercase tracking-widest text-xs mb-8 text-[#6B5D52]">FROM SOCIOLOGY TO STRATEGY AND BACK AGAIN</h3>
 
             <p className="mb-8">I started university to take a Marketing degree, but because I went to a liberal arts school, I had to take Social Science, Humanities, and Science courses. In my first semester, I immediately hated being in class with other marketing students and completely fell in love with Sociology. I went straight through a BA, MA, and PhD (which I am still, and forever will be, a "candidate" — I've written the dissertation, and I will defend it some day). In 2007, I started teaching at the University of Lethbridge: 3000-level courses in Mass Communications, Sociology of Health, and a course I designed from scratch called Digital Culture and Society. But as I got deeper into academic life, I realized how much better I was suited to a faster-paced environment. I became almost completely intolerant of academic bureaucracy. One summer, touring around the Midwest, my bandmates and I started watching Mad Men DVDs in the tour van, and because at the time I was teaching about advertising in my Mass Comm class, it dawned on me that a sociological approach would be genuinely useful in this field. That realization has been fueling me ever since. My current strategic process is founded in the first principles of Bruno Latour's Actor-Network Theory, and I believe brands can be built in the same mode as Pierre Bourdieu's theory of capital, habitus, and field. The classroom forces clarity, and the client work keeps the theory honest.</p>
             
-            <h4 className="font-bold border-b border-black pb-1 mb-3">Teaching</h4>
+            <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">Teaching</h4>
             <div className="space-y-6 mb-12">
               <div>
                 <p className="font-bold">McMaster Continuing Education (2020–present)</p>
@@ -605,7 +628,7 @@ export default function App() {
               </div>
             </div>
 
-            <h4 className="font-bold border-b border-black pb-1 mb-3">Academic Research</h4>
+            <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">Academic Research</h4>
             <div className="space-y-6 mb-12">
               <div>
                 <p className="font-bold uppercase tracking-widest text-xs mb-2">Peer-Reviewed Publications</p>
@@ -634,14 +657,14 @@ export default function App() {
 
         {view === 'published' && (
           <div className="max-w-2xl font-mono text-sm leading-relaxed pb-20">
-            <h2 className="text-xl mb-2 font-bold uppercase tracking-widest">PUBLISHED & SPOKEN</h2>
-            <h3 className="font-bold uppercase tracking-widest text-xs mb-8 text-gray-500">EVERYTHING HERE SITS AT THE INTERSECTION OF HOW BRANDS GET BUILT AND WHY MOST OF THE PLAYBOOKS ARE WRONG</h3>
+            <h2 className="text-2xl mb-2 font-bold uppercase tracking-widest font-display">PUBLISHED & SPOKEN</h2>
+            <h3 className="font-bold uppercase tracking-widest text-xs mb-8 text-[#6B5D52]">EVERYTHING HERE SITS AT THE INTERSECTION OF HOW BRANDS GET BUILT AND WHY MOST OF THE PLAYBOOKS ARE WRONG</h3>
             
             <p className="mb-8">The newsletter, the trade publications, the op-eds, and the talks all come from the same place: a conviction that strategy work should be grounded in something more durable than trend decks and gut instinct. The writing covers cultural theory, cannabis marketing, brand methodology, and industry criticism. The speaking side is keynotes, panels, and podcast appearances.</p>
             
             <div className="space-y-6 mb-12">
               <div>
-                <p className="font-bold border-b border-black pb-1 mb-3">Cultural Cartography (Substack, 2025–Present)</p>
+                <p className="font-bold border-b border-[#C4B99A] pb-1 mb-3">Cultural Cartography (Substack, 2025–Present)</p>
                 <p className="mb-4">A newsletter and forthcoming book applying Actor-Network Theory, critical theory, and institutional ethnography to brand strategy.</p>
                 <p className="font-bold uppercase tracking-widest text-xs mb-2 mt-4">Selected Essays</p>
                 <ul className="list-disc pl-5 space-y-2">
@@ -656,7 +679,7 @@ export default function App() {
               </div>
               
               <div>
-                <p className="font-bold border-b border-black pb-1 mb-3 mt-8">Trade Publications & Op-Eds</p>
+                <p className="font-bold border-b border-[#C4B99A] pb-1 mb-3 mt-8">Trade Publications & Op-Eds</p>
                 <ul className="list-disc pl-5 space-y-2">
                   <li><AnimatedLink href="https://lbbonline.com/news/the-secret-playbook-of-cannabis-brands-that-win" target="_blank" rel="noreferrer" variant="center">"The Secret Playbook of Cannabis Brands That Win"</AnimatedLink> — LBBOnline (2025). Six years of agency experience across 150+ cannabis brands distilled.</li>
                   <li><AnimatedLink href="https://lbbonline.com/news/Entering-the-Age-of-Health-Conscious-Hedonism" target="_blank" rel="noreferrer" variant="center">"Entering the Age of Health-Conscious Hedonism"</AnimatedLink> — LBBOnline (2026). Emerging beverage trends and what they mean for regulated categories.</li>
@@ -669,7 +692,7 @@ export default function App() {
               </div>
 
               <div>
-                <p className="font-bold border-b border-black pb-1 mb-3 mt-8">Keynotes & Conference Speaking</p>
+                <p className="font-bold border-b border-[#C4B99A] pb-1 mb-3 mt-8">Keynotes & Conference Speaking</p>
                 <ul className="list-disc pl-5 space-y-1">
                   <li>APG Canada Keynote (2024) — The future of market research.</li>
                   <li>Cannabis Council of Canada Keynote (2024) — Reddit's impact on brand performance.</li>
@@ -677,12 +700,12 @@ export default function App() {
               </div>
 
               <div>
-                <p className="font-bold border-b border-black pb-1 mb-3 mt-8">Industry Roles</p>
+                <p className="font-bold border-b border-[#C4B99A] pb-1 mb-3 mt-8">Industry Roles</p>
                 <p>Chair, Marketing & Advertising Committee, National Cannabis Industry Association (2025). Vice Chair (2024), Coordinator (2023). Strategic Advisor, Cannabis Standards Alliance of Canada (2024–2025). CMA Awards Judge.</p>
               </div>
 
               <div>
-                <p className="font-bold border-b border-black pb-1 mb-3 mt-8">Individual Recognition</p>
+                <p className="font-bold border-b border-[#C4B99A] pb-1 mb-3 mt-8">Individual Recognition</p>
                 <ul className="list-disc pl-5 space-y-1">
                   <li>ADCANN Cannabis Marketer of the Year, Canada— Finalist (2022, 2023, 2024).</li>
                   <li>Strategy Magazine Creative Report Card, Planners category, ranked #12 (2021).</li>
@@ -691,7 +714,7 @@ export default function App() {
               </div>
 
               <div>
-                <p className="font-bold border-b border-black pb-1 mb-3 mt-8">Campaign Awards (PK Credited as Strategist)</p>
+                <p className="font-bold border-b border-[#C4B99A] pb-1 mb-3 mt-8">Campaign Awards (PK Credited as Strategist)</p>
                 <ul className="list-disc pl-5 space-y-2">
                   <li>"I'm High Right Now" — Cannabis Media Council: Clio Cannabis Silver + 4 Bronze. Adweek Top 3 Cannabis Campaign of 2023. ADCANN Campaign of the Year, USA (2023–24).</li>
                   <li>Tweed "Hi." — Canopy Growth / Cossette: AToMiC Awards, Strategy Awards Bronze, SIA Gold/Silver/Bronze, CMA Award. Part of Cossette's Strategy Agency of the Year submission (2018).</li>
@@ -702,7 +725,7 @@ export default function App() {
               </div>
 
               <div>
-                <p className="font-bold border-b border-black pb-1 mb-3 mt-8">Podcasts</p>
+                <p className="font-bold border-b border-[#C4B99A] pb-1 mb-3 mt-8">Podcasts</p>
                 <p className="font-bold uppercase tracking-widest text-xs mb-2">As Host</p>
                 <ul className="list-disc pl-5 space-y-1 mb-4">
                   <li>Send Me the Link (2023-2025) with Melissa Eshaghbeigi: Digital culture</li>
@@ -715,7 +738,7 @@ export default function App() {
               </div>
 
               <div>
-                <p className="font-bold border-b border-black pb-1 mb-3 mt-8">Selected Press (Strategy & Cannabis)</p>
+                <p className="font-bold border-b border-[#C4B99A] pb-1 mb-3 mt-8">Selected Press (Strategy & Cannabis)</p>
                 <ul className="list-disc pl-5 space-y-1">
                   <li><AnimatedLink href="https://continuing.mcmaster.ca/meet-paul-lawton-developing-your-brand-with-style-and-confidence/" target="_blank" rel="noreferrer" variant="center">McMaster Continuing Education (2024) — Institutional profile</AnimatedLink></li>
                   <li><AnimatedLink href="https://strategyonline.ca/2023/01/19/homegrown-cannabis-brand-building-cred/" target="_blank" rel="noreferrer" variant="center">Strategy Online (2023) — "Homegrown cannabis brand building cred" agency profile</AnimatedLink></li>
@@ -732,14 +755,14 @@ export default function App() {
 
         {view === 'music' && (
           <div className="max-w-2xl font-mono text-sm leading-relaxed pb-20">
-            <h2 className="text-xl mb-2 font-bold uppercase tracking-widest">THE OTHER LIFE: MUSIC & CULTURE</h2>
-            <h3 className="font-bold uppercase tracking-widest text-xs mb-8 text-gray-500">TWO DECADES BUILDING THE CANADIAN UNDERGROUND</h3>
+            <h2 className="text-2xl mb-2 font-bold uppercase tracking-widest font-display">THE OTHER LIFE: MUSIC & CULTURE</h2>
+            <h3 className="font-bold uppercase tracking-widest text-xs mb-8 text-[#6B5D52]">TWO DECADES BUILDING THE CANADIAN UNDERGROUND</h3>
 
             <p className="mb-8">Before strategy decks, I spent two decades in Canadian underground music: fronting bands, pressing records, co-organizing festivals, and writing the critiques nobody else would. The same instincts that built the music community now build brands and run agencies. The through line is infrastructure: figuring out what people need, then building it.</p>
             
             <div className="space-y-6 mb-12">
               <div>
-                <p className="font-bold border-b border-black pb-1 mb-3">Bands & Projects</p>
+                <p className="font-bold border-b border-[#C4B99A] pb-1 mb-3">Bands & Projects</p>
                 <ul className="list-disc pl-5 space-y-4">
                   <li><strong><AnimatedLink href="https://ketamines.bandcamp.com/" target="_blank" rel="noreferrer" variant="center">Ketamines</AnimatedLink> (1996–2015; 2023-Current):</strong> Bass, vocals, principal songwriter. Long-running garage-pop project with James Leroy, originating in Lethbridge and evolving through multiple lineups across three cities. Released records on HoZac (Chicago), Southpaw, Mammoth Cave, Mint Records, and Hosehead. Pitchfork gave Spaced Out a 7.0. PopMatters named You Can't Serve Two Masters #15 Best Canadian Album of 2013. Oprah tweeted about the band. Target used a song in a US commercial. 128+ documented shows including SXSW, Sled Island, Pop Montreal, NXNE, HoZac BlackOut Fest. NEW LP OUT 2026!</li>
                   <li><strong><AnimatedLink href="https://centurypalm.bandcamp.com/" target="_blank" rel="noreferrer" variant="center">Century Palm</AnimatedLink> (2014–2017):</strong> Bass, vocals. Toronto post-punk with Andrew Payne (Zebrassieres), Penny Clark (Tough Age), Jesse Locke (Dirty Beaches), and Alex Hamlyn. Debut LP Meet You on Deranged Records, mixed by Jay Arner, mastered by Mikey Young. Premiered on Stereogum. Album of the Day on Bandcamp Daily. CLRVYNT called it "a crash course in post-punk."</li>
@@ -750,7 +773,7 @@ export default function App() {
               </div>
 
               <div>
-                <p className="font-bold border-b border-black pb-1 mb-3 mt-8">Record Labels</p>
+                <p className="font-bold border-b border-[#C4B99A] pb-1 mb-3 mt-8">Record Labels</p>
                 <ul className="list-disc pl-5 space-y-4">
                   <li><strong><AnimatedLink href="https://mammothcave.bandcamp.com/" target="_blank" rel="noreferrer" variant="center">Mammoth Cave Recording Co.</AnimatedLink> (2008–2015):</strong> Co-founded with Evan Van Reekum. Nearly four dozen releases, 7"s, LP and cassettes that defined a specific era of Canadian DIY. FFWD Magazine voted it Best Record Label for three consecutive years (2010, 2011, 2012). B.A. Johnston's Shit Sucks was longlisted for the Polaris Prize. Catalogue includes B.A. Johnston, Fist City, The Famines, Needles//Pins, Korean Gut, Krang, Strange Attractor, Nervous Talk, Lab Coast. Reissued legacy recordings by Simply Saucer and Shadowy Men on a Shadowy Planet. The Bloodstains Across... compilation series documented punk scenes province-by-province, featuring White Lung, Nü Sensae (now: Orville Peck), and an unreleased Shadowy Men track. I got to meet Tonetta once. This is one thing I did in my life that earned me a Wikipedia page. Eulogized by Exclaim! and National Post when I decided to shut the label down over pressing plant backlogs, the weakening Canadian dollar, and the impact of Record Store Day on independent manufacturers.</li>
                   <li><strong><AnimatedLink href="https://pleasencerecords.bandcamp.com/" target="_blank" rel="noreferrer" variant="center">Pleasence Records</AnimatedLink> (2016–2022):</strong> And then, almost immediately, I bought into the amazing Toronto underground experimental label with James Lindsay. The story is that I did freelance brand strategy for Precision Pressing plant in Burlington, ON, in exchange for production credit. This helped guide the label through a prolific period Profiled by NOW Toronto on the label's evolving approach to sustainability in indie music. Catalogue: TRAITRS, Fake Palms, Isla Craig, Petra Glynt, WHIMM, Aidan Baker, Feel Alright, Germaphobes, Man Made Hill. TRAITRS might be the most successful band I've ever worked with; they generated an insane amount of money on streaming music.</li>
@@ -758,12 +781,12 @@ export default function App() {
               </div>
 
               <div>
-                <p className="font-bold border-b border-black pb-1 mb-3 mt-8">Event Production</p>
+                <p className="font-bold border-b border-[#C4B99A] pb-1 mb-3 mt-8">Event Production</p>
                 <p>Co-organized Mammoth Cave Fest (Lethbridge, 2009–2010) and Wyrd Fest (Alberta travelling festival, 2009–2013) with Weird Canada founder Aaron Levin.</p>
               </div>
 
               <div>
-                <p className="font-bold border-b border-black pb-1 mb-3 mt-8">Writing & Cultural Criticism</p>
+                <p className="font-bold border-b border-[#C4B99A] pb-1 mb-3 mt-8">Writing & Cultural Criticism</p>
                 <ul className="list-disc pl-5 space-y-4">
                   <li><strong>Slagging Off (2013):</strong> In February 2013, I started an anonymous Tumblr blog reviewing every band playing Canadian Music Week (CMW) as a joke for my friends. I decided to review every single band from A-Z with jokes because, at the time, I was taking stand-up comedy writing lessons at Second City. I was learning how to structure a joke! But then it went viral, so with the attention on me, I dropped a long, data-driven investigation into how FACTOR was distributing public arts funding. The blog hit 10,000+ daily views. CBC dubbed me "The Most Hated Man in Canadian Music." I was asked to come on DAY6 to debate FACTOR's president, but that coward refused to sit in the same studio with me, so they interviewed me. What gets lost in the "most hated" framing is the advocacy underneath. The project was an attempt to help non-Toronto musicians access better funding coverage, to address the collapse of touring infrastructure, and to argue for a more equitable system. From Husky House Zine #1 (2025), reflecting a decade later: "If there is one thing I regret, it was waging the battle solo. Everything I had learned about Canadian music is that the power came from community, and we were building a very strong infrastructure that was benefiting many people. By doing Slagging Off, I damaged the community I was trying to advocate for. Even if I was right, all I really did was teach the industry how to hide their tracks."</li>
                   <li><strong><AnimatedLink href="https://en.wikipedia.org/wiki/Weird_Canada" target="_blank" rel="noreferrer" variant="center">Weird Canada</AnimatedLink> (2009–2014):</strong> Writer, editor, board member, grant writer. Winner of the 2011 CBC Radio 3 Searchlight Award for Best Canadian Music Website. Co-organized Wyrd Fest.</li>
@@ -774,12 +797,12 @@ export default function App() {
               </div>
 
               <div>
-                <p className="font-bold border-b border-black pb-1 mb-3 mt-8">Reviewed In</p>
+                <p className="font-bold border-b border-[#C4B99A] pb-1 mb-3 mt-8">Reviewed In</p>
                 <p>Pitchfork · Stereogum · Bandcamp Daily · PopMatters · VICE · Exclaim! · NOW Toronto · Maximum Rocknroll · Razorcake · Dusted Magazine · Weird Canada · CLRVYNT · Raven Sings The Blues · Collective Zine · Yellow Green Red · Styrofoam Drone · The 405 · QRO Magazine · CBC Music · LA Beat · Largehearted Boy · Norman Records</p>
               </div>
 
               <div>
-                <p className="font-bold border-b border-black pb-1 mb-3 mt-8">Selected Press (Music & Culture)</p>
+                <p className="font-bold border-b border-[#C4B99A] pb-1 mb-3 mt-8">Selected Press (Music & Culture)</p>
                 <ul className="list-disc pl-5 space-y-1">
                   <li><AnimatedLink href="https://www.theglobeandmail.com/arts/music/why-indie-rock-mediocrity-rules-in-canada-according-to-one-insider/article11170577/" target="_blank" rel="noreferrer" variant="center">The Globe and Mail (2013) — "Why Indie-Rock Mediocrity Rules in Canada"</AnimatedLink></li>
                   <li><AnimatedLink href="https://www.vice.com/en/article/meet-the-guy-whos-slagging-off-the-canadian-music-industry/" target="_blank" rel="noreferrer" variant="center">VICE (2013) — "Meet the Guy Who's Slagging Off the Canadian Music Industry"</AnimatedLink></li>
@@ -793,17 +816,17 @@ export default function App() {
               </div>
 
               <div>
-                <p className="font-bold border-b border-black pb-1 mb-3 mt-8">Notable Shared Bills</p>
+                <p className="font-bold border-b border-[#C4B99A] pb-1 mb-3 mt-8">Notable Shared Bills</p>
                 <p>Mac DeMarco, Thee Oh Sees, Redd Kross, Parquet Courts, Screaming Females, The Fresh and Onlys, Damo Suzuki, Sonic Boom, King Tuff, Shannon and the Clams, The Blind Shake, Warm Soda, Viet Cong, Cindy Lee, Dirty Beaches, Times New Viking, Davila 666, Human Eye</p>
               </div>
 
               <div>
-                <p className="font-bold border-b border-black pb-1 mb-3 mt-8">Touring</p>
+                <p className="font-bold border-b border-[#C4B99A] pb-1 mb-3 mt-8">Touring</p>
                 <p>128+ documented Ketamines shows (2011–2014). Festivals: SXSW 2012, Sled Island (multiple years), HoZac BlackOut Fest 2012, Pop Montreal 2013, Ottawa Explosion Weekend (2014, 2018), NXNE 2014, Halifax Pop Explosion 2013, OBEY Fest 2013. Major tours: 35-date national run with B.A. Johnston (2012), cross-Canada with Zebrassieres (2013), Ontario with Tough Age (2013), Maritimes with Jay Arner (2014). US venues: Death By Audio, Mercury Lounge, The Empty Bottle, Comet Ping Pong, The Bug Jar, Now That's Class, Turf Club, Gabe's.</p>
               </div>
 
               <div>
-                <p className="font-bold border-b border-black pb-1 mb-3 mt-8">Production & Engineering</p>
+                <p className="font-bold border-b border-[#C4B99A] pb-1 mb-3 mt-8">Production & Engineering</p>
                 <p>Selected credits: Century Palm Meet You (2017), B.A. Johnston Mission Accomplished (2013), Ketamines You Can't Serve Two Masters (2013), Fist City It's 1983 Grow Up! (2012), Krang Speed Of Tent (2011), Korean Gut Your Misery Our Benefit (2011), The Famines Complete Collected Singles (2011), Myelin Sheaths (2008–2010).</p>
               </div>
             </div>
@@ -840,11 +863,11 @@ export default function App() {
 
         {view === 'testimonials' && (
           <div className="max-w-2xl font-mono text-sm leading-relaxed pb-20">
-            <h2 className="text-xl mb-2 font-bold uppercase tracking-widest">Eye Witness Accounts</h2>
-            <h3 className="font-bold uppercase tracking-widest text-xs mb-8 text-gray-500">A SELECTION OF PERSONAL RECOMMENDATIONS FROM MY CLIENTS, PEERS AND FORMER STRATEGY TEAMMATES</h3>
+            <h2 className="text-2xl mb-2 font-bold uppercase tracking-widest font-display">Eye Witness Accounts</h2>
+            <h3 className="font-bold uppercase tracking-widest text-xs mb-8 text-[#6B5D52]">A SELECTION OF PERSONAL RECOMMENDATIONS FROM MY CLIENTS, PEERS AND FORMER STRATEGY TEAMMATES</h3>
 
             <div className="space-y-6 mb-12">
-              <h4 className="font-bold border-b border-black pb-1 mb-3">Client Testimonials</h4>
+              <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">Client Testimonials</h4>
 
               <div className="mb-8">
                 <p className="font-bold mb-2">Eric Williams | Organigram / Canopy Growth</p>
@@ -873,7 +896,7 @@ export default function App() {
             </div>
 
             <div className="space-y-6 mb-12">
-              <h4 className="font-bold border-b border-black pb-1 mb-3">People With Whom I've Been in the Proverbial Foxhole</h4>
+              <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">People With Whom I've Been in the Proverbial Foxhole</h4>
 
               <div className="mb-8">
                 <p className="font-bold mb-2">Lindsay Peterson | Current: Managing Director, GOLIN Canada</p>
@@ -902,57 +925,57 @@ export default function App() {
             </div>
 
             <div className="space-y-6 mb-12">
-              <h4 className="font-bold border-b border-black pb-1 mb-3">RateMyProfessors.com — University of Lethbridge, Sociology</h4>
+              <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">RateMyProfessors.com — University of Lethbridge, Sociology</h4>
               <p className="text-sm italic mb-4">Selected reviews from 29 ratings (4.3 / 5 overall). Unedited.</p>
 
               <div className="mb-6 pl-4 border-l-2 border-gray-300">
                 <p className="italic">"Paul Lawton is among the best scholars today. Make no mistake, this guy is going to leave his mark on the field. Witty yet subtle. Intelligent yet comprehensible. Brilliant yet grounded. Take one of his courses before Princeton or Oxford snatches him up! Trust me, Lawton is going places..."</p>
-                <p className="text-sm text-gray-500 mt-1">— SOCY2000, May 2009 | Quality: 5.0 | Difficulty: 5.0</p>
+                <p className="text-sm text-[#6B5D52] mt-1">— SOCY2000, May 2009 | Quality: 5.0 | Difficulty: 5.0</p>
               </div>
 
               <div className="mb-6 pl-4 border-l-2 border-gray-300">
                 <p className="italic">"Professor Lawton is a very nice man. He made me understand the sociology of cyberspace, and I want to know more now. It is very cool, and one day during our lecture, we opened a portal to exciting new fields of learning. Yes. He has shown that the future is scary, but with Prof. Lawton leading the way, we will survive. Don't fear the reaper."</p>
-                <p className="text-sm text-gray-500 mt-1">— ACCT202, Dec 2008 | Quality: 3.5 | Difficulty: 2.0</p>
+                <p className="text-sm text-[#6B5D52] mt-1">— ACCT202, Dec 2008 | Quality: 3.5 | Difficulty: 2.0</p>
               </div>
 
               <div className="mb-6 pl-4 border-l-2 border-gray-300">
                 <p className="italic">"promfessor lawton is extremely tough, you will work hard and not alswyas get what you want. At one time, he got very upset with the class, and I thought there would be some to leave, but no, all was oK at the end. You will work hard and presentations are hard too but if you can get by his hard shell, a soft cookie lays beneath. Excellent class"</p>
-                <p className="text-sm text-gray-500 mt-1">— COMMS101, Jan 2013 | Quality: 2.0 | Difficulty: 5.0</p>
+                <p className="text-sm text-[#6B5D52] mt-1">— COMMS101, Jan 2013 | Quality: 2.0 | Difficulty: 5.0</p>
               </div>
 
               <div className="mb-6 pl-4 border-l-2 border-gray-300">
                 <p className="italic">"A very nice man, pleasant and helpful. Not at all scary, because I heard he was. I got to see his band play live! Talk about cool. He reminds me of the cool dean from that Simpson's episode, you know, he dean, your a stoopid head! Ha, Homer, he is funny."</p>
-                <p className="text-sm text-gray-500 mt-1">— SOCIXXX, Aug 2009 | Quality: 3.0 | Difficulty: 4.0</p>
+                <p className="text-sm text-[#6B5D52] mt-1">— SOCIXXX, Aug 2009 | Quality: 3.0 | Difficulty: 4.0</p>
               </div>
 
               <div className="mb-6 pl-4 border-l-2 border-gray-300">
                 <p className="italic">"WOW!! It was like the coolest, and also further to that, Mr Lanton is a great teacher, and explained things in an easy to understand form of explanation. Also, and this is true to most, he is quite the funny!! Most recommending!"</p>
-                <p className="text-sm text-gray-500 mt-1">— SOCI2000, Apr 2009 | Quality: 5.0 | Difficulty: 3.0</p>
+                <p className="text-sm text-[#6B5D52] mt-1">— SOCI2000, Apr 2009 | Quality: 5.0 | Difficulty: 3.0</p>
               </div>
 
               <div className="mb-6 pl-4 border-l-2 border-gray-300">
                 <p className="italic">"Paul is extremely interesting, but class discussions are squashed by blank stares from people looking for easy grades."</p>
-                <p className="text-sm text-gray-500 mt-1">— SOCIO3700, May 2008 | Quality: 4.5 | Difficulty: 3.0</p>
+                <p className="text-sm text-[#6B5D52] mt-1">— SOCIO3700, May 2008 | Quality: 4.5 | Difficulty: 3.0</p>
               </div>
 
               <div className="mb-6 pl-4 border-l-2 border-gray-300">
                 <p className="italic">"Workload was heavy (lots of reading), but Paul does a good job compensating with being totally available (I emailed him once on a Saturday and he had a full page response an hour later) and with lots of flexibility in turning in assignments. Seems to actually give a**** about his students."</p>
-                <p className="text-sm text-gray-500 mt-1">— SOC3390, Jan 2008 | Quality: 4.0 | Difficulty: 4.0</p>
+                <p className="text-sm text-[#6B5D52] mt-1">— SOC3390, Jan 2008 | Quality: 4.0 | Difficulty: 4.0</p>
               </div>
 
               <div className="mb-6 pl-4 border-l-2 border-gray-300">
                 <p className="italic">"Very knowledgeable in his field. There is a lot of reading but that's expected in a 3rd year course. He is new to teaching so there is a lot of glitches in his teaching but that does not overshadow the fact that he is a good prof, who will eventually become better. Also, he's pretty cool because he's in a punk band that sound pretty good."</p>
-                <p className="text-sm text-gray-500 mt-1">— SOC3XXX, Nov 2008 | Quality: 5.0 | Difficulty: 4.0</p>
+                <p className="text-sm text-[#6B5D52] mt-1">— SOC3XXX, Nov 2008 | Quality: 5.0 | Difficulty: 4.0</p>
               </div>
 
               <div className="mb-6 pl-4 border-l-2 border-gray-300">
                 <p className="italic">"Paul really disappointed me. Just because he has a good sense of humour doesn't mean he is a great prof. He makes you the do the most USELESS readings. You get to do a group presentation but then he wants you to rate the LEAST valuable person. This was supposed to be an easy A for me as Soci is BS but Paul made it hard for no reason."</p>
-                <p className="text-sm text-gray-500 mt-1">— SOCI3390, Apr 2009 | Quality: 2.0 | Difficulty: 3.0</p>
+                <p className="text-sm text-[#6B5D52] mt-1">— SOCI3390, Apr 2009 | Quality: 2.0 | Difficulty: 3.0</p>
               </div>
 
               <div className="mb-6 pl-4 border-l-2 border-gray-300">
                 <p className="italic">"No Comments"</p>
-                <p className="text-sm text-gray-500 mt-1">— SOCY3740, Dec 2007 | Quality: 1.0 | Difficulty: 2.0</p>
+                <p className="text-sm text-[#6B5D52] mt-1">— SOCY3740, Dec 2007 | Quality: 1.0 | Difficulty: 2.0</p>
               </div>
             </div>
           </div>
@@ -961,8 +984,8 @@ export default function App() {
         {/* PROJECT CASE STUDIES */}
         {view === 'project' && activeProject && (
           <div className="max-w-3xl pb-20">
-            <h1 className="text-2xl mb-2 font-bold">{activeProject.title}</h1>
-            <p className="text-gray-500 mb-8 italic">{activeProject.summary}</p>
+            <h1 className="text-3xl mb-2 font-bold font-display">{activeProject.title}</h1>
+            <p className="text-[#6B5D52] mb-8 italic">{activeProject.summary}</p>
 
             {/* Videos */}
             {activeProject.videos && activeProject.videos.length > 0 && (
@@ -985,7 +1008,7 @@ export default function App() {
                     <VideoEmbed url={activeProject.sectionVideos[s.heading]} />
                   )}
                   <div>
-                    <h3 className="uppercase tracking-widest text-xs font-bold border-b border-black pb-1 mb-3">{s.heading}</h3>
+                    <h3 className="uppercase tracking-widest text-xs font-bold border-b border-[#C4B99A] pb-1 mb-3">{s.heading}</h3>
                     <p className="whitespace-pre-wrap leading-relaxed">{s.text}</p>
                   </div>
                 </React.Fragment>
@@ -1015,14 +1038,14 @@ export default function App() {
             
             {activeProject?.proof && activeProject.proof.length > 0 && (
               <div className="mb-12">
-                <h3 className="uppercase tracking-widest text-xs font-bold border-b border-black pb-1 mb-3">Proof & Results</h3>
+                <h3 className="uppercase tracking-widest text-xs font-bold border-b border-[#C4B99A] pb-1 mb-3">Proof & Results</h3>
                 <ul className="list-disc pl-5 space-y-2">{activeProject.proof.map((p, i) => <li key={i}><Linkify text={p} /></li>)}</ul>
               </div>
             )}
 
             {activeProject?.team && activeProject.team.length > 0 && (
               <div className="mb-12">
-                <h3 className="uppercase tracking-widest text-xs font-bold border-b border-black pb-1 mb-3">Team & Credits</h3>
+                <h3 className="uppercase tracking-widest text-xs font-bold border-b border-[#C4B99A] pb-1 mb-3">Team & Credits</h3>
                 <ul className="list-disc pl-5 space-y-2">{activeProject.team.map((t, i) => <li key={i}><Linkify text={t} /></li>)}</ul>
               </div>
             )}
@@ -1031,8 +1054,10 @@ export default function App() {
             {activeProject.images && activeProject.images.length > 0 && <ImageGrid urls={activeProject.images} />}
           </div>
         )}
-        </div>
-      </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
     </div>
   );

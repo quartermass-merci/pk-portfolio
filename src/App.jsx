@@ -342,9 +342,9 @@ export default function App() {
               WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
             }}
           >
-            <InfiniteSlider gap={36} duration={35} durationOnHover={70}>
+            <InfiniteSlider gap={44} duration={52} durationOnHover={104}>
               {BRAND_LOGOS.map((logo) => (
-                <div key={logo.alt} className="flex items-center justify-center w-[100px] h-[24px] shrink-0">
+                <div key={logo.alt} className="flex items-center justify-center w-[200px] h-[48px] shrink-0">
                   <img
                     src={logo.src}
                     alt={logo.alt}

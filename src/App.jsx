@@ -336,26 +336,6 @@ export default function App() {
             </p>
           </motion.div>
 
-          <motion.div variants={fadeUp} className="mt-6 -mx-6 md:-mx-10"
-            style={{
-              maskImage: 'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
-              WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
-            }}
-          >
-            <InfiniteSlider gap={48} duration={65} durationOnHover={130}>
-              {BRAND_LOGOS.map((logo) => (
-                <div key={logo.alt} className="flex items-center justify-center w-[250px] h-[60px] shrink-0">
-                  <img
-                    src={logo.src}
-                    alt={logo.alt}
-                    className="max-w-full max-h-full object-contain opacity-30 hover:opacity-60 transition-opacity duration-300"
-                    style={{ filter: 'grayscale(100%)' }}
-                    loading="lazy"
-                  />
-                </div>
-              ))}
-            </InfiniteSlider>
-          </motion.div>
         </motion.div>
 
         <motion.button variants={fadeUp} initial="hidden" animate="show" onClick={() => openPanel('about')} className={`flex items-center gap-3 mb-10 transition-opacity group ${view === 'about' && panelOpen ? 'font-bold' : ''}`}>
@@ -428,6 +408,33 @@ export default function App() {
             </div>
           ))}
         </nav>
+      </div>
+
+      {/* Trusted By Logo Slider */}
+      <div className="relative z-10 py-12 px-6 md:px-10 border-t border-[#C4B99A]/40">
+        <div className="max-w-5xl mx-auto">
+          <h3 className="text-xs uppercase tracking-[0.2em] text-[#565D4F] font-bold mb-6">Trusted By</h3>
+        </div>
+        <div
+          style={{
+            maskImage: 'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
+            WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
+          }}
+        >
+          <InfiniteSlider gap={48} duration={65} durationOnHover={130}>
+            {BRAND_LOGOS.map((logo) => (
+              <div key={logo.alt} className="flex items-center justify-center w-[250px] h-[60px] shrink-0">
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="max-w-full max-h-full object-contain opacity-30 hover:opacity-60 transition-opacity duration-300"
+                  style={{ filter: 'grayscale(100%)' }}
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </InfiniteSlider>
+        </div>
       </div>
 
       {/* Footer Colophon */}

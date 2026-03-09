@@ -383,7 +383,7 @@ export default function App() {
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
           <div>
             <p className="font-display font-bold text-lg tracking-wide">PK Lawton</p>
-            <p className="text-sm text-[#C4B99A] mt-1">Strategy is infrastructure. Everything else is decoration.</p>
+            <p className="text-sm text-[#C4B99A] mt-1">Strategy is a discipline of attention, the practice of staying awake in a world that will not stay still.</p>
           </div>
           <div className="flex gap-6 text-sm font-ui">
             <a href="mailto:pklawton@gmail.com" className="hover:text-white transition-colors">Email</a>

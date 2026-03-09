@@ -380,16 +380,16 @@ export default function App() {
 
       {/* Footer Colophon */}
       <footer className="relative z-10 bg-[#362318] text-[#E0D3A8] py-10 px-6 md:px-10 border-t-2 border-[#D4903A]">
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-          <div>
+        <div className="max-w-5xl mx-auto flex flex-col gap-4">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
             <p className="font-display font-bold text-lg tracking-wide">PK Lawton</p>
-            <p className="text-sm text-[#C4B99A] mt-1">Strategy is a discipline of attention, the practice of staying awake in a world that will not stay still.</p>
+            <div className="flex gap-6 text-sm font-ui">
+              <a href="mailto:pklawton@gmail.com" className="hover:text-white transition-colors">Email</a>
+              <a href="https://linkedin.com/in/paulklawton" target="_blank" rel="noreferrer" aria-label="LinkedIn (opens in new tab)" className="hover:text-white transition-colors">LinkedIn</a>
+              <a href="https://culturalcartography.substack.com" target="_blank" rel="noreferrer" aria-label="Substack (opens in new tab)" className="hover:text-white transition-colors">Substack</a>
+            </div>
           </div>
-          <div className="flex gap-6 text-sm font-ui">
-            <a href="mailto:pklawton@gmail.com" className="hover:text-white transition-colors">Email</a>
-            <a href="https://linkedin.com/in/paulklawton" target="_blank" rel="noreferrer" aria-label="LinkedIn (opens in new tab)" className="hover:text-white transition-colors">LinkedIn</a>
-            <a href="https://culturalcartography.substack.com" target="_blank" rel="noreferrer" aria-label="Substack (opens in new tab)" className="hover:text-white transition-colors">Substack</a>
-          </div>
+          <p className="text-sm text-[#C4B99A]">Strategy is a discipline of attention, the practice of staying awake in a world that will not stay still.</p>
         </div>
       </footer>
 

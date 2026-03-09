@@ -165,7 +165,6 @@ export default function App() {
     { id: 'education', title: 'Education' },
     { id: 'agency', title: 'Agency as Lab: Sister Merci' },
     { id: 'research-stack', title: 'Research Stack' },
-    { id: 'counsel', title: 'How I Work' },
     { id: 'square', title: 'Developing Square Shaped Strategists' },
     { id: 'cartography', title: 'Cultural Cartography' },
     { id: 'teaching', title: 'Teaching & Research' },
@@ -286,7 +285,7 @@ export default function App() {
           >
             <img
               src={url}
-              className="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500"
+              className="w-full h-full object-cover md:grayscale md:hover:grayscale-0 transition duration-500"
               alt=""
               loading="lazy"
               onError={(e) => { e.target.src = ''; e.target.alt = 'Image unavailable'; e.target.className = 'w-full h-full flex items-center justify-center text-xs text-[#A89B86]'; }}
@@ -706,30 +705,6 @@ export default function App() {
           </Suspense>
         )}
 
-        {view === 'counsel' && (
-          <div className="max-w-2xl font-mono text-sm leading-relaxed pb-20">
-            <h2 className="text-2xl mb-2 font-bold uppercase tracking-widest font-display">How I Work</h2>
-            <h3 className="font-bold uppercase tracking-widest text-sm md:text-xs mb-8 text-[#6B5D52]">STRATEGY AS OPERATING SYSTEM</h3>
-
-            <div className="space-y-6 mb-12">
-              <p>Strategy works best when it is embedded in how a team operates, not isolated as a deliverable at the start of a project.</p>
-              <p>In practice, that means clarifying the problem before jumping to solutions, translating between creative, account, research, and client teams so everyone works from the same brief, defining what success looks like before the budget moves, and staying close enough to the work to course-correct when the market shifts.</p>
-              <p>The best strategy work happens when the strategist makes everyone else's job easier. The creative team gets a brief they can run with. The account team can tell a consistent story. The media plan connects to a measurement framework that was set before launch. The client hears one voice from the agency, not three.</p>
-            </div>
-
-            <div className="space-y-6 mb-12">
-              <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">New Business</h4>
-              <p>A good strategist reframes the pitch from "here is what we do" to "here is what you are missing." At Sister Merci, I lead roughly five competitive pitches per year at an 85% win rate, including the recent global win for the Doodle.com rebrand. At Weber Shandwick, about ten per year at 65%. The Manulife relationship that came to Sister Merci in 2026 started at Weber Shandwick a decade earlier. That is what happens when strategy consistently helps the client make the right call.</p>
-            </div>
-
-            <div className="space-y-6 mb-12">
-              <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">Building Strategists</h4>
-              <p>I teach and coach strategists to work across four connected areas: problem clarification, insight development, strategic articulation, and effectiveness. The point is range with rigour. Teams need strategists who can move from a brand tracker to a cultural insight to an attribution model without losing clarity.</p>
-              <p>A large part of leadership in this role is building an environment where people develop stronger judgment, sharper craft, and the confidence to hold a room. I have managed teams of up to 20 at Weber Shandwick and 30 at Sister Merci. Strategists I have worked with now hold senior positions at McDonald's Global, Zeno Group, GUT, Courage, and Lifelong Crush.</p>
-            </div>
-          </div>
-        )}
-
         {view === 'square' && (
           <div className="max-w-2xl font-mono text-sm leading-relaxed pb-20">
             <h2 className="text-2xl mb-2 font-bold uppercase tracking-widest font-display">DEVELOPING SQUARE SHAPED STRATEGISTS</h2>
@@ -1127,7 +1102,7 @@ export default function App() {
                 <img
                   src={hero}
                   alt=""
-                  className="w-full rounded-md grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer"
+                  className="w-full rounded-md md:grayscale md:hover:grayscale-0 transition-all duration-500 cursor-pointer"
                   loading="lazy"
                   onClick={() => setZoomImg(hero)}
                   onError={(e) => { e.target.style.display = 'none'; }}
@@ -1165,7 +1140,7 @@ export default function App() {
                       <img
                         src={distributed[i]}
                         alt=""
-                        className="w-full rounded-md grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer"
+                        className="w-full rounded-md md:grayscale md:hover:grayscale-0 transition-all duration-500 cursor-pointer"
                         loading="lazy"
                         onClick={() => setZoomImg(distributed[i])}
                         onError={(e) => { e.target.style.display = 'none'; }}

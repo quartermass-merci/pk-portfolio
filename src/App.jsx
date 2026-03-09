@@ -110,7 +110,7 @@ export default function App() {
     { id: 'education', title: 'Education' },
     { id: 'agency', title: 'Agency as Lab: Sister Merci' },
     { id: 'research-stack', title: 'Research Stack' },
-    { id: 'counsel', title: 'The Embedded Strategist' },
+    { id: 'counsel', title: 'How I Work' },
     { id: 'square', title: 'Developing Square Shaped Strategists' },
     { id: 'cartography', title: 'Cultural Cartography' },
     { id: 'teaching', title: 'Teaching & Research' },
@@ -292,7 +292,7 @@ export default function App() {
           <motion.div variants={fadeUp}>
             <img src="/images/pk-logo.png" alt="PK Lawton — Strategy × Culture" className="w-full max-w-[300px] md:max-w-[560px] h-auto mb-8" />
           </motion.div>
-          <motion.p variants={fadeUp} className="text-sm md:text-base text-[#6B5D52] mb-6 max-w-xl">Co-Founder & Chief Strategy Officer at Sister Merci. Brand strategist, researcher, educator, cultural critic. Based in Hamilton, ON.</motion.p>
+          <motion.p variants={fadeUp} className="text-sm md:text-base text-[#6B5D52] mb-6 max-w-xl">Co-Founder & Chief Strategy Officer, Sister Merci. Brand Strategist, Researcher, Educator. Rock & Roll Sociologist based in Hamilton, ON.</motion.p>
           <motion.div variants={fadeUp} className="flex gap-6 text-sm font-ui">
             <AnimatedLink href="mailto:pklawton@gmail.com" variant="goesOut">Email</AnimatedLink>
             <AnimatedLink href="https://linkedin.com/in/paulklawton" target="_blank" rel="noreferrer" variant="center">LinkedIn</AnimatedLink>
@@ -430,18 +430,14 @@ export default function App() {
         {/* BACKGROUND SECTIONS */}
         {view === 'about' && (
           <div className="max-w-2xl font-mono text-sm leading-relaxed pb-20">
-            <h2 className="text-2xl mb-8 font-bold uppercase tracking-widest font-display">Hi, I'm PK</h2>
+            <h2 className="text-2xl mb-8 font-bold uppercase tracking-widest font-display">An Introduction</h2>
             <div className="space-y-6">
-              <p>I'm Co-Founder and Chief Strategy Officer at Sister Merci, a creative agency that won the 2023 Clio Cannabis Agency of the Year. I started Sister Merci in 2019 with my friends Katie Waterman (CEO) and Amanda Wood (CCO). Before that, I led brand strategy and integrated media at Cossette, Weber Shandwick, and Cohn & Wolfe for clients like Canopy Growth, Air Canada, RBC, and Mondelez.</p>
-              <p>Sister Merci has been the big one. I've led strategy for over 150 brands across cannabis, iGaming, AI, beverage alcohol, health tech, and financial services. Seven Clios, Agency of the Year three times. We started as four founders, and now we're 30 people in Toronto and Chicago.</p>
-              <p>Before any of that, I spent 10 years in academia doing sociological research on digital culture: an MA at the University of Lethbridge on the rise of community blogs, and PhD work at the University of Calgary (ABD: did everything except finish the dissertation).</p>
-              <p>Outside Sister Merci, I've been a founding CMO twice: at Galaxie Brands, a cannabis co-packing startup I helped build before it sold to The Green Organic Dutchman, and at PepHealth, a health tech startup.</p>
-              <p>Music runs through all of it. I toured North America as a player and promoter, put out records on HoZac, Mint, Southpaw, and Deranged. Our booking agent Annie Southworth (R.I.P.) at Panache put us on the road for much of 2011–12. The best thing about that whole period is that I have a couch to sleep on in almost every major city on the continent. That same impulse to build scenes is how I ended up co-running two indie record labels and releasing close to 100 records.</p>
-              <p>In 2013, an anonymous music criticism blog I started went viral. CBC called me "The Most Hated Man in Canadian Music" because I published a deep-dive on the uneven distribution of Canadian music grants. I've written for Vice, Adbusters, Exclaim!, The National Post, Globe and Mail, Strategy Magazine, and Quirk's. Been blogging since the early 2000s. The drive to say the thing has carried through everything since.</p>
-              <p>I teach brand strategy, market research, and consumer research at McMaster Continuing Education. I've been reworking the curriculum because most of what we taught about media planning three years ago doesn't hold anymore. I'm a co-founding editor of Rebrief: A Canadian Journal of Advertising, launching April 2026. I write occasionally on Substack as Cultural Cartography. It's about how strategy works in practice, through the lens of Bourdieu, Actor-Network Theory, and institutional ethnography. That probably tells you everything you need to know about me.</p>
-              <p>The other thing I've been deep in lately is AI as a research tool. I built a methodology called Q-Litics that uses semantic taxonomy and contextual sentiment scoring to turn unstructured consumer conversations (Reddit threads, reviews, community chatter) into structured, quantifiable data. It maps slang, negators, and colloquial language to standardized strategic markers, so you're measuring what people actually mean, not just keywords. I wrote about the broader framework with Marcelo Bursztein for Quirk's under the heading of "hype analysis." Most interesting problem I'm working on right now: making qualitative data legible at scale without losing what makes it useful.</p>
-              <p>After all this time making and building: labels, agencies, courses, bands, touring festivals, brand campaigns, actual brands (!), I still get real satisfaction from strategy. I read about 60 books a year. My record collection is 4,000 pieces deep. I'm at a matinee almost every Saturday. I work best on a team, and contribution is what sustains me. The infrastructure of community building is the same in any medium.</p>
-              <p>Questions? Text me: 647-241-2575. I promise to respond.</p>
+              <p>I co-founded Sister Merci in 2019 with Katie Waterman and Amanda Wood to build a strategy-led creative agency for the categories where marketing is genuinely difficult: cannabis, iGaming, health tech, and financial services. Seven years later, we work across Toronto and Chicago with seven Clios, three Agency of the Year awards, and an approach to regulated markets that has consistently turned compliance into creative advantage.</p>
+              <p>My work starts with research, usually qualitative, and focuses on giving account and creative teams a clearer read on the problem before anyone jumps to concepting. That means the brief is sharper, the audience insight is grounded in something real, and the creative team has what they need to sell ambitious work. I care as much about helping breakthrough ideas survive a client presentation as I do about the strategy that sets them up.</p>
+              <p>My early career as an academic sociologist informs most of my thinking. I was an early voice in applying social theory to online communities and digital culture, and that lens still shapes how I read consumer behaviour, build research programs, and develop the people around me. I teach brand strategy and consumer research at McMaster University and am co-founding editor of Rebrief: A Canadian Journal of Advertising, launching in 2026.</p>
+              <p>Before Sister Merci, I led strategy and integrated media teams at Cossette, Weber Shandwick, and Cohn & Wolfe, working across Canopy Growth, Air Canada, RBC, CN Rail, Walmart, McDonald's, and Mondelez. That blue-chip background matters, but the work I sought out at Sister Merci was deliberately different: building brands from nothing. Understanding how to develop a strategy for something that does not yet exist and then applying the same thinking to take an established brand like MadeGood and give it a framework to grow beyond its original positioning. That range, from net-new builds to brand architecture for scaling companies, is where I do my best work.</p>
+              <p>I came into strategy from the side door. Years of academic research and teaching from September to May, then touring North America in a van as a musician from May to August, writing my MA thesis and my dissertation on the road. I ran two indie record labels, Mammoth Cave Recording Co. (2008–2015) and Pleasence Records (2016–2023), with 100+ releases between them, building the infrastructure underground scenes needed to function. The instinct to understand subculture, develop talent, and build community is the same drive I bring to client work.</p>
+              <p>I am also building tools to make that work sharper. Q-Litics is a methodology I developed with an AI research partner that uses semantic taxonomy and contextual sentiment scoring to turn unstructured conversations — Reddit threads, dispensary reviews, community forums — into quantifiable strategic data. It is one example of how I use AI to deepen research capability, not replace judgment.</p>
             </div>
             <ImageGrid urls={[
               'https://mytoastlife.com/wp-content/uploads/2020/08/Paul-Lawton.jpg',
@@ -470,17 +466,21 @@ export default function App() {
               <div>
                 <div className="flex justify-between border-b border-[#C4B99A] mb-2 pb-1 font-bold"><span>Sister Merci</span><span>2019–Present</span></div>
                 <p className="uppercase text-sm md:text-xs tracking-tighter text-[#6B5D52] mb-2">Co-Founder & Chief Strategy Officer</p>
-                <p>Co-founded with Katie Waterman. Built from four founders to 30+ staff across Toronto and Chicago. Led strategy for 150+ brands across cannabis, iGaming, AI, beverage alcohol, health tech, and financial services. 2023 Clio Cannabis Agency of the Year. Seven Clios total. Three-time Agency of the Year.</p>
+                <p>Built Sister Merci from zero clients to a cross-border operation serving brands across cannabis, iGaming, AI, health tech, fintech, and CPG. Led strategy across 150+ brands. Responsible for new business, research design, team development, and embedding strategy into agency operations. Led the agency's $1.5M seed round from BlackShire Capital. Clio Cannabis Agency of the Year (2023). Three-time Agency of the Year across three organizations.</p>
               </div>
               <div>
                 <div className="flex justify-between border-b border-[#C4B99A] mb-2 pb-1 font-bold"><span>McMaster Continuing Education</span><span>2020–Present</span></div>
-                <p className="uppercase text-sm md:text-xs tracking-tighter text-[#6B5D52] mb-2">Adjunct Professor</p>
-                <p>Teaching Brand Strategy, Consumer Research, Introduction to Marketing, Personal Branding, and Effective Presentations. Redesigning curriculum for platform fragmentation and AI. Partnered with the Canadian Marketing Association to create an accelerated pathway to the Chartered Marketer designation.</p>
+                <p className="uppercase text-sm md:text-xs tracking-tighter text-[#6B5D52] mb-2">Adjunct Professor & Program Designer</p>
+                <p>Teaching brand strategy, consumer research, introduction to marketing, personal branding, and effective presentations. Rebuilding the Brand & Image, Consumer Research, and Market Research courses, and partnering with the Canadian Marketing Association to create an accelerated pathway to the Chartered Marketer designation.</p>
+              </div>
+              <div>
+                <div className="flex justify-between border-b border-[#C4B99A] mb-2 pb-1 font-bold"><span>University of Lethbridge, Department of Sociology</span><span>2007–2012</span></div>
+                <p className="uppercase text-sm md:text-xs tracking-tighter text-[#6B5D52] mb-2">Adjunct Assistant Professor</p>
+                <p>Designed and taught senior undergraduate courses in Sociology of Mass Communication, Digital Culture and Society, and Medical Sociology.</p>
               </div>
               <div>
                 <div className="flex justify-between border-b border-[#C4B99A] mb-2 pb-1 font-bold"><span>National Cannabis Industry Association</span><span>2023–2025</span></div>
-                <p className="uppercase text-sm md:text-xs tracking-tighter text-[#6B5D52] mb-2">Officer, Marketing & Advertising Committee</p>
-                <p>Coordinator (2023), Vice Chair (2024), Chair (2025).</p>
+                <p className="uppercase text-sm md:text-xs tracking-tighter text-[#6B5D52] mb-2">Chair, Marketing & Advertising Committee (2025)</p>
               </div>
               <div>
                 <div className="flex justify-between border-b border-[#C4B99A] mb-2 pb-1 font-bold"><span>Cannabis Standards Alliance of Canada</span><span>2024–2025</span></div>
@@ -489,17 +489,17 @@ export default function App() {
               <div>
                 <div className="flex justify-between border-b border-[#C4B99A] mb-2 pb-1 font-bold"><span>Cossette</span><span>2018–2019</span></div>
                 <p className="uppercase text-sm md:text-xs tracking-tighter text-[#6B5D52] mb-2">Vice President, Strategy</p>
-                <p>Led brand strategy and market insights for the Canopy Growth portfolio ($50M+ account) during Canada's cannabis legalization. Developed the positioning for Tweed that helped establish it as the country's most recognized cannabis brand. Worked alongside Rosie Gentile (now Global EVP, FCB) and Kevin McHugh (now CSO, Dentsu) in a three-person senior strategy unit. Strategy work on the Canopy Growth portfolio directly contributed to CMO David Bigioni being named Canada's Marketer of the Year (2019). Also led brand strategy for DNA Genetics and Foria.</p>
+                <p>Led brand strategy and market insights for the Canopy Growth portfolio during Canada's cannabis legalization. Developed the positioning for Tweed that helped establish it as the country's most recognized cannabis brand. Strategy work contributed to CMO David Bigioni being named Canada's Marketer of the Year (2019).</p>
               </div>
               <div>
                 <div className="flex justify-between border-b border-[#C4B99A] mb-2 pb-1 font-bold"><span>Weber Shandwick</span><span>2016–2018</span></div>
                 <p className="uppercase text-sm md:text-xs tracking-tighter text-[#6B5D52] mb-2">VP, Strategic Planning & Head of Paid Media</p>
-                <p>Led strategic planning for Air Canada, RBC, Mondelez, and Chevrolet. Five direct reports, 20-person integrated media team. Transformed the corporate practice by leading with audience analysis, digital ethnography, and participant-observation rather than traditional creds presentations. Won the Air Canada account by interviewing loyalty program members and presenting their stories instead of agency credentials — the client stopped the 100-page pitch deck midway through and awarded the business. Contributed to an average of 10 competitive pitches per year with a 65% win rate on contributed pitches. Agency won consecutive Holmes Report Agency of the Year during tenure.</p>
+                <p>Led strategic planning for Air Canada, RBC, Mondelez, and Chevrolet. Five direct reports, 20-person integrated media team. Brought audience analysis and digital ethnography into the corporate practice. Averaged ten competitive pitches per year at a 65% win rate.</p>
               </div>
               <div>
                 <div className="flex justify-between border-b border-[#C4B99A] mb-2 pb-1 font-bold"><span>Cohn & Wolfe</span><span>2013–2016</span></div>
                 <p className="uppercase text-sm md:text-xs tracking-tighter text-[#6B5D52] mb-2">Senior Counsellor & Digital Lead</p>
-                <p>Built the agency's first analytics and measurement framework. Integrated media strategy for Nissan, Nintendo, CN Rail, and Dell. Brought earned media discipline together with paid and owned channels at a time when most PR agencies treated them as separate functions. Employee of the Year 2015.</p>
+                <p>Built the agency's first analytics and measurement framework. Integrated media strategy for Nissan, Nintendo, CN Rail, and Dell. Connected earned, paid, and owned media at a time when most PR agencies treated them as separate functions.</p>
               </div>
             </div>
             <ImageGrid urls={['https://webershandwick.asia/wp-content/uploads/2018/05/2.-Sophie-Shin-Paul-Lawton-Fatma-Othman-640x640.jpg']} />
@@ -511,15 +511,15 @@ export default function App() {
             <h2 className="text-2xl mb-8 font-bold uppercase tracking-widest font-display">Education</h2>
             <div className="space-y-8">
               <div>
-                <p className="font-bold">PhD (ABD), Sociology : University of Calgary, 2006–2010</p>
-                <p>Dissertation on internet-mediated doctor-patient relationships. SSHRC PhD Fellowship recipient.</p>
+                <p className="font-bold">PhD (ABD), Sociology — University of Calgary, 2006–2010</p>
+                <p>Dissertation on internet-mediated doctor-patient relationships and rare-illness online communities. SSHRC PhD Fellowship recipient.</p>
               </div>
               <div>
-                <p className="font-bold">MA, Sociology : University of Lethbridge, 2003–2005</p>
-                <p>Thesis: "Capital and Stratification Within Virtual Community: A Case Study of Metafilter.com." Applied Bourdieu's theory of capital to online community dynamics. Cited in the Yale Journal of Law & Technology.</p>
+                <p className="font-bold">MA, Sociology — University of Lethbridge, 2003–2005</p>
+                <p>Applied Bourdieu's theory of capital to online community dynamics. Cited in the Yale Journal of Law & Technology.</p>
               </div>
               <div>
-                <p className="font-bold">BA, Sociology : University of Lethbridge, 1999–2003</p>
+                <p className="font-bold">BA, Sociology — University of Lethbridge, 1999–2003</p>
                 <p>Graduated with Great Distinction.</p>
               </div>
             </div>
@@ -533,11 +533,10 @@ export default function App() {
             
             <div className="space-y-6 mb-12">
               <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">The Thesis</h4>
-              <p>The most restricted marketing environment in North America would produce the sharpest creative thinking, not the weakest.</p>
-              <p>Sister Merci started as a hypothesis: the disciplines forced by cannabis marketing, specifically: compliance as creative fuel, budtender ecosystems as distribution channels, ethnographic research as the basis for every brief, would transfer to any high-stakes, emerging, or restricted category.</p>
-              <p>Seven years later, the hypothesis has been tested across cannabis, iGaming, craft beverages, CPG, fintech, and pharma. Three Agency of the Year awards from three different organizations. A reverse-takeover that created a North American footprint. Constraints don't limit creativity. They sharpen it.</p>
-              <p>Some people will say, "But PK, aren't you worried about working in cannabis limiting your career options?" and then I show them how sharp I've made my strategy blade working in the most relentless, unforgiving category you can work in. When Sister Merci started working in other categories, we've blown away expectations because we've had to really figure out the fundamentals of brand and marketing strategy with our arms tied behind our backs.</p>
-              <p>Some people will say, "But PK, you can't even build a brand in Cannabis!" I will sigh, and ask them to explain how a brand like SHRED could be in the top 5 sellers and have a 98% retail penetration rate without having brand salience through the distinctive brand assets we helped create with Organigram. Here is the story of what we've built over the last 7 years:</p>
+              <p>Sister Merci started from a conviction shared by all three founders: the toughest marketing environments produce the sharpest strategic thinking.</p>
+              <p>Cannabis forced that discipline early. The Cannabis Act imposes restrictions comparable to tobacco: no lifestyle ads, no celebrity endorsements, limited media channels. We treated those constraints as design inputs. The disciplines we built — compliance-first creative development, ethnographic research as the basis for every brief, budtender ecosystems as distribution channels — transferred to every high-stakes category we entered.</p>
+              <p>The record over seven years: strategy work across 150+ cannabis brands. Clients include Manulife, Doodle, Organigram, MadeGood, Pangea, and the Cannabis Media Council. In 2023, we expanded into the U.S. cannabis industry by integrating Allison Disney's Chicago-based consultancy Receptor Brands. We hold 85%+ client retention on top-tier accounts over four years.</p>
+              <p>We grew from four founders to 30 staff across Toronto and Chicago on a model designed for accountability: a core team plus specialist talent that flexes based on client needs.</p>
             </div>
 
             <div className="space-y-6 mb-12">
@@ -619,39 +618,24 @@ export default function App() {
 
         {view === 'counsel' && (
           <div className="max-w-2xl font-mono text-sm leading-relaxed pb-20">
-            <h2 className="text-2xl mb-2 font-bold uppercase tracking-widest font-display">The Embedded Strategist</h2>
-            <h3 className="font-bold uppercase tracking-widest text-sm md:text-xs mb-8 text-[#6B5D52]">A STRATEGY-LED AGENCY MODEL</h3>
-
-            <p className="mb-12">When we started Sister Merci, we decided early to lead with the frame of "a strategy-led creative agency" because we believe the properly embedded strategist is an agency multiplier — driving new business wins and organic client growth by deepening client relationships and working our way upstream into the C-Suite. As Sister Merci enters our 8th year as of March 2026, here are some of the results we've seen putting strategists in the middle of agency operations as opposed to the periphery.</p>
+            <h2 className="text-2xl mb-2 font-bold uppercase tracking-widest font-display">How I Work</h2>
+            <h3 className="font-bold uppercase tracking-widest text-sm md:text-xs mb-8 text-[#6B5D52]">STRATEGY AS OPERATING SYSTEM</h3>
 
             <div className="space-y-6 mb-12">
-              <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">First Revenue Line, Not a Cost Center</h4>
-              <p>A good strategist reframes the pitch from "here's what we do" to "here's what you're missing." At Sister Merci, I've led roughly five competitive pitches per year at an 85% win rate, including a global win for the Doodle.com rebrand. At Weber Shandwick, about 10 per year at 65%.</p>
+              <p>Strategy works best when it is embedded in how a team operates, not isolated as a deliverable at the start of a project.</p>
+              <p>In practice, that means clarifying the problem before jumping to solutions, translating between creative, account, research, and client teams so everyone works from the same brief, defining what success looks like before the budget moves, and staying close enough to the work to course-correct when the market shifts.</p>
+              <p>The best strategy work happens when the strategist makes everyone else's job easier. The creative team gets a brief they can run with. The account team can tell a consistent story. The media plan connects to a measurement framework that was set before launch. The client hears one voice from the agency, not three.</p>
             </div>
 
             <div className="space-y-6 mb-12">
-              <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">Trust Builder</h4>
-              <p>When Sister Merci landed at Manulife in 2026, it was because of a client-strategist relationship that began at McDonald's Canada at Weber Shandwick and grew across three companies over 10 years. That is what happens when strategy consistently makes the client look right. Sister Merci maintains 85%+ retention on top-tier accounts, and our business is more likely to grow when a client moves into a new role and brings us in because of their level of trust. The strategist's job is to be ahead of the brief so the agency overdelivers without overages.</p>
+              <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">New Business</h4>
+              <p>A good strategist reframes the pitch from "here is what we do" to "here is what you are missing." At Sister Merci, I lead roughly five competitive pitches per year at an 85% win rate, including the recent global win for the Doodle.com rebrand. At Weber Shandwick, about ten per year at 65%. The Manulife relationship that came to Sister Merci in 2026 started at Weber Shandwick a decade earlier. That is what happens when strategy consistently helps the client make the right call.</p>
             </div>
 
             <div className="space-y-6 mb-12">
-              <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">Effectiveness Driver</h4>
-              <p>If you let creative run before you've defined what "working" means, you'll spend six months optimizing against the wrong metric. The strategist's job is to set the measurement logic before the budget moves. I built frameworks at Cohn & Wolfe connecting earned to paid and owned when most PR agencies treated them as separate P&Ls. At Sister Merci, cannabis restrictions forced this discipline early. You can't buy your way to equity when the channels don't exist, so you define success on your own terms or you don't have a strategy at all.</p>
-            </div>
-
-            <div className="space-y-6 mb-12">
-              <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">Silo Buster</h4>
-              <p>The embedded strategist translates between the client and the agency, the account and the creative, and the data and the narrative. Inside the agency, they connect departments that most shops keep walled off. Outside, they're the continuity between the client's business problem and every team that touches the work. At Weber Shandwick, I was hired for a consumer role (Strategy, Head of Paid Media), and I ended up completely reshaping how the corporate team won business and organically grew client scopes. At Sister Merci, strategy, creative, media, and research teams operate as one unit because the strategist sits at the center, not at the start of a handoff chain. I've also done strategic due diligence with BlackShire Capital and Canopy Rivers, evaluating brand viability and market-entry logic for investors. Wherever the thinking is needed, that's where the role goes.</p>
-            </div>
-
-            <div className="space-y-6 mb-12">
-              <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">Internal Growth Engine</h4>
-              <p>Strategists I've trained now hold senior positions at McDonald's Global, Zeno Group, GUT, Courage, and Lifelong Crush. I've managed teams of up to 20 at Weber Shandwick and 30 at Cossette. The job of a strategy lead is to make the next generation dangerous. Set a clear standard, build the environment, and enable strong decision-making, hard skills development, and a winning mindset by creating a culture of high performers who carry more work.</p>
-            </div>
-
-            <div className="space-y-6 mb-12">
-              <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">External Growth Engine</h4>
-              <p>Sister Merci grew from four founders to 30 across Toronto and Chicago on a model I helped design. Core team plus specialist talent who flex based on client needs. No bloat, no diffused accountability. I led the agency's $1.5M seed raise from BlackShire Capital. A strategist who only faces the client is half a strategist.</p>
+              <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">Building Strategists</h4>
+              <p>I teach and coach strategists to work across four connected areas: problem clarification, insight development, strategic articulation, and effectiveness. The point is range with rigour. Teams need strategists who can move from a brand tracker to a cultural insight to an attribution model without losing clarity.</p>
+              <p>A large part of leadership in this role is building an environment where people develop stronger judgment, sharper craft, and the confidence to hold a room. I have managed teams of up to 20 at Weber Shandwick and 30 at Sister Merci. Strategists I have worked with now hold senior positions at McDonald's Global, Zeno Group, GUT, Courage, and Lifelong Crush.</p>
             </div>
           </div>
         )}
@@ -701,35 +685,13 @@ export default function App() {
         {view === 'cartography' && (
           <div className="max-w-2xl font-mono text-sm leading-relaxed pb-20">
             <h2 className="text-2xl mb-2 font-bold uppercase tracking-widest font-display">CULTURAL CARTOGRAPHY</h2>
-            <h3 className="font-bold uppercase tracking-widest text-sm md:text-xs mb-8 text-[#6B5D52]">A PHILOSOPHY OF STRATEGIC PLANNING</h3>
+            <h3 className="font-bold uppercase tracking-widest text-sm md:text-xs mb-8 text-[#6B5D52]">A METHOD FOR STRATEGIC PLANNING</h3>
 
             <div className="space-y-6 mb-12">
-              <p>Strategy has lost its way. Strategists used to be creative partners, shaping the work as it unfolded. Now, their role often comes at the end: they arrive after the main thinking, fit ideas into templates, and mention the right names to make everyone feel aligned. We were so close!</p>
-              <p>Generative AI is speeding up this shift. As desk research and synthesis become automated, strategists who only read reports and write positioning slides are becoming unnecessary. The person who quotes Sharp or Binet just to sound credible, instead of digging into the problem, is giving a performance, not real analysis.</p>
-              <p>Cultural Cartography is my answer to that drift, situating strategy as a theory/method that starts in the field, not in the deck.</p>
-            </div>
-
-            <div className="space-y-6 mb-12">
-              <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">How Strategy Got Flattened</h4>
-              <p>The industry has made strategy so stable that it's almost invisible. Three patterns are responsible for this.</p>
-              <p><strong>PowerPoint shapes our thinking.</strong> Slides encourage linear stories and safe bullet points, but real people and markets don't work that way. Latour called this inscription—the idea that tools shape the knowledge we create. Every strategist knows the feeling: you open a deck template, and your ideas start to fit its mold.</p>
-              <p><strong>Ritualized methods are common.</strong> The insight slide is filled out before any real insight appears. Competitive audits use the same template no matter the category. These routines create order, but they also remove the friction needed for creative breakthroughs. John Law's work on method assemblages explains this well: the tools we use to study a situation shape what we can see.</p>
-              <p><strong>Citation has become a ritual.</strong> There's nothing wrong with Binet and Field or Byron Sharp. The issue is that their work is used to end the discussion instead of starting it. When people say "the science says" instead of asking "what's happening here," strategy becomes routine. And routines don't adapt.</p>
-            </div>
-
-            <div className="space-y-6 mb-12">
-              <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">What Cultural Cartography Actually Does</h4>
-              <p>Rather than analyzing from afar, you follow how meaning moves through a system. The focus isn't just on "the consumer" or "the brand." It's on the network of things already influencing the situation.</p>
-              <p><strong>You identify actors.</strong> An actor can be anything that changes the situation: a person, a platform algorithm, a budget limit, a regulatory rule, or even a Reddit thread that changes a brand's story overnight. In the cannabis industry, I've seen a single Health Canada compliance memo change an entire category's creative work in just weeks. That memo is an actor. Ignoring it because it doesn't fit on a slide is a mistake.</p>
-              <p><strong>You look for friction.</strong> Strategy happens where systems clash: where policy, culture, and business meet, not in the safe center of a brand model. In fast-changing fields, brands live in regulatory documents and online comments just as much as in briefs.</p>
-              <p><strong>You avoid forcing things to fit too soon.</strong> Agencies often want to tidy up quickly, but Cultural Cartography stays with the complexity longer. It maps what's already happening before trying to explain it. Clarity comes after complexity. There are no shortcuts.</p>
-            </div>
-
-            <div className="space-y-6 mb-12">
-              <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">The Stalker Problem</h4>
-              <p>In Tarkovsky's Stalker, there's a scene where the guide says, "You can't walk straight through the Zone!" The direct path is dangerous. You throw a bolt, see where it lands, and follow it. The landscape has its own rules and changes as you move.</p>
-              <p>That's what the strategic process can increase relevance. Algorithms change. Regulations shift. Culture moves so fast that last quarter's insight can become a problem. The old maps don't just have gaps; they describe a place that no longer exists.</p>
-              <p>The strategist who succeeds now isn't the one with the best map. It's the one who has the courage to move when things change and the patience to study new ground before acting. Mastery isn't the right word for this. Attunement fits better.</p>
+              <p>Cultural Cartography is the strategic approach I have developed over 15 years of practice and academic research. It applies Actor-Network Theory — a framework from the social sciences — to the practical work of building brands.</p>
+              <p>The core idea: strategy should start in the field, not in the deck. Rather than analyzing a market from the outside, you follow how meaning moves through the system. You map the relevant actors — a person, an algorithm, a competitor's advertising, a regulation, a Reddit thread — compiling an inventory of social objects already shaping the situation. You look for friction: the places where policy, culture, and business collide. And you stay with the complexity longer than is comfortable before forcing a tidy answer.</p>
+              <p>This approach has been most useful in regulated and emerging categories where the standard playbooks do not apply. In cannabis, I have watched a single Health Canada compliance memo reshape an entire category's creative output in weeks. That memo is an actor in the system. Ignoring it because it does not fit on a positioning slide is a strategic error.</p>
+              <p>The method is informed by sociology and institutional analysis, but it is meant to be useful in working teams, not trapped in theory. I write about Cultural Cartography on Substack and am developing a book. The flagship essay, "Reassembling the Strategist," is the most detailed introduction to the method.</p>
             </div>
 
             <div className="aspect-video w-full my-6 bg-[#F0EDE7] overflow-hidden rounded">
@@ -746,15 +708,15 @@ export default function App() {
         {view === 'teaching' && (
           <div className="max-w-2xl font-mono text-sm leading-relaxed pb-20">
             <h2 className="text-2xl mb-2 font-bold uppercase tracking-widest font-display">TEACHING & RESEARCH</h2>
-            <h3 className="font-bold uppercase tracking-widest text-sm md:text-xs mb-8 text-[#6B5D52]">FROM SOCIOLOGY TO STRATEGY AND BACK AGAIN</h3>
+            <h3 className="font-bold uppercase tracking-widest text-sm md:text-xs mb-8 text-[#6B5D52]">THEORY INTO PRACTICE</h3>
 
-            <p className="mb-8">I started university to take a Marketing degree, but because I went to a liberal arts school, I had to take Social Science, Humanities, and Science courses. In my first semester, I immediately hated being in class with other marketing students and completely fell in love with Sociology. I went straight through a BA, MA, and PhD (which I am still, and forever will be, a "candidate" — I've written the dissertation, and I will defend it some day). In 2007, I started teaching at the University of Lethbridge: 3000-level courses in Mass Communications, Sociology of Health, and a course I designed from scratch called Digital Culture and Society. But as I got deeper into academic life, I realized how much better I was suited to a faster-paced environment. I became almost completely intolerant of academic bureaucracy. One summer, touring around the Midwest, my bandmates and I started watching Mad Men DVDs in the tour van, and because at the time I was teaching about advertising in my Mass Comm class, it dawned on me that a sociological approach would be genuinely useful in this field. That realization has been fueling me ever since. My current strategic process is founded in the first principles of Bruno Latour's Actor-Network Theory, and I believe brands can be built in the same mode as Pierre Bourdieu's theory of capital, habitus, and field. The classroom forces clarity, and the client work keeps the theory honest.</p>
+            <p className="mb-8">Teaching keeps me grounded in both theory and practice. In the classroom, I work on clarity, structure, and practical application. In client work, I apply that same discipline to audience research, brand strategy, and organizational decision-making. The theoretical frameworks I studied — particularly Latour's Actor-Network Theory and Bourdieu's theory of capital — are the foundation of my current strategic practice.</p>
             
             <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">Teaching</h4>
             <div className="space-y-6 mb-12">
               <div>
                 <p className="font-bold">McMaster Continuing Education (2020–present)</p>
-                <p>Adjunct Professor. Courses: Branding & Image, Consumer Research, Market Research, Introduction to Marketing, Developing Personal Brand, Delivering Effective Presentations. Between 2023 and 2026, played a central role in revamping the Marketing Diploma, partnering with the Canadian Marketing Association to create an accelerated pathway to the Chartered Marketer (CM) designation.</p>
+                <p>Adjunct Professor. Courses: Branding & Image, Consumer Research, Market Research, Introduction to Marketing, Developing Personal Brand, and Delivering Effective Presentations.</p>
               </div>
               <div>
                 <p className="font-bold">University of Lethbridge, Department of Sociology (2007–2012)</p>
@@ -762,7 +724,7 @@ export default function App() {
               </div>
               <div>
                 <p className="font-bold">The Thoughtful Strategist</p>
-                <p>A year-long reading group and graduate seminar for working strategists, co-created with Michelle Lee and Spencer MacEachern (Zulu Alpha Kilo). The 11-book syllabus spans Lazzarato, Stiegler, Mbembe, Berlant, Preciado, and Malabou. Hosted through Cultural Cartography on Substack.</p>
+                <p>A year-long reading group for working strategists, co-created with Michelle Lee and Spencer MacEachern (Zulu Alpha Kilo). Hosted through Cultural Cartography on Substack.</p>
               </div>
             </div>
 
@@ -770,9 +732,9 @@ export default function App() {
             <div className="space-y-6 mb-12">
               <div>
                 <p className="font-bold uppercase tracking-widest text-sm md:text-xs mb-2">Peer-Reviewed Publications</p>
-                <p className="mb-3">Frank, A.W., Corman, M., Gish, J. & Lawton, P. (2010). "Healer–Patient Interaction: New Mediations in Clinical Relationships." The SAGE Handbook of Qualitative Methods in Health Research (pp. 34–52), SAGE Publications. — Invited book chapter in one of the field's most authoritative reference works. Early engagement with Actor-Network Theory.</p>
-                <p className="mb-3">Wood, R.T., Williams, R.J. & Lawton, P.K. (2007). "Why Do Internet Gamblers Prefer Online Versus Land-Based Venues? Some Preliminary Findings and Implications." Journal of Gambling Issues, 20, 235–252. — Original research using data from 1,920 gamblers. Widely cited in international gambling research.</p>
-                <p>Lawton, P.K. (2005). "Capital and Stratification Within Virtual Community: A Case Study of Metafilter.com." Master's thesis, University of Lethbridge. — Applied Bourdieu's theory of capital to online community stratification years before "social capital" became standard platform vocabulary. Cited in the Yale Journal of Law & Technology.</p>
+                <p className="mb-3">Frank, A.W., Corman, M., Gish, J. & Lawton, P. (2010). "Healer–Patient Interaction: New Mediations in Clinical Relationships." The SAGE Handbook of Qualitative Methods in Health Research. SAGE Publications.</p>
+                <p className="mb-3">Wood, R.T., Williams, R.J. & Lawton, P.K. (2007). "Why Do Internet Gamblers Prefer Online Versus Land-Based Venues?" Journal of Gambling Issues, 20, 235–252.</p>
+                <p>Lawton, P.K. (2005). "Capital and Stratification Within Virtual Community: A Case Study of Metafilter.com." Master's thesis, University of Lethbridge. Cited in the Yale Journal of Law & Technology.</p>
               </div>
               <div>
                 <p className="font-bold uppercase tracking-widest text-sm md:text-xs mb-2">Conference Presentations</p>
@@ -839,26 +801,26 @@ export default function App() {
 
               <div>
                 <p className="font-bold border-b border-[#C4B99A] pb-1 mb-3 mt-8">Industry Roles</p>
-                <p>Chair, Marketing & Advertising Committee, National Cannabis Industry Association (2025). Vice Chair (2024), Coordinator (2023). Strategic Advisor, Cannabis Standards Alliance of Canada (2024–2025). CMA Awards Judge.</p>
+                <p>Chair, Marketing & Advertising Committee, National Cannabis Industry Association (2025). Strategic Advisor, Cannabis Standards Alliance of Canada (2024–2025). CMA Awards Judge.</p>
               </div>
 
               <div>
                 <p className="font-bold border-b border-[#C4B99A] pb-1 mb-3 mt-8">Individual Recognition</p>
                 <ul className="list-disc pl-5 space-y-1">
-                  <li>ADCANN Cannabis Marketer of the Year, Canada— Finalist (2022, 2023, 2024).</li>
-                  <li>Strategy Magazine Creative Report Card, Planners category, ranked #12 (2021).</li>
-                  <li>Cohn & Wolfe Employee of the Year (2015).</li>
+                  <li>ADCANN Cannabis Marketer of the Year, Canada: Finalist (2022, 2023, 2024)</li>
+                  <li>Strategy Magazine Creative Report Card, Planners: #12 (2021)</li>
+                  <li>Cohn & Wolfe Employee of the Year (2015)</li>
                 </ul>
               </div>
 
               <div>
                 <p className="font-bold border-b border-[#C4B99A] pb-1 mb-3 mt-8">Campaign Awards (PK Credited as Strategist)</p>
                 <ul className="list-disc pl-5 space-y-2">
-                  <li>"I'm High Right Now" — Cannabis Media Council: Clio Cannabis Silver + 4 Bronze. Adweek Top 3 Cannabis Campaign of 2023. ADCANN Campaign of the Year, USA (2023–24).</li>
-                  <li>Tweed "Hi." — Canopy Growth / Cossette: AToMiC Awards, Strategy Awards Bronze, SIA Gold/Silver/Bronze, CMA Award. Part of Cossette's Strategy Agency of the Year submission (2018).</li>
-                  <li>Don't Drive High — Tweed × MADD × Uber / Cossette: AToMiC Awards, SIA, Media Innovation Awards, CMA Awards, Strategy Awards.</li>
-                  <li>Coleman "Get Outside Day" — Cohn & Wolfe: CPRS ACE Award (Bronze 2017, Silver 2018), multiple Platinum Awards.</li>
-                  <li>Sunbeam "Supports with Warmth" — Cohn & Wolfe: CPRS ACE Award, Bronze, Media Relations (2015).</li>
+                  <li>"I'm High Right Now" — Cannabis Media Council: Clio Silver + 4 Bronze. Adweek Top 3 Cannabis Campaign (2023). ADCANN Campaign of the Year (2023–24).</li>
+                  <li>Tweed "Hi." — AToMiC Awards, Strategy Awards, SIA, CMA Award. Part of Cossette's Strategy Agency of the Year (2018).</li>
+                  <li>Don't Drive High — AToMiC Awards, SIA, Media Innovation, CMA Awards, Strategy Awards.</li>
+                  <li>Coleman "Get Outside Day" — CPRS ACE Award (Bronze 2017, Silver 2018), Platinum Awards.</li>
+                  <li>Sunbeam "Supports with Warmth" — CPRS ACE Award, Bronze (2015).</li>
                 </ul>
               </div>
 
@@ -1009,56 +971,51 @@ export default function App() {
 
               <div className="mb-8">
                 <p className="font-bold mb-2">Eric Williams | Organigram / Canopy Growth</p>
-                <p>I had the opportunity to work with Paul across two chapters of my career, first while he was at Cossette supporting Canopy Growth, and later with Sister Merci, after I moved to Organigram. Few creative leaders combine strategic rigour and cultural fluency the way Paul does. His background in ethnographic research gives him a genuine feel for consumers and the communities that shape the category, allowing him to uncover insights many others miss. What that ultimately leads to is differentiated work. In a category where many brands end up looking and sounding the same, Paul consistently pushes for ideas that feel authentic to cannabis culture while still grounded in strong marketing fundamentals. He understands how brands are built, how creative needs to perform in the real world, and how to translate consumer insight into work that actually stands apart and drives business performance.</p>
+                <p>I had the opportunity to work with Paul across two chapters of my career, first while he was at Cossette supporting Canopy Growth, and later with Sister Merci, after I moved to Organigram. Few creative leaders combine strategic rigour and cultural fluency the way Paul does. His background in ethnographic research gives him a genuine feel for consumers and the communities that shape the category, allowing him to uncover insights many others miss. In a category where many brands end up looking and sounding the same, Paul consistently pushes for ideas that feel authentic to cannabis culture while still grounded in strong marketing fundamentals.</p>
               </div>
 
               <div className="mb-8">
-                <p className="font-bold mb-2">Nicole Bleiwas | Vapium / GreenHouse Juice (Herbert) / Riverside Foods (MadeGood, CookiePal)</p>
-                <p>Paul brings both intellectual rigour and genuine curiosity to strategy. He has a way of digging beneath the obvious to understand the cultural and behavioural forces shaping a category, which consistently leads to insights others miss. That perspective translates into clear, differentiated brand positioning and creative work that truly stands apart. Just as important, he is an excellent partner. He challenges thinking constructively and elevates the work through real collaboration. The result is a strategy that is distinctive, grounded in insight, and capable of moving a business and brand forward.</p>
+                <p className="font-bold mb-2">Nicole Bleiwas | Vapium / GreenHouse Juice / Riverside Foods (MadeGood, CookiePal)</p>
+                <p>Paul brings both intellectual rigour and genuine curiosity to strategy. He has a way of digging beneath the obvious to understand the cultural and behavioural forces shaping a category, which consistently leads to insights others miss. Just as important, he is an excellent partner. He challenges thinking constructively and elevates the work through real collaboration.</p>
               </div>
 
               <div className="mb-8">
                 <p className="font-bold mb-2">Mark McKay | Organigram</p>
-                <p>Paul is quite simply one of the best strategists I have ever worked with. He operates more like a cultural anthropologist than a marketing leader. He doesn't just track trends; he understands the fundamental shifts in audience behaviour before they even happen. During our time together at Organigram, Paul and his team brought a level of insight to our content and campaigns that moved the needle because they truly "got it." Our partnership yielded incredible success. Paul's ability to find the cultural pulse allowed us to connect with audiences in a way that felt both authentic and daring. Under his guidance, our portfolio became the most engaged-with brands on social media within our competitive set: a level of success that's incredibly rare in a category where most brands stay invisible to avoid risk. The quality of work coming from Paul and his team is in a category of its own. He is always my first call for new projects and I am constantly looking for opportunities to work together again.</p>
+                <p>Paul's ability to find the cultural pulse allowed us to connect with audiences in a way that felt both authentic and daring. Under his guidance, our portfolio became the most engaged-with brands on social media within our competitive set. He is always my first call for new projects.</p>
               </div>
 
               <div className="mb-8">
                 <p className="font-bold mb-2">Rachel Boykins | Pangea Money Transfer</p>
-                <p>PK and team were great strategic partners as we built out our new brand. From identifying the target audience to crafting the brand voice, he utilized various sources and exercises to ensure we collaborated on solutions quickly. I loved working with PK and hope to partner with him again.</p>
+                <p>PK and team were great strategic partners as we built out our new brand. From identifying the target audience to crafting the brand voice, he utilized various sources and exercises to ensure we collaborated on solutions quickly.</p>
               </div>
 
               <div className="mb-8">
-                <p className="font-bold mb-2">Jesse Ikeman | CCO at Vortex Media</p>
-                <p>We had the pleasure of working with Paul to help us with our digital media strategy and social media outreach. Paul excelled at both. He has a deep understanding of the social media landscape. He was reliable and executed with speed and diligence. I'd highly recommend Paul for social media and other digital media projects.</p>
+                <p className="font-bold mb-2">Jesse Ikeman | Vortex Media</p>
+                <p>We had the pleasure of working with Paul to support our digital media strategy and social media outreach. Paul excelled at both. He has a deep understanding of the social media landscape. He was reliable and executed with speed and diligence. I'd highly recommend Paul for social media and other digital media projects.</p>
               </div>
             </div>
 
             <div className="space-y-6 mb-12">
-              <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">People With Whom I've Been in the Proverbial Foxhole</h4>
+              <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">Colleagues</h4>
 
               <div className="mb-8">
-                <p className="font-bold mb-2">Lindsay Peterson | Current: Managing Director, GOLIN Canada</p>
-                <p>Paul is a rare breed. Multi-talented, uber smart and truly the most fun to work with. He is collaborative, quick and knows more than the average human. He unlocks insights that can take the team from zero to 100 in no time. I had the pleasure of developing several pitches with Paul — some of the best work I've ever seen/done.</p>
+                <p className="font-bold mb-2">Melissa Eshaghbeigi | AKQA London</p>
+                <p>PK has been instrumental to my growth as a strategic thinker. He has a rare ability to help you find and sharpen your own unique point of view, rather than simply handing you frameworks. He creates the conditions for you to develop them yourself. Whether you're stress-testing a half-formed idea or working through a complex cultural observation, PK is always genuinely engaged and ready to dig in.</p>
               </div>
 
               <div className="mb-8">
-                <p className="font-bold mb-2">Melissa Eshaghbeigi | Current: Strategy Director, AKQA London</p>
-                <p>PK has been instrumental to my growth as a strategic thinker. Drawing on his deep academic background, he has a rare ability to help you find and sharpen your own unique point of view, rather than simply handing you frameworks, he creates the conditions for you to develop them yourself. He is the ultimate sparring partner. Whether you're stress-testing a half-formed idea or working through a complex cultural observation, PK is always genuinely engaged and ready to dig in. He is collaborative and generous with his time. Over the years we've worked together across a remarkably diverse range of projects, from writing white papers on sneakerheads to deep digital ethnography. Our shared love of digital observation even led us to launch a podcast exploring how the internet is reshaping culture at large. Across it all, his understanding of digital culture is rigorous and instinctive. PK pushes me to become a sharper, more confident strategist, and I'm grateful to have him in my corner.</p>
+                <p className="font-bold mb-2">Matt Weir | GUT Toronto</p>
+                <p>Paul gave me my first full-time shot in strategy, converting my internship at Cossette into a full-time role, and later bringing me on as his first strategic hire at Sister Merci. What sets Paul apart is his commitment to long-term brand building in an industry obsessed with short-term gains. He seldom relies on desktop research. He gets in the dirt, talks to real people, and uncovers truths others miss.</p>
               </div>
 
               <div className="mb-8">
-                <p className="font-bold mb-2">Matt Weir | Current: Senior Strategist at Gut Toronto</p>
-                <p>Paul gave me my first full-time shot in strategy, converting my internship at Cossette into a full-time role, and later bringing me on as his first strategic hire at Sister Merci. It absolutely changed the trajectory of my life, not just as a planner but as a person. What sets Paul apart is his commitment to long-term brand building in an industry obsessed with short-term gains. He seldom relies on desktop research, he gets in the dirt, talks to real people, and uncovers truths others miss. As a mentor, he's helped many a planner find their own strategic voices, grounded in his sharp strategic fundamentals. Legend.</p>
+                <p className="font-bold mb-2">Lindsay Peterson | GOLIN Canada</p>
+                <p>Paul is collaborative, quick, and knows more than the average human. He unlocks insights that can take the team from zero to 100 in no time. I had the pleasure of developing several pitches with Paul: some of the best work I've ever done.</p>
               </div>
 
               <div className="mb-8">
-                <p className="font-bold mb-2">Yemina Kaiman | Senior Strategy Director, Cossette</p>
-                <p>Paul is everything a leader should be: thoughtful, approachable, invested in his employees' success and a wealth of knowledge and thought leadership. Most of all Paul is an exceptional strategist who brings a dynamic perspective. His voracious thirst for knowledge means he's always got a book, a podcast, or a website to recommend, and he's always got a POV on that book, podcast, or website. His energy and good vibes are contagious which results in a profound and indelible impact on any room he walks into. Everyone I know who's worked with Paul considers themselves lucky to have gotten the chance.</p>
-              </div>
-
-              <div className="mb-8">
-                <p className="font-bold mb-2">Lauren Harrison | Current: Senior Director, GCI</p>
-                <p>I had the opportunity to work very closely with Paul for about two years, in which time I learned a great deal from him, specifically in the social and digital media landscape. Paul's determination and intrigue in social media analysis enabled our team to gain meaningful insights, which allowed us to provide our client base with a deeply enriched campaign analysis. His persistence in challenging the status quo created a positive, growing environment, both internally for me and externally for our clients.</p>
+                <p className="font-bold mb-2">Yemina Kaiman | Cossette</p>
+                <p>Paul is everything a leader should be: thoughtful, approachable, invested in his employees' success, and a wealth of knowledge and thought leadership. Most of all, Paul is an exceptional strategist who brings a dynamic perspective. His voracious thirst for knowledge means he's always got a book, a podcast, or a website to recommend — and he's always got a POV on that book, podcast, or website. His energy and good vibes are contagious, which results in a profound and indelible impact on any room he walks into. Everyone I know who's worked with Paul considers themselves lucky to have gotten the chance.</p>
               </div>
             </div>
 
@@ -1072,7 +1029,7 @@ export default function App() {
               </div>
 
               <div className="mb-6 pl-4 border-l-2 border-[#C4B99A]">
-                <p className="italic">"Professor Lawton is a very nice man. He made me understand the sociology of cyberspace, and I want to know more now. It is very cool, and one day during our lecture, we opened a portal to exciting new fields of learning. Yes. He has shown that the future is scary, but with Prof. Lawton leading the way, we will survive. Don't fear the reaper."</p>
+                <p className="italic">"Professor Lawton is a very nice man. He made me understand digital culture, and I want to know more now. It is very cool, and one day during our lecture, we opened a portal to exciting new fields of learning. Yes. He has shown that the future is scary, but with Prof. Paul leading the way, we will survive. Don't fear the reaper."</p>
                 <p className="text-sm text-[#6B5D52] mt-1">— ACCT202, Dec 2008 | Quality: 3.5 | Difficulty: 2.0</p>
               </div>
 

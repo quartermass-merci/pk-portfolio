@@ -1,10 +1,10 @@
 import { useMotionValue, animate, motion } from 'framer-motion';
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 import useMeasure from 'react-use-measure';
 
 export function InfiniteSlider({
   children,
-  gap = 24,
+  gap = 16,
   duration = 25,
   durationOnHover,
   direction = 'horizontal',
@@ -24,7 +24,17 @@ export function InfiniteSlider({
     const from = reverse ? -contentSize / 2 : 0;
     const to = reverse ? 0 : -contentSize / 2;
 
-    if (size) {
+    if (isTransitioning) {
+      controls = animate(translation, [translation.get(), to], {
+        ease: 'linear',
+        duration:
+          currentDuration * Math.abs((translation.get() - to) / contentSize),
+        onComplete: () => {
+          setIsTransitioning(false);
+          setKey((prevKey) => prevKey + 1);
+        },
+      });
+    } else {
       controls = animate(translation, [from, to], {
         ease: 'linear',
         duration: currentDuration,
@@ -37,7 +47,7 @@ export function InfiniteSlider({
       });
     }
 
-    return () => controls?.stop();
+    return controls?.stop;
   }, [
     key,
     translation,
@@ -45,6 +55,7 @@ export function InfiniteSlider({
     width,
     height,
     gap,
+    isTransitioning,
     direction,
     reverse,
   ]);
@@ -54,26 +65,16 @@ export function InfiniteSlider({
         onHoverStart: () => {
           setIsTransitioning(true);
           setCurrentDuration(durationOnHover);
-          setKey((prev) => prev + 1);
         },
         onHoverEnd: () => {
           setIsTransitioning(true);
           setCurrentDuration(duration);
-          setKey((prev) => prev + 1);
         },
       }
     : {};
 
-  const transitionStyle = isTransitioning
-    ? { transition: 'opacity 0.3s ease' }
-    : {};
-
   return (
-    <motion.div
-      className={`overflow-hidden ${className}`}
-      style={transitionStyle}
-      {...hoverProps}
-    >
+    <div className={`overflow-hidden ${className}`}>
       <motion.div
         className="flex w-max"
         style={{
@@ -84,10 +85,11 @@ export function InfiniteSlider({
           flexDirection: direction === 'horizontal' ? 'row' : 'column',
         }}
         ref={ref}
+        {...hoverProps}
       >
         {children}
         {children}
       </motion.div>
-    </motion.div>
+    </div>
   );
 }

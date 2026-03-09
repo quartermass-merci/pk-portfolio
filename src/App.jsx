@@ -38,6 +38,10 @@ const BRAND_LOGOS = [
   { src: '/images/scrolling-logos/spectrum.svg', alt: 'Spectrum' },
   { src: '/images/scrolling-logos/tweed.svg', alt: 'Tweed' },
   { src: '/images/scrolling-logos/ronald-mcdonald-house.svg', alt: 'Ronald McDonald House' },
+  { src: '/images/scrolling-logos/doodle.png', alt: 'Doodle' },
+  { src: '/images/scrolling-logos/mosaic-ai.svg', alt: 'Mosaic AI' },
+  { src: '/images/scrolling-logos/opentext.png', alt: 'OpenText' },
+  { src: '/images/scrolling-logos/novascene-ai.png', alt: 'Novascene AI' },
 ];
 
 const URL_REGEX = /(https?:\/\/[^\s)]+)/g;
@@ -413,7 +417,7 @@ export default function App() {
       {/* Trusted By Logo Slider */}
       <div className="relative z-10 py-12 px-6 md:px-10 border-t border-[#C4B99A]/40">
         <div className="max-w-5xl mx-auto">
-          <h3 className="text-xs uppercase tracking-[0.2em] text-[#565D4F] font-bold mb-6">Trusted By</h3>
+          <p className="text-sm md:text-base text-[#6B5D52] italic mb-6">Strategy for brands that can't afford to get it wrong.</p>
         </div>
         <div
           style={{

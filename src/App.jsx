@@ -6,8 +6,39 @@ import PixelTrail from './components/PixelTrail';
 import { useScreenSize } from './components/hooks/useScreenSize';
 import AnimatedLink from './components/AnimatedLink';
 import { VariableFontHoverByLetter } from './components/VariableFontHover';
+import { InfiniteSlider } from './components/InfiniteSlider';
 
-
+const BRAND_LOGOS = [
+  { src: '/images/scrolling-logos/air-canada.png', alt: 'Air Canada' },
+  { src: '/images/scrolling-logos/rbc.png', alt: 'RBC' },
+  { src: '/images/scrolling-logos/nintendo.png', alt: 'Nintendo' },
+  { src: '/images/scrolling-logos/cbc.png', alt: 'CBC' },
+  { src: '/images/scrolling-logos/mcdonalds.png', alt: "McDonald's" },
+  { src: '/images/scrolling-logos/scotiabank.png', alt: 'Scotiabank' },
+  { src: '/images/scrolling-logos/walmart.png', alt: 'Walmart' },
+  { src: '/images/scrolling-logos/shoppers.png', alt: 'Shoppers Drug Mart' },
+  { src: '/images/scrolling-logos/oreo.png', alt: 'Oreo' },
+  { src: '/images/scrolling-logos/buick.png', alt: 'Buick' },
+  { src: '/images/scrolling-logos/chevrolet.png', alt: 'Chevrolet' },
+  { src: '/images/scrolling-logos/nissan.png', alt: 'Nissan' },
+  { src: '/images/scrolling-logos/infiniti.png', alt: 'Infiniti' },
+  { src: '/images/scrolling-logos/manulife.png', alt: 'Manulife' },
+  { src: '/images/scrolling-logos/coleman.png', alt: 'Coleman' },
+  { src: '/images/scrolling-logos/madegood.png', alt: 'MadeGood' },
+  { src: '/images/scrolling-logos/canopy-growth.png', alt: 'Canopy Growth' },
+  { src: '/images/scrolling-logos/houseplant.png', alt: 'Houseplant' },
+  { src: '/images/scrolling-logos/homebase.png', alt: 'Homebase' },
+  { src: '/images/scrolling-logos/novartis.png', alt: 'Novartis' },
+  { src: '/images/scrolling-logos/collective-arts.png', alt: 'Collective Arts' },
+  { src: '/images/scrolling-logos/solesavy.png', alt: 'SoleSavy' },
+  { src: '/images/scrolling-logos/deep-space.png', alt: 'Deep Space' },
+  { src: '/images/scrolling-logos/7acres.png', alt: '7Acres' },
+  { src: '/images/scrolling-logos/nia-health.png', alt: 'Nia Health' },
+  { src: '/images/scrolling-logos/globe-and-mail.png', alt: 'Globe and Mail' },
+  { src: '/images/scrolling-logos/spectrum.svg', alt: 'Spectrum' },
+  { src: '/images/scrolling-logos/tweed.svg', alt: 'Tweed' },
+  { src: '/images/scrolling-logos/ronald-mcdonald-house.svg', alt: 'Ronald McDonald House' },
+];
 
 const URL_REGEX = /(https?:\/\/[^\s)]+)/g;
 const URL_REGEX_TEST = /^https?:\/\//;
@@ -301,8 +332,29 @@ export default function App() {
 
           <motion.div variants={fadeUp} className="mt-8 pt-4 border-t border-[#C4B99A] font-ui">
             <p className="text-sm tracking-wide text-[#6B5D52]">
-              <span className="font-bold text-[#362318]"><CountUp target={150} />+</span> brands · <span className="font-bold text-[#362318]"><CountUp target={27} /></span> campaigns · <span className="font-bold text-[#DB3E36]"><CountUp target={7} /> Clios</span> · <span className="font-bold text-[#362318]"><CountUp target={3} />×</span> Agency of the Year · <span className="font-bold text-[#362318]"><CountUp target={85} />%</span> pitch win rate
+              <span className="font-bold text-[#362318]"><CountUp target={150} />+</span> brands · <span className="font-bold text-[#362318]"><CountUp target={20} />+</span> industry awards · <span className="font-bold text-[#DB3E36]"><CountUp target={7} /> Clios</span> · <span className="font-bold text-[#362318]"><CountUp target={3} />×</span> Agency of the Year · <span className="font-bold text-[#362318]"><CountUp target={85} />%</span> pitch win rate
             </p>
+          </motion.div>
+
+          <motion.div variants={fadeUp} className="mt-6 -mx-6 md:-mx-10"
+            style={{
+              maskImage: 'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
+              WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
+            }}
+          >
+            <InfiniteSlider gap={36} duration={35} durationOnHover={70}>
+              {BRAND_LOGOS.map((logo) => (
+                <div key={logo.alt} className="flex items-center justify-center w-[100px] h-[24px] shrink-0">
+                  <img
+                    src={logo.src}
+                    alt={logo.alt}
+                    className="max-w-full max-h-full object-contain opacity-30 hover:opacity-60 transition-opacity duration-300"
+                    style={{ filter: 'grayscale(100%)' }}
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </InfiniteSlider>
           </motion.div>
         </motion.div>
 

@@ -8,40 +8,60 @@ import AnimatedLink from './components/AnimatedLink';
 import { VariableFontHoverByLetter } from './components/VariableFontHover';
 import { InfiniteSlider } from './components/InfiniteSlider';
 
-const BRAND_LOGOS = [
-  { src: '/images/scrolling-logos/air-canada.png', alt: 'Air Canada' },
-  { src: '/images/scrolling-logos/rbc.png', alt: 'RBC' },
-  { src: '/images/scrolling-logos/nintendo.png', alt: 'Nintendo' },
-  { src: '/images/scrolling-logos/cbc.png', alt: 'CBC' },
-  { src: '/images/scrolling-logos/mcdonalds.png', alt: "McDonald's" },
-  { src: '/images/scrolling-logos/scotiabank.png', alt: 'Scotiabank' },
-  { src: '/images/scrolling-logos/walmart.png', alt: 'Walmart' },
-  { src: '/images/scrolling-logos/shoppers.png', alt: 'Shoppers Drug Mart' },
-  { src: '/images/scrolling-logos/oreo.png', alt: 'Oreo' },
-  { src: '/images/scrolling-logos/buick.png', alt: 'Buick' },
-  { src: '/images/scrolling-logos/chevrolet.png', alt: 'Chevrolet' },
-  { src: '/images/scrolling-logos/nissan.png', alt: 'Nissan' },
-  { src: '/images/scrolling-logos/infiniti.png', alt: 'Infiniti' },
-  { src: '/images/scrolling-logos/manulife.png', alt: 'Manulife' },
-  { src: '/images/scrolling-logos/coleman.png', alt: 'Coleman' },
-  { src: '/images/scrolling-logos/madegood.png', alt: 'MadeGood' },
-  { src: '/images/scrolling-logos/canopy-growth.png', alt: 'Canopy Growth' },
-  { src: '/images/scrolling-logos/houseplant.png', alt: 'Houseplant' },
-  { src: '/images/scrolling-logos/homebase.png', alt: 'Homebase' },
-  { src: '/images/scrolling-logos/novartis.png', alt: 'Novartis' },
-  { src: '/images/scrolling-logos/collective-arts.png', alt: 'Collective Arts' },
-  { src: '/images/scrolling-logos/solesavy.png', alt: 'SoleSavy' },
-  { src: '/images/scrolling-logos/deep-space.png', alt: 'Deep Space' },
-  { src: '/images/scrolling-logos/7acres.png', alt: '7Acres' },
-  { src: '/images/scrolling-logos/nia-health.png', alt: 'Nia Health' },
-  { src: '/images/scrolling-logos/globe-and-mail.png', alt: 'Globe and Mail' },
-  { src: '/images/scrolling-logos/spectrum.svg', alt: 'Spectrum' },
-  { src: '/images/scrolling-logos/tweed.svg', alt: 'Tweed' },
-  { src: '/images/scrolling-logos/ronald-mcdonald-house.svg', alt: 'Ronald McDonald House' },
-  { src: '/images/scrolling-logos/doodle.png', alt: 'Doodle' },
-  { src: '/images/scrolling-logos/mosaic-ai.svg', alt: 'Mosaic AI' },
-  { src: '/images/scrolling-logos/opentext.png', alt: 'OpenText' },
-  { src: '/images/scrolling-logos/novascene-ai.png', alt: 'Novascene AI' },
+const LOGO_GROUPS = [
+  {
+    label: 'Cannabis',
+    logos: [
+      { src: '/images/scrolling-logos/canopy-growth.png', alt: 'Canopy Growth' },
+      { src: '/images/scrolling-logos/tweed.svg', alt: 'Tweed' },
+      { src: '/images/scrolling-logos/houseplant.png', alt: 'Houseplant' },
+      { src: '/images/scrolling-logos/7acres.png', alt: '7Acres' },
+      { src: '/images/scrolling-logos/deep-space.png', alt: 'Deep Space' },
+      { src: '/images/scrolling-logos/spectrum.svg', alt: 'Spectrum' },
+      { src: '/images/scrolling-logos/homebase.png', alt: 'Homebase' },
+      { src: '/images/scrolling-logos/collective-arts.png', alt: 'Collective Arts' },
+    ],
+  },
+  {
+    label: 'Food, Retail & Non-Profit',
+    logos: [
+      { src: '/images/scrolling-logos/mcdonalds.png', alt: "McDonald's" },
+      { src: '/images/scrolling-logos/ronald-mcdonald-house.svg', alt: 'Ronald McDonald House' },
+      { src: '/images/scrolling-logos/walmart.png', alt: 'Walmart' },
+      { src: '/images/scrolling-logos/shoppers.png', alt: 'Shoppers Drug Mart' },
+      { src: '/images/scrolling-logos/oreo.png', alt: 'Oreo' },
+      { src: '/images/scrolling-logos/madegood.png', alt: 'MadeGood' },
+      { src: '/images/scrolling-logos/coleman.png', alt: 'Coleman' },
+    ],
+  },
+  {
+    label: 'Finance, Auto & Transport',
+    logos: [
+      { src: '/images/scrolling-logos/rbc.png', alt: 'RBC' },
+      { src: '/images/scrolling-logos/scotiabank.png', alt: 'Scotiabank' },
+      { src: '/images/scrolling-logos/manulife.png', alt: 'Manulife' },
+      { src: '/images/scrolling-logos/buick.png', alt: 'Buick' },
+      { src: '/images/scrolling-logos/chevrolet.png', alt: 'Chevrolet' },
+      { src: '/images/scrolling-logos/nissan.png', alt: 'Nissan' },
+      { src: '/images/scrolling-logos/infiniti.png', alt: 'Infiniti' },
+      { src: '/images/scrolling-logos/air-canada.png', alt: 'Air Canada' },
+    ],
+  },
+  {
+    label: 'Tech, Media & Health',
+    logos: [
+      { src: '/images/scrolling-logos/nintendo.png', alt: 'Nintendo' },
+      { src: '/images/scrolling-logos/cbc.png', alt: 'CBC' },
+      { src: '/images/scrolling-logos/globe-and-mail.png', alt: 'Globe and Mail' },
+      { src: '/images/scrolling-logos/solesavy.png', alt: 'SoleSavy' },
+      { src: '/images/scrolling-logos/novartis.png', alt: 'Novartis' },
+      { src: '/images/scrolling-logos/nia-health.png', alt: 'Nia Health' },
+      { src: '/images/scrolling-logos/opentext.png', alt: 'OpenText' },
+      { src: '/images/scrolling-logos/doodle.png', alt: 'Doodle' },
+      { src: '/images/scrolling-logos/mosaic-ai.svg', alt: 'Mosaic AI' },
+      { src: '/images/scrolling-logos/novascene-ai.png', alt: 'Novascene AI' },
+    ],
+  },
 ];
 
 const URL_REGEX = /(https?:\/\/[^\s)]+)/g;
@@ -414,30 +434,37 @@ export default function App() {
         </nav>
       </div>
 
-      {/* Trusted By Logo Slider */}
+      {/* Trusted By Logo Slider — grouped by industry */}
       <div className="relative z-10 py-12 px-6 md:px-10 border-t border-[#C4B99A]/40">
         <div className="max-w-5xl mx-auto">
           <p className="text-sm md:text-base text-[#6B5D52] italic mb-6">Strategy for brands that can't afford to get it wrong.</p>
         </div>
-        <div
-          style={{
-            maskImage: 'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
-            WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
-          }}
-        >
-          <InfiniteSlider gap={48} duration={65} durationOnHover={130}>
-            {BRAND_LOGOS.map((logo) => (
-              <div key={logo.alt} className="flex items-center justify-center w-[250px] h-[60px] shrink-0">
-                <img
-                  src={logo.src}
-                  alt={logo.alt}
-                  className="max-w-full max-h-full object-contain opacity-30 hover:opacity-60 transition-opacity duration-300"
-                  style={{ filter: 'grayscale(100%)' }}
-                  loading="lazy"
-                />
+        <div className="space-y-6">
+          {LOGO_GROUPS.map((group, i) => (
+            <div key={group.label}>
+              <p className="text-[10px] uppercase tracking-[0.2em] text-[#6B5D52]/50 font-mono mb-2 px-2 md:px-8">{group.label}</p>
+              <div
+                style={{
+                  maskImage: 'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
+                  WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
+                }}
+              >
+                <InfiniteSlider gap={48} duration={55 + i * 8} durationOnHover={120} reverse={i % 2 === 1}>
+                  {group.logos.map((logo) => (
+                    <div key={logo.alt} className="flex items-center justify-center w-[200px] h-[50px] shrink-0">
+                      <img
+                        src={logo.src}
+                        alt={logo.alt}
+                        className="max-w-full max-h-full object-contain opacity-30 hover:opacity-60 transition-opacity duration-300"
+                        style={{ filter: 'grayscale(100%)' }}
+                        loading="lazy"
+                      />
+                    </div>
+                  ))}
+                </InfiniteSlider>
               </div>
-            ))}
-          </InfiniteSlider>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -1078,6 +1105,18 @@ export default function App() {
           const { hero, distributed, remaining } = splitProjectImages(activeProject.images, activeProject.sections?.length || 0);
           return (
           <div className="max-w-3xl pb-20">
+            {/* Hero logo (small brand mark) */}
+            {activeProject.heroLogo && (
+              <div className="mb-6">
+                <img
+                  src={activeProject.heroLogo}
+                  alt=""
+                  className="h-12 w-auto object-contain"
+                  loading="lazy"
+                  onError={(e) => { e.target.style.display = 'none'; }}
+                />
+              </div>
+            )}
             <p className="text-xs uppercase tracking-[0.25em] text-[#DB3E36] font-bold mb-2 font-ui">{activeProject.category}</p>
             <h1 className="text-4xl md:text-5xl mb-4 font-bold font-display leading-tight">{activeProject.title}</h1>
             <p className="text-[#6B5D52] mb-10 italic text-base">{activeProject.summary}</p>

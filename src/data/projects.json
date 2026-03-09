@@ -1527,7 +1527,10 @@
       "Air Canada: Andy Shibata, VP Brand, Air Canada; Derek Whitworth, Customer Care, Air Canada; Mark Nasr, EVP & COO, Air Canada",
       "Public filings, press releases, and published reporting; no proprietary internal communications or unreleased financial projections"
     ],
-    "images": []
+    "heroLogo": "/images/air-canada/air-canada-hero.png",
+    "images": [
+      "/images/air-canada/air-canada-1.png"
+    ]
   },
   {
     "id": "nia-health",
@@ -1583,7 +1586,11 @@
       "Kate Carnegie, Media Relations",
       "Chantel Cassar, Media Relations"
     ],
-    "images": []
+    "heroLogo": "/images/nia-health/nia-health-hero.png",
+    "images": [
+      "/images/nia-health/nia-health-1.png",
+      "/images/nia-health/nia-health-2.png"
+    ]
   },
   {
     "id": "shoppers",
@@ -1640,7 +1647,11 @@
       "Client: Shoppers Drug Mart (Loblaw Companies)",
       "Pharmacy services expansion is widely reported in Canadian media; provincial scope-of-practice changes are matters of public regulatory record"
     ],
-    "images": []
+    "heroLogo": "/images/shoppers/shoppers-hero.png",
+    "images": [
+      "/images/shoppers/shoppers-1.webp",
+      "/images/shoppers/shoppers-2.webp"
+    ]
   },
   {
     "id": "rbc",
@@ -1696,7 +1707,11 @@
       "RBC: Lisa Hutniak, Director, Communications, RBC; Michelle Yao, Senior Manager, Brand Communications, RBC",
       "RBC Future Launch is publicly promoted with extensive documentation; no proprietary RBC internal financial data referenced"
     ],
-    "images": []
+    "heroLogo": "/images/rbc/rbc-hero.png",
+    "images": [
+      "/images/rbc/rbc-1.jpg",
+      "/images/rbc/rbc-2.jpg"
+    ]
   },
   {
     "id": "cn-rail",
@@ -1750,6 +1765,10 @@
       "Client: Canadian National Railway",
       "Public record information only; no proprietary CN financial data or confidential regulatory submissions included"
     ],
-    "images": []
+    "heroLogo": "/images/cn-rail/cn-rail-logo.png",
+    "images": [
+      "/images/cn-rail/cn-rail-1.png",
+      "/images/cn-rail/cn-rail-2.jpg"
+    ]
   }
 ]

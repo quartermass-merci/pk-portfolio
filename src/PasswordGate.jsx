@@ -66,11 +66,11 @@ export default function PasswordGate({ children }) {
             placeholder="Enter password"
             autoFocus
             autoComplete="off"
-            className="w-full h-11 px-4 text-sm font-mono outline-none transition-all duration-200 bg-[#FAF8F4]/80 backdrop-blur-sm border border-[#C4B99A] rounded-md text-[#362318] placeholder-[#A89B86] focus:border-[#565D4F]"
+            className="w-full h-12 px-4 text-base font-mono outline-none transition-all duration-200 bg-[#FAF8F4]/80 backdrop-blur-sm border border-[#C4B99A] rounded-md text-[#362318] placeholder-[#A89B86] focus:border-[#565D4F]"
           />
           {error && (
             <motion.p
-              className="text-xs text-center text-[#DB3E36]"
+              className="text-sm text-center text-[#DB3E36]"
               role="alert"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -78,9 +78,10 @@ export default function PasswordGate({ children }) {
               Incorrect password. Try again.
             </motion.p>
           )}
+          <p className="text-xs text-center text-[#A89B86]">Hint: last name</p>
           <button
             type="submit"
-            className="h-10 text-xs font-mono uppercase tracking-widest bg-[#362318] text-[#E0D3A8] rounded-md hover:bg-[#4A3F35] transition-colors cursor-pointer"
+            className="h-12 text-sm font-mono uppercase tracking-widest bg-[#362318] text-[#E0D3A8] rounded-md hover:bg-[#4A3F35] transition-colors cursor-pointer"
           >
             Enter
           </button>
@@ -88,7 +89,7 @@ export default function PasswordGate({ children }) {
 
         {/* Footer */}
         <motion.p
-          className="mt-10 text-[10px] uppercase tracking-widest text-[#C4B99A]"
+          className="mt-10 text-xs uppercase tracking-widest text-[#C4B99A]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.4, delay: 0.9 }}

@@ -234,7 +234,7 @@ export default function App() {
               className="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500"
               alt=""
               loading="lazy"
-              onError={(e) => { e.target.style.display = 'none'; }}
+              onError={(e) => { e.target.src = ''; e.target.alt = 'Image unavailable'; e.target.className = 'w-full h-full flex items-center justify-center text-xs text-[#A89B86]'; }}
             />
           </motion.button>
         ))}
@@ -243,7 +243,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAF8F4] text-[#362318] font-mono text-[14px] leading-tight relative pk-grain">
+    <div className="min-h-screen bg-[#FAF8F4] text-[#362318] font-mono text-sm md:text-[14px] leading-relaxed md:leading-tight relative pk-grain">
       
       {/* Pixel trail background */}
       <div className="fixed inset-0 z-0 pointer-events-auto">
@@ -290,7 +290,7 @@ export default function App() {
       <div className="w-full max-w-5xl mx-auto p-6 md:p-10 flex flex-col min-h-screen relative z-10">
         <motion.div className="mb-16" variants={stagger} initial="hidden" animate="show">
           <motion.div variants={fadeUp}>
-            <img src="/images/pk-logo.png" alt="PK Lawton — Strategy × Culture" className="w-full max-w-[560px] h-auto mb-8" />
+            <img src="/images/pk-logo.png" alt="PK Lawton — Strategy × Culture" className="w-full max-w-[300px] md:max-w-[560px] h-auto mb-8" />
           </motion.div>
           <motion.p variants={fadeUp} className="text-sm md:text-base text-[#6B5D52] mb-6 max-w-xl">Co-Founder & Chief Strategy Officer at Sister Merci. Brand strategist, researcher, educator, cultural critic. Based in Hamilton, ON.</motion.p>
           <motion.div variants={fadeUp} className="flex gap-6 text-sm font-ui">
@@ -321,16 +321,17 @@ export default function App() {
         <nav className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-0 items-start">
           {/* Background */}
           <div className="mb-8">
-            <h3 className="text-[11px] uppercase tracking-[0.2em] text-[#565D4F] border-l-2 border-[#DB3E36] pl-2 mb-2 font-bold">Background</h3>
+            <h3 className="text-xs uppercase tracking-[0.2em] text-[#565D4F] border-l-2 border-[#DB3E36] pl-2 mb-2 font-bold">Background</h3>
             <ul>
               {backgroundSections.map((item) => (
                 <li
                   key={item.id}
                   role="button"
                   tabIndex={0}
+                  aria-label={`Open ${item.title}`}
                   onClick={() => openPanel(item.id)}
                   onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openPanel(item.id); } }}
-                  className={`border-b border-[#C4B99A]/40 py-1.5 px-1 cursor-pointer hover:bg-[#F0EDE7] transition-all duration-200 border-l-2 ${view === item.id && panelOpen ? 'bg-[#F0EDE7] font-bold border-l-[#DB3E36]' : 'border-l-transparent'}`}
+                  className={`border-b border-[#C4B99A]/40 py-2.5 md:py-1.5 px-1 cursor-pointer hover:bg-[#F0EDE7] transition-all duration-200 border-l-2 ${view === item.id && panelOpen ? 'bg-[#F0EDE7] font-bold border-l-[#DB3E36]' : 'border-l-transparent'}`}
                 >
                   <VariableFontHoverByLetter
                     label={item.title}
@@ -348,16 +349,17 @@ export default function App() {
           {/* Case Study Categories */}
           {categories.map((category) => (
             <div key={category} className="mb-8">
-              <h3 className="text-[11px] uppercase tracking-[0.2em] text-[#565D4F] border-l-2 border-[#DB3E36] pl-2 mb-2 font-bold">{category}</h3>
+              <h3 className="text-xs uppercase tracking-[0.2em] text-[#565D4F] border-l-2 border-[#DB3E36] pl-2 mb-2 font-bold">{category}</h3>
               <ul>
                 {portfolioData.filter((p) => p.category === category).map((project) => (
                   <li
                     key={project.id}
                     role="button"
                     tabIndex={0}
+                    aria-label={`View case study: ${project.title}`}
                     onClick={() => handleProjectClick(project)}
                     onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleProjectClick(project); } }}
-                    className={`border-b border-[#C4B99A]/40 py-1.5 px-1 flex justify-between cursor-pointer hover:bg-[#F0EDE7] transition-all duration-200 border-l-2 ${activeProject?.id === project.id && view === 'project' && panelOpen ? 'bg-[#F0EDE7] font-bold border-l-[#DB3E36]' : 'border-l-transparent'}`}
+                    className={`border-b border-[#C4B99A]/40 py-2.5 md:py-1.5 px-1 flex justify-between cursor-pointer hover:bg-[#F0EDE7] transition-all duration-200 border-l-2 ${activeProject?.id === project.id && view === 'project' && panelOpen ? 'bg-[#F0EDE7] font-bold border-l-[#DB3E36]' : 'border-l-transparent'}`}
                   >
                     <VariableFontHoverByLetter
                       label={project.title}
@@ -385,8 +387,8 @@ export default function App() {
           </div>
           <div className="flex gap-6 text-sm font-ui">
             <a href="mailto:pklawton@gmail.com" className="hover:text-white transition-colors">Email</a>
-            <a href="https://linkedin.com/in/paulklawton" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
-            <a href="https://culturalcartography.substack.com" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">Substack</a>
+            <a href="https://linkedin.com/in/paulklawton" target="_blank" rel="noreferrer" aria-label="LinkedIn (opens in new tab)" className="hover:text-white transition-colors">LinkedIn</a>
+            <a href="https://culturalcartography.substack.com" target="_blank" rel="noreferrer" aria-label="Substack (opens in new tab)" className="hover:text-white transition-colors">Substack</a>
           </div>
         </div>
       </footer>
@@ -421,7 +423,7 @@ export default function App() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.15, duration: 0.4 }}
             >
-              <button onClick={closePanel} className="mb-8 text-sm font-mono uppercase tracking-widest text-[#6B5D52] hover:text-[#362318] transition-colors flex items-center gap-2 group">
+              <button onClick={closePanel} aria-label="Close panel and return to navigation" className="mb-8 text-sm font-mono uppercase tracking-widest text-[#6B5D52] hover:text-[#362318] transition-colors flex items-center gap-2 group">
                 <span className="inline-block transition-transform duration-200 group-hover:-translate-x-1">←</span> Back
               </button>
         
@@ -467,36 +469,36 @@ export default function App() {
             <div className="space-y-12">
               <div>
                 <div className="flex justify-between border-b border-[#C4B99A] mb-2 pb-1 font-bold"><span>Sister Merci</span><span>2019–Present</span></div>
-                <p className="uppercase text-xs tracking-tighter text-[#6B5D52] mb-2">Co-Founder & Chief Strategy Officer</p>
+                <p className="uppercase text-sm md:text-xs tracking-tighter text-[#6B5D52] mb-2">Co-Founder & Chief Strategy Officer</p>
                 <p>Co-founded with Katie Waterman. Built from four founders to 30+ staff across Toronto and Chicago. Led strategy for 150+ brands across cannabis, iGaming, AI, beverage alcohol, health tech, and financial services. 2023 Clio Cannabis Agency of the Year. Seven Clios total. Three-time Agency of the Year.</p>
               </div>
               <div>
                 <div className="flex justify-between border-b border-[#C4B99A] mb-2 pb-1 font-bold"><span>McMaster Continuing Education</span><span>2020–Present</span></div>
-                <p className="uppercase text-xs tracking-tighter text-[#6B5D52] mb-2">Adjunct Professor</p>
+                <p className="uppercase text-sm md:text-xs tracking-tighter text-[#6B5D52] mb-2">Adjunct Professor</p>
                 <p>Teaching Brand Strategy, Consumer Research, Introduction to Marketing, Personal Branding, and Effective Presentations. Redesigning curriculum for platform fragmentation and AI. Partnered with the Canadian Marketing Association to create an accelerated pathway to the Chartered Marketer designation.</p>
               </div>
               <div>
                 <div className="flex justify-between border-b border-[#C4B99A] mb-2 pb-1 font-bold"><span>National Cannabis Industry Association</span><span>2023–2025</span></div>
-                <p className="uppercase text-xs tracking-tighter text-[#6B5D52] mb-2">Officer, Marketing & Advertising Committee</p>
+                <p className="uppercase text-sm md:text-xs tracking-tighter text-[#6B5D52] mb-2">Officer, Marketing & Advertising Committee</p>
                 <p>Coordinator (2023), Vice Chair (2024), Chair (2025).</p>
               </div>
               <div>
                 <div className="flex justify-between border-b border-[#C4B99A] mb-2 pb-1 font-bold"><span>Cannabis Standards Alliance of Canada</span><span>2024–2025</span></div>
-                <p className="uppercase text-xs tracking-tighter text-[#6B5D52] mb-2">Strategic Advisor</p>
+                <p className="uppercase text-sm md:text-xs tracking-tighter text-[#6B5D52] mb-2">Strategic Advisor</p>
               </div>
               <div>
                 <div className="flex justify-between border-b border-[#C4B99A] mb-2 pb-1 font-bold"><span>Cossette</span><span>2018–2019</span></div>
-                <p className="uppercase text-xs tracking-tighter text-[#6B5D52] mb-2">Vice President, Strategy</p>
+                <p className="uppercase text-sm md:text-xs tracking-tighter text-[#6B5D52] mb-2">Vice President, Strategy</p>
                 <p>Led brand strategy and market insights for the Canopy Growth portfolio ($50M+ account) during Canada's cannabis legalization. Developed the positioning for Tweed that helped establish it as the country's most recognized cannabis brand. Worked alongside Rosie Gentile (now Global EVP, FCB) and Kevin McHugh (now CSO, Dentsu) in a three-person senior strategy unit. Strategy work on the Canopy Growth portfolio directly contributed to CMO David Bigioni being named Canada's Marketer of the Year (2019). Also led brand strategy for DNA Genetics and Foria.</p>
               </div>
               <div>
                 <div className="flex justify-between border-b border-[#C4B99A] mb-2 pb-1 font-bold"><span>Weber Shandwick</span><span>2016–2018</span></div>
-                <p className="uppercase text-xs tracking-tighter text-[#6B5D52] mb-2">VP, Strategic Planning & Head of Paid Media</p>
+                <p className="uppercase text-sm md:text-xs tracking-tighter text-[#6B5D52] mb-2">VP, Strategic Planning & Head of Paid Media</p>
                 <p>Led strategic planning for Air Canada, RBC, Mondelez, and Chevrolet. Five direct reports, 20-person integrated media team. Transformed the corporate practice by leading with audience analysis, digital ethnography, and participant-observation rather than traditional creds presentations. Won the Air Canada account by interviewing loyalty program members and presenting their stories instead of agency credentials — the client stopped the 100-page pitch deck midway through and awarded the business. Contributed to an average of 10 competitive pitches per year with a 65% win rate on contributed pitches. Agency won consecutive Holmes Report Agency of the Year during tenure.</p>
               </div>
               <div>
                 <div className="flex justify-between border-b border-[#C4B99A] mb-2 pb-1 font-bold"><span>Cohn & Wolfe</span><span>2013–2016</span></div>
-                <p className="uppercase text-xs tracking-tighter text-[#6B5D52] mb-2">Senior Counsellor & Digital Lead</p>
+                <p className="uppercase text-sm md:text-xs tracking-tighter text-[#6B5D52] mb-2">Senior Counsellor & Digital Lead</p>
                 <p>Built the agency's first analytics and measurement framework. Integrated media strategy for Nissan, Nintendo, CN Rail, and Dell. Brought earned media discipline together with paid and owned channels at a time when most PR agencies treated them as separate functions. Employee of the Year 2015.</p>
               </div>
             </div>
@@ -527,7 +529,7 @@ export default function App() {
         {view === 'agency' && (
           <div className="max-w-2xl font-mono text-sm leading-relaxed pb-20">
             <h2 className="text-2xl mb-2 font-bold uppercase tracking-widest font-display">AGENCY AS LAB: SISTER MERCI</h2>
-            <h3 className="font-bold uppercase tracking-widest text-xs mb-8 text-[#6B5D52]">EXPERIMENT UNTIL EXTRAORDINARY</h3>
+            <h3 className="font-bold uppercase tracking-widest text-sm md:text-xs mb-8 text-[#6B5D52]">EXPERIMENT UNTIL EXTRAORDINARY</h3>
             
             <div className="space-y-6 mb-12">
               <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">The Thesis</h4>
@@ -610,7 +612,7 @@ export default function App() {
         )}
 
         {view === 'research-stack' && (
-          <Suspense fallback={<div className="text-sm text-[#6B5D52] py-8">Loading…</div>}>
+          <Suspense fallback={<div className="text-sm text-[#362318] py-8 animate-pulse">Loading Research Stack…</div>}>
             <ResearchStack />
           </Suspense>
         )}
@@ -618,7 +620,7 @@ export default function App() {
         {view === 'counsel' && (
           <div className="max-w-2xl font-mono text-sm leading-relaxed pb-20">
             <h2 className="text-2xl mb-2 font-bold uppercase tracking-widest font-display">The Embedded Strategist</h2>
-            <h3 className="font-bold uppercase tracking-widest text-xs mb-8 text-[#6B5D52]">A STRATEGY-LED AGENCY MODEL</h3>
+            <h3 className="font-bold uppercase tracking-widest text-sm md:text-xs mb-8 text-[#6B5D52]">A STRATEGY-LED AGENCY MODEL</h3>
 
             <p className="mb-12">When we started Sister Merci, we decided early to lead with the frame of "a strategy-led creative agency" because we believe the properly embedded strategist is an agency multiplier — driving new business wins and organic client growth by deepening client relationships and working our way upstream into the C-Suite. As Sister Merci enters our 8th year as of March 2026, here are some of the results we've seen putting strategists in the middle of agency operations as opposed to the periphery.</p>
 
@@ -657,7 +659,7 @@ export default function App() {
         {view === 'square' && (
           <div className="max-w-2xl font-mono text-sm leading-relaxed pb-20">
             <h2 className="text-2xl mb-2 font-bold uppercase tracking-widest font-display">DEVELOPING SQUARE SHAPED STRATEGISTS</h2>
-            <h3 className="font-bold uppercase tracking-widest text-xs mb-8 text-[#6B5D52]">THE SQUARE-SHAPED STRATEGIST</h3>
+            <h3 className="font-bold uppercase tracking-widest text-sm md:text-xs mb-8 text-[#6B5D52]">THE SQUARE-SHAPED STRATEGIST</h3>
 
             <div className="space-y-6 mb-12">
               <p>The industry has long focused on T-shaped people, experts in one area, with a little knowledge in others. But that approach falls short when you need to analyze a brand tracker one day, test a cultural insight the next, and defend an attribution model by the end of the week.</p>
@@ -699,7 +701,7 @@ export default function App() {
         {view === 'cartography' && (
           <div className="max-w-2xl font-mono text-sm leading-relaxed pb-20">
             <h2 className="text-2xl mb-2 font-bold uppercase tracking-widest font-display">CULTURAL CARTOGRAPHY</h2>
-            <h3 className="font-bold uppercase tracking-widest text-xs mb-8 text-[#6B5D52]">A PHILOSOPHY OF STRATEGIC PLANNING</h3>
+            <h3 className="font-bold uppercase tracking-widest text-sm md:text-xs mb-8 text-[#6B5D52]">A PHILOSOPHY OF STRATEGIC PLANNING</h3>
 
             <div className="space-y-6 mb-12">
               <p>Strategy has lost its way. Strategists used to be creative partners, shaping the work as it unfolded. Now, their role often comes at the end: they arrive after the main thinking, fit ideas into templates, and mention the right names to make everyone feel aligned. We were so close!</p>
@@ -744,7 +746,7 @@ export default function App() {
         {view === 'teaching' && (
           <div className="max-w-2xl font-mono text-sm leading-relaxed pb-20">
             <h2 className="text-2xl mb-2 font-bold uppercase tracking-widest font-display">TEACHING & RESEARCH</h2>
-            <h3 className="font-bold uppercase tracking-widest text-xs mb-8 text-[#6B5D52]">FROM SOCIOLOGY TO STRATEGY AND BACK AGAIN</h3>
+            <h3 className="font-bold uppercase tracking-widest text-sm md:text-xs mb-8 text-[#6B5D52]">FROM SOCIOLOGY TO STRATEGY AND BACK AGAIN</h3>
 
             <p className="mb-8">I started university to take a Marketing degree, but because I went to a liberal arts school, I had to take Social Science, Humanities, and Science courses. In my first semester, I immediately hated being in class with other marketing students and completely fell in love with Sociology. I went straight through a BA, MA, and PhD (which I am still, and forever will be, a "candidate" — I've written the dissertation, and I will defend it some day). In 2007, I started teaching at the University of Lethbridge: 3000-level courses in Mass Communications, Sociology of Health, and a course I designed from scratch called Digital Culture and Society. But as I got deeper into academic life, I realized how much better I was suited to a faster-paced environment. I became almost completely intolerant of academic bureaucracy. One summer, touring around the Midwest, my bandmates and I started watching Mad Men DVDs in the tour van, and because at the time I was teaching about advertising in my Mass Comm class, it dawned on me that a sociological approach would be genuinely useful in this field. That realization has been fueling me ever since. My current strategic process is founded in the first principles of Bruno Latour's Actor-Network Theory, and I believe brands can be built in the same mode as Pierre Bourdieu's theory of capital, habitus, and field. The classroom forces clarity, and the client work keeps the theory honest.</p>
             
@@ -767,13 +769,13 @@ export default function App() {
             <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">Academic Research</h4>
             <div className="space-y-6 mb-12">
               <div>
-                <p className="font-bold uppercase tracking-widest text-xs mb-2">Peer-Reviewed Publications</p>
+                <p className="font-bold uppercase tracking-widest text-sm md:text-xs mb-2">Peer-Reviewed Publications</p>
                 <p className="mb-3">Frank, A.W., Corman, M., Gish, J. & Lawton, P. (2010). "Healer–Patient Interaction: New Mediations in Clinical Relationships." The SAGE Handbook of Qualitative Methods in Health Research (pp. 34–52), SAGE Publications. — Invited book chapter in one of the field's most authoritative reference works. Early engagement with Actor-Network Theory.</p>
                 <p className="mb-3">Wood, R.T., Williams, R.J. & Lawton, P.K. (2007). "Why Do Internet Gamblers Prefer Online Versus Land-Based Venues? Some Preliminary Findings and Implications." Journal of Gambling Issues, 20, 235–252. — Original research using data from 1,920 gamblers. Widely cited in international gambling research.</p>
                 <p>Lawton, P.K. (2005). "Capital and Stratification Within Virtual Community: A Case Study of Metafilter.com." Master's thesis, University of Lethbridge. — Applied Bourdieu's theory of capital to online community stratification years before "social capital" became standard platform vocabulary. Cited in the Yale Journal of Law & Technology.</p>
               </div>
               <div>
-                <p className="font-bold uppercase tracking-widest text-xs mb-2">Conference Presentations</p>
+                <p className="font-bold uppercase tracking-widest text-sm md:text-xs mb-2">Conference Presentations</p>
                 <ul className="list-disc pl-5 space-y-1">
                   <li>Canadian Sociological Association, Annual Meeting (2007) — "Mapping the Forms of Capital in Online Community"</li>
                   <li>University of Lethbridge Sociology Day (2007) — "The End of Cosmology: Latour, Actor-Network Theory and Reassembling the Social"</li>
@@ -782,7 +784,7 @@ export default function App() {
                 </ul>
               </div>
               <div>
-                <p className="font-bold uppercase tracking-widest text-xs mb-2">Research Positions</p>
+                <p className="font-bold uppercase tracking-widest text-sm md:text-xs mb-2">Research Positions</p>
                 <p>Research Coordinator for Dr. Arthur W. Frank (University of Calgary). Research Assistant to Dr. Robert Wood (online gambling), Dr. Anne Gautier (family dynamics), and Dr. Lloyd Wong (anti-multiculturalism). SSHRC PhD Fellowship recipient.</p>
               </div>
             </div>
@@ -794,7 +796,7 @@ export default function App() {
         {view === 'published' && (
           <div className="max-w-2xl font-mono text-sm leading-relaxed pb-20">
             <h2 className="text-2xl mb-2 font-bold uppercase tracking-widest font-display">PUBLISHED & SPOKEN</h2>
-            <h3 className="font-bold uppercase tracking-widest text-xs mb-8 text-[#6B5D52]">EVERYTHING HERE SITS AT THE INTERSECTION OF HOW BRANDS GET BUILT AND WHY MOST OF THE PLAYBOOKS ARE WRONG</h3>
+            <h3 className="font-bold uppercase tracking-widest text-sm md:text-xs mb-8 text-[#6B5D52]">EVERYTHING HERE SITS AT THE INTERSECTION OF HOW BRANDS GET BUILT AND WHY MOST OF THE PLAYBOOKS ARE WRONG</h3>
             
             <p className="mb-8">The newsletter, the trade publications, the op-eds, and the talks all come from the same place: a conviction that strategy work should be grounded in something more durable than trend decks and gut instinct. The writing covers cultural theory, cannabis marketing, brand methodology, and industry criticism. The speaking side is keynotes, panels, and podcast appearances.</p>
             
@@ -802,7 +804,7 @@ export default function App() {
               <div>
                 <p className="font-bold border-b border-[#C4B99A] pb-1 mb-3">Cultural Cartography (Substack, 2025–Present)</p>
                 <p className="mb-4">A newsletter and forthcoming book applying Actor-Network Theory, critical theory, and institutional ethnography to brand strategy.</p>
-                <p className="font-bold uppercase tracking-widest text-xs mb-2 mt-4">Selected Essays</p>
+                <p className="font-bold uppercase tracking-widest text-sm md:text-xs mb-2 mt-4">Selected Essays</p>
                 <ul className="list-disc pl-5 space-y-2">
                   <li><AnimatedLink href="https://culturalcartography.substack.com/p/reassembling-the-strategist" target="_blank" rel="noreferrer" variant="center">"Reassembling the Strategist"</AnimatedLink> — The flagship essay. Proposes Cultural Cartography as a new theory and method for practicing strategy. 74 likes, most popular post. Accompanied by a 22-page Field Guide for paid subscribers.</li>
                   <li><AnimatedLink href="https://culturalcartography.substack.com/p/reassembling-the-consumer" target="_blank" rel="noreferrer" variant="center">"Reassembling the Consumer"</AnimatedLink> — "The Consumer" is a fiction that enters the marketing process early and hardens into organizational infrastructure. Uses the Stanley thermos trend as a case study.</li>
@@ -862,14 +864,14 @@ export default function App() {
 
               <div>
                 <p className="font-bold border-b border-[#C4B99A] pb-1 mb-3 mt-8">Podcasts</p>
-                <p className="font-bold uppercase tracking-widest text-xs mb-2">As Host</p>
+                <p className="font-bold uppercase tracking-widest text-sm md:text-xs mb-2">As Host</p>
                 <ul className="list-disc pl-5 space-y-1 mb-4">
                   <li>Send Me the Link (2023-2025) with Melissa Eshaghbeigi: Digital culture</li>
                   <li>The Sister Merci Podcast (2019–2020): Cannabis industry insights, dispensary reviews, edibles commentary.</li>
                   <li>Welcome: Toronto! (2019-2020): Toronto Raptors fan culture</li>
                   <li>Pleasence Record Podcast (2018): Co-hosted with James Lindsay. Conversations with indie label operators and musicians.</li>
                 </ul>
-                <p className="font-bold uppercase tracking-widest text-xs mb-2">As Guest</p>
+                <p className="font-bold uppercase tracking-widest text-sm md:text-xs mb-2">As Guest</p>
                 <p>Legacies (2025) The Lobsterpot (2024), Craft & Crew (2021), CANADALAND Ep. 87 (2015), Stereo Dynamite (2015), Part of the Noise (2013), City Slang Radio (2013)</p>
               </div>
 
@@ -892,7 +894,7 @@ export default function App() {
         {view === 'music' && (
           <div className="max-w-2xl font-mono text-sm leading-relaxed pb-20">
             <h2 className="text-2xl mb-2 font-bold uppercase tracking-widest font-display">THE OTHER LIFE: MUSIC & CULTURE</h2>
-            <h3 className="font-bold uppercase tracking-widest text-xs mb-8 text-[#6B5D52]">TWO DECADES BUILDING THE CANADIAN UNDERGROUND</h3>
+            <h3 className="font-bold uppercase tracking-widest text-sm md:text-xs mb-8 text-[#6B5D52]">TWO DECADES BUILDING THE CANADIAN UNDERGROUND</h3>
 
             <p className="mb-8">Before strategy decks, I spent two decades in Canadian underground music: fronting bands, pressing records, co-organizing festivals, and writing the critiques nobody else would. The same instincts that built the music community now build brands and run agencies. The through line is infrastructure: figuring out what people need, then building it.</p>
             
@@ -1000,7 +1002,7 @@ export default function App() {
         {view === 'testimonials' && (
           <div className="max-w-2xl font-mono text-sm leading-relaxed pb-20">
             <h2 className="text-2xl mb-2 font-bold uppercase tracking-widest font-display">Eye Witness Accounts</h2>
-            <h3 className="font-bold uppercase tracking-widest text-xs mb-8 text-[#6B5D52]">A SELECTION OF PERSONAL RECOMMENDATIONS FROM MY CLIENTS, PEERS AND FORMER STRATEGY TEAMMATES</h3>
+            <h3 className="font-bold uppercase tracking-widest text-sm md:text-xs mb-8 text-[#6B5D52]">A SELECTION OF PERSONAL RECOMMENDATIONS FROM MY CLIENTS, PEERS AND FORMER STRATEGY TEAMMATES</h3>
 
             <div className="space-y-6 mb-12">
               <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">Client Testimonials</h4>
@@ -1122,7 +1124,7 @@ export default function App() {
           const { hero, distributed, remaining } = splitProjectImages(activeProject.images, activeProject.sections?.length || 0);
           return (
           <div className="max-w-3xl pb-20">
-            <p className="text-[10px] uppercase tracking-[0.25em] text-[#DB3E36] font-bold mb-2 font-ui">{activeProject.category}</p>
+            <p className="text-xs uppercase tracking-[0.25em] text-[#DB3E36] font-bold mb-2 font-ui">{activeProject.category}</p>
             <h1 className="text-4xl md:text-5xl mb-4 font-bold font-display leading-tight">{activeProject.title}</h1>
             <p className="text-[#6B5D52] mb-10 italic text-base">{activeProject.summary}</p>
 
@@ -1135,7 +1137,7 @@ export default function App() {
                   className="w-full rounded-md grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer"
                   loading="lazy"
                   onClick={() => setZoomImg(hero)}
-                  onError={(e) => { e.target.parentElement.style.display = 'none'; }}
+                  onError={(e) => { e.target.style.display = 'none'; }}
                 />
               </div>
             )}
@@ -1162,7 +1164,7 @@ export default function App() {
                     <VideoEmbed url={activeProject.sectionVideos[s.heading]} />
                   )}
                   <div>
-                    <h3 className="uppercase tracking-widest text-xs font-bold border-l-2 border-[#DB3E36] pl-2 mb-3">{s.heading}</h3>
+                    <h3 className="uppercase tracking-widest text-sm md:text-xs font-bold border-l-2 border-[#DB3E36] pl-2 mb-3">{s.heading}</h3>
                     <p className="whitespace-pre-wrap leading-relaxed">{s.text}</p>
                   </div>
                   {distributed[i] && (
@@ -1173,7 +1175,7 @@ export default function App() {
                         className="w-full rounded-md grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer"
                         loading="lazy"
                         onClick={() => setZoomImg(distributed[i])}
-                        onError={(e) => { e.target.parentElement.style.display = 'none'; }}
+                        onError={(e) => { e.target.style.display = 'none'; }}
                       />
                     </div>
                   )}
@@ -1207,14 +1209,14 @@ export default function App() {
 
             {activeProject?.proof && activeProject.proof.length > 0 && (
               <div className="mb-12">
-                <h3 className="uppercase tracking-widest text-xs font-bold border-l-2 border-[#DB3E36] pl-2 mb-3">Proof & Results</h3>
+                <h3 className="uppercase tracking-widest text-sm md:text-xs font-bold border-l-2 border-[#DB3E36] pl-2 mb-3">Proof & Results</h3>
                 <ul className="list-disc pl-5 space-y-2">{activeProject.proof.map((p, i) => <li key={i}><Linkify text={p} /></li>)}</ul>
               </div>
             )}
 
             {activeProject?.team && activeProject.team.length > 0 && (
               <div className="mb-12">
-                <h3 className="uppercase tracking-widest text-xs font-bold border-l-2 border-[#DB3E36] pl-2 mb-3">Team & Credits</h3>
+                <h3 className="uppercase tracking-widest text-sm md:text-xs font-bold border-l-2 border-[#DB3E36] pl-2 mb-3">Team & Credits</h3>
                 <ul className="list-disc pl-5 space-y-2">{activeProject.team.map((t, i) => <li key={i}><Linkify text={t} /></li>)}</ul>
               </div>
             )}
@@ -1230,13 +1232,13 @@ export default function App() {
                 <nav className="flex justify-between items-start border-t border-[#C4B99A] pt-6 mt-8 font-ui">
                   {prev ? (
                     <button onClick={() => { setActiveProject(prev); document.querySelector('.overflow-y-auto')?.scrollTo(0, 0); }} className="text-left group cursor-pointer">
-                      <span className="text-[10px] uppercase tracking-widest text-[#D4903A]"><span className="inline-block transition-transform duration-200 group-hover:-translate-x-1">←</span> Previous</span>
+                      <span className="text-xs uppercase tracking-widest text-[#D4903A]"><span className="inline-block transition-transform duration-200 group-hover:-translate-x-1">←</span> Previous</span>
                       <span className="block text-sm text-[#565D4F] group-hover:text-[#362318] transition-colors">{prev.title}</span>
                     </button>
                   ) : <span />}
                   {next ? (
                     <button onClick={() => { setActiveProject(next); document.querySelector('.overflow-y-auto')?.scrollTo(0, 0); }} className="text-right group cursor-pointer">
-                      <span className="text-[10px] uppercase tracking-widest text-[#D4903A]">Next <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">→</span></span>
+                      <span className="text-xs uppercase tracking-widest text-[#D4903A]">Next <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">→</span></span>
                       <span className="block text-sm text-[#565D4F] group-hover:text-[#362318] transition-colors">{next.title}</span>
                     </button>
                   ) : <span />}

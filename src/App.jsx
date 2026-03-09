@@ -574,7 +574,7 @@ export default function App() {
             </div>
             
             <div className="space-y-4 mb-12">
-              <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">Some Random Industry Firsts</h4>
+              <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">Selected Firsts</h4>
               <ul className="list-disc pl-5 space-y-1">
                 <li>First cannabis campaign on Pornhub</li>
                 <li>First cannabis campaign on Spotify</li>
@@ -603,7 +603,7 @@ export default function App() {
 
             <div className="space-y-4">
               <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">As Covered In</h4>
-              <p>Adweek · Forbes · Ad Age · Strategy · Campaign Canada · Financial Post · Clio · LBB · Muse by Clios · TrendHunter · Ads of the World · MediaPost · B&T Australia · Honeysuckle Magazine · mg Magazine</p>
+              <p>Adweek · Forbes · Ad Age · Strategy · Campaign Canada · Financial Post · Clio · LBB · Muse by Clios · TrendHunter · Ads of the World · MediaPost · Honeysuckle Magazine · mg Magazine</p>
             </div>
 
 
@@ -758,23 +758,23 @@ export default function App() {
         {view === 'published' && (
           <div className="max-w-2xl font-mono text-sm leading-relaxed pb-20">
             <h2 className="text-2xl mb-2 font-bold uppercase tracking-widest font-display">PUBLISHED & SPOKEN</h2>
-            <h3 className="font-bold uppercase tracking-widest text-sm md:text-xs mb-8 text-[#6B5D52]">EVERYTHING HERE SITS AT THE INTERSECTION OF HOW BRANDS GET BUILT AND WHY MOST OF THE PLAYBOOKS ARE WRONG</h3>
+            <h3 className="font-bold uppercase tracking-widest text-sm md:text-xs mb-8 text-[#6B5D52]">THE WORK BETWEEN THE WORK</h3>
             
-            <p className="mb-8">The newsletter, the trade publications, the op-eds, and the talks all come from the same place: a conviction that strategy work should be grounded in something more durable than trend decks and gut instinct. The writing covers cultural theory, cannabis marketing, brand methodology, and industry criticism. The speaking side is keynotes, panels, and podcast appearances.</p>
+            <p className="mb-8">Writing and speaking on cultural theory, cannabis marketing, brand methodology, and industry criticism.</p>
             
             <div className="space-y-6 mb-12">
               <div>
                 <p className="font-bold border-b border-[#C4B99A] pb-1 mb-3">Cultural Cartography (Substack, 2025–Present)</p>
-                <p className="mb-4">A newsletter and forthcoming book applying Actor-Network Theory, critical theory, and institutional ethnography to brand strategy.</p>
+                <p className="mb-4">A newsletter and forthcoming book applying Actor-Network Theory and critical theory to brand strategy.</p>
                 <p className="font-bold uppercase tracking-widest text-sm md:text-xs mb-2 mt-4">Selected Essays</p>
                 <ul className="list-disc pl-5 space-y-2">
-                  <li><AnimatedLink href="https://culturalcartography.substack.com/p/reassembling-the-strategist" target="_blank" rel="noreferrer" variant="center">"Reassembling the Strategist"</AnimatedLink> — The flagship essay. Proposes Cultural Cartography as a new theory and method for practicing strategy. 74 likes, most popular post. Accompanied by a 22-page Field Guide for paid subscribers.</li>
-                  <li><AnimatedLink href="https://culturalcartography.substack.com/p/reassembling-the-consumer" target="_blank" rel="noreferrer" variant="center">"Reassembling the Consumer"</AnimatedLink> — "The Consumer" is a fiction that enters the marketing process early and hardens into organizational infrastructure. Uses the Stanley thermos trend as a case study.</li>
-                  <li><AnimatedLink href="https://culturalcartography.substack.com/p/glazed-and-confused-how-ai-is-rewriting" target="_blank" rel="noreferrer" variant="center">"Glazed and Confused: How AI Is Rewriting Human Trust in Real Time"</AnimatedLink> — The ChatGPT-4o "glazing" controversy analyzed through Latour.</li>
-                  <li><AnimatedLink href="https://culturalcartography.substack.com/p/ai-serves-power-not-people" target="_blank" rel="noreferrer" variant="center">"AI Serves Power, Not People"</AnimatedLink> — Technology is never neutral. DOGE as a case study.</li>
-                  <li><AnimatedLink href="https://culturalcartography.substack.com/p/are-you-a-strategist-or-are-you-just" target="_blank" rel="noreferrer" variant="center">"Are You a Strategist, or Are You Just a Human Algorithm with Good Taste?"</AnimatedLink> — Whether the strategy function has been reduced to pattern recognition and taste arbitrage.</li>
-                  <li><AnimatedLink href="https://culturalcartography.substack.com/p/notes-from-the-underground" target="_blank" rel="noreferrer" variant="center">"Notes from the Underground" (Parts 1 & 2)</AnimatedLink> — Intellectual autobiography. From punk scenes in Winnipeg through a sociology PhD to the ad world.</li>
-                  <li><AnimatedLink href="https://culturalcartography.substack.com/p/taste-wont-save-you-on-maintaining" target="_blank" rel="noreferrer" variant="center">"Taste Won't Save You: On Maintaining Subscriptions"</AnimatedLink> — Creative professionals have to actively maintain cultural engagement. Accumulated taste is not a static asset.</li>
+                  <li><AnimatedLink href="https://culturalcartography.substack.com/p/reassembling-the-strategist" target="_blank" rel="noreferrer" variant="center">"Reassembling the Strategist"</AnimatedLink>: Proposes Cultural Cartography as a theory and method for practising strategy.</li>
+                  <li><AnimatedLink href="https://culturalcartography.substack.com/p/reassembling-the-consumer" target="_blank" rel="noreferrer" variant="center">"Reassembling the Consumer"</AnimatedLink>: How "The Consumer" hardens into organizational infrastructure.</li>
+                  <li><AnimatedLink href="https://culturalcartography.substack.com/p/glazed-and-confused-how-ai-is-rewriting" target="_blank" rel="noreferrer" variant="center">"Glazed and Confused"</AnimatedLink>: The ChatGPT-4o "glazing" controversy analyzed through Latour.</li>
+                  <li><AnimatedLink href="https://culturalcartography.substack.com/p/ai-serves-power-not-people" target="_blank" rel="noreferrer" variant="center">"AI Serves Power, Not People"</AnimatedLink>: Technology is never neutral. DOGE as case study.</li>
+                  <li><AnimatedLink href="https://culturalcartography.substack.com/p/are-you-a-strategist-or-are-you-just" target="_blank" rel="noreferrer" variant="center">"Are You a Strategist, or Are You Just a Human Algorithm with Good Taste?"</AnimatedLink></li>
+                  <li><AnimatedLink href="https://culturalcartography.substack.com/p/notes-from-the-underground" target="_blank" rel="noreferrer" variant="center">"Notes from the Underground" (Parts 1 & 2)</AnimatedLink>: Intellectual autobiography.</li>
+                  <li><AnimatedLink href="https://culturalcartography.substack.com/p/taste-wont-save-you-on-maintaining" target="_blank" rel="noreferrer" variant="center">"Taste Won't Save You"</AnimatedLink>: Creative professionals must actively maintain cultural engagement.</li>
                 </ul>
               </div>
               
@@ -828,13 +828,11 @@ export default function App() {
                 <p className="font-bold border-b border-[#C4B99A] pb-1 mb-3 mt-8">Podcasts</p>
                 <p className="font-bold uppercase tracking-widest text-sm md:text-xs mb-2">As Host</p>
                 <ul className="list-disc pl-5 space-y-1 mb-4">
-                  <li>Send Me the Link (2023-2025) with Melissa Eshaghbeigi: Digital culture</li>
-                  <li>The Sister Merci Podcast (2019–2020): Cannabis industry insights, dispensary reviews, edibles commentary.</li>
-                  <li>Welcome: Toronto! (2019-2020): Toronto Raptors fan culture</li>
-                  <li>Pleasence Record Podcast (2018): Co-hosted with James Lindsay. Conversations with indie label operators and musicians.</li>
+                  <li>Send Me the Link (2023–2025) with Melissa Eshaghbeigi: Digital culture</li>
+                  <li>The Sister Merci Podcast (2019–2020): Cannabis industry</li>
                 </ul>
                 <p className="font-bold uppercase tracking-widest text-sm md:text-xs mb-2">As Guest</p>
-                <p>Legacies (2025) The Lobsterpot (2024), Craft & Crew (2021), CANADALAND Ep. 87 (2015), Stereo Dynamite (2015), Part of the Noise (2013), City Slang Radio (2013)</p>
+                <p>Legacies (2025), The Lobsterpot (2024), Craft & Crew (2021), CANADALAND Ep. 87 (2015)</p>
               </div>
 
               <div>
@@ -858,76 +856,44 @@ export default function App() {
             <h2 className="text-2xl mb-2 font-bold uppercase tracking-widest font-display">THE OTHER LIFE: MUSIC & CULTURE</h2>
             <h3 className="font-bold uppercase tracking-widest text-sm md:text-xs mb-8 text-[#6B5D52]">TWO DECADES BUILDING THE CANADIAN UNDERGROUND</h3>
 
-            <p className="mb-8">Before strategy decks, I spent two decades in Canadian underground music: fronting bands, pressing records, co-organizing festivals, and writing the critiques nobody else would. The same instincts that built the music community now build brands and run agencies. The through line is infrastructure: figuring out what people need, then building it.</p>
+            <p className="mb-8">Before strategy, I spent two decades in Canadian underground music: playing in bands, running record labels, co-organizing festivals, and writing cultural criticism. The instincts are the same across both careers. Figure out what people need. Build the infrastructure. Ship the thing.</p>
             
             <div className="space-y-6 mb-12">
               <div>
-                <p className="font-bold border-b border-[#C4B99A] pb-1 mb-3">Bands & Projects</p>
-                <ul className="list-disc pl-5 space-y-4">
-                  <li><strong><AnimatedLink href="https://ketamines.bandcamp.com/" target="_blank" rel="noreferrer" variant="center">Ketamines</AnimatedLink> (1996–2015; 2023-Current):</strong> Bass, vocals, principal songwriter. Long-running garage-pop project with James Leroy, originating in Lethbridge and evolving through multiple lineups across three cities. Released records on HoZac (Chicago), Southpaw, Mammoth Cave, Mint Records, and Hosehead. Pitchfork gave Spaced Out a 7.0. PopMatters named You Can't Serve Two Masters #15 Best Canadian Album of 2013. Oprah tweeted about the band. Target used a song in a US commercial. 128+ documented shows including SXSW, Sled Island, Pop Montreal, NXNE, HoZac BlackOut Fest. NEW LP OUT 2026!</li>
-                  <li><strong><AnimatedLink href="https://centurypalm.bandcamp.com/" target="_blank" rel="noreferrer" variant="center">Century Palm</AnimatedLink> (2014–2017):</strong> Bass, vocals. Toronto post-punk with Andrew Payne (Zebrassieres), Penny Clark (Tough Age), Jesse Locke (Dirty Beaches), and Alex Hamlyn. Debut LP Meet You on Deranged Records, mixed by Jay Arner, mastered by Mikey Young. Premiered on Stereogum. Album of the Day on Bandcamp Daily. CLRVYNT called it "a crash course in post-punk."</li>
-                  <li><strong><AnimatedLink href="https://myelinsheaths.bandcamp.com/" target="_blank" rel="noreferrer" variant="center">Myelin Sheaths</AnimatedLink> (~2008–2010):</strong> Drums, vocals. Lethbridge garage-punk. Two 7" singles on HoZac and Bachelor Records. LP Get On Your Nerves on Southpaw: Weird Canada called it "the most realized piece of psy-fi punk shreddery from the camp that put Alberta on the map."</li>
-                  <li><strong><AnimatedLink href="https://themobydicks.bandcamp.com/" target="_blank" rel="noreferrer" variant="center">The Moby Dicks</AnimatedLink> (2009–2011):</strong> Bass, vocals. Lethbridge bar-rock. Self-titled 7" on Southpaw, split with Needles//Pins, collaborative 7" with B.A. Johnston on Mammoth Cave.</li>
-                  <li><strong>Also:</strong> Tough Age (touring bassist, Mint Records, 2013–2015), Red Mass (touring guitar player) Don't Bother, Endangered Ape, Radians, Pentagon, Mean Tikes, Complex Cities, James Leroy and the Giant, Ran, Kill Credo, 10% Gain.</li>
-                </ul>
-              </div>
-
-              <div>
-                <p className="font-bold border-b border-[#C4B99A] pb-1 mb-3 mt-8">Record Labels</p>
-                <ul className="list-disc pl-5 space-y-4">
-                  <li><strong><AnimatedLink href="https://mammothcave.bandcamp.com/" target="_blank" rel="noreferrer" variant="center">Mammoth Cave Recording Co.</AnimatedLink> (2008–2015):</strong> Co-founded with Evan Van Reekum. Nearly four dozen releases, 7"s, LP and cassettes that defined a specific era of Canadian DIY. FFWD Magazine voted it Best Record Label for three consecutive years (2010, 2011, 2012). B.A. Johnston's Shit Sucks was longlisted for the Polaris Prize. Catalogue includes B.A. Johnston, Fist City, The Famines, Needles//Pins, Korean Gut, Krang, Strange Attractor, Nervous Talk, Lab Coast. Reissued legacy recordings by Simply Saucer and Shadowy Men on a Shadowy Planet. The Bloodstains Across... compilation series documented punk scenes province-by-province, featuring White Lung, Nü Sensae (now: Orville Peck), and an unreleased Shadowy Men track. I got to meet Tonetta once. This is one thing I did in my life that earned me a Wikipedia page. Eulogized by Exclaim! and National Post when I decided to shut the label down over pressing plant backlogs, the weakening Canadian dollar, and the impact of Record Store Day on independent manufacturers.</li>
-                  <li><strong><AnimatedLink href="https://pleasencerecords.bandcamp.com/" target="_blank" rel="noreferrer" variant="center">Pleasence Records</AnimatedLink> (2016–2022):</strong> And then, almost immediately, I bought into the amazing Toronto underground experimental label with James Lindsay. The story is that I did freelance brand strategy for Precision Pressing plant in Burlington, ON, in exchange for production credit. This helped guide the label through a prolific period Profiled by NOW Toronto on the label's evolving approach to sustainability in indie music. Catalogue: TRAITRS, Fake Palms, Isla Craig, Petra Glynt, WHIMM, Aidan Baker, Feel Alright, Germaphobes, Man Made Hill. TRAITRS might be the most successful band I've ever worked with; they generated an insane amount of money on streaming music.</li>
-                </ul>
-              </div>
-
-              <div>
-                <p className="font-bold border-b border-[#C4B99A] pb-1 mb-3 mt-8">Event Production</p>
-                <p>Co-organized Mammoth Cave Fest (Lethbridge, 2009–2010) and Wyrd Fest (Alberta travelling festival, 2009–2013) with Weird Canada founder Aaron Levin.</p>
-              </div>
-
-              <div>
-                <p className="font-bold border-b border-[#C4B99A] pb-1 mb-3 mt-8">Writing & Cultural Criticism</p>
-                <ul className="list-disc pl-5 space-y-4">
-                  <li><strong>Slagging Off (2013):</strong> In February 2013, I started an anonymous Tumblr blog reviewing every band playing Canadian Music Week (CMW) as a joke for my friends. I decided to review every single band from A-Z with jokes because, at the time, I was taking stand-up comedy writing lessons at Second City. I was learning how to structure a joke! But then it went viral, so with the attention on me, I dropped a long, data-driven investigation into how FACTOR was distributing public arts funding. The blog hit 10,000+ daily views. CBC dubbed me "The Most Hated Man in Canadian Music." I was asked to come on DAY6 to debate FACTOR's president, but that coward refused to sit in the same studio with me, so they interviewed me. What gets lost in the "most hated" framing is the advocacy underneath. The project was an attempt to help non-Toronto musicians access better funding coverage, to address the collapse of touring infrastructure, and to argue for a more equitable system. From Husky House Zine #1 (2025), reflecting a decade later: "If there is one thing I regret, it was waging the battle solo. Everything I had learned about Canadian music is that the power came from community, and we were building a very strong infrastructure that was benefiting many people. By doing Slagging Off, I damaged the community I was trying to advocate for. Even if I was right, all I really did was teach the industry how to hide their tracks."</li>
-                  <li><strong><AnimatedLink href="https://en.wikipedia.org/wiki/Weird_Canada" target="_blank" rel="noreferrer" variant="center">Weird Canada</AnimatedLink> (2009–2014):</strong> Writer, editor, board member, grant writer. Winner of the 2011 CBC Radio 3 Searchlight Award for Best Canadian Music Website. Co-organized Wyrd Fest.</li>
-                  <li><strong><AnimatedLink href="https://www.newfeeling.ca/" target="_blank" rel="noreferrer" variant="center">New Feeling</AnimatedLink> (2020–present):</strong> Founding member. Multi-stakeholder cooperative of Canadian music journalists. Cited by Liz Pelly in Mood Machine as "one of the most interesting models of co-op music" journalism in Canada.</li>
-                  <li><strong>BeatRoute Magazine:</strong> Monthly punk 7" review column. "A column convinced no one actually read."</li>
-                  <li><strong>Toast Life, Weird Canada, New Feeling:</strong> Various criticism and reviews.</li>
+                <p className="font-bold border-b border-[#C4B99A] pb-1 mb-3">Highlights</p>
+                <ul className="list-disc pl-5 space-y-2">
+                  <li><strong><AnimatedLink href="https://ketamines.bandcamp.com/" target="_blank" rel="noreferrer" variant="center">The Ketamines</AnimatedLink> (1996–2015; 2023–present):</strong> Bass, vocals, principal songwriter. Pitchfork 7.0. PopMatters #15 Best Canadian Album of 2013. New LP in 2026.</li>
+                  <li><strong><AnimatedLink href="https://centurypalm.bandcamp.com/" target="_blank" rel="noreferrer" variant="center">Century Palm</AnimatedLink> (2014–2017):</strong> Bass, vocals. Toronto post-punk. Stereogum premiere. Bandcamp Album of the Day.</li>
+                  <li><strong>Toured and Opened for:</strong> The B52s, Mac DeMarco, Thee Oh Sees, Redd Kross, Parquet Courts, Screaming Females, The Fresh and Onlys, Damo Suzuki (CAN), Sonic Boom, King Tuff, Shannon and the Clams, The Blind Shake, Warm Soda, Viet Cong, Cindy Lee, Dirty Beaches, Times New Viking, Davila 666, Human Eye</li>
+                  <li><strong>Selected engineering and production credits:</strong> Century Palm Meet You (2017), B.A. Johnston Mission Accomplished (2013), Ketamines You Can't Serve Two Masters (2013), Fist City It's 1983 Grow Up! (2012), Krang Speed Of Tent (2011), Korean Gut Your Misery Our Benefit (2011), The Famines Complete Collected Singles (2011), Myelin Sheaths (2008–2010)</li>
+                  <li><strong><AnimatedLink href="https://mammothcave.bandcamp.com/" target="_blank" rel="noreferrer" variant="center">Mammoth Cave Recording Co.</AnimatedLink> (2008–2015):</strong> Co-founder and Creative Director. FFWD Magazine Best Record Label three consecutive years (2010, 2011, 2012). B.A. Johnston's Shit Sucks longlisted for the Polaris Prize.</li>
+                  <li><strong><AnimatedLink href="https://pleasencerecords.bandcamp.com/" target="_blank" rel="noreferrer" variant="center">Pleasence Records</AnimatedLink> (2016–2022):</strong> Co-owner and managing operator. Toronto underground experimental label. Profiled by NOW Toronto.</li>
+                  <li>Co-organized Mammoth Cave Fest and Wyrd Fest with Weird Canada founder Aaron Levin. Wyrd Fest was a travelling music festival with 20 bands playing in four cities.</li>
+                  <li><strong><AnimatedLink href="https://en.wikipedia.org/wiki/Weird_Canada" target="_blank" rel="noreferrer" variant="center">Weird Canada</AnimatedLink> (2009–2014):</strong> Writer, editor, board member. CBC Radio 3 Searchlight Award for Best Canadian Music Website.</li>
+                  <li><strong><AnimatedLink href="https://www.newfeeling.ca/" target="_blank" rel="noreferrer" variant="center">New Feeling</AnimatedLink> (2020–present):</strong> Founding member. Multi-stakeholder co-op of Canadian music journalists. Cited by Liz Pelly in Mood Machine.</li>
                 </ul>
               </div>
 
               <div>
                 <p className="font-bold border-b border-[#C4B99A] pb-1 mb-3 mt-8">Reviewed In</p>
-                <p>Pitchfork · Stereogum · Bandcamp Daily · PopMatters · VICE · Exclaim! · NOW Toronto · Maximum Rocknroll · Razorcake · Dusted Magazine · Weird Canada · CLRVYNT · Raven Sings The Blues · Collective Zine · Yellow Green Red · Styrofoam Drone · The 405 · QRO Magazine · CBC Music · LA Beat · Largehearted Boy · Norman Records</p>
+                <p>Pitchfork · Stereogum · Rolling Stone · Bandcamp Daily · PopMatters · VICE · Exclaim! · NOW Toronto · Maximum Rock'n'roll · Razorcake · Dusted Magazine · Weird Canada · CLRVYNT · Raven Sings the Blues · Collective Zine · Yellow Green Red · Styrofoam Drone · The 405 · QRO Magazine · CBC Music · LA Beat · Largehearted Boy · Norman Records</p>
               </div>
 
               <div>
-                <p className="font-bold border-b border-[#C4B99A] pb-1 mb-3 mt-8">Selected Press (Music & Culture)</p>
+                <p className="font-bold border-b border-[#C4B99A] pb-1 mb-3 mt-8">Slagging Off (2013)</p>
+                <p>In 2013, I ran a satirical blog about Canadian Music Week that went viral and led to a data-driven investigation of how FACTOR distributed public arts funding. The blog hit 10,000+ daily views. CBC covered it on Day 6.</p>
+              </div>
+
+              <div>
+                <p className="font-bold border-b border-[#C4B99A] pb-1 mb-3 mt-8">Selected Press</p>
                 <ul className="list-disc pl-5 space-y-1">
                   <li><AnimatedLink href="https://www.theglobeandmail.com/arts/music/why-indie-rock-mediocrity-rules-in-canada-according-to-one-insider/article11170577/" target="_blank" rel="noreferrer" variant="center">The Globe and Mail (2013) — "Why Indie-Rock Mediocrity Rules in Canada"</AnimatedLink></li>
                   <li><AnimatedLink href="https://www.vice.com/en/article/meet-the-guy-whos-slagging-off-the-canadian-music-industry/" target="_blank" rel="noreferrer" variant="center">VICE (2013) — "Meet the Guy Who's Slagging Off the Canadian Music Industry"</AnimatedLink></li>
                   <li><AnimatedLink href="https://www.cbc.ca/player/play/audio/1.1541637" target="_blank" rel="noreferrer" variant="center">CBC Day 6 (2013) — "The Most Hated Man in Canadian Music"</AnimatedLink></li>
-                  <li>National Post (2013, 2015) — Music industry profiles</li>
-                  <li><AnimatedLink href="https://www.ominocity.com/2013/04/30/how-paul-lawton-became-the-most-hated-man-in-canadian-music-timeline/" target="_blank" rel="noreferrer" variant="center">Ominocity (2013) — Full Slagging Off timeline</AnimatedLink></li>
-                  <li><AnimatedLink href="https://www.canadaland.com/podcast/canadian-music-horribly-broken-week/" target="_blank" rel="noreferrer" variant="center">CANADALAND Ep. 87 (2015) — "Canadian Music (Is Horribly Broken) Week"</AnimatedLink></li>
+                  <li><AnimatedLink href="https://www.canadaland.com/podcast/canadian-music-horribly-broken-week/" target="_blank" rel="noreferrer" variant="center">CANADALAND Ep. 87 (2015)</AnimatedLink></li>
                   <li><AnimatedLink href="https://nowtoronto.com/music/features/pleasence-records-indie-record-label-podcast-festival" target="_blank" rel="noreferrer" variant="center">NOW Toronto (2018) — "How Pleasence Records Is Rethinking the Label Model"</AnimatedLink></li>
                   <li>Husky House Zine #1 (2025) — "Slagging Off: Ten Years Later"</li>
                 </ul>
-              </div>
-
-              <div>
-                <p className="font-bold border-b border-[#C4B99A] pb-1 mb-3 mt-8">Notable Shared Bills</p>
-                <p>Mac DeMarco, Thee Oh Sees, Redd Kross, Parquet Courts, Screaming Females, The Fresh and Onlys, Damo Suzuki, Sonic Boom, King Tuff, Shannon and the Clams, The Blind Shake, Warm Soda, Viet Cong, Cindy Lee, Dirty Beaches, Times New Viking, Davila 666, Human Eye</p>
-              </div>
-
-              <div>
-                <p className="font-bold border-b border-[#C4B99A] pb-1 mb-3 mt-8">Touring</p>
-                <p>128+ documented Ketamines shows (2011–2014). Festivals: SXSW 2012, Sled Island (multiple years), HoZac BlackOut Fest 2012, Pop Montreal 2013, Ottawa Explosion Weekend (2014, 2018), NXNE 2014, Halifax Pop Explosion 2013, OBEY Fest 2013. Major tours: 35-date national run with B.A. Johnston (2012), cross-Canada with Zebrassieres (2013), Ontario with Tough Age (2013), Maritimes with Jay Arner (2014). US venues: Death By Audio, Mercury Lounge, The Empty Bottle, Comet Ping Pong, The Bug Jar, Now That's Class, Turf Club, Gabe's.</p>
-              </div>
-
-              <div>
-                <p className="font-bold border-b border-[#C4B99A] pb-1 mb-3 mt-8">Production & Engineering</p>
-                <p>Selected credits: Century Palm Meet You (2017), B.A. Johnston Mission Accomplished (2013), Ketamines You Can't Serve Two Masters (2013), Fist City It's 1983 Grow Up! (2012), Krang Speed Of Tent (2011), Korean Gut Your Misery Our Benefit (2011), The Famines Complete Collected Singles (2011), Myelin Sheaths (2008–2010).</p>
               </div>
             </div>
 
@@ -1021,56 +987,24 @@ export default function App() {
 
             <div className="space-y-6 mb-12">
               <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">RateMyProfessors.com — University of Lethbridge, Sociology</h4>
-              <p className="text-sm italic mb-4">Selected reviews from 29 ratings (4.3 / 5 overall). Unedited.</p>
-
               <div className="mb-6 pl-4 border-l-2 border-[#C4B99A]">
                 <p className="italic">"Paul Lawton is among the best scholars today. Make no mistake, this guy is going to leave his mark on the field. Witty yet subtle. Intelligent yet comprehensible. Brilliant yet grounded. Take one of his courses before Princeton or Oxford snatches him up! Trust me, Lawton is going places..."</p>
-                <p className="text-sm text-[#6B5D52] mt-1">— SOCY2000, May 2009 | Quality: 5.0 | Difficulty: 5.0</p>
               </div>
 
               <div className="mb-6 pl-4 border-l-2 border-[#C4B99A]">
                 <p className="italic">"Professor Lawton is a very nice man. He made me understand digital culture, and I want to know more now. It is very cool, and one day during our lecture, we opened a portal to exciting new fields of learning. Yes. He has shown that the future is scary, but with Prof. Paul leading the way, we will survive. Don't fear the reaper."</p>
-                <p className="text-sm text-[#6B5D52] mt-1">— ACCT202, Dec 2008 | Quality: 3.5 | Difficulty: 2.0</p>
               </div>
 
               <div className="mb-6 pl-4 border-l-2 border-[#C4B99A]">
-                <p className="italic">"promfessor lawton is extremely tough, you will work hard and not alswyas get what you want. At one time, he got very upset with the class, and I thought there would be some to leave, but no, all was oK at the end. You will work hard and presentations are hard too but if you can get by his hard shell, a soft cookie lays beneath. Excellent class"</p>
-                <p className="text-sm text-[#6B5D52] mt-1">— COMMS101, Jan 2013 | Quality: 2.0 | Difficulty: 5.0</p>
+                <p className="italic">"WOW!! It was like the coolest, and, further to that, Prof Paul is a great teacher who explained things in an easy-to-understand way. Also, and this is true for most, he is quite funny!! Most recommended!"</p>
               </div>
 
               <div className="mb-6 pl-4 border-l-2 border-[#C4B99A]">
-                <p className="italic">"A very nice man, pleasant and helpful. Not at all scary, because I heard he was. I got to see his band play live! Talk about cool. He reminds me of the cool dean from that Simpson's episode, you know, he dean, your a stoopid head! Ha, Homer, he is funny."</p>
-                <p className="text-sm text-[#6B5D52] mt-1">— SOCIXXX, Aug 2009 | Quality: 3.0 | Difficulty: 4.0</p>
+                <p className="italic">"Workload was heavy (lots of reading), but Paul does a good job compensating with being totally available (I emailed him once on a Saturday and he had a full-page response an hour later) and with lots of flexibility in turning in assignments. Seems to give a about his students."</p>
               </div>
 
               <div className="mb-6 pl-4 border-l-2 border-[#C4B99A]">
-                <p className="italic">"WOW!! It was like the coolest, and also further to that, Mr Lanton is a great teacher, and explained things in an easy to understand form of explanation. Also, and this is true to most, he is quite the funny!! Most recommending!"</p>
-                <p className="text-sm text-[#6B5D52] mt-1">— SOCI2000, Apr 2009 | Quality: 5.0 | Difficulty: 3.0</p>
-              </div>
-
-              <div className="mb-6 pl-4 border-l-2 border-[#C4B99A]">
-                <p className="italic">"Paul is extremely interesting, but class discussions are squashed by blank stares from people looking for easy grades."</p>
-                <p className="text-sm text-[#6B5D52] mt-1">— SOCIO3700, May 2008 | Quality: 4.5 | Difficulty: 3.0</p>
-              </div>
-
-              <div className="mb-6 pl-4 border-l-2 border-[#C4B99A]">
-                <p className="italic">"Workload was heavy (lots of reading), but Paul does a good job compensating with being totally available (I emailed him once on a Saturday and he had a full page response an hour later) and with lots of flexibility in turning in assignments. Seems to actually give a**** about his students."</p>
-                <p className="text-sm text-[#6B5D52] mt-1">— SOC3390, Jan 2008 | Quality: 4.0 | Difficulty: 4.0</p>
-              </div>
-
-              <div className="mb-6 pl-4 border-l-2 border-[#C4B99A]">
-                <p className="italic">"Very knowledgeable in his field. There is a lot of reading but that's expected in a 3rd year course. He is new to teaching so there is a lot of glitches in his teaching but that does not overshadow the fact that he is a good prof, who will eventually become better. Also, he's pretty cool because he's in a punk band that sound pretty good."</p>
-                <p className="text-sm text-[#6B5D52] mt-1">— SOC3XXX, Nov 2008 | Quality: 5.0 | Difficulty: 4.0</p>
-              </div>
-
-              <div className="mb-6 pl-4 border-l-2 border-[#C4B99A]">
-                <p className="italic">"Paul really disappointed me. Just because he has a good sense of humour doesn't mean he is a great prof. He makes you the do the most USELESS readings. You get to do a group presentation but then he wants you to rate the LEAST valuable person. This was supposed to be an easy A for me as Soci is BS but Paul made it hard for no reason."</p>
-                <p className="text-sm text-[#6B5D52] mt-1">— SOCI3390, Apr 2009 | Quality: 2.0 | Difficulty: 3.0</p>
-              </div>
-
-              <div className="mb-6 pl-4 border-l-2 border-[#C4B99A]">
-                <p className="italic">"No Comments"</p>
-                <p className="text-sm text-[#6B5D52] mt-1">— SOCY3740, Dec 2007 | Quality: 1.0 | Difficulty: 2.0</p>
+                <p className="italic">"Very knowledgeable in his field. There is a lot of reading, but that's expected in a 3rd year course. He is a good prof, and he's pretty cool because he's in a punk band that sounds pretty good."</p>
               </div>
             </div>
           </div>

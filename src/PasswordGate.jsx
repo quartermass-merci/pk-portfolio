@@ -78,7 +78,6 @@ export default function PasswordGate({ children }) {
               Incorrect password. Try again.
             </motion.p>
           )}
-          <p className="text-xs text-center text-[#A89B86]">Hint: last name</p>
           <button
             type="submit"
             className="h-12 text-sm font-mono uppercase tracking-widest bg-[#362318] text-[#E0D3A8] rounded-md hover:bg-[#4A3F35] transition-colors cursor-pointer"

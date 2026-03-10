@@ -332,18 +332,18 @@ export default function App() {
 
       {/* Navigation */}
       <div className="w-full max-w-5xl mx-auto p-6 md:p-10 flex flex-col min-h-screen relative z-10">
-        <motion.div className="mb-16" variants={stagger} initial="hidden" animate="show">
-          <motion.div variants={fadeUp}>
+        <motion.div className="mb-16 text-center" variants={stagger} initial="hidden" animate="show">
+          <motion.div variants={fadeUp} className="flex justify-center">
             <img src="/images/pk-logo.png" alt="PK Lawton — Strategy × Culture" className="w-full max-w-[300px] md:max-w-[560px] h-auto mb-8" />
           </motion.div>
-          <motion.p variants={fadeUp} className="text-sm md:text-base text-[#6B5D52] mb-6 max-w-xl">Co-Founder & Chief Strategy Officer, Sister Merci. Brand Strategist, Researcher, Educator. Rock & Roll Sociologist based in Hamilton, ON.</motion.p>
-          <motion.div variants={fadeUp} className="flex gap-6 text-sm font-ui">
+          <motion.p variants={fadeUp} className="text-sm md:text-base text-[#6B5D52] mb-6 max-w-xl mx-auto">Co-Founder & Chief Strategy Officer, Sister Merci. Brand Strategist, Researcher, Educator. Rock & Roll Sociologist based in Hamilton, ON.</motion.p>
+          <motion.div variants={fadeUp} className="flex justify-center gap-6 text-sm font-ui">
             <AnimatedLink href="mailto:pklawton@gmail.com" variant="goesOut">Email</AnimatedLink>
             <AnimatedLink href="https://linkedin.com/in/paulklawton" target="_blank" rel="noreferrer" variant="center">LinkedIn</AnimatedLink>
             <AnimatedLink href="https://culturalcartography.substack.com" target="_blank" rel="noreferrer" variant="comesIn">Substack</AnimatedLink>
           </motion.div>
 
-          <motion.div variants={fadeUp} className="mt-8 pt-4 border-t border-[#C4B99A] font-ui">
+          <motion.div variants={fadeUp} className="mt-8 pt-4 border-t border-[#C4B99A] font-ui max-w-xl mx-auto">
             <p className="text-sm tracking-wide text-[#6B5D52]">
               <span className="font-bold text-[#362318]"><CountUp target={150} />+</span> brands · <span className="font-bold text-[#362318]"><CountUp target={20} />+</span> industry awards · <span className="font-bold text-[#DB3E36]"><CountUp target={7} /> Clios</span> · <span className="font-bold text-[#362318]"><CountUp target={3} />×</span> Agency of the Year · <span className="font-bold text-[#362318]"><CountUp target={85} />%</span> pitch win rate
             </p>
@@ -425,9 +425,6 @@ export default function App() {
 
       {/* Trusted By Logo Slider */}
       <div className="relative z-10 py-12 px-6 md:px-10 border-t border-[#C4B99A]/40">
-        <div className="max-w-5xl mx-auto">
-          <p className="text-sm md:text-base text-[#6B5D52] italic mb-6">Strategy for brands that can't afford to get it wrong.</p>
-        </div>
         <div
           style={{
             maskImage: 'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
@@ -452,16 +449,13 @@ export default function App() {
 
       {/* Footer Colophon */}
       <footer className="relative z-10 bg-[#362318] text-[#E0D3A8] py-10 px-6 md:px-10 border-t-2 border-[#D4903A]">
-        <div className="max-w-5xl mx-auto flex flex-col gap-4">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-            <p className="font-display font-bold text-lg tracking-wide">PK Lawton</p>
-            <div className="flex gap-6 text-sm font-ui">
-              <a href="mailto:pklawton@gmail.com" className="hover:text-white transition-colors">Email</a>
-              <a href="https://linkedin.com/in/paulklawton" target="_blank" rel="noreferrer" aria-label="LinkedIn (opens in new tab)" className="hover:text-white transition-colors">LinkedIn</a>
-              <a href="https://culturalcartography.substack.com" target="_blank" rel="noreferrer" aria-label="Substack (opens in new tab)" className="hover:text-white transition-colors">Substack</a>
-            </div>
+        <div className="max-w-5xl mx-auto flex flex-col items-center gap-4 text-center">
+          <p className="font-display font-bold text-lg tracking-wide">PK Lawton</p>
+          <div className="flex gap-6 text-sm font-ui">
+            <a href="mailto:pklawton@gmail.com" className="hover:text-white transition-colors">Email</a>
+            <a href="https://linkedin.com/in/paulklawton" target="_blank" rel="noreferrer" aria-label="LinkedIn (opens in new tab)" className="hover:text-white transition-colors">LinkedIn</a>
+            <a href="https://culturalcartography.substack.com" target="_blank" rel="noreferrer" aria-label="Substack (opens in new tab)" className="hover:text-white transition-colors">Substack</a>
           </div>
-          <p className="text-sm text-[#C4B99A]">Strategy is a discipline of attention, the practice of staying awake in a world that will not stay still.</p>
         </div>
       </footer>
 

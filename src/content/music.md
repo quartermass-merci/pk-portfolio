@@ -34,30 +34,111 @@ In 2013, I ran a satirical blog about Canadian Music Week that went viral and le
 - [NOW Toronto (2018) — "How Pleasence Records Is Rethinking the Label Model"](https://nowtoronto.com/music/features/pleasence-records-indie-record-label-podcast-festival)
 - Husky House Zine #1 (2025) — "Slagging Off: Ten Years Later"
 
-:::images
-/images/background/music/music-01.jpg
-/images/background/music/music-02.jpg
-/images/background/music/music-03.jpg
-/images/background/music/music-04.jpg
-/images/background/music/music-05.jpg
-/images/background/music/music-06.jpg
-/images/background/music/music-07.jpg
-/images/background/music/music-08.jpg
-/images/background/music/music-09.jpg
-/images/background/music/music-10.jpg
-/images/background/music/music-11.jpg
-/images/background/music/music-12.jpg
-/images/background/music/music-13.jpg
-/images/background/music/music-14.jpg
-/images/background/music/music-15.jpg
-/images/background/music/music-16.jpg
-/images/background/music/music-17.jpg
-/images/background/music/music-18.jpg
-/images/background/music/music-19.jpg
-/images/background/music/music-20.jpg
-/images/background/music/music-21.jpg
-/images/background/music/music-22.jpg
-/images/background/music/music-23.jpg
-/images/background/music/music-24.jpg
-/images/background/music/music-25.jpg
+#### Selected Videos
+
+:::youtube
+id=3NtGMv5bOdQ
+title=The Ketamines — Evil Intentions (LIVE)
+:::
+
+:::youtube
+id=CtPx8s_QZN0
+title=The Ketamines — "Line by Line" hook used in a national campaign for Target promoting "Mom Jeans"
+:::
+
+:::youtube
+id=iXPiCki50gw
+title=Century Palm — King of John St.
+:::
+
+:::youtube
+id=vXj8Kk0V_IQ
+title=Century Palm — Then You're Gone
+:::
+
+:::youtube
+id=VLt1kwLoBxQ
+title=Myelin Sheaths — Myelin Sheath
+:::
+
+:::imagegroup
+label=Early Music Career
+/images/background/music/Early%20Music%20Career/IMG_9651.JPG
+/images/background/music/Early%20Music%20Career/chris-jl-sully_4944118_o.jpg
+/images/background/music/Early%20Music%20Career/james-leroy---jl-paul-sully-chris_4944008_o.jpg
+:::
+
+:::imagegroup
+label=The Ketamines
+/images/background/music/Ketamines/music-05.jpg
+/images/background/music/Ketamines/music-07.jpg
+/images/background/music/Ketamines/music-08.jpg
+/images/background/music/Ketamines/music-09.jpg
+/images/background/music/Ketamines/music-10.jpg
+/images/background/music/Ketamines/music-11.jpg
+/images/background/music/Ketamines/music-12.jpg
+/images/background/music/Ketamines/music-13.jpg
+/images/background/music/Ketamines/IMG_3052.jpeg
+/images/background/music/Ketamines/IMG_6135.JPG
+/images/background/music/Ketamines/IMG_9260.JPG
+/images/background/music/Ketamines/IMG_9262.JPG
+/images/background/music/Ketamines/IMG_9276.JPG
+/images/background/music/Ketamines/Ketamines%20capture%20Oprah's%20attention.jpg
+/images/background/music/Ketamines/download.jpg
+:::
+
+:::imagegroup
+label=Century Palm
+/images/background/music/Century%20Palm/music-03.jpg
+/images/background/music/Century%20Palm/music-14.jpg
+/images/background/music/Century%20Palm/music-15.jpg
+/images/background/music/Century%20Palm/music-16.jpg
+/images/background/music/Century%20Palm/IMG_1333.JPG
+/images/background/music/Century%20Palm/IMG_1926.JPG
+/images/background/music/Century%20Palm/IMG_2615.JPG
+/images/background/music/Century%20Palm/IMG_2616.JPG
+/images/background/music/Century%20Palm/IMG_4102.JPG
+/images/background/music/Century%20Palm/IMG_9828.JPG
+/images/background/music/Century%20Palm/IMG_9909.JPG
+:::
+
+:::imagegroup
+label=Myelin Sheaths
+/images/background/music/Myelin%20Sheaths/music-21.jpg
+/images/background/music/Myelin%20Sheaths/music-22.jpg
+/images/background/music/Myelin%20Sheaths/IMG_9253.JPG
+/images/background/music/Myelin%20Sheaths/IMG_9255.JPG
+/images/background/music/Myelin%20Sheaths/IMG_9256.JPG
+/images/background/music/Myelin%20Sheaths/a2638259083_2.jpg
+/images/background/music/Myelin%20Sheaths/download-1.jpg
+/images/background/music/Myelin%20Sheaths/download.jpg
+:::
+
+:::imagegroup
+label=Pleasence Records
+/images/background/music/Pleasence/IMG_0177.JPG
+:::
+
+:::imagegroup
+label=Live
+/images/background/music/Other%20live/IMG_1513.jpeg
+/images/background/music/Other%20live/IMG_2334.JPG
+/images/background/music/Other%20live/IMG_2728.jpeg
+/images/background/music/Other%20live/IMG_4096.JPG
+/images/background/music/Other%20live/IMG_9277.JPG
+:::
+
+:::imagegroup
+label=Promoting
+/images/background/music/Promoting/25C2143A-498A-420B-9E0A-AC8A5E446E20.jpg
+:::
+
+:::imagegroup
+label=Show Posters
+/images/background/music/Show%20Posters/IMG_0045.JPG
+/images/background/music/Show%20Posters/IMG_0046.JPG
+/images/background/music/Show%20Posters/IMG_0052.JPG
+/images/background/music/Show%20Posters/IMG_0055.jpeg
+/images/background/music/Show%20Posters/IMG_3057.JPG
+/images/background/music/Show%20Posters/IMG_3059.JPG
 :::

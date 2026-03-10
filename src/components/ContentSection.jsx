@@ -189,12 +189,25 @@ function renderBlock(block, index) {
   switch (block.type) {
     case 'heading': {
       const Tag = `h${block.level}`;
-      // Timeline entry: ### Title | Date
+      // Timeline entry: ### Title | Date  OR  ### Title | Date | logo_path
       if (block.level === 3 && block.text.includes(' | ')) {
-        const [title, date] = block.text.split(' | ');
+        const parts = block.text.split(' | ');
+        const title = parts[0];
+        const date = parts[1];
+        const logo = parts[2]?.trim();
         return (
-          <div key={index} className="flex justify-between border-b border-[#C4B99A] mb-2 pb-1 font-bold mt-8 first:mt-0">
-            <span>{title}</span><span>{date}</span>
+          <div key={index} className="flex items-center gap-3 border-b border-[#C4B99A] mb-2 pb-1 font-bold mt-8 first:mt-0">
+            {logo && (
+              <img
+                src={logo}
+                alt=""
+                className="h-6 w-6 object-contain flex-shrink-0 opacity-60"
+                loading="lazy"
+                onError={(e) => { e.target.style.display = 'none'; }}
+              />
+            )}
+            <span className="flex-1">{title}</span>
+            <span className="flex-shrink-0">{date}</span>
           </div>
         );
       }
@@ -264,6 +277,43 @@ function renderBlock(block, index) {
       );
     }
 
+    case 'youtube': {
+      const lines = block.content.split('\n');
+      const idMatch = lines.find(l => l.startsWith('id='));
+      const titleMatch = lines.find(l => l.startsWith('title='));
+      const videoId = idMatch ? idMatch.replace('id=', '').trim() : '';
+      const title = titleMatch ? titleMatch.replace('title=', '').trim() : '';
+      if (!videoId) return null;
+      return (
+        <div key={index} className="my-6">
+          {title && <p className="text-xs uppercase tracking-widest text-[#6B5D52] mb-2 font-ui">{title}</p>}
+          <div className="aspect-video w-full bg-black overflow-hidden rounded">
+            <iframe
+              src={`https://www.youtube.com/embed/${videoId}`}
+              className="w-full h-full border-0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              title={title || 'YouTube video'}
+            />
+          </div>
+        </div>
+      );
+    }
+
+    case 'imagegroup': {
+      const lines = block.content.split('\n');
+      const labelLine = lines.find(l => l.startsWith('label='));
+      const label = labelLine ? labelLine.replace('label=', '').trim() : '';
+      const urls = lines.filter(l => !l.startsWith('label=') && l.trim()).map(u => u.trim());
+      if (!urls.length) return null;
+      return (
+        <div key={index} className="mb-2">
+          {label && <h4 className="font-bold text-sm uppercase tracking-widest text-[#6B5D52] mb-3 mt-8">{label}</h4>}
+          <ImageGrid urls={urls} />
+        </div>
+      );
+    }
+
     case 'testimonial': {
       const lines = block.content.split('\n');
       const nameMatch = lines[0]?.match(/^\*\*(.+)\*\*$/);
@@ -296,6 +346,17 @@ export default function ContentSection({ content }) {
 
   return (
     <div className="max-w-2xl font-mono text-sm leading-relaxed pb-20">
+      {meta.logo && (
+        <div className="mb-6">
+          <img
+            src={meta.logo}
+            alt=""
+            className="h-12 w-auto object-contain"
+            loading="lazy"
+            onError={(e) => { e.target.style.display = 'none'; }}
+          />
+        </div>
+      )}
       {meta.title && (
         <h2 className="text-2xl mb-2 font-bold uppercase tracking-widest font-display">{meta.title}</h2>
       )}

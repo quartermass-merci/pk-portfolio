@@ -1,6 +1,7 @@
 ---
 title: "AGENCY AS LAB: SISTER MERCI"
 subtitle: EXPERIMENT UNTIL EXTRAORDINARY
+logo: /images/background/agency/Sister-Merci-Square-Logo.png
 ---
 
 :::video

@@ -19,6 +19,9 @@ const BRAND_LOGOS = [
   { src: '/images/scrolling-logos/spectrum.svg', alt: 'Spectrum' },
   { src: '/images/scrolling-logos/homebase.png', alt: 'Homebase' },
   { src: '/images/scrolling-logos/collective-arts.png', alt: 'Collective Arts' },
+  { src: '/images/scrolling-logos/holy-mountain.png', alt: 'Holy Mountain' },
+  { src: '/images/scrolling-logos/shred.png', alt: 'Shred' },
+  { src: '/images/scrolling-logos/wyld.png', alt: 'WYLD' },
   // Food, Retail & Non-Profit
   { src: '/images/scrolling-logos/mcdonalds.png', alt: "McDonald's" },
   { src: '/images/scrolling-logos/ronald-mcdonald-house.svg', alt: 'Ronald McDonald House' },
@@ -30,6 +33,7 @@ const BRAND_LOGOS = [
   // Finance, Auto & Transport
   { src: '/images/scrolling-logos/rbc.png', alt: 'RBC' },
   { src: '/images/scrolling-logos/scotiabank.png', alt: 'Scotiabank' },
+  { src: '/images/scrolling-logos/pangea.svg', alt: 'Pangea' },
   { src: '/images/scrolling-logos/manulife.png', alt: 'Manulife' },
   { src: '/images/scrolling-logos/buick.png', alt: 'Buick' },
   { src: '/images/scrolling-logos/chevrolet.png', alt: 'Chevrolet' },
@@ -187,13 +191,14 @@ export default function App() {
         </div>
       );
     }
-    // Vimeo embed
-    const vimeoMatch = url.match(/player\.vimeo\.com\/video\/(\d+)/);
+    // Vimeo embed (supports player.vimeo.com/video/ID and vimeo.com/ID)
+    const vimeoMatch = url.match(/(?:player\.)?vimeo\.com\/(?:video\/)?(\d+)/);
     if (vimeoMatch) {
+      const vimeoId = vimeoMatch[1];
       return (
         <div className="aspect-video w-full my-6 bg-black overflow-hidden">
           <iframe
-            src={url}
+            src={`https://player.vimeo.com/video/${vimeoId}`}
             className="w-full h-full"
             frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture"
@@ -597,7 +602,18 @@ export default function App() {
           <div className="max-w-2xl font-mono text-sm leading-relaxed pb-20">
             <h2 className="text-2xl mb-2 font-bold uppercase tracking-widest font-display">AGENCY AS LAB: SISTER MERCI</h2>
             <h3 className="font-bold uppercase tracking-widest text-sm md:text-xs mb-8 text-[#6B5D52]">EXPERIMENT UNTIL EXTRAORDINARY</h3>
-            
+
+            {/* Sizzle reel */}
+            <div className="aspect-video w-full mb-10 bg-black overflow-hidden rounded">
+              <video
+                src="/images/sister-merci/sister-merci-sizzle.mp4"
+                className="w-full h-full object-contain"
+                controls
+                playsInline
+                preload="metadata"
+              />
+            </div>
+
             <div className="space-y-6 mb-12">
               <h4 className="font-bold border-b border-[#C4B99A] pb-1 mb-3">The Thesis</h4>
               <p>Sister Merci started from a conviction shared by all three founders: the toughest marketing environments produce the sharpest strategic thinking.</p>

@@ -336,7 +336,7 @@ export default function App() {
           <motion.div variants={fadeUp} className="flex justify-center">
             <img src="/images/pk-logo.png" alt="PK Lawton — Strategy × Culture" className="w-full max-w-[300px] md:max-w-[560px] h-auto mb-8" />
           </motion.div>
-          <motion.p variants={fadeUp} className="text-sm md:text-base text-[#6B5D52] mb-6 max-w-xl mx-auto">Co-Founder & Chief Strategy Officer, Sister Merci. Brand Strategist, Researcher, Educator. Rock & Roll Sociologist based in Hamilton, ON.</motion.p>
+          <motion.p variants={fadeUp} className="text-sm md:text-base text-[#6B5D52] mb-6 max-w-xl mx-auto">Co-Founder & Chief Strategy Officer, Sister Merci.<br />Creative Strategist, Researcher, Educator. Rock & Roll Sociologist.</motion.p>
           <motion.div variants={fadeUp} className="flex justify-center gap-6 text-sm font-ui">
             <AnimatedLink href="mailto:pklawton@gmail.com" variant="goesOut">Email</AnimatedLink>
             <AnimatedLink href="https://linkedin.com/in/paulklawton" target="_blank" rel="noreferrer" variant="center">LinkedIn</AnimatedLink>

@@ -13,3 +13,7 @@ Applied Bourdieu's theory of capital to online community dynamics. Cited in the 
 **BA, Sociology — University of Lethbridge, 1999–2003**
 
 Graduated with Great Distinction.
+
+:::images
+:::
+

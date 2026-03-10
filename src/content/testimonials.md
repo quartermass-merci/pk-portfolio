@@ -63,3 +63,6 @@ Paul is everything a leader should be: thoughtful, approachable, invested in his
 > "Workload was heavy (lots of reading), but Paul does a good job compensating with being totally available (I emailed him once on a Saturday and he had a full-page response an hour later) and with lots of flexibility in turning in assignments. Seems to give a about his students."
 
 > "Very knowledgeable in his field. There is a lot of reading, but that's expected in a 3rd year course. He is a good prof, and he's pretty cool because he's in a punk band that sounds pretty good."
+
+:::images
+:::

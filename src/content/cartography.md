@@ -15,3 +15,6 @@ The method is informed by sociology and institutional analysis, but it is meant 
 src=https://www.canva.com/design/DAGmrey6WcQ/XiV4VUIzkBj0PMohFrxZSw/view?embed
 title=Cultural Cartography presentation
 :::
+
+:::images
+:::

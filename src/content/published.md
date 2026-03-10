@@ -70,3 +70,6 @@ Legacies (2025), The Lobsterpot (2024), Craft & Crew (2021), CANADALAND Ep. 87 (
 - [Strategy Online (2020) — COVID-era cannabis marketing advice](https://strategyonline.ca/2020/03/20/cannabis-industry-copes-with-social-distancing/)
 - [Authority Magazine (2020) — "All Gut, No Glory" extended interview](https://medium.com/authority-magazine/marketing-strategies-from-the-top-all-gut-no-glory-with-paul-lawton-chief-strategy-officer-at-90de1dc3bf7d)
 - [Campaign Canada (2019) — Agency launch coverage](https://www.campaigncanada.ca/article/sister-merci-vows-to-solve-the-challenges-of-cannabis-marketing/4685qg6nyt1a9xkvm4sq4jjyxm)
+
+:::images
+:::

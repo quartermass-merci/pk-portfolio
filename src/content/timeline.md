@@ -39,5 +39,5 @@ Led strategic planning for Air Canada, RBC, Mondelez, and Chevrolet. Five direct
 Built the agency's first analytics and measurement framework. Integrated media strategy for Nissan, Nintendo, CN Rail, and Dell. Connected earned, paid, and owned media at a time when most PR agencies treated them as separate functions.
 
 :::images
-https://webershandwick.asia/wp-content/uploads/2018/05/2.-Sophie-Shin-Paul-Lawton-Fatma-Othman-640x640.jpg
+/images/background/timeline/timeline-01.jpg
 :::

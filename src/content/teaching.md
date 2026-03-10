@@ -39,3 +39,6 @@ Lawton, P.K. (2005). "Capital and Stratification Within Virtual Community: A Cas
 ##### Research Positions
 
 Research Coordinator for Dr. Arthur W. Frank (University of Calgary). Research Assistant to Dr. Robert Wood (online gambling), Dr. Anne Gautier (family dynamics), and Dr. Lloyd Wong (anti-multiculturalism). SSHRC PhD Fellowship recipient.
+
+:::images
+:::

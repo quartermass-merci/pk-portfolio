@@ -35,3 +35,6 @@ A Square-Shaped Strategist knows how to make work stand out, how to make it effe
 src=https://www.canva.com/design/DAHCz5-pAFQ/--EKhbQ4MR4hhxGFW5ExjA/view?embed
 title=Square Shaped Strategist presentation
 :::
+
+:::images
+:::

@@ -27,4 +27,5 @@ I am also building tools to make that work sharper. Q-Litics is a methodology I 
 /images/background/about/about-11.jpeg
 /images/background/about/about-12.jpg
 /images/background/about/about-13.jpg
+/images/background/about/IMG_2933.JPG
 :::

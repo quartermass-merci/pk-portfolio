@@ -102,14 +102,18 @@ function CountUp({ target }) {
     if (!inView) return;
     const n = typeof target === 'number' ? target : parseInt(target);
     if (isNaN(n) || reduced) { setVal(n); return; }
-    let current = 0;
-    const step = Math.max(1, Math.ceil(n / 30));
-    const id = setInterval(() => {
-      current += step;
-      if (current >= n) { setVal(n); clearInterval(id); }
-      else setVal(current);
-    }, 35);
-    return () => clearInterval(id);
+    const duration = 4500; // total animation time in ms
+    const start = performance.now();
+    const ease = t => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t; // easeInOut
+    let raf;
+    const tick = (now) => {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      setVal(Math.round(ease(progress) * n));
+      if (progress < 1) raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
   }, [inView, target, reduced]);
   return <span ref={ref}>{val}</span>;
 }
@@ -360,7 +364,10 @@ export default function App() {
       <div className="w-full max-w-5xl mx-auto p-6 md:p-10 flex flex-col min-h-screen relative z-10">
         <motion.div className="mb-16 text-center" variants={stagger} initial="hidden" animate="show">
           <motion.div variants={fadeUp} className="flex justify-center">
-            <img src="/images/pk-logo.png" alt="PK Lawton — Strategy × Culture" className="w-full max-w-[300px] md:max-w-[560px] h-auto mb-8" />
+            <img src="/images/pk-logo.png" alt="PK Lawton — Strategy × Culture" className="w-full max-w-[300px] md:max-w-[560px] h-auto mb-4" />
+          </motion.div>
+          <motion.div variants={fadeUp} className="flex justify-center mb-4">
+            <img src="/images/PK%20ICON.png" alt="" className="w-16 md:w-20 h-auto opacity-70" />
           </motion.div>
           <motion.p variants={fadeUp} className="text-sm md:text-base text-[#6B5D52] mb-6 max-w-xl mx-auto">Co-Founder & Chief Strategy Officer, Sister Merci.<br />Creative Strategist, Researcher, Educator. Rock & Roll Sociologist.</motion.p>
           <motion.div variants={fadeUp} className="flex justify-center gap-6 text-sm font-ui">

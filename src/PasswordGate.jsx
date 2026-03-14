@@ -35,6 +35,16 @@ export default function PasswordGate({ children }) {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center pointer-events-none w-full px-6">
+        {/* Sketch icon */}
+        <motion.div
+          className="mb-6 flex justify-center"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 0.7, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+        >
+          <img src="/images/PK%20ICON.png" alt="" className="w-16 md:w-20 h-auto" />
+        </motion.div>
+
         {/* BIG Logo */}
         <motion.div
           className="mb-16 w-full flex justify-center"

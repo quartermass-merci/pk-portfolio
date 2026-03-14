@@ -528,9 +528,37 @@ export default function App() {
         
         {/* BACKGROUND SECTIONS */}
         {view === 'research-stack' && (
+          <>
           <Suspense fallback={<div className="text-sm text-[#362318] py-8 animate-pulse">Loading Research Stack…</div>}>
             <ResearchStack />
           </Suspense>
+          {(() => {
+            const allSections = [{ id: 'about', title: 'An Introduction' }, ...backgroundSections];
+            const idx = allSections.findIndex(s => s.id === 'research-stack');
+            const prev = idx > 0 ? allSections[idx - 1] : null;
+            const next = idx < allSections.length - 1 ? allSections[idx + 1] : null;
+            if (!prev && !next) return null;
+            return (
+              <nav className="flex justify-between items-center border-t border-[#C4B99A] pt-6 mt-4 mb-16 font-ui max-w-2xl">
+                {prev ? (
+                  <button onClick={() => { setView(prev.id); document.querySelector('.overflow-y-auto')?.scrollTo(0, 0); }} className="text-left group cursor-pointer">
+                    <span className="text-xs uppercase tracking-widest text-[#D4903A]"><span className="inline-block transition-transform duration-200 group-hover:-translate-x-1">←</span> Previous</span>
+                    <span className="block text-sm text-[#565D4F] group-hover:text-[#362318] transition-colors">{prev.title}</span>
+                  </button>
+                ) : <span />}
+                <button onClick={closePanel} className="opacity-50 hover:opacity-100 transition-opacity cursor-pointer" aria-label="Return home">
+                  <img src="/images/PK%20ICON.png" alt="Home" className="w-8 h-auto" />
+                </button>
+                {next ? (
+                  <button onClick={() => { setView(next.id); document.querySelector('.overflow-y-auto')?.scrollTo(0, 0); }} className="text-right group cursor-pointer">
+                    <span className="text-xs uppercase tracking-widest text-[#D4903A]">Next <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">→</span></span>
+                    <span className="block text-sm text-[#565D4F] group-hover:text-[#362318] transition-colors">{next.title}</span>
+                  </button>
+                ) : <span />}
+              </nav>
+            );
+          })()}
+          </>
         )}
 
         {view !== 'research-stack' && view !== 'project' && sectionContent[view] && (
@@ -544,13 +572,16 @@ export default function App() {
               const next = idx < allSections.length - 1 ? allSections[idx + 1] : null;
               if (!prev && !next) return null;
               return (
-                <nav className="flex justify-between items-start border-t border-[#C4B99A] pt-6 mt-4 mb-16 font-ui max-w-2xl">
+                <nav className="flex justify-between items-center border-t border-[#C4B99A] pt-6 mt-4 mb-16 font-ui max-w-2xl">
                   {prev ? (
                     <button onClick={() => { setView(prev.id); document.querySelector('.overflow-y-auto')?.scrollTo(0, 0); }} className="text-left group cursor-pointer">
                       <span className="text-xs uppercase tracking-widest text-[#D4903A]"><span className="inline-block transition-transform duration-200 group-hover:-translate-x-1">←</span> Previous</span>
                       <span className="block text-sm text-[#565D4F] group-hover:text-[#362318] transition-colors">{prev.title}</span>
                     </button>
                   ) : <span />}
+                  <button onClick={closePanel} className="opacity-50 hover:opacity-100 transition-opacity cursor-pointer" aria-label="Return home">
+                    <img src="/images/PK%20ICON.png" alt="Home" className="w-8 h-auto" />
+                  </button>
                   {next ? (
                     <button onClick={() => { setView(next.id); document.querySelector('.overflow-y-auto')?.scrollTo(0, 0); }} className="text-right group cursor-pointer">
                       <span className="text-xs uppercase tracking-widest text-[#D4903A]">Next <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">→</span></span>
@@ -685,13 +716,16 @@ export default function App() {
               const next = idx < siblings.length - 1 ? siblings[idx + 1] : null;
               if (!prev && !next) return null;
               return (
-                <nav className="flex justify-between items-start border-t border-[#C4B99A] pt-6 mt-8 font-ui">
+                <nav className="flex justify-between items-center border-t border-[#C4B99A] pt-6 mt-8 font-ui">
                   {prev ? (
                     <button onClick={() => { setActiveProject(prev); document.querySelector('.overflow-y-auto')?.scrollTo(0, 0); }} className="text-left group cursor-pointer">
                       <span className="text-xs uppercase tracking-widest text-[#D4903A]"><span className="inline-block transition-transform duration-200 group-hover:-translate-x-1">←</span> Previous</span>
                       <span className="block text-sm text-[#565D4F] group-hover:text-[#362318] transition-colors">{prev.title}</span>
                     </button>
                   ) : <span />}
+                  <button onClick={closePanel} className="opacity-50 hover:opacity-100 transition-opacity cursor-pointer" aria-label="Return home">
+                    <img src="/images/PK%20ICON.png" alt="Home" className="w-8 h-auto" />
+                  </button>
                   {next ? (
                     <button onClick={() => { setActiveProject(next); document.querySelector('.overflow-y-auto')?.scrollTo(0, 0); }} className="text-right group cursor-pointer">
                       <span className="text-xs uppercase tracking-widest text-[#D4903A]">Next <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">→</span></span>

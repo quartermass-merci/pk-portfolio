@@ -286,9 +286,9 @@ const doc = new Document({
       }),
 
       spacer(),
-      heading("5.3 Project Case Studies (27)", HeadingLevel.HEADING_2),
+      heading("5.3 Project Case Studies (26)", HeadingLevel.HEADING_2),
       body("Each case study includes: title, year, category, summary, narrative sections (typically 4\u20136), proof/results, and image galleries. Some include video embeds (YouTube thumbnails, Vimeo iframes, MP4 native). Three categories:"),
-      bulletItem("Campaign Strategy (9 projects): CMC \u201CI\u2019m High Right Now,\u201D CasinoTime Big Fran, Tweed Hi/Don\u2019t Drive High, Scotiabank Hockey 24, Coleman, Sunbeam, etc.", "bullets"),
+      bulletItem("Campaign Strategy (8 projects): CMC \u201CI\u2019m High Right Now,\u201D Tweed Hi/Don\u2019t Drive High, Scotiabank Hockey 24, Coleman, Sunbeam, etc.", "bullets"),
       bulletItem("Brand Architecture (13 projects): SHRED, Wyld, MadeGood, Pangea, Highly Dutch, SoleSavy, etc.", "bullets"),
       bulletItem("Corporate Comms (5 projects): Air Canada Aeroplan, Nia Health, Shoppers Drug Mart, RBC Future Launch, CN Rail", "bullets"),
 

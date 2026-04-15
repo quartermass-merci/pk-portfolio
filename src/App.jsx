@@ -376,12 +376,6 @@ export default function App() {
             <AnimatedLink href="https://culturalcartography.substack.com" target="_blank" rel="noreferrer" variant="comesIn">Substack</AnimatedLink>
           </motion.div>
 
-          <motion.div variants={fadeUp} className="mt-8 pt-4 border-t border-[#C4B99A] font-ui max-w-xl mx-auto">
-            <p className="text-sm tracking-wide text-[#6B5D52]">
-              <span className="font-bold text-[#362318]"><CountUp target={150} />+</span> brands · <span className="font-bold text-[#362318]"><CountUp target={20} />+</span> industry awards · <span className="font-bold text-[#DB3E36]"><CountUp target={7} /> Clios</span> · <span className="font-bold text-[#362318]"><CountUp target={3} />×</span> Agency of the Year · <span className="font-bold text-[#362318]"><CountUp target={85} />%</span> pitch win rate
-            </p>
-          </motion.div>
-
         </motion.div>
 
         <motion.button variants={fadeUp} initial="hidden" animate="show" onClick={() => openPanel('about')} className={`flex items-center gap-3 mb-10 transition-opacity group ${view === 'about' && panelOpen ? 'font-bold' : ''}`}>

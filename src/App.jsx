@@ -362,14 +362,14 @@ export default function App() {
 
       {/* Navigation */}
       <div className="w-full max-w-5xl mx-auto p-6 md:p-10 flex flex-col min-h-screen relative z-10">
-        <motion.div className="mb-16 text-center" variants={stagger} initial="hidden" animate="show">
+        <motion.div className="mb-10 text-center" variants={stagger} initial="hidden" animate="show">
           <motion.div variants={fadeUp} className="flex justify-center">
-            <img src="/images/pk-logo.png" alt="PK Lawton — Strategy × Culture" className="w-full max-w-[300px] md:max-w-[560px] h-auto mb-4" />
+            <img src="/images/pk-logo.png" alt="PK Lawton — Strategy × Culture" className="w-full max-w-[300px] md:max-w-[560px] h-auto mb-2" />
           </motion.div>
-          <motion.div variants={fadeUp} className="flex justify-center mb-4">
-            <img src="/images/PK%20ICON.png" alt="" className="w-16 md:w-20 h-auto opacity-70" />
+          <motion.div variants={fadeUp} className="flex justify-center mb-6">
+            <img src="/images/PK%20ICON.png" alt="" className="w-24 md:w-32 h-auto opacity-80" />
           </motion.div>
-          <motion.p variants={fadeUp} className="text-sm md:text-base text-[#6B5D52] mb-6 max-w-xl mx-auto">Co-Founder & Chief Strategy Officer, Sister Merci.<br />Brand builder in hard-mode categories. Cultural Ethnographer. Award-Winning Educator. Rock & Roll Sociologist.</motion.p>
+          <motion.p variants={fadeUp} className="text-sm md:text-base text-[#6B5D52] mb-6 max-w-xl mx-auto">Co-Founder & Chief Strategy Officer, Sister Merci.<br />Strategy for categories playing on Hard Mode.<br />Rock & Roll Sociologist.</motion.p>
           <motion.div variants={fadeUp} className="flex justify-center gap-6 text-sm font-ui">
             <AnimatedLink href="mailto:pklawton@gmail.com" variant="goesOut">Email</AnimatedLink>
             <AnimatedLink href="https://linkedin.com/in/paulklawton" target="_blank" rel="noreferrer" variant="center">LinkedIn</AnimatedLink>
@@ -393,7 +393,7 @@ export default function App() {
         <nav className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-0 items-start">
           {/* Background */}
           <div className="mb-8">
-            <h3 className="text-xs uppercase tracking-[0.2em] text-[#565D4F] border-l-2 border-[#DB3E36] pl-2 mb-2 font-bold">Background</h3>
+            <h3 className="text-xs uppercase tracking-[0.2em] text-[#565D4F] border-l-2 border-[#362318] pl-2 mb-2 font-bold">Background</h3>
             <ul>
               {backgroundSections.map((item) => (
                 <li
@@ -421,7 +421,7 @@ export default function App() {
           {/* Case Study Categories */}
           {categories.map((category) => (
             <div key={category} className="mb-8">
-              <h3 className="text-xs uppercase tracking-[0.2em] text-[#565D4F] border-l-2 border-[#DB3E36] pl-2 mb-2 font-bold">{category}</h3>
+              <h3 className="text-xs uppercase tracking-[0.2em] text-[#565D4F] border-l-2 border-[#362318] pl-2 mb-2 font-bold">{category}</h3>
               <ul>
                 {portfolioData.filter((p) => p.category === category).map((project) => (
                   <li
@@ -605,7 +605,7 @@ export default function App() {
                 />
               </div>
             )}
-            <p className="text-xs uppercase tracking-[0.25em] text-[#DB3E36] font-bold mb-2 font-ui">{activeProject.category}</p>
+            <p className="text-xs uppercase tracking-[0.25em] text-[#565D4F] font-bold mb-2 font-ui">{activeProject.category}</p>
             <h1 className="text-4xl md:text-5xl mb-4 font-bold font-display leading-tight">{activeProject.title}</h1>
             <p className="text-[#6B5D52] mb-10 italic text-base">{activeProject.summary}</p>
 
@@ -645,7 +645,7 @@ export default function App() {
                     <VideoEmbed url={activeProject.sectionVideos[s.heading]} />
                   )}
                   <div>
-                    <h3 className="uppercase tracking-widest text-sm md:text-xs font-bold border-l-2 border-[#DB3E36] pl-2 mb-3">{s.heading}</h3>
+                    <h3 className="uppercase tracking-widest text-sm md:text-xs font-bold border-l-2 border-[#362318] pl-2 mb-3">{s.heading}</h3>
                     <p className="whitespace-pre-wrap leading-relaxed">{s.text}</p>
                   </div>
                   {distributed[i] && (
@@ -690,14 +690,14 @@ export default function App() {
 
             {activeProject?.proof && activeProject.proof.length > 0 && (
               <div className="mb-12">
-                <h3 className="uppercase tracking-widest text-sm md:text-xs font-bold border-l-2 border-[#DB3E36] pl-2 mb-3">Proof & Results</h3>
+                <h3 className="uppercase tracking-widest text-sm md:text-xs font-bold border-l-2 border-[#362318] pl-2 mb-3">Proof & Results</h3>
                 <ul className="list-disc pl-5 space-y-2">{activeProject.proof.map((p, i) => <li key={i}><Linkify text={p} /></li>)}</ul>
               </div>
             )}
 
             {activeProject?.team && activeProject.team.length > 0 && (
               <div className="mb-12">
-                <h3 className="uppercase tracking-widest text-sm md:text-xs font-bold border-l-2 border-[#DB3E36] pl-2 mb-3">Team & Credits</h3>
+                <h3 className="uppercase tracking-widest text-sm md:text-xs font-bold border-l-2 border-[#362318] pl-2 mb-3">Team & Credits</h3>
                 <ul className="list-disc pl-5 space-y-2">{activeProject.team.map((t, i) => <li key={i}><Linkify text={t} /></li>)}</ul>
               </div>
             )}

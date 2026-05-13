@@ -468,101 +468,16 @@ export default function App() {
           </div>
         </section>
 
-        {/* § 02 — Selected work (CMC featured + 3-card grid) */}
-        <section id="work" className="bg-[#F2EAD0] border-y border-[#C4B99A]/40">
-          <div className="pk-container py-10 md:py-16">
-            <p className="text-xs uppercase tracking-[0.25em] text-[#565D4F] mb-3">§ 02 &nbsp;—&nbsp; Selected work</p>
-            <h2 className="font-display t-section font-bold text-[#2D4A8F] max-w-3xl">
-              The work.
-            </h2>
-
-            {/* Featured: CMC */}
-            {(() => {
-              const cmc = portfolioData.find(p => p.id === 'cmc');
-              if (!cmc) return null;
-              const firstVideo = cmc.videos && cmc.videos[0];
-              const isMp4 = firstVideo && /\.(mp4|webm)$/i.test(firstVideo);
-              const ytMatch = firstVideo && firstVideo.match(/(?:v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
-              const heroImg = !isMp4 && (ytMatch ? `https://img.youtube.com/vi/${ytMatch[1]}/maxresdefault.jpg` : (cmc.images && cmc.images[0]));
-              return (
-                <div className="mt-8 md:mt-10 bg-[#FAF8F4] border border-[#C4B99A]/40">
-                  <div className="grid grid-cols-1 lg:grid-cols-12">
-                    <div className="lg:col-span-7 bg-[#2D4A8F] flex items-center justify-center min-h-[260px] lg:min-h-0 overflow-hidden">
-                      {isMp4 ? (
-                        <video src={firstVideo} className="w-full h-auto object-contain" autoPlay muted loop playsInline preload="metadata" />
-                      ) : heroImg ? (
-                        <img src={heroImg} alt={cmc.title} className="w-full h-auto object-contain" loading="lazy" />
-                      ) : (
-                        <img src={cmc.heroLogo} alt={cmc.title} className="w-1/2 max-w-[200px] h-auto opacity-90" loading="lazy" />
-                      )}
-                    </div>
-                    <div className="lg:col-span-5 p-6 md:p-8 flex flex-col">
-                      <p className="text-xs uppercase tracking-[0.2em] text-[#DB3E36] font-bold mb-3">Featured case</p>
-                      <h3 className="font-display text-2xl md:text-3xl font-bold text-[#2D4A8F] leading-tight mb-2">CMC: I'm High Right Now</h3>
-                      <p className="text-sm text-[#565D4F] italic mb-4">Campaign strategy &nbsp;·&nbsp; 2023–2026</p>
-                      <p className="t-body text-[#2D4A8F] mb-5">First nationwide consumer campaign for the Cannabis Media Council. Featured Baby Boomers as confident, stylish users, repositioning an entire audience and shifting category stigma.</p>
-                      <ul className="space-y-1.5 text-sm text-[#2D4A8F] mb-6">
-                        <li className="flex gap-2"><span className="text-[#C4B99A]">·</span><span><span className="font-bold">256M+</span> earned impressions</span></li>
-                        <li className="flex gap-2"><span className="text-[#C4B99A]">·</span><span><span className="font-bold">1st</span> cannabis ad in <em>Vanity Fair</em></span></li>
-                        <li className="flex gap-2"><span className="text-[#C4B99A]">·</span><span><span className="font-bold">Adweek Top 10</span> cannabis campaign of the year</span></li>
-                        <li className="flex gap-2"><span className="text-[#C4B99A]">·</span><span><span className="font-bold">1st</span> on Pornhub and Spotify</span></li>
-                      </ul>
-                      <button onClick={() => handleProjectClick(cmc)} className="self-start inline-flex items-center gap-2 bg-[#2D4A8F] text-[#FAF8F4] px-4 py-2.5 text-sm hover:bg-[#4A3F35] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-150 ease-out tracking-wide">[ Read the full case → ]</button>
-                    </div>
-                  </div>
-                </div>
-              );
-            })()}
-
-            {/* 3-card grid below featured */}
-            <div className="mt-6 md:mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
-              {[
-                { id: 'tweed', name: 'Tweed', role: 'Brand positioning, campaign platform', outcome: "Defined the language of legal cannabis in Canada. \"Hi.\" and \"Don't Drive High\" set the category bar.", tags: ['Cannabis', 'Brand Positioning', 'Campaign'], thumbFit: 'cover' },
-                { id: 'madegood', name: 'MadeGood', role: 'Brand architecture, US market entry', outcome: 'Year-long ethnographic research program informed US growth in the snack category.', tags: ['CPG', 'Brand Architecture', 'Research'], customThumb: 'https://img.youtube.com/vi/Z5nWili2sZI/hqdefault.jpg', thumbFit: 'cover' },
-                { id: 'scotiabank', name: 'Scotiabank', role: 'Sponsorship strategy, Hockey 24', outcome: 'Reframed Scotiabank\'s NHL sponsorship from logo placement to cultural object.', tags: ['Sponsorship', 'Brand Strategy', 'Cultural Reset'], thumbFit: 'contain' },
-              ].map((c) => {
-                const project = portfolioData.find(p => p.id === c.id);
-                const thumb = c.customThumb || project?.images?.[0] || project?.heroLogo;
-                return (
-                  <button
-                    key={c.id}
-                    onClick={() => project && handleProjectClick(project)}
-                    className="bg-[#FAF8F4] border border-[#C4B99A]/40 text-left min-w-0 group hover:bg-[#EDE3CC] hover:-translate-y-0.5 transition-all duration-200 ease-out flex flex-col cursor-pointer"
-                  >
-                    {thumb && (
-                      <div className="aspect-[16/10] bg-[#2D4A8F] overflow-hidden">
-                        <img src={thumb} alt={c.name} className={`w-full h-full object-${c.thumbFit} md:grayscale group-hover:grayscale-0 transition duration-500`} loading="lazy" />
-                      </div>
-                    )}
-                    <div className="p-5 md:p-6">
-                      <p className="text-xs uppercase tracking-[0.18em] text-[#565D4F] mb-2">Case study</p>
-                      <h3 className="font-display text-lg md:text-xl font-bold text-[#2D4A8F] mb-1 group-hover:text-[#DB3E36] transition">{c.name}</h3>
-                      <p className="text-xs font-ui text-[#565D4F] italic mb-3">{c.role}</p>
-                      <p className="text-sm text-[#2D4A8F] mb-4 leading-relaxed">{c.outcome}</p>
-                      <ul className="flex flex-wrap gap-1.5">
-                        {c.tags.map((t, j) => (
-                          <li key={j} className="text-[10px] font-ui uppercase tracking-wider text-[#565D4F] border border-[#C4B99A]/60 px-2 py-0.5">{t}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  </button>
-                );
-              })}
-            </div>
-            <p className="mt-6 md:mt-8 text-sm text-[#565D4F]"><a href="#backgrounder" className="underline decoration-[#C4B99A] underline-offset-4 decoration-2 hover:decoration-[#DB3E36] hover:text-[#2D4A8F] transition">Backgrounder below ↓</a></p>
-          </div>
-        </section>
-
-        {/* § 03 — What I bring into the work (with declarative beliefs) — warm white bg, cream cards */}
+        {/* § 02 — What I bring into the work (with declarative beliefs) — warm white bg, cream cards */}
         <section id="approach" className="pk-container py-10 md:py-16">
-          <p className="text-xs uppercase tracking-[0.25em] text-[#565D4F] mb-3">§ 03 &nbsp;—&nbsp; A note on the working strategist</p>
+          <p className="text-xs uppercase tracking-[0.25em] text-[#565D4F] mb-3">§ 02 &nbsp;—&nbsp; A note on the working strategist</p>
           <h2 className="font-display t-section font-bold text-[#2D4A8F] max-w-3xl">
             What I bring into the work.
           </h2>
           <div className="mt-8 md:mt-10 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
             {[
               { Icon: Layers, title: 'Evidence, taste, and commercial instinct', belief: 'Too often, strategy is intelligence without judgment.', body: "I am skilled in all three: a sociologist's research training, the taste of a working artist, and the pattern recognition needed to run an agency in heavily regulated categories. I love the work of a strategist, and the deeper I get into my agency career, the more I love it." },
-              { Icon: Hammer, title: 'Bias toward making things real', belief: "Strategists who only critique are tourists. I've toured.", body: "I have lived the \"You can just do stuff, you know?\" ethos my whole life: I've run two indie labels, toured in garage bands, produced records, taught classes, raised VC capital, launched an agency; I am launching a print magazine this summer (Rebrief.ca), and am putting out a record in the fall. I just want to make the world move." },
+              { Icon: Hammer, title: 'Bias toward making things real', belief: "Strategists who only critique are tourists. I've toured.", body: "I have lived the \"You can just do stuff, you know?\" ethos my whole life: I've run two indie labels, toured in garage bands, produced records, taught classes, raised VC capital, and launched an agency. I just want to make the world move." },
               { Icon: Users, title: 'Pressure-tested judgment', belief: "Most strategy decks don't survive procurement. I make the ones that do.", body: "I know how to do the work and sell the work, and generally, that means that I work fast and enroll the team as a more efficient unit of operations. When we destroy our internal silos, we build organizational empathy, which improves both output and employee relations. Find me some dogs to run with and we will make a go of it!" },
             ].map(({ Icon, title, belief, body }, i) => (
               <article key={i} className="bg-[#F2EAD0] border border-[#C4B99A]/40 p-5 md:p-6 min-w-0">
@@ -574,6 +489,61 @@ export default function App() {
                 <p className="t-body text-[#2D4A8F]">{body}</p>
               </article>
             ))}
+          </div>
+        </section>
+
+        {/* § 03 — Selected work — 2x2 card grid with autoplay videos */}
+        <section id="work" className="bg-[#F2EAD0] border-y border-[#C4B99A]/40">
+          <div className="pk-container py-10 md:py-16">
+            <p className="text-xs uppercase tracking-[0.25em] text-[#565D4F] mb-3">§ 03 &nbsp;—&nbsp; Selected work</p>
+            <h2 className="font-display t-section font-bold text-[#2D4A8F] max-w-3xl">
+              The work.
+            </h2>
+            <div className="mt-8 md:mt-10 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+              {[
+                { id: 'cmc', name: "CMC: I'm High Right Now", role: 'Campaign strategy', year: '2023–2026', eyebrowColor: '#DB3E36', summary: "First nationwide consumer campaign for the Cannabis Media Council. Featured Baby Boomers as confident, stylish users, repositioning an entire audience.", proof: ['256M+ earned impressions', '1st cannabis ad in Vanity Fair', 'Adweek Top 10 of the year'] },
+                { id: 'madegood', name: 'MadeGood: For All the Good Reasons', role: 'Brand architecture, US market entry', year: '2023–2024', eyebrowColor: '#5C9D34', summary: 'Year-long ethnographic research reframed a snack brand from lunchbox niche to values-led identity. Strategy informed every subsequent decision.', proof: ['26.9% sales increase in 2023', '#43 on Instacart\'s top emerging brands', 'Global operating framework'] },
+                { id: 'scotiabank', name: 'Scotiabank: Hockey 24', role: 'Sponsorship strategy', year: '2019–2020', eyebrowColor: '#FF66A8', summary: "Ethnographic research revealed hockey's deepest meaning is community, not competition. Reframed sponsorship from logo placement to cultural document.", proof: ['500K+ Canadian homes for premiere', '99% lift in brand awareness', 'CMA Gold Business Impact'] },
+                { id: 'tweed', name: "Tweed: Hi / Don't Drive High", role: 'Brand positioning, campaign platform', year: '2017–2019', eyebrowColor: '#DB3E36', summary: "Built Canada's most recognized cannabis brand. \"Hi.\" set the category bar; \"Don't Drive High\" introduced the first responsibility platform.", proof: ['700M+ media impressions', '38% lift in brand awareness', 'AToMiC Gold ×3'] },
+              ].map((c) => {
+                const project = portfolioData.find(p => p.id === c.id);
+                const videoUrl = project?.videos?.[0];
+                let videoElement = null;
+                if (videoUrl) {
+                  if (/\.(mp4|webm)$/i.test(videoUrl)) {
+                    videoElement = <video src={videoUrl} className="absolute inset-0 w-full h-full object-cover" autoPlay muted loop playsInline preload="metadata" />;
+                  } else {
+                    const ytMatch = videoUrl.match(/(?:v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+                    const vimeoMatch = videoUrl.match(/video\/(\d+)(?:\?h=([a-zA-Z0-9]+))?/);
+                    if (ytMatch) {
+                      const ytSrc = `https://www.youtube.com/embed/${ytMatch[1]}?autoplay=1&mute=1&loop=1&playlist=${ytMatch[1]}&controls=0&showinfo=0&modestbranding=1&rel=0&playsinline=1`;
+                      videoElement = <iframe src={ytSrc} className="absolute inset-0 pointer-events-none" style={{ width: 'calc(100% + 4px)', height: 'calc(100% + 4px)', left: '-2px', top: '-2px' }} frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" title={c.name} />;
+                    } else if (vimeoMatch) {
+                      const vimSrc = `https://player.vimeo.com/video/${vimeoMatch[1]}${vimeoMatch[2] ? `?h=${vimeoMatch[2]}&` : '?'}autoplay=1&muted=1&loop=1&background=1&controls=0`;
+                      videoElement = <iframe src={vimSrc} className="absolute inset-0 w-full h-full pointer-events-none" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" title={c.name} />;
+                    }
+                  }
+                }
+                return (
+                  <article key={c.id} className="bg-[#FAF8F4] border border-[#C4B99A]/40 overflow-hidden flex flex-col group hover:-translate-y-0.5 transition-all duration-200 ease-out">
+                    <div className="aspect-video bg-[#2D4A8F] relative overflow-hidden">
+                      {videoElement}
+                    </div>
+                    <div className="p-5 md:p-6 flex flex-col flex-grow">
+                      <p className="text-xs uppercase tracking-[0.2em] font-bold mb-2" style={{ color: c.eyebrowColor }}>Featured case</p>
+                      <h3 className="font-display text-xl md:text-2xl font-bold text-[#2D4A8F] leading-tight mb-2">{c.name}</h3>
+                      <p className="text-sm text-[#565D4F] italic mb-3">{c.role} &nbsp;·&nbsp; {c.year}</p>
+                      <p className="t-body text-[#2D4A8F] mb-4">{c.summary}</p>
+                      <ul className="space-y-1.5 text-sm text-[#2D4A8F] mb-5">
+                        {c.proof.map((p, j) => <li key={j} className="flex gap-2"><span className="text-[#C4B99A]">·</span><span>{p}</span></li>)}
+                      </ul>
+                      <button onClick={() => project && handleProjectClick(project)} className="mt-auto self-start inline-flex items-center gap-2 bg-[#2D4A8F] text-[#F2EAD0] px-4 py-2.5 text-sm hover:bg-[#4A3F35] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-150 ease-out tracking-wide">[ Read the full case → ]</button>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+            <p className="mt-6 md:mt-8 text-sm text-[#565D4F]"><a href="#backgrounder" className="underline decoration-[#C4B99A] underline-offset-4 decoration-2 hover:decoration-[#DB3E36] hover:text-[#2D4A8F] transition">Backgrounder below ↓</a></p>
           </div>
         </section>
 
@@ -592,35 +562,9 @@ export default function App() {
           </div>
         </section>
 
-        {/* § 05 — Core capabilities — warm white bg, cream cells */}
-        <section id="capabilities" className="pk-container py-10 md:py-16">
-          <p className="text-xs uppercase tracking-[0.25em] text-[#565D4F] mb-3">§ 05 &nbsp;—&nbsp; Capabilities</p>
-          <h2 className="font-display t-section font-bold text-[#2D4A8F] max-w-3xl">
-            Core capabilities.
-          </h2>
-          <div className="mt-8 md:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#C4B99A]/40 border border-[#C4B99A]/40">
-            {[
-              { Icon: Compass, title: 'Strategy Leadership', body: 'Agency strategy leadership, pitch leadership, senior client counsel, stakeholder alignment, team development, growth planning.' },
-              { Icon: Megaphone, title: 'Brand & Communications Strategy', body: 'Positioning, architecture, campaign strategy, category strategy, messaging, narrative, go-to-market.' },
-              { Icon: Search, title: 'Research & Insights', body: 'Qualitative research, interviews, ethnography, social listening, cultural analysis, synthesis, consumer insight.' },
-              { Icon: Sparkles, title: 'Creative Strategy', body: 'Brief development, territory development, creative evaluation, voice, campaign platforms, research-to-creative translation.' },
-              { Icon: Share2, title: 'Connections, Media & Content', body: 'Social strategy, channel planning, creator strategy, content systems, media logic, platform behaviour.' },
-              { Icon: LineChart, title: 'Commercial & Effectiveness Strategy', body: 'Measurement logic, KPI development, scope protection, pitch conversion, case study development, growth storytelling.' },
-            ].map(({ Icon, title, body }, i) => (
-              <div key={i} className="bg-[#F2EAD0] p-5 md:p-6 min-w-0">
-                <div className="flex items-center gap-2 mb-3">
-                  <Icon className="w-4 h-4 text-[#2D4A8F]" aria-hidden />
-                  <h3 className="font-bold text-[#2D4A8F] text-sm md:text-base font-display">{title}</h3>
-                </div>
-                <p className="t-body text-[#2D4A8F]">{body}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* SECTION 5 — Where I'm most useful (bento, contained) */}
+        {/* § 05 — Where I'm most useful (bento, contained) — moved up from former § 06 */}
         <section className="pk-container py-10 md:py-16">
-          <p className="text-xs uppercase tracking-[0.25em] text-[#565D4F] mb-3">§ 06 &nbsp;—&nbsp; Use cases</p>
+          <p className="text-xs uppercase tracking-[0.25em] text-[#565D4F] mb-3">§ 05 &nbsp;—&nbsp; Use cases</p>
           <h2 className="font-display t-section font-bold text-[#2D4A8F] max-w-3xl">
             Where I'm most useful.
           </h2>
@@ -646,10 +590,66 @@ export default function App() {
           </div>
         </section>
 
+        {/* § 06 — Field Building (Rebrief Magazine) — cream paper bg with pink accents */}
+        <section className="bg-[#F2EAD0] border-y border-[#2D4A8F]/20">
+          <div className="pk-container py-10 md:py-16">
+            <p className="text-xs uppercase tracking-[0.25em] text-[#FF66A8] mb-3 font-bold">§ 06 &nbsp;—&nbsp; Field building</p>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-10 items-start">
+              <div className="lg:col-span-6">
+                <div className="border border-[#2D4A8F]/30 bg-[#FAF8F4] overflow-hidden">
+                  <img src="/images/background/Rebrief/hero-composite-desktop.png" alt="Rebrief Magazine — hero composite" className="w-full h-auto block" loading="lazy" />
+                </div>
+                <p className="mt-3 text-xs text-[#565D4F] italic font-ui">Rebrief Magazine — editorial composite, July 2026.</p>
+              </div>
+              <div className="lg:col-span-6">
+                <h2 className="font-display t-section font-bold text-[#2D4A8F] leading-tight">
+                  Rebrief: A New Canadian Journal of Advertising.
+                </h2>
+                <div className="mt-5 md:mt-6 space-y-4 t-body text-[#2D4A8F] pk-prose">
+                  <p>In 2025, I helped found a new non-profit, the <a href="https://rebrief.ca" target="_blank" rel="noreferrer" className="underline decoration-[#FF66A8] underline-offset-4 decoration-2 hover:text-[#FF66A8] transition">Rebrief Magazine Society</a>, a new independent Canadian journal of advertising, with Carly Miller, Spencer MacEachern, Jon Crowley, Zoe Kim, and Vince Rozas. Our first issue drops <span className="bg-[#FF66A8]/70 text-[#2D4A8F] px-1">July 2026</span>.</p>
+                  <p>Rebrief gives Canadian advertising a place to think in public. We publish essays, fiction, interviews, and visual experiments from emerging and established voices across the country, asking what happens when the industry takes a second look at its own assumptions.</p>
+                  <p>As founding editor, treasurer, and media sales lead, I help build the magazine as both an editorial project and an independent platform for the next wave of strategic thinking in Canada.</p>
+                </div>
+                <div className="mt-6 md:mt-8">
+                  <a href="https://rebrief.ca" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#2D4A8F] text-[#F2EAD0] px-4 py-2.5 text-sm hover:bg-[#FF66A8] hover:text-[#2D4A8F] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-150 ease-out tracking-wide">[ Visit rebrief.ca ↗ ]</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* § 07 — Core capabilities — INVERTED: federal blue bg, cream cells */}
+        <section id="capabilities" className="bg-[#2D4A8F]">
+          <div className="pk-container py-10 md:py-16">
+            <p className="text-xs uppercase tracking-[0.25em] text-[#FF66A8] mb-3 font-bold">§ 07 &nbsp;—&nbsp; Capabilities</p>
+            <h2 className="font-display t-section font-bold text-[#F2EAD0] max-w-3xl">
+              Core capabilities.
+            </h2>
+            <div className="mt-8 md:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#F2EAD0]/20 border border-[#F2EAD0]/20">
+              {[
+                { Icon: Compass, title: 'Strategy Leadership', body: 'Agency strategy leadership, pitch leadership, senior client counsel, stakeholder alignment, team development, growth planning.' },
+                { Icon: Megaphone, title: 'Brand & Communications Strategy', body: 'Positioning, architecture, campaign strategy, category strategy, messaging, narrative, go-to-market.' },
+                { Icon: Search, title: 'Research & Insights', body: 'Qualitative research, interviews, ethnography, social listening, cultural analysis, synthesis, consumer insight.' },
+                { Icon: Sparkles, title: 'Creative Strategy', body: 'Brief development, territory development, creative evaluation, voice, campaign platforms, research-to-creative translation.' },
+                { Icon: Share2, title: 'Connections, Media & Content', body: 'Social strategy, channel planning, creator strategy, content systems, media logic, platform behaviour.' },
+                { Icon: LineChart, title: 'Commercial & Effectiveness Strategy', body: 'Measurement logic, KPI development, scope protection, pitch conversion, case study development, growth storytelling.' },
+              ].map(({ Icon, title, body }, i) => (
+                <div key={i} className="bg-[#F2EAD0] p-5 md:p-6 min-w-0">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Icon className="w-4 h-4 text-[#2D4A8F]" aria-hidden />
+                    <h3 className="font-bold text-[#2D4A8F] text-sm md:text-base font-display">{title}</h3>
+                  </div>
+                  <p className="t-body text-[#2D4A8F]">{body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* § 07 — Backgrounder (background + case studies) — sage paper bg */}
         <section id="backgrounder" className="bg-[#5C9D34] border-y border-[#565D4F]/30">
           <div className="pk-container py-10 md:py-16">
-            <p className="text-xs uppercase tracking-[0.25em] text-[#565D4F] mb-3">§ 07 &nbsp;—&nbsp; Backgrounder</p>
+            <p className="text-xs uppercase tracking-[0.25em] text-[#565D4F] mb-3">§ 08 &nbsp;—&nbsp; Backgrounder</p>
             <h2 className="font-display t-section font-bold text-[#2D4A8F] max-w-3xl mb-8 md:mb-10">
               Backgrounder.
             </h2>
@@ -717,7 +717,7 @@ export default function App() {
         {/* § 08 — Closing CTA / Best fit — dark footnote zone */}
         <section id="contact" className="bg-[#2D4A8F] text-[#E0D3A8]">
           <div className="pk-container py-12 md:py-16">
-          <p className="text-xs uppercase tracking-[0.25em] text-[#C4B99A] mb-3">§ 08 &nbsp;—&nbsp; Footnote / Best fit</p>
+          <p className="text-xs uppercase tracking-[0.25em] text-[#C4B99A] mb-3">§ 09 &nbsp;—&nbsp; Footnote / Best fit</p>
           <h2 className="font-display text-2xl md:text-3xl font-bold text-[#FAF8F4] max-w-3xl mb-8 md:mb-10 leading-tight">
             Work with me.
           </h2>

@@ -4,7 +4,9 @@
   /* PK Palette — Core */
   --pk-olive: #565D4F;
   --pk-cream: #E0D3A8;
-  --pk-brown: #362318;
+  --pk-brown: #2D4A8F;        /* federal blue — Risograph palette upgrade */
+  --pk-ink:   #2D4A8F;        /* alias for clarity */
+  --pk-pink:  #FF66A8;        /* riso fluorescent pink — sparing accent */
   --pk-warm-white: #FAF8F4;
   --pk-rule: #C4B99A;
   --pk-light-text: #6B5D52;
@@ -22,9 +24,15 @@
   --pk-gray-600: #4A3F35;
 
   /* Cream Surface Scale — for tonal hierarchy */
-  --pk-cream-paper: #F5EEDC;  /* slide-in panel bg, "different paper" */
+  --pk-cream-paper: #F2EAD0;  /* unified cream surface */
   --pk-cream-tint:  #EDE3CC;  /* hover, image grid bg */
   --pk-cream-mute:  #8C7A5C;  /* quiet metadata text (was amber years) */
+
+  /* Sage-tinted surface — for sections that need to differ from cream */
+  --pk-sage-paper: #5C9D34;   /* riso grass green — Backgrounder zone */
+
+  /* Hero surface — warmer than warm-white, lighter than cream-paper */
+  --pk-hero-paper: #F2EAD0;   /* unified cream — hero zone uses same as cream-paper */
 }
 
 *, *::before, *::after {

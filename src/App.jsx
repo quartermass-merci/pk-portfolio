@@ -564,9 +564,9 @@ export default function App() {
             </h2>
             <div className="mt-8 md:mt-10 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
               {[
-                { Icon: Layers, title: 'Evidence, taste, and commercial instinct', belief: 'Most strategy is intelligence without judgment. I work with all three.', body: 'The research discipline of a sociologist, the creative instincts of someone who spent a life inside music and culture, and the commercial discipline of an agency operator.' },
-                { Icon: Hammer, title: 'Bias toward making things real', belief: "Strategists who only comment from the side are tourists. I've toured.", body: 'I have built labels, toured bands, produced records, taught courses, launched an agency, raised capital, won pitches, and helped brands grow inside difficult categories.' },
-                { Icon: Users, title: 'Pressure-tested judgment', belief: "Most strategy decks don't survive procurement. I write ones that do.", body: 'I know how to do the work and sell the work. Sharpen the brief. Build the case. Read the room. Protect the creative. Connect strategy to growth.' },
+                { Icon: Layers, title: 'Evidence, taste, and commercial instinct', belief: 'Too often, strategy is intelligence without judgment.', body: "I am skilled at all three: a sociologist's research training, the taste of a life as an artist, and the pattern recognition of running an agency in heavily regulated categories." },
+                { Icon: Hammer, title: 'Bias toward making things real', belief: "Strategists who only critique are tourists. I've toured.", body: 'You can just do stuff, you know? I live this ethos: labels, toured bands, produced records, taught courses, launched an agency, raised capital, and won pitches in categories most strategists won\'t touch.' },
+                { Icon: Users, title: 'Pressure-tested judgment', belief: "Most strategy decks don't survive procurement. I make the ones that do.", body: 'I know how to do the work and sell the work. Sharpen the brief. Build the case. Read the room. Protect the creative.' },
               ].map(({ Icon, title, belief, body }, i) => (
                 <article key={i} className="bg-[#FAF8F4] border border-[#C4B99A]/40 p-5 md:p-6 min-w-0">
                   <div className="flex items-center justify-center w-10 h-10 border border-[#362318]/30 mb-4">

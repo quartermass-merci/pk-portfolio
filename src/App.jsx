@@ -399,10 +399,13 @@ export default function App() {
               Brand strategist for categories that punish lazy thinking.
             </h1>
             <p className="mt-6 md:mt-8 t-body text-[#2D4A8F] pk-prose">
-              I help teams find the pressure point, sharpen the brief, build the case, and turn strategy into work people can defend.
+              I help teams find the pressure point, build a winnable case, and turn strategy into work our clients can buy, defend, and believe in.
             </p>
             <p className="mt-4 t-body text-[#2D4A8F] pk-prose">
-              I'm a brand strategist with a sociologist's training and an agency operator's discipline. I work where culture, commercial pressure, creative judgment, and organizational reality collide.
+              I bring a sociologist's training, an agency operator's urgency, and a creative strategist's ear for what makes an idea worth building.
+            </p>
+            <p className="mt-4 t-body text-[#2D4A8F] pk-prose">
+              I love the work of a strategist, and this portfolio page should communicate my non-cynical approach to my craft.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
               <a href="#work" className="inline-flex items-center gap-2 bg-[#2D4A8F] text-[#FAF8F4] px-4 py-2.5 text-sm hover:bg-[#4A3F35] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-150 ease-out tracking-wide">[ View the work → ]</a>
@@ -445,7 +448,7 @@ export default function App() {
               </h2>
               <div className="mt-5 md:mt-6 space-y-4 t-body text-[#2D4A8F] pk-prose">
                 <p>I co-founded Sister Merci with Katie Waterman and Amanda Wood in 2019. We built it from four founders to 30+ staff across Toronto and Chicago.</p>
-                <p>In many ways, we treated Sister Merci like an experiment. We embraced the "hard mode" and vice categories. And in many ways, the eight years I spent working with my friends and building a real agency, with real stakes, was my PhD in advertising. In many ways, a real PhD is actually easier.</p>
+                <p>In many ways, we treated Sister Merci like an experiment. We embraced the "hard mode" and vice categories. And in many ways, the eight years I spent building a real agency, with real stakes, was my PhD in advertising. In many ways, a real PhD is actually easier.</p>
                 <p>As Co-Founder and CSO, I led strategy across 150+ brands and helped shape an agency that treated every account like a brand lab.</p>
                 <p>SM continues, but as of May 2026, I have sold my stake in the company. <span className="italic">Sister for life.</span></p>
               </div>

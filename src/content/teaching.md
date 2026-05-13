@@ -15,10 +15,6 @@ Adjunct Professor. Courses: Branding & Image, Consumer Research, Market Research
 
 Adjunct Assistant Professor. Courses designed: Sociology of Mass Communication, Digital Culture and Society, Medical Sociology.
 
-**The Thoughtful Strategist**
-
-A year-long reading group for working strategists, co-created with Michelle Lee and Spencer MacEachern (Zulu Alpha Kilo). Hosted through Cultural Cartography on Substack.
-
 #### Academic Research
 
 ##### Peer-Reviewed Publications

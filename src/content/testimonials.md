@@ -1,5 +1,5 @@
 ---
-title: Eye Witness Accounts
+title: References
 subtitle: A SELECTION OF PERSONAL RECOMMENDATIONS FROM MY CLIENTS, PEERS AND FORMER STRATEGY TEAMMATES
 ---
 

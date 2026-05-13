@@ -266,7 +266,7 @@ function renderBlock(block, index) {
       const src = srcMatch ? srcMatch[1].trim() : '';
       const title = titleMatch ? titleMatch[1].trim() : '';
       return (
-        <div key={index} className="aspect-video w-full my-6 bg-[#F0EDE7] overflow-hidden rounded">
+        <div key={index} className="aspect-video w-full my-6 bg-[#EDE3CC] overflow-hidden rounded">
           <iframe
             src={src}
             className="w-full h-full border-0"

@@ -12,17 +12,6 @@ Built Sister Merci from zero clients to a cross-border operation serving brands 
 
 Teaching brand strategy, consumer research, introduction to marketing, personal branding, and effective presentations. Rebuilding the Brand & Image, Consumer Research, and Market Research courses, and partnering with the Canadian Marketing Association to create an accelerated pathway to the Chartered Marketer designation.
 
-### University of Lethbridge, Department of Sociology | 2007–2012 | /images/background/timeline/Lethbridge.png
-*Adjunct Assistant Professor*
-
-Designed and taught senior undergraduate courses in Sociology of Mass Communication, Digital Culture and Society, and Medical Sociology.
-
-### National Cannabis Industry Association | 2023–2025 | /images/background/timeline/NCIA.jpg
-*Chair, Marketing & Advertising Committee (2025)*
-
-### Cannabis Standards Alliance of Canada | 2024–2025 | /images/background/timeline/CSAC.png
-*Strategic Advisor*
-
 ### Cossette | 2018–2019 | /images/background/timeline/cossette.png
 *Vice President, Strategy*
 
@@ -37,6 +26,11 @@ Led strategic planning for Air Canada, RBC, Mondelez, and Chevrolet. Five direct
 *Senior Counsellor & Digital Lead*
 
 Built the agency's first analytics and measurement framework. Integrated media strategy for Nissan, Nintendo, CN Rail, and Dell. Connected earned, paid, and owned media at a time when most PR agencies treated them as separate functions.
+
+### University of Lethbridge, Department of Sociology | 2007–2012 | /images/background/timeline/Lethbridge.png
+*Adjunct Assistant Professor*
+
+Designed and taught senior undergraduate courses in Sociology of Mass Communication, Digital Culture and Society, and Medical Sociology.
 
 :::images
 /images/background/timeline/timeline-01.jpg

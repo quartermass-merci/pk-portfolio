@@ -1,7 +1,7 @@
 [
   {
     "id": "cmc",
-    "category": "Campaign Strategy",
+    "category": "Campaign and Brand Strategy",
     "title": "CMC: CANNABIS MEDIA COUNCIL \u2014 I'M HIGH RIGHT NOW",
     "year": "2023-2026",
     "tags": "",
@@ -73,7 +73,8 @@
   },
   {
     "id": "jr-strain",
-    "category": "Campaign Strategy",
+    "hidden": true,
+    "category": "Campaign and Brand Strategy",
     "title": "J.R. STRAIN: ROOTSUIT",
     "year": "2023",
     "tags": "",
@@ -138,7 +139,7 @@
   },
   {
     "id": "collective-arts",
-    "category": "Campaign Strategy",
+    "category": "Campaign and Brand Strategy",
     "title": "COLLECTIVE ARTS: DRINK CREATIVELY",
     "year": "2023",
     "tags": "",
@@ -209,7 +210,7 @@
   },
   {
     "id": "up-cannabis",
-    "category": "Campaign Strategy",
+    "category": "Campaign and Brand Strategy",
     "title": "UP CANNABIS: MEA CULPA",
     "year": "2020-2023",
     "tags": "",
@@ -271,7 +272,7 @@
   },
   {
     "id": "scotiabank",
-    "category": "Campaign Strategy",
+    "category": "Campaign and Brand Strategy",
     "title": "SCOTIABANK: HOCKEY 24",
     "year": "2019-2020",
     "tags": "",
@@ -333,7 +334,7 @@
   },
   {
     "id": "tweed",
-    "category": "Campaign Strategy",
+    "category": "Campaign and Brand Strategy",
     "title": "TWEED: HI / DON'T DRIVE HIGH",
     "year": "2017-2019",
     "tags": "",
@@ -397,7 +398,8 @@
   },
   {
     "id": "coleman",
-    "category": "Campaign Strategy",
+    "hidden": true,
+    "category": "Campaign and Brand Strategy",
     "title": "COLEMAN: GET OUTSIDE DAY",
     "year": "2014-2017",
     "tags": "",
@@ -458,7 +460,8 @@
   },
   {
     "id": "sunbeam",
-    "category": "Campaign Strategy",
+    "hidden": true,
+    "category": "Campaign and Brand Strategy",
     "title": "SUNBEAM: SUPPORTS WITH WARMTH",
     "year": "2013-2015",
     "tags": "",
@@ -519,7 +522,7 @@
   },
   {
     "id": "madegood",
-    "category": "Brand Architecture",
+    "category": "Brand Design and Architecture",
     "title": "MADEGOOD: FOR ALL THE GOOD REASONS",
     "year": "2023-2024",
     "tags": "",
@@ -585,7 +588,7 @@
   },
   {
     "id": "pangea",
-    "category": "Brand Architecture",
+    "category": "Brand Design and Architecture",
     "title": "PANGEA: SIMPLE. HONEST. TRANSFERS.",
     "year": "2024-2025",
     "tags": "",
@@ -673,7 +676,8 @@
   },
   {
     "id": "far-out-crops",
-    "category": "Brand Architecture",
+    "hidden": true,
+    "category": "Brand Design and Architecture",
     "title": "FAR OUT CROPS: BEYOND THE ORDINARY",
     "year": "2023-2024",
     "tags": "",
@@ -729,7 +733,8 @@
   },
   {
     "id": "highly-dutch",
-    "category": "Brand Architecture",
+    "hidden": true,
+    "category": "Brand Design and Architecture",
     "title": "HIGHLY DUTCH: BEACON OF WEIRD",
     "year": "2022-2024",
     "tags": "",
@@ -791,7 +796,8 @@
   },
   {
     "id": "neighborgoods",
-    "category": "Brand Architecture",
+    "hidden": true,
+    "category": "Brand Design and Architecture",
     "title": "NEIGHBORGOODS: NEIGHBORHOOD CANNABIS CO.",
     "year": "2022-2023",
     "tags": "",
@@ -854,7 +860,8 @@
   },
   {
     "id": "holy-mountain",
-    "category": "Brand Architecture",
+    "hidden": true,
+    "category": "Brand Design and Architecture",
     "title": "HOLY MOUNTAIN: A MIRROR, NOT A MEGAPHONE",
     "year": "2022-2023",
     "tags": "",
@@ -920,7 +927,7 @@
   },
   {
     "id": "shred",
-    "category": "Brand Architecture",
+    "category": "Brand Design and Architecture",
     "title": "SHRED: BRAND ARCHITECTURE & SOCIAL",
     "year": "2021-2023",
     "tags": "",
@@ -991,7 +998,7 @@
   },
   {
     "id": "solesavy",
-    "category": "Brand Architecture",
+    "category": "Brand Design and Architecture",
     "title": "SOLESAVY: STATE OF SNEAKERS",
     "year": "2021-2023",
     "tags": "",
@@ -1050,7 +1057,8 @@
   },
   {
     "id": "wyld",
-    "category": "Brand Architecture",
+    "hidden": true,
+    "category": "Brand Design and Architecture",
     "title": "WYLD: CANADIAN MARKET ENTRY",
     "year": "2021-2022",
     "tags": "",
@@ -1116,7 +1124,8 @@
   },
   {
     "id": "cruuzy",
-    "category": "Brand Architecture",
+    "hidden": true,
+    "category": "Brand Design and Architecture",
     "title": "CRUUZY: IT'S ALL CRUUZY",
     "year": "2020-2023",
     "tags": "",
@@ -1184,7 +1193,8 @@
   },
   {
     "id": "offside",
-    "category": "Brand Architecture",
+    "hidden": true,
+    "category": "Brand Design and Architecture",
     "title": "OFFSIDE CANNABIS: SHOP AROUND",
     "year": "2020-2021",
     "tags": "",
@@ -1243,7 +1253,7 @@
   },
   {
     "id": "simply-bare",
-    "category": "Brand Architecture",
+    "category": "Brand Design and Architecture",
     "title": "SIMPLY BARE: NOTHING ADDED",
     "year": "2019-2020",
     "tags": "",
@@ -1306,7 +1316,8 @@
   },
   {
     "id": "herbert-labs",
-    "category": "Brand Architecture",
+    "hidden": true,
+    "category": "Brand Design and Architecture",
     "title": "HERBERT LABS: BRAND STRATEGY",
     "year": "2019-2020",
     "tags": "",
@@ -1364,7 +1375,7 @@
   },
   {
     "id": "air-canada",
-    "category": "Corporate Comms",
+    "category": "Communications Strategy",
     "title": "AIR CANADA: AEROPLAN BREAKUP",
     "year": "2016-2017",
     "tags": "",
@@ -1429,7 +1440,7 @@
   },
   {
     "id": "nia-health",
-    "category": "Corporate Comms",
+    "category": "Communications Strategy",
     "title": "NIA HEALTH: MARKET ENTRY",
     "year": "2025",
     "tags": "",
@@ -1489,7 +1500,7 @@
   },
   {
     "id": "shoppers",
-    "category": "Corporate Comms",
+    "category": "Communications Strategy",
     "title": "SHOPPERS DRUG MART: PROJECT HOUSTON",
     "year": "2019",
     "tags": "",
@@ -1550,7 +1561,7 @@
   },
   {
     "id": "rbc",
-    "category": "Corporate Comms",
+    "category": "Communications Strategy",
     "title": "RBC: FUTURE LAUNCH AUDIENCE IDENTIFICATION",
     "year": "2016-2017",
     "tags": "",
@@ -1610,7 +1621,7 @@
   },
   {
     "id": "cn-rail",
-    "category": "Corporate Comms",
+    "category": "Communications Strategy",
     "title": "CN RAIL: MILTON VALUES ETHNOGRAPHY",
     "year": "2014-2015",
     "tags": "",

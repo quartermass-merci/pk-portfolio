@@ -438,8 +438,8 @@ export default function App() {
                 Sister Merci: Agency as Brand Lab.
               </h2>
               <div className="mt-5 md:mt-6 space-y-4 t-body text-[#362318] pk-prose">
-                <p>I co-founded Sister Merci with Katie Waterman and Amanda Wood in 2019. We built it from four founders to 30+ staff across Toronto and Chicago. As Co-Founder and CSO, I led strategy across 150+ brands and helped shape an agency that treated every account like a brand lab.</p>
-                <p>Sister Merci is three-time Agency of the Year: Clio Cannabis (2023), ADCANN Canadian Cannabis (2022), and KIND Magazine (2021). Coverage in <em>Adweek</em>, <em>Forbes</em>, <em>Ad Age</em>, <em>Strategy</em>, and <em>Financial Post</em>.</p>
+                <p>I co-founded Sister Merci with Katie Waterman and Amanda Wood in 2019. We built it from four founders to 30+ staff across Toronto and Chicago. As Co-Founder and CSO, I led strategy across 150+ brands and helped shape an agency that treated every account like a brand lab. The agency continues, but as of May 2026, I have sold my stake in the company.</p>
+                <p>Sister Merci is a three-time Agency of the Year: Clio Cannabis (2023), ADCANN Canadian Cannabis (2022), and KIND Magazine (2021). Coverage in <em>Adweek</em>, <em>Forbes</em>, <em>Ad Age</em>, <em>Strategy</em>, and <em>Financial Post</em>.</p>
               </div>
               <div className="mt-6 md:mt-8 border-t border-[#C4B99A]/40 pt-5">
                 <p className="text-xs uppercase tracking-[0.18em] text-[#565D4F] font-bold mb-4">My tenure as CSO at Sister Merci</p>

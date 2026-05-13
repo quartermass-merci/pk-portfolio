@@ -396,16 +396,25 @@ export default function App() {
         <section className="pk-container pt-4 md:pt-8 pb-10 md:pb-16">
           <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="max-w-3xl">
             <h1 className="font-display t-hero font-bold text-[#2D4A8F] text-balance">
-              Brand strategist for categories that punish lazy thinking.
+              Strategy Loves Friction.
             </h1>
             <p className="mt-6 md:mt-8 t-body text-[#2D4A8F] pk-prose">
-              I help teams find the pressure point, build a winnable case, and turn strategy into work our clients can buy, defend, and believe in.
+              I do not trust a strategy when it arrives too smoothly.
             </p>
             <p className="mt-4 t-body text-[#2D4A8F] pk-prose">
-              I bring a sociologist's training, an agency operator's urgency, and a creative strategist's ear for what makes an idea worth building.
+              A smooth strategy often means the problem was cleaned too early. The customer has become a persona. The market has become a quadrant. Culture has become a trend slide. The brief has become a ritual object.
             </p>
             <p className="mt-4 t-body text-[#2D4A8F] pk-prose">
-              I love the work of a strategist, and this portfolio page should communicate my non-cynical approach to my craft.
+              Everything looks strategic. Nothing has been forced to answer to the world.
+            </p>
+            <p className="mt-4 t-body text-[#2D4A8F] pk-prose">
+              My practice is to restore contact.
+            </p>
+            <p className="mt-4 t-body text-[#2D4A8F] pk-prose">
+              I trace the actors that make the problem move: behaviours, platforms, category rules, organizational habits, cultural tensions, sales realities, stakeholder anxieties, and executional limits. I look for the point of friction because friction shows where the work has something real to push against.
+            </p>
+            <p className="mt-4 t-body text-[#2D4A8F] pk-prose">
+              That is what I bring as a strategist: not faster answers, but better contact. Not more polish, but more consequence.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
               <a href="#work" className="inline-flex items-center gap-2 bg-[#2D4A8F] text-[#FAF8F4] px-4 py-2.5 text-sm hover:bg-[#4A3F35] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-150 ease-out tracking-wide">[ View the work → ]</a>
@@ -423,48 +432,53 @@ export default function App() {
         </div>
         {/* /HERO ZONE */}
 
-        {/* § 01 — Sister Merci: Agency as Brand Lab */}
-        <section className="pk-container py-10 md:py-16">
-          <p className="text-xs uppercase tracking-[0.25em] text-[#565D4F] mb-3">§ 01 &nbsp;—&nbsp; The operator story</p>
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-10 items-start">
-            <div className="lg:col-span-5">
-              <div className="border border-[#C4B99A]/40 bg-[#2D4A8F] overflow-hidden aspect-video">
-                <video
-                  src="/images/sister-merci/sister-merci-sizzle.mp4"
-                  className="w-full h-full object-cover"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
-                  poster="/images/background/timeline/Sister%20Merci.png"
-                />
-              </div>
-              <p className="mt-2 text-xs text-[#565D4F] font-ui italic">Sister Merci sizzle reel</p>
+        {/* § 01 — Sister Merci: Agency as Brand Lab — RISO PINK */}
+        <section className="bg-[#FF66A8] border-y border-[#2D4A8F]/40">
+          <div className="pk-container py-10 md:py-16">
+          <p className="text-xs uppercase tracking-[0.25em] text-[#0D1929]/80 mb-3 font-bold">§ 01 &nbsp;—&nbsp; The operator story</p>
+          <h2 className="font-display t-section font-bold text-[#2D4A8F] leading-tight max-w-3xl mb-6 md:mb-8">
+            Sister Merci: Agency as Brand Lab.
+          </h2>
+
+          {/* Full-width sizzle reel */}
+          <div className="border border-[#2D4A8F]/40 bg-[#2D4A8F] overflow-hidden aspect-video">
+            <video
+              src="/images/sister-merci/sister-merci-sizzle.mp4"
+              className="w-full h-full object-cover"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              poster="/images/background/timeline/Sister%20Merci.png"
+            />
+          </div>
+          <p className="mt-2 text-xs text-[#0D1929]/80 font-ui italic">Sister Merci sizzle reel</p>
+
+          {/* Two-column content below the video */}
+          <div className="mt-8 md:mt-10 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+            {/* Left col: story copy */}
+            <div className="space-y-4 t-body text-[#0D1929]">
+              <p>I co-founded Sister Merci with Katie Waterman and Amanda Wood in 2019. We built it from four founders to 30+ staff across Toronto and Chicago.</p>
+              <p>In many ways, we treated Sister Merci like an experiment. We embraced the "hard mode" and vice categories. And in many ways, the eight years I spent building a real agency, with real stakes, was my PhD in advertising. In many ways, a real PhD is actually easier.</p>
+              <p>As Co-Founder and CSO, I led strategy across 150+ brands and helped shape an agency that treated every account like a brand lab.</p>
+              <p>SM continues, but as of May 2026, I have sold my stake in the company. <span className="italic">Sister for life.</span></p>
             </div>
-            <div className="lg:col-span-7">
-              <h2 className="font-display t-section font-bold text-[#2D4A8F] leading-tight">
-                Sister Merci: Agency as Brand Lab.
-              </h2>
-              <div className="mt-5 md:mt-6 space-y-4 t-body text-[#2D4A8F] pk-prose">
-                <p>I co-founded Sister Merci with Katie Waterman and Amanda Wood in 2019. We built it from four founders to 30+ staff across Toronto and Chicago.</p>
-                <p>In many ways, we treated Sister Merci like an experiment. We embraced the "hard mode" and vice categories. And in many ways, the eight years I spent building a real agency, with real stakes, was my PhD in advertising. In many ways, a real PhD is actually easier.</p>
-                <p>As Co-Founder and CSO, I led strategy across 150+ brands and helped shape an agency that treated every account like a brand lab.</p>
-                <p>SM continues, but as of May 2026, I have sold my stake in the company. <span className="italic">Sister for life.</span></p>
-              </div>
-              <div className="mt-6 md:mt-8 border-t border-[#C4B99A]/40 pt-5">
-                <p className="text-xs uppercase tracking-[0.18em] text-[#565D4F] font-bold mb-4">My tenure as CSO at Sister Merci</p>
-                <ul className="space-y-2 text-sm text-[#2D4A8F]">
-                  <li className="flex gap-3"><span className="text-[#C4B99A] mt-0.5">→</span><span>Developed <span className="font-bold">150+</span> brands across cannabis, iGaming, AI, health tech, fintech, and CPG</span></li>
-                  <li className="flex gap-3"><span className="text-[#C4B99A] mt-0.5">→</span><span>Founded with 4 partners, grew to <span className="font-bold">30+</span> staff</span></li>
-                  <li className="flex gap-3"><span className="text-[#C4B99A] mt-0.5">→</span><span>Cross-border operation: Toronto + Chicago, with <span className="font-bold">2023</span> US market entry</span></li>
-                  <li className="flex gap-3"><span className="text-[#C4B99A] mt-0.5">→</span><span>Raised <span className="font-bold">$1.5M</span> VC funding from BlackShire Capital</span></li>
-                  <li className="flex gap-3"><span className="text-[#C4B99A] mt-0.5">→</span><span><span className="font-bold text-[#DB3E36]">7 Clios</span> and <span className="font-bold">3×</span> Agency of the Year</span></li>
-                  <li className="flex gap-3"><span className="text-[#C4B99A] mt-0.5">→</span><span><span className="font-bold">85%+</span> pitch win rate and <span className="font-bold">85%+</span> tier-one client retention</span></li>
-                  <li className="flex gap-3"><span className="text-[#C4B99A] mt-0.5">→</span><span>Press: <em>Adweek · Forbes · Ad Age · Strategy · Financial Post</em></span></li>
-                </ul>
-              </div>
+
+            {/* Right col: tenure bullets */}
+            <div className="md:border-l md:border-[#0D1929]/30 md:pl-6 md:pl-10">
+              <p className="text-xs uppercase tracking-[0.18em] text-[#0D1929]/80 font-bold mb-4">My tenure as CSO at Sister Merci</p>
+              <ul className="space-y-2 text-sm text-[#0D1929]">
+                <li className="flex gap-3"><span className="text-[#F2EAD0] mt-0.5 font-bold">→</span><span>Developed <span className="font-bold">150+</span> brands across cannabis, iGaming, AI, health tech, fintech, and CPG</span></li>
+                <li className="flex gap-3"><span className="text-[#F2EAD0] mt-0.5 font-bold">→</span><span>Founded with 4 partners, grew to <span className="font-bold">30+</span> staff</span></li>
+                <li className="flex gap-3"><span className="text-[#F2EAD0] mt-0.5 font-bold">→</span><span>Cross-border operation: Toronto + Chicago, with <span className="font-bold">2023</span> US market entry</span></li>
+                <li className="flex gap-3"><span className="text-[#F2EAD0] mt-0.5 font-bold">→</span><span>Raised <span className="font-bold">$1.5M</span> VC funding from BlackShire Capital</span></li>
+                <li className="flex gap-3"><span className="text-[#F2EAD0] mt-0.5 font-bold">→</span><span><span className="font-bold text-[#DB3E36]">7 Clios</span> and <span className="font-bold">3×</span> Agency of the Year</span></li>
+                <li className="flex gap-3"><span className="text-[#F2EAD0] mt-0.5 font-bold">→</span><span><span className="font-bold">85%+</span> pitch win rate and <span className="font-bold">85%+</span> tier-one client retention</span></li>
+                <li className="flex gap-3"><span className="text-[#F2EAD0] mt-0.5 font-bold">→</span><span>Press: <em>Adweek · Forbes · Ad Age · Strategy · Financial Post</em></span></li>
+              </ul>
             </div>
+          </div>
           </div>
         </section>
 
@@ -647,16 +661,16 @@ export default function App() {
         </section>
 
         {/* § 07 — Backgrounder (background + case studies) — sage paper bg */}
-        <section id="backgrounder" className="bg-[#5C9D34] border-y border-[#565D4F]/30">
+        <section id="backgrounder" className="bg-[#5C9D34] border-y border-[#2D4A8F]/30">
           <div className="pk-container py-10 md:py-16">
-            <p className="text-xs uppercase tracking-[0.25em] text-[#565D4F] mb-3">§ 08 &nbsp;—&nbsp; Backgrounder</p>
+            <p className="text-xs uppercase tracking-[0.25em] text-[#0D1929]/80 mb-3 font-bold">§ 08 &nbsp;—&nbsp; Backgrounder</p>
             <h2 className="font-display t-section font-bold text-[#2D4A8F] max-w-3xl mb-8 md:mb-10">
               Backgrounder.
             </h2>
-          <nav className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-0 items-start">
+          <nav className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-0 items-start text-[#0D1929]">
           {/* Background */}
           <div className="mb-8">
-            <h3 className="text-xs uppercase tracking-[0.2em] text-[#565D4F] border-l-2 border-[#2D4A8F] pl-2 mb-2 font-bold">Background</h3>
+            <h3 className="text-xs uppercase tracking-[0.2em] text-[#0D1929] border-l-2 border-[#0D1929] pl-2 mb-2 font-bold">Background</h3>
             <ul>
               {backgroundSections.map((item) => (
                 <li
@@ -684,7 +698,7 @@ export default function App() {
           {/* Case Study Categories */}
           {categories.map((category) => (
             <div key={category} className="mb-8">
-              <h3 className="text-xs uppercase tracking-[0.2em] text-[#565D4F] border-l-2 border-[#2D4A8F] pl-2 mb-2 font-bold">{category}</h3>
+              <h3 className="text-xs uppercase tracking-[0.2em] text-[#0D1929] border-l-2 border-[#0D1929] pl-2 mb-2 font-bold">{category}</h3>
               <ul>
                 {portfolioData.filter((p) => p.category === category && !p.hidden).map((project) => (
                   <li
@@ -704,7 +718,7 @@ export default function App() {
                       staggerFrom="first"
                       className={`truncate pr-4 cursor-pointer ${project.forceBold ? 'underline decoration-2' : ''}`}
                     />
-                    <span className="whitespace-nowrap text-[#8C7A5C] text-sm">{project.year}</span>
+                    <span className="whitespace-nowrap text-[#F2EAD0] text-sm">{project.year}</span>
                   </li>
                 ))}
               </ul>

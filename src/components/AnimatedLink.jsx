@@ -63,7 +63,7 @@ const underlineTypes = {
   goesOut: GoesOutComesInUnderline,
 };
 
-// Main AnimatedLink component — drop-in <a> replacement
+// Main AnimatedLink component · drop-in <a> replacement
 export default function AnimatedLink({
   href,
   children,

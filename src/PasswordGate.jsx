@@ -54,7 +54,7 @@ export default function PasswordGate({ children }) {
         >
           <img
             src="/images/pk-logo.png"
-            alt="PK Lawton — Strategy × Culture"
+            alt="PK Lawton · Strategy × Culture"
             className="w-[90vw] max-w-[600px] h-auto"
           />
         </motion.div>

@@ -12,7 +12,7 @@ Before Sister Merci, I led strategy and integrated media teams at Cossette, Webe
 
 I came into strategy from the side door. Years of academic research and teaching from September to May, then touring North America in a van as a musician from May to August, writing my MA thesis and my dissertation on the road. I ran two indie record labels, Mammoth Cave Recording Co. (2008–2015) and Pleasence Records (2016–2023), with 100+ releases between them, building the infrastructure underground scenes needed to function. The instinct to understand subculture, develop talent, and build community is the same drive I bring to client work.
 
-I am also building tools to make that work sharper. Q-Litics is a methodology I developed with an AI research partner that uses semantic taxonomy and contextual sentiment scoring to turn unstructured conversations — Reddit threads, dispensary reviews, community forums — into quantifiable strategic data. It is one example of how I use AI to deepen research capability, not replace judgment.
+I am also building tools to make that work sharper. Q-Litics is a methodology I developed with an AI research partner that uses semantic taxonomy and contextual sentiment scoring to turn unstructured conversations · Reddit threads, dispensary reviews, community forums · into quantifiable strategic data. It is one example of how I use AI to deepen research capability, not replace judgment.
 
 :::images
 /images/background/about/about-01.jpg

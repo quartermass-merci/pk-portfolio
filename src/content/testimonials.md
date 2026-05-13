@@ -49,10 +49,10 @@ Paul is collaborative, quick, and knows more than the average human. He unlocks 
 
 :::testimonial
 **Yemina Kaiman | Cossette**
-Paul is everything a leader should be: thoughtful, approachable, invested in his employees' success, and a wealth of knowledge and thought leadership. Most of all, Paul is an exceptional strategist who brings a dynamic perspective. His voracious thirst for knowledge means he's always got a book, a podcast, or a website to recommend — and he's always got a POV on that book, podcast, or website. His energy and good vibes are contagious, which results in a profound and indelible impact on any room he walks into. Everyone I know who's worked with Paul considers themselves lucky to have gotten the chance.
+Paul is everything a leader should be: thoughtful, approachable, invested in his employees' success, and a wealth of knowledge and thought leadership. Most of all, Paul is an exceptional strategist who brings a dynamic perspective. His voracious thirst for knowledge means he's always got a book, a podcast, or a website to recommend · and he's always got a POV on that book, podcast, or website. His energy and good vibes are contagious, which results in a profound and indelible impact on any room he walks into. Everyone I know who's worked with Paul considers themselves lucky to have gotten the chance.
 :::
 
-#### RateMyProfessors.com — University of Lethbridge, Sociology
+#### RateMyProfessors.com · University of Lethbridge, Sociology
 
 > "Paul Lawton is among the best scholars today. Make no mistake, this guy is going to leave his mark on the field. Witty yet subtle. Intelligent yet comprehensible. Brilliant yet grounded. Take one of his courses before Princeton or Oxford snatches him up! Trust me, Lawton is going places..."
 

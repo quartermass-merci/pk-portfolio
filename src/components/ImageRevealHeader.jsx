@@ -1,15 +1,15 @@
 import { useState, useRef, useCallback, useEffect, useMemo } from 'react';
 
 /**
- * ImageRevealHeader — wraps a section header button.
+ * ImageRevealHeader · wraps a section header button.
  * On hover, a random image from that section's projects
  * follows the cursor as a floating preview.
  *
  * Props:
- *   images: string[]  — array of image URLs from the section's projects
- *   children: ReactNode — the header content (button text, arrows, etc.)
+ *   images: string[]  · array of image URLs from the section's projects
+ *   children: ReactNode · the header content (button text, arrows, etc.)
  *   className: string
- *   ...rest — passed to the outer div
+ *   ...rest · passed to the outer div
  */
 export default function ImageRevealHeader({ images = [], children, className = '', ...rest }) {
   const [activeImg, setActiveImg] = useState(null);

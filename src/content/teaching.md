@@ -3,7 +3,7 @@ title: TEACHING & RESEARCH
 subtitle: THEORY INTO PRACTICE
 ---
 
-Teaching keeps me grounded in both theory and practice. In the classroom, I work on clarity, structure, and practical application. In client work, I apply that same discipline to audience research, brand strategy, and organizational decision-making. The theoretical frameworks I studied — particularly Latour's Actor-Network Theory and Bourdieu's theory of capital — are the foundation of my current strategic practice.
+Teaching keeps me grounded in both theory and practice. In the classroom, I work on clarity, structure, and practical application. In client work, I apply that same discipline to audience research, brand strategy, and organizational decision-making. The theoretical frameworks I studied · particularly Latour's Actor-Network Theory and Bourdieu's theory of capital · are the foundation of my current strategic practice.
 
 #### Teaching
 
@@ -27,10 +27,10 @@ Lawton, P.K. (2005). "Capital and Stratification Within Virtual Community: A Cas
 
 ##### Conference Presentations
 
-- Canadian Sociological Association, Annual Meeting (2007) — "Mapping the Forms of Capital in Online Community"
-- University of Lethbridge Sociology Day (2007) — "The End of Cosmology: Latour, Actor-Network Theory and Reassembling the Social"
-- University of Calgary Graduate Research Conference (2007) — MA thesis findings
-- University of Lethbridge Sociology Day (2005, 2004) — Preliminary MA research
+- Canadian Sociological Association, Annual Meeting (2007) · "Mapping the Forms of Capital in Online Community"
+- University of Lethbridge Sociology Day (2007) · "The End of Cosmology: Latour, Actor-Network Theory and Reassembling the Social"
+- University of Calgary Graduate Research Conference (2007) · MA thesis findings
+- University of Lethbridge Sociology Day (2005, 2004) · Preliminary MA research
 
 ##### Research Positions
 

@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  /* PK Palette — Core */
+  /* PK Palette · Core */
   --pk-olive: #565D4F;
   --pk-cream: #E0D3A8;
-  --pk-brown: #2D4A8F;        /* federal blue — Risograph palette upgrade */
+  --pk-brown: #2D4A8F;        /* federal blue · Risograph palette upgrade */
   --pk-ink:   #2D4A8F;        /* alias for clarity */
-  --pk-pink:  #FF66A8;        /* riso fluorescent pink — sparing accent */
+  --pk-pink:  #FF66A8;        /* riso fluorescent pink · sparing accent */
   --pk-warm-white: #FAF8F4;
   --pk-rule: #C4B99A;
   --pk-light-text: #6B5D52;
 
-  /* PK Palette — Accents */
+  /* PK Palette · Accents */
   --pk-red: #DB3E36;
   --pk-orange: #D4903A;
 
@@ -23,16 +23,16 @@
   --pk-gray-500: #6B5D52;
   --pk-gray-600: #4A3F35;
 
-  /* Cream Surface Scale — for tonal hierarchy */
+  /* Cream Surface Scale · for tonal hierarchy */
   --pk-cream-paper: #F2EAD0;  /* unified cream surface */
   --pk-cream-tint:  #EDE3CC;  /* hover, image grid bg */
   --pk-cream-mute:  #8C7A5C;  /* quiet metadata text (was amber years) */
 
-  /* Sage-tinted surface — for sections that need to differ from cream */
-  --pk-sage-paper: #5C9D34;   /* riso grass green — Backgrounder zone */
+  /* Sage-tinted surface · for sections that need to differ from cream */
+  --pk-sage-paper: #5C9D34;   /* riso grass green · Backgrounder zone */
 
-  /* Hero surface — warmer than warm-white, lighter than cream-paper */
-  --pk-hero-paper: #F2EAD0;   /* unified cream — hero zone uses same as cream-paper */
+  /* Hero surface · warmer than warm-white, lighter than cream-paper */
+  --pk-hero-paper: #F2EAD0;   /* unified cream · hero zone uses same as cream-paper */
 }
 
 *, *::before, *::after {
@@ -51,24 +51,24 @@ body {
   background-color: var(--pk-warm-white);
 }
 
-/* Type scale — fluid, per spec */
+/* Type scale · fluid, per spec */
 .t-wordmark { font-size: clamp(44px, 8vw, 96px); line-height: 0.95; }
 .t-hero { font-size: clamp(40px, 6vw, 76px); line-height: 1.02; letter-spacing: -0.02em; }
 .t-section { font-size: clamp(28px, 4vw, 48px); line-height: 1.05; letter-spacing: -0.01em; }
-.t-body { font-size: clamp(18px, 1.25vw, 20px); line-height: 1.55; }
+.t-body { font-size: clamp(19px, 1.45vw, 22px); line-height: 1.6; }
 .t-label { font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; }
 
-/* Page container — single source of truth */
+/* Page container · single source of truth */
 .pk-container { width: 100%; max-width: 1120px; margin-inline: auto; padding-inline: 24px; }
 @media (min-width: 768px) { .pk-container { padding-inline: 40px; } }
 @media (min-width: 1024px) { .pk-container { padding-inline: 64px; } }
 @media (min-width: 1280px) { .pk-container { padding-inline: 80px; } }
 .pk-prose { max-width: 760px; }
 
-/* Full-bleed surface sections (cream paper) — guaranteed no overflow */
+/* Full-bleed surface sections (cream paper) · guaranteed no overflow */
 .pk-bleed { width: 100vw; margin-left: 50%; transform: translateX(-50%); }
 
-/* Reduce motion respect — kill non-essential animations for users who ask */
+/* Reduce motion respect · kill non-essential animations for users who ask */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;

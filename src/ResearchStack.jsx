@@ -113,7 +113,7 @@ export default function ResearchStack() {
                   className="w-full text-left border border-gray-300 p-3 hover:border-black transition-colors"
                 >
                   <span className="font-bold">{t.name}</span>
-                  <span className="text-gray-500 ml-2">— {t.output}</span>
+                  <span className="text-gray-500 ml-2">· {t.output}</span>
                   <span className="text-xs text-gray-400 ml-2">{t.time}</span>
                 </button>
               ))}
@@ -125,7 +125,7 @@ export default function ResearchStack() {
           <div>
             <p className="text-xs text-gray-500 mb-3">
               <button onClick={() => { setWizardStep(0); setSelectedTier(null); }} className="underline hover:opacity-70">← Change tier</button>
-            </p>            <p className="font-bold mb-2">{selectedTier.name} — {selectedTier.time}</p>
+            </p>            <p className="font-bold mb-2">{selectedTier.name} · {selectedTier.time}</p>
             <p className="mb-3">{selectedTier.desc}</p>
             <div className="bg-gray-50 p-3 mb-3">
               <p className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">Your Path</p>
@@ -133,7 +133,7 @@ export default function ResearchStack() {
             </div>
             <div className="bg-gray-50 p-3 mb-3">
               <p className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">Primary Research</p>
-              <p>{selectedTier.primary === false ? 'None — secondary only.' : selectedTier.primary === 'optional' ? 'Optional. Stakeholder interviews, community observation.' : selectedTier.primary === 'targeted' ? 'Targeted. 5–8 interviews, community ethnography, or survey after desk research reveals the gaps.' : 'Full triangulation. Multiple evidence streams designed to converge.'}</p>
+              <p>{selectedTier.primary === false ? 'None · secondary only.' : selectedTier.primary === 'optional' ? 'Optional. Stakeholder interviews, community observation.' : selectedTier.primary === 'targeted' ? 'Targeted. 5–8 interviews, community ethnography, or survey after desk research reveals the gaps.' : 'Full triangulation. Multiple evidence streams designed to converge.'}</p>
             </div>
             <p className="text-xs text-gray-400">Before you start: write a one-sentence problem statement and name the output artifact. If you can't do both, you need more information, not more research.</p>
           </div>
@@ -156,26 +156,26 @@ export default function ResearchStack() {
       </Phase>
 
       <Phase num="1.5" name="Filter" subtitle="CONFIDENTIALITY + CHUNKING" tool="HUMAN" time="10–15 min"
-        gate={{ title: 'Clean Input', description: "The filtered version — not the raw dump — goes into the LLM. If you wouldn't email it to a stranger, don't paste it into a prompt." }}>
+        gate={{ title: 'Clean Input', description: "The filtered version · not the raw dump · goes into the LLM. If you wouldn't email it to a stranger, don't paste it into a prompt." }}>
         <p>Two operations before anything goes into an LLM. First, strip client names, proprietary data, and NDA-covered material. The research design prompt needs the problem structure, not the client's name. Second, chunk it: read through your dump and pull the 10–15 sentences that carry the tension, the hypothesis, the open questions. The rest stays in your notes.</p>
       </Phase>
       <Phase num="2" name="Design" tool="LLM QUERY" time="20–40 min"
         gate={{ title: 'Own Your Questions', description: 'AI proposed questions. You edit, cut, reword, add. The final set is yours. Then tag each: DEEP SEARCH (niche, worth a token) or STANDARD SEARCH (established lit, free query).' }}>
         <p>Two prompts, not one. The first maps the territory. You edit. The second generates questions from your edited map.</p>
 
-        <Prompt label="Prompt 2a — Tension + Question Type Mapping" text={`CONTEXT: I'm preparing a research sprint for a strategy project. Below is my raw thinking — messy notes, client context, gut hypotheses, and open questions.
+        <Prompt label="Prompt 2a · Tension + Question Type Mapping" text={`CONTEXT: I'm preparing a research sprint for a strategy project. Below is my raw thinking · messy notes, client context, gut hypotheses, and open questions.
 
 [paste your filtered dump here]
 
 TASK:
-1. State the core tension I'm circling in one sentence — the central gap, paradox, or problem.
+1. State the core tension I'm circling in one sentence · the central gap, paradox, or problem.
 2. For each of these question types, tell me whether I need it for this specific problem and why or why not: Definitional, Empirical, Causal/Mechanistic, Comparative, Normative/Evaluative, Historical.
 
 Stop after the mapping. Do not generate research questions yet.`} />
 
         <p className="text-xs text-gray-500 my-2">⛔ Human edit: review 2a output. Is the tension right? Which question types matter for YOUR project? Cut what doesn't serve the SCOPE objective.</p>
 
-        <Prompt label="Prompt 2b — Question Generation" text={`Here is my research tension and the question types I've selected:
+        <Prompt label="Prompt 2b · Question Generation" text={`Here is my research tension and the question types I've selected:
 
 [paste your edited 2a output with your edits noted]
 
@@ -196,7 +196,7 @@ End with a sequencing recommendation: which to research first to ground the othe
         gate={{ title: 'Source Integrity', description: "Every source has a working URL and has been script-verified or human-verified. Any [UNVERIFIED] confirmed or dropped. If you can't vouch for your corpus, nothing downstream is trustworthy." }}>
         <p>DEEP-tagged questions get Deep Research tokens (1–2 questions per run max for best quality). STANDARD-tagged questions use free search-enabled LLM queries with the same prompt. Run across 2–3 LLMs for cross-validation.</p>
 
-        <Prompt label="Prompt 3a — Annotated Bibliography (run per 2–3 questions)" text={`ROLE: Research librarian building an annotated bibliography.
+        <Prompt label="Prompt 3a · Annotated Bibliography (run per 2–3 questions)" text={`ROLE: Research librarian building an annotated bibliography.
 
 RESEARCH QUESTIONS:
 [paste max 3 questions]
@@ -226,7 +226,7 @@ ENTRY FORMAT (per source):
 9. Proof links: DOI + publisher URL
 
 After the entries, produce a clean URL loading list: one verified URL per line, no markup, no numbering, matching the bibliography sequence.`} />
-        <Prompt label="Prompt 3b — Stitch + Deduplicate (after multiple runs)" text={`Here are annotated bibliography outputs from multiple research tools on the same topic.
+        <Prompt label="Prompt 3b · Stitch + Deduplicate (after multiple runs)" text={`Here are annotated bibliography outputs from multiple research tools on the same topic.
 
 [paste all bibliography outputs]
 
@@ -243,40 +243,40 @@ Tasks:
       <Phase num="4" name="Load" tool="NOTEBOOKLM" time="20–30 min"
         gate={{ title: 'Corpus Review', description: "If you could only learn from these sources, would you trust the picture? If not, fill the gap before investing soak time." }}>
         <p><span className="font-bold">Goes in the notebook:</span> verified URLs, PDFs, your research questions (paste as text source), client docs if relevant.</p>
-        <p><span className="font-bold">Stays on your desk:</span> the annotated bibliography (your proof lines — loading it contaminates the interrogation with AI interpretation), your Phase 1 priors note.</p>
+        <p><span className="font-bold">Stays on your desk:</span> the annotated bibliography (your proof lines · loading it contaminates the interrogation with AI interpretation), your Phase 1 priors note.</p>
 
-        <Prompt label="Prompt 4a — Gap Analysis (first prompt in notebook)" text={`I've loaded sources for a research project. My research questions are in the text source titled "RESEARCH QUESTIONS."
+        <Prompt label="Prompt 4a · Gap Analysis (first prompt in notebook)" text={`I've loaded sources for a research project. My research questions are in the text source titled "RESEARCH QUESTIONS."
 
 Review this corpus against those questions. For each question, tell me:
 - What perspectives or evidence types are well-represented
 - What's underrepresented or missing entirely
 - What a skeptic of my source selection would point to as a blind spot`} />
 
-        <p className="text-xs text-gray-500 mt-2">Decision: one notebook (default, fine for most projects) or two notebooks (A = academic/theoretical, B = applied/industry — run interrogation on each, cross-synthesize yourself in Phase 6).</p>
+        <p className="text-xs text-gray-500 mt-2">Decision: one notebook (default, fine for most projects) or two notebooks (A = academic/theoretical, B = applied/industry · run interrogation on each, cross-synthesize yourself in Phase 6).</p>
       </Phase>
       <Phase num="5" name="Learn" subtitle="INTERROGATION PROTOCOL" tool="NOTEBOOKLM + HUMAN" time="4–8h full / 1–2h sprint"
         gate={{ title: 'Earn Your Position', description: "Without notes: name the three biggest debates and where you come down on each. If you can't, more soak time." }}>
         <p>Six stages. A–C take about an hour. D (the soak) takes 3–6 hours. ORIENT tier exits after C.</p>
 
-        <Prompt label="Stage A — Mental Model Extraction" text={`What are the 5 core mental models that experts in [this domain] share? Not facts or best practices — the underlying frameworks that shape how they see the field, evaluate options, and interpret new information. Ground each model in specific sources from this notebook.`} />
+        <Prompt label="Stage A · Mental Model Extraction" text={`What are the 5 core mental models that experts in [this domain] share? Not facts or best practices · the underlying frameworks that shape how they see the field, evaluate options, and interpret new information. Ground each model in specific sources from this notebook.`} />
 
-        <Prompt label="Stage B — Debate Mapping" text={`Where do experts in this field fundamentally disagree? Identify 3–5 unresolved debates. For each one: state the disagreement clearly, give each side's strongest argument, and cite the specific sources that support each position.`} />
+        <Prompt label="Stage B · Debate Mapping" text={`Where do experts in this field fundamentally disagree? Identify 3–5 unresolved debates. For each one: state the disagreement clearly, give each side's strongest argument, and cite the specific sources that support each position.`} />
 
-        <Prompt label="Stage C — Diagnostic Questions" text={`Generate 10 questions that would separate someone who genuinely understands this field from someone who memorized the key facts. These should require connecting multiple concepts, weighing tradeoffs, or reasoning through ambiguity. Reference specific source material in the expected answers.`} />
+        <Prompt label="Stage C · Diagnostic Questions" text={`Generate 10 questions that would separate someone who genuinely understands this field from someone who memorized the key facts. These should require connecting multiple concepts, weighing tradeoffs, or reasoning through ambiguity. Reference specific source material in the expected answers.`} />
 
         <p className="text-xs text-gray-500 border-l-2 border-yellow-600 pl-3 my-3">ORIENT tier exits here. Review A–C output, take notes, done.</p>
 
-        <p className="font-bold mt-4">Stage D — The Soak (3–6 hours, human only)</p>
+        <p className="font-bold mt-4">Stage D · The Soak (3–6 hours, human only)</p>
         <p>Answer each diagnostic question using the source material. For every wrong answer: "Explain why my answer is wrong and what I'm missing. Cite specific sources." Repeat until no gaps. For each debate from Stage B, write one sentence on which side you lean toward and why.</p>
 
-        <Prompt label="Stage E — Pre-Mortem" text={`Here is the position I've developed from this research:
+        <Prompt label="Stage E · Pre-Mortem" text={`Here is the position I've developed from this research:
 [write 2–3 sentences stating your position]
 
 Stress-test it. What are the 3 strongest counterarguments someone could make using the sources in this notebook? What evidence would make my position wrong? Where is my reasoning weakest?`} />
 
-        <Prompt label="Stage F — Synthesis Draft" text={`Based on everything in these sources, write a one-page briefing for [name your audience: e.g., "a strategy team new to this category" or "a client executive making a decision"]. Cover:
-- The consensus view — what most experts agree on
-- The key open questions — what's unresolved
+        <Prompt label="Stage F · Synthesis Draft" text={`Based on everything in these sources, write a one-page briefing for [name your audience: e.g., "a strategy team new to this category" or "a client executive making a decision"]. Cover:
+- The consensus view · what most experts agree on
+- The key open questions · what's unresolved
 - The 2–3 things a strategist must get right in this space
 - One non-obvious insight that most newcomers miss
 
@@ -288,18 +288,18 @@ Cite sources for every claim. No padding.`} />
         <p>Phases 0–5 compress secondary research from weeks to hours. That time savings is not margin. It's an investment in fieldwork that produces evidence no other agency with a ChatGPT subscription can replicate.</p>
 
         <p className="font-bold mt-4 border-b border-black pb-1 mb-2">Quantitative Methods</p>
-        <p>Survey design — Typeform | SurveyMonkey | Qualtrics</p>
-        <p>Social listening / sentiment — Q-Litics | Brandwatch | Sprout Social</p>
-        <p>Internal client data analysis — BU data, CRM, web analytics</p>
-        <p>Behavioral data — GA4 | Hotjar | platform analytics</p>
-        <p>Community scraping — structured semantic analysis (Reddit, forums)</p>
+        <p>Survey design · Typeform | SurveyMonkey | Qualtrics</p>
+        <p>Social listening / sentiment · Q-Litics | Brandwatch | Sprout Social</p>
+        <p>Internal client data analysis · BU data, CRM, web analytics</p>
+        <p>Behavioral data · GA4 | Hotjar | platform analytics</p>
+        <p>Community scraping · structured semantic analysis (Reddit, forums)</p>
 
         <p className="font-bold mt-4 border-b border-black pb-1 mb-2">Qualitative Methods</p>
-        <p>Stakeholder interviews — 1:1, structured or semi-structured</p>
-        <p>Expert interviews — category specialists, regulators, practitioners</p>
-        <p>Online ethnography — Reddit, Discord, forums (participant/observer)</p>
-        <p>In-field observation — retail, events, dispensary floor, user testing</p>
-        <p>Diary studies — participant journaling over time</p>
+        <p>Stakeholder interviews · 1:1, structured or semi-structured</p>
+        <p>Expert interviews · category specialists, regulators, practitioners</p>
+        <p>Online ethnography · Reddit, Discord, forums (participant/observer)</p>
+        <p>In-field observation · retail, events, dispensary floor, user testing</p>
+        <p>Diary studies · participant journaling over time</p>
 
         <p className="font-bold mt-4 border-b border-black pb-1 mb-2">Triangulation Models</p>
         <div className="space-y-3">
@@ -328,7 +328,7 @@ Cite sources for every claim. No padding.`} />
       </Phase>
 
       <Phase num="7" name="Archive" tool="HUMAN" time="5 min">
-        <p>Good notebooks compound. Name: [Client] — [Topic] — [Month Year]. File in shared Drive. Save bibliography as standalone doc. Add one-line description to team index. Five minutes of housekeeping that turns a project artifact into a team resource.</p>
+        <p>Good notebooks compound. Name: [Client] · [Topic] · [Month Year]. File in shared Drive. Save bibliography as standalone doc. Add one-line description to team index. Five minutes of housekeeping that turns a project artifact into a team resource.</p>
       </Phase>
       {/* ── THE BRIGHT LINE ── */}
       <div className="border-t-2 border-black mt-12 pt-6 mb-12">

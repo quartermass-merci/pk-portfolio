@@ -44,7 +44,7 @@ function parseFrontmatter(raw) {
   return { meta, body: match[2] };
 }
 
-/* ─── Inline renderer — handles **bold**, *italic*, [text](url) ─── */
+/* ─── Inline renderer · handles **bold**, *italic*, [text](url) ─── */
 function renderInline(text) {
   if (!text) return null;
   const tokens = [];

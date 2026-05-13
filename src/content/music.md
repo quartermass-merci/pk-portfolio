@@ -27,38 +27,38 @@ In 2013, I ran a satirical blog about Canadian Music Week that went viral and le
 
 #### Selected Press
 
-- [The Globe and Mail (2013) — "Why Indie-Rock Mediocrity Rules in Canada"](https://www.theglobeandmail.com/arts/music/why-indie-rock-mediocrity-rules-in-canada-according-to-one-insider/article11170577/)
-- [VICE (2013) — "Meet the Guy Who's Slagging Off the Canadian Music Industry"](https://www.vice.com/en/article/meet-the-guy-whos-slagging-off-the-canadian-music-industry/)
-- [CBC Day 6 (2013) — "The Most Hated Man in Canadian Music"](https://www.cbc.ca/player/play/audio/1.1541637)
+- [The Globe and Mail (2013) · "Why Indie-Rock Mediocrity Rules in Canada"](https://www.theglobeandmail.com/arts/music/why-indie-rock-mediocrity-rules-in-canada-according-to-one-insider/article11170577/)
+- [VICE (2013) · "Meet the Guy Who's Slagging Off the Canadian Music Industry"](https://www.vice.com/en/article/meet-the-guy-whos-slagging-off-the-canadian-music-industry/)
+- [CBC Day 6 (2013) · "The Most Hated Man in Canadian Music"](https://www.cbc.ca/player/play/audio/1.1541637)
 - [CANADALAND Ep. 87 (2015)](https://www.canadaland.com/podcast/canadian-music-horribly-broken-week/)
-- [NOW Toronto (2018) — "How Pleasence Records Is Rethinking the Label Model"](https://nowtoronto.com/music/features/pleasence-records-indie-record-label-podcast-festival)
-- Husky House Zine #1 (2025) — "Slagging Off: Ten Years Later"
+- [NOW Toronto (2018) · "How Pleasence Records Is Rethinking the Label Model"](https://nowtoronto.com/music/features/pleasence-records-indie-record-label-podcast-festival)
+- Husky House Zine #1 (2025) · "Slagging Off: Ten Years Later"
 
 #### Selected Videos
 
 :::youtube
 id=3NtGMv5bOdQ
-title=The Ketamines — Evil Intentions (LIVE)
+title=The Ketamines · Evil Intentions (LIVE)
 :::
 
 :::youtube
 id=CtPx8s_QZN0
-title=The Ketamines — "Line by Line" hook used in a national campaign for Target promoting "Mom Jeans"
+title=The Ketamines · "Line by Line" hook used in a national campaign for Target promoting "Mom Jeans"
 :::
 
 :::youtube
 id=iXPiCki50gw
-title=Century Palm — King of John St.
+title=Century Palm · King of John St.
 :::
 
 :::youtube
 id=vXj8Kk0V_IQ
-title=Century Palm — Then You're Gone
+title=Century Palm · Then You're Gone
 :::
 
 :::youtube
 id=VLt1kwLoBxQ
-title=Myelin Sheaths — Myelin Sheath
+title=Myelin Sheaths · Myelin Sheath
 :::
 
 :::imagegroup

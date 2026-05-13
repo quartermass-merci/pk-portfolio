@@ -10,7 +10,7 @@ import { VariableFontHoverByLetter } from './components/VariableFontHover';
 import { InfiniteSlider } from './components/InfiniteSlider';
 import { Zap, LineChart, Sparkles, MessageCircleQuestion, Compass, Network, Send, Shield, Microscope, Rocket, Users, Megaphone, Search, Share2, Handshake, Layers, Hammer, Radio, AlertTriangle, Activity, GraduationCap, Briefcase, Palette } from 'lucide-react';
 
-// Editable content files — edit these .md files to update background sections
+// Editable content files · edit these .md files to update background sections
 import aboutContent from './content/about.md?raw';
 import timelineContent from './content/timeline.md?raw';
 import educationContent from './content/education.md?raw';
@@ -21,6 +21,7 @@ import teachingContent from './content/teaching.md?raw';
 import publishedContent from './content/published.md?raw';
 import musicContent from './content/music.md?raw';
 import testimonialsContent from './content/testimonials.md?raw';
+import leadershipContent from './content/leadership.md?raw';
 
 const sectionContent = {
   about: aboutContent,
@@ -33,6 +34,7 @@ const sectionContent = {
   published: publishedContent,
   music: musicContent,
   testimonials: testimonialsContent,
+  leadership: leadershipContent,
 };
 
 // Single row, ordered by industry cluster so peers appear together
@@ -93,7 +95,7 @@ function splitProjectImages(images, sectionCount = 0) {
   return { hero, distributed, remaining };
 }
 
-// Animated number counter — counts from 0 to target on first view
+// Animated number counter · counts from 0 to target on first view
 function CountUp({ target }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true });
@@ -133,7 +135,7 @@ export default function App() {
     : {};
 
 
-  // Animation variants — page load stagger
+  // Animation variants · page load stagger
   const stagger = prefersReducedMotion ? {} : {
     hidden: {},
     show: { transition: { staggerChildren: 0.1 } }
@@ -168,14 +170,14 @@ export default function App() {
 
   const handleProjectClick = (p) => { openPanel('project', p); };
 
-  // Console message for the curious — devs, hiring engineers, journalists who inspect pages
+  // Console message for the curious · devs, hiring engineers, journalists who inspect pages
   useEffect(() => {
     const head = 'color:#2D4A8F;font-family:Georgia,serif;font-size:22px;font-weight:bold;letter-spacing:-0.01em';
     const dim = 'color:#565D4F;font-family:ui-monospace,monospace;font-size:12px;line-height:1.6';
     const accent = 'color:#DB3E36;font-family:ui-monospace,monospace;font-size:12px;font-weight:bold';
     console.log('%cPK Lawton', head);
     console.log('%cStrategy × Culture × Commercial Pressure', dim);
-    console.log('%c——', dim);
+    console.log('%c··', dim);
     console.log('%cIf you got here through dev tools, you probably also email people.', dim);
     console.log('%cpklawton@gmail.com', accent);
   }, []);
@@ -196,6 +198,7 @@ export default function App() {
     { id: 'timeline', title: 'Career Timeline' },
     { id: 'education', title: 'Education' },
     { id: 'teaching', title: 'Teaching & Research' },
+    { id: 'leadership', title: 'Board, Advisory & Industry Leadership' },
     { id: 'testimonials', title: 'References' }
   ];
 
@@ -211,7 +214,7 @@ export default function App() {
     );
   };
 
-  // Video embed — handles YouTube (thumbnail + link), Vimeo (iframe), and MP4 (native)
+  // Video embed · handles YouTube (thumbnail + link), Vimeo (iframe), and MP4 (native)
   const VideoEmbed = ({ url }) => {
     if (!url) return null;
     // MP4 / local video
@@ -367,13 +370,13 @@ export default function App() {
         )}
       </AnimatePresence>
 
-      {/* Main page wrapper — no global max-width, sections handle their own containment. font-mono restores typewriter body texture. */}
+      {/* Main page wrapper · no global max-width, sections handle their own containment. font-mono restores typewriter body texture. */}
       <div className="relative z-10 font-mono">
 
-        {/* HERO ZONE — header + hero on warmer paper tone */}
+        {/* HERO ZONE · header + hero on warmer paper tone */}
         <div className="bg-[#F2EAD0] border-b border-[#C4B99A]/40">
 
-        {/* HEADER — sketch icon + wordmark left, nav right */}
+        {/* HEADER · sketch icon + wordmark left, nav right */}
         <header className="pk-container pt-6 md:pt-8 pb-6 md:pb-10">
           <div className="flex items-start justify-between gap-6">
             <div className="flex items-start gap-4 md:gap-5 flex-1 min-w-0">
@@ -399,13 +402,13 @@ export default function App() {
               Strategy Loves Friction.
             </h1>
             <div className="mt-6 md:mt-10 grid grid-cols-1 md:grid-cols-2 gap-x-8 md:gap-x-12 gap-y-4 max-w-5xl">
-              {/* Left column — the diagnosis */}
+              {/* Left column · the diagnosis */}
               <div className="space-y-4">
                 <p className="t-body text-[#2D4A8F]">It is so easy to make something look like a strategy. But without contact with real people, real communities, real stakes, that strategy often collapses on arrival.</p>
                 <p className="t-body text-[#2D4A8F]">There is only so much insight and life to extract from the screen.</p>
                 <p className="t-body text-[#2D4A8F]">My practice is to restore contact.</p>
               </div>
-              {/* Right column — the practice */}
+              {/* Right column · the practice */}
               <div className="space-y-4 md:border-l md:border-[#2D4A8F]/30 md:pl-8 md:pl-12">
                 <p className="t-body text-[#2D4A8F]">I trace the actors that make the problem move: behaviours, platforms, category rules, organizational habits, cultural tensions, sales realities, stakeholder anxieties, and executional limits. I look for the point of friction because friction shows where the work has something real to push against.</p>
                 <p className="t-body text-[#2D4A8F]">That is what I bring as a strategist: not faster answers, but better contact. Not more polish, but more consequence.</p>
@@ -416,10 +419,21 @@ export default function App() {
               <a href="mailto:pklawton@gmail.com" className="text-sm text-[#2D4A8F] underline decoration-[#C4B99A] underline-offset-4 decoration-2 hover:decoration-[#DB3E36] transition">Get in touch ↗</a>
             </div>
 
-            {/* Currently — availability signal on dark bg, hero footnote */}
+            {/* Currently · availability signal on dark bg, hero footnote */}
             <div className="mt-10 md:mt-12 bg-[#2D4A8F] text-[#E0D3A8] px-5 md:px-6 py-4 md:py-5 max-w-2xl">
               <p className="text-xs uppercase tracking-[0.22em] text-[#DB3E36] font-bold mb-2">Currently</p>
-              <p className="text-sm text-[#E0D3A8] leading-relaxed">Available for senior strategy leadership (CSO / VP / Head of Strategy), fractional or advisory engagements, and category-defining consulting. Toronto + Chicago. Open to remote and cross-border.</p>
+              <p className="text-sm text-[#E0D3A8] leading-relaxed">Co-founded, scaled, and exited Sister Merci (2019–2026), and as of May 2026, I am available for senior strategy leadership (CSO / VP / Head of Strategy), fractional or advisory engagements, and category-defining consulting. Toronto + Chicago. Open to remote and cross-border.</p>
+              <div className="mt-4 pt-4 border-t border-[#C4B99A]/30">
+                <a
+                  href="/PK_Lawton_2026_Resume.pdf"
+                  download
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 bg-[#FAF8F4] text-[#2D4A8F] px-4 py-2 text-xs uppercase tracking-[0.15em] font-bold hover:bg-[#E0D3A8] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-150 ease-out"
+                >
+                  [ Download my full CV ↓ ]
+                </a>
+              </div>
             </div>
           </motion.div>
         </section>
@@ -427,10 +441,10 @@ export default function App() {
         </div>
         {/* /HERO ZONE */}
 
-        {/* § 01 — Sister Merci: Agency as Brand Lab — RISO PINK */}
+        {/* § 01 · Sister Merci: Agency as Brand Lab · RISO PINK */}
         <section className="bg-[#FF66A8] border-y border-[#2D4A8F]/40">
           <div className="pk-container py-10 md:py-16">
-          <p className="text-xs uppercase tracking-[0.25em] text-[#0D1929]/80 mb-3 font-bold">§ 01 &nbsp;—&nbsp; The operator story</p>
+          <p className="text-xs uppercase tracking-[0.25em] text-[#0D1929]/80 mb-3 font-bold">§ 01 &nbsp;·&nbsp; The operator story</p>
           <h2 className="font-display t-section font-bold text-[#2D4A8F] leading-tight max-w-3xl mb-6 md:mb-8">
             Sister Merci: Agency as Brand Lab.
           </h2>
@@ -454,9 +468,7 @@ export default function App() {
           <div className="mt-8 md:mt-10 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
             {/* Left col: story copy */}
             <div className="space-y-4 t-body text-[#0D1929]">
-              <p>I co-founded Sister Merci with Katie Waterman and Amanda Wood in 2019 after a successful capital raise with BlackShire Capital. Together, we built the agency from four founders to 30+ staff across Toronto and Chicago.</p>
-              <p>We positioned our agency as a strategy-led creative agency, which meant we invested in building a rolling category analysis and longitudinal audience studies that enabled us to consistently deliver award-winning brand design, go-to-market, and campaign strategy.</p>
-              <p>I had success working in large agencies, but in my mind, building and operating Sister Merci over the last seven years was equivalent to getting my PhD in brand and comms strategy. In many ways, the PhD program I did as a sociologist was easier.</p>
+              <p>I co-founded Sister Merci with Katie Waterman and Amanda Wood in 2019 after a successful $1.5M capital raise from BlackShire Capital. Over seven years we built the agency from four founders to 30+ staff across Toronto and Chicago, with a strategy-led operating model designed for regulated and vice categories. I exited the company as of May 2026, but could not be more proud of what we built with our own hands and ambition.</p>
             </div>
 
             {/* Right col: tenure bullets + footnote */}
@@ -470,19 +482,16 @@ export default function App() {
                 <li className="flex gap-3"><span className="text-[#F2EAD0] mt-0.5 font-bold">→</span><span><span className="font-bold text-[#DB3E36]">7 Clios</span> and <span className="font-bold">3×</span> Agency of the Year</span></li>
                 <li className="flex gap-3"><span className="text-[#F2EAD0] mt-0.5 font-bold">→</span><span><span className="font-bold">85%+</span> pitch win rate and <span className="font-bold">85%+</span> tier-one client retention</span></li>
                 <li className="flex gap-3"><span className="text-[#F2EAD0] mt-0.5 font-bold">→</span><span>Press: <em>Adweek · Forbes · Ad Age · Strategy · Financial Post</em></span></li>
+                <li className="flex gap-3"><span className="text-[#F2EAD0] mt-0.5 font-bold">→</span><span><span className="font-bold">Exited stake May 2026</span></span></li>
               </ul>
-              {/* Footnote */}
-              <p className="mt-6 pt-4 border-t border-[#0D1929]/30 text-xs text-[#0D1929]/80 italic leading-relaxed">
-                <span className="not-italic font-bold text-[#0D1929]">*</span> SM continues, but in May 2026, I sold my stake in the company and am ready for new challenges.
-              </p>
             </div>
           </div>
           </div>
         </section>
 
-        {/* § 02 — What I bring into the work (with declarative beliefs) — warm white bg, cream cards */}
+        {/* § 02 · What I bring into the work (with declarative beliefs) · warm white bg, cream cards */}
         <section id="approach" className="pk-container py-10 md:py-16">
-          <p className="text-xs uppercase tracking-[0.25em] text-[#565D4F] mb-3">§ 02 &nbsp;—&nbsp; A note on the working strategist</p>
+          <p className="text-xs uppercase tracking-[0.25em] text-[#565D4F] mb-3">§ 02 &nbsp;·&nbsp; A note on the working strategist</p>
           <h2 className="font-display t-section font-bold text-[#2D4A8F] max-w-3xl">
             What I bring into the work.
           </h2>
@@ -504,10 +513,10 @@ export default function App() {
           </div>
         </section>
 
-        {/* § 03 — Selected work — 2x2 card grid with autoplay videos */}
+        {/* § 03 · Selected work · 2x2 card grid with autoplay videos */}
         <section id="work" className="bg-[#F2EAD0] border-y border-[#C4B99A]/40">
           <div className="pk-container py-10 md:py-16">
-            <p className="text-xs uppercase tracking-[0.25em] text-[#565D4F] mb-3">§ 03 &nbsp;—&nbsp; Selected work</p>
+            <p className="text-xs uppercase tracking-[0.25em] text-[#565D4F] mb-3">§ 03 &nbsp;·&nbsp; Selected work</p>
             <h2 className="font-display t-section font-bold text-[#2D4A8F] max-w-3xl">
               The work.
             </h2>
@@ -559,10 +568,39 @@ export default function App() {
           </div>
         </section>
 
-        {/* § 04 — Pull-quote testimonial — RISO GREEN POSTER */}
+        {/* § 04 · Where I'm most useful · PINK SECTION, compact 3-col grid */}
+        <section className="bg-[#FF66A8] border-y border-[#2D4A8F]/30">
+          <div className="pk-container py-10 md:py-14">
+            <p className="text-xs uppercase tracking-[0.25em] text-[#0D1929]/80 mb-3 font-bold">§ 04 &nbsp;·&nbsp; Use cases</p>
+            <h2 className="font-display t-section font-bold text-[#2D4A8F] max-w-3xl">
+              Where I'm most useful.
+            </h2>
+            <div className="mt-6 md:mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
+              {[
+                { Icon: Compass, title: 'Strategy leadership for agencies in transition', trigger: "If your strategy function isn't pulling its weight in pitches, account growth, or client confidence:", body: 'Pitch win rates, account growth, sharper briefs, stronger creative partnerships, and strategy embedded in the agency\'s growth system.' },
+                { Icon: Shield, title: 'Brand strategy under pressure', trigger: 'If your brand has lost its edge or your category just shifted under you:', body: 'Positioning, architecture, narrative, and category strategy when the organization needs sharper language and better decisions.' },
+                { Icon: Microscope, title: 'Research that makes the work harder to ignore', trigger: 'If your creative team needs sharper raw material to build from:', body: 'Fieldwork, interviews, community observation, cultural analysis, and synthesis that give creative and commercial teams something real to build from.' },
+                { Icon: Rocket, title: 'Growth and go-to-market in difficult categories', trigger: "If you're entering a regulated category or repositioning a brand the easy playbook doesn't fit:", body: 'Regulated markets, new categories, repositioning, complex buyers, and brands that need to enter the market with force.' },
+                { Icon: Megaphone, title: 'Executive narrative and thought leadership', trigger: 'If your founder, CMO, or category needs a sharper public argument:', body: 'Whitepapers, keynote logic, founder POV, category arguments, strategic essays, and internal alignment stories.' },
+                { Icon: Users, title: 'Strategy team building and coaching', trigger: "If your strategy team isn't operating at the level the work demands, or you need to build the function from scratch:", body: 'Strategy team design, development rubrics, coaching for strategy leadership, applied training and workshops, bespoke strategy learning agendas, and outside-agency-to-inside-agency translation for high-potential talent.' },
+              ].map(({ Icon, title, trigger, body }, i) => (
+                <article key={i} className="bg-[#FAF8F4] border border-[#2D4A8F]/30 p-4 md:p-5 min-w-0">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Icon className="w-4 h-4 text-[#2D4A8F] flex-shrink-0" aria-hidden />
+                    <h3 className="font-bold text-[#2D4A8F] text-sm md:text-base font-display leading-tight">{title}</h3>
+                  </div>
+                  <p className="text-xs text-[#0D1929]/80 italic mb-2 leading-snug">{trigger}</p>
+                  <p className="text-sm text-[#0D1929] leading-relaxed">{body}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* § 05 · Pull-quote testimonial · RISO GREEN POSTER */}
         <section className="bg-[#5C9D34] border-y border-[#2D4A8F]/30">
           <div className="pk-container py-12 md:py-20">
-            <p className="text-xs uppercase tracking-[0.25em] text-[#2D4A8F]/80 mb-6 font-bold">§ 04 &nbsp;—&nbsp; In the room</p>
+            <p className="text-xs uppercase tracking-[0.25em] text-[#2D4A8F]/80 mb-6 font-bold">§ 05 &nbsp;·&nbsp; In the room</p>
             <figure className="max-w-4xl">
               <blockquote className="font-display text-xl md:text-3xl leading-snug text-[#2D4A8F] tracking-tight">
                 <span className="text-[#FF66A8] mr-1">"</span>Paul brings both intellectual rigour and genuine curiosity to strategy. He has a way of digging beneath the obvious to understand the cultural and behavioural forces shaping a category, which consistently leads to <span className="bg-[#FF66A8]/70 text-[#2D4A8F] px-1">insights others miss</span>. Just as important, he is an <span className="bg-[#FF66A8]/70 text-[#2D4A8F] px-1">excellent partner</span>. He challenges thinking constructively and elevates the work through real collaboration.<span className="text-[#FF66A8] ml-1">"</span>
@@ -574,83 +612,48 @@ export default function App() {
           </div>
         </section>
 
-        {/* § 05 — Where I'm most useful (bento, contained) — moved up from former § 06 */}
-        <section className="pk-container py-10 md:py-16">
-          <p className="text-xs uppercase tracking-[0.25em] text-[#565D4F] mb-3">§ 05 &nbsp;—&nbsp; Use cases</p>
-          <h2 className="font-display t-section font-bold text-[#2D4A8F] max-w-3xl">
-            Where I'm most useful.
-          </h2>
-          <div className="mt-8 md:mt-10 grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-5 auto-rows-fr">
-            {[
-              { Icon: Compass, title: 'Strategy leadership for agencies in transition', trigger: "If your strategy function isn't pulling its weight in pitches, account growth, or client confidence:", body: 'Pitch win rates, account growth, sharper briefs, stronger creative partnerships, and strategy embedded in the agency\'s growth system.', span: 'lg:col-span-8' },
-              { Icon: Shield, title: 'Brand strategy under pressure', trigger: 'If your brand has lost its edge or your category just shifted under you:', body: 'Positioning, architecture, narrative, and category strategy when the organization needs sharper language and better decisions.', span: 'lg:col-span-4' },
-              { Icon: Microscope, title: 'Research that makes the work harder to ignore', trigger: "If your creative team needs sharper raw material to build from:", body: 'Fieldwork, interviews, community observation, cultural analysis, and synthesis that give creative and commercial teams something real to build from.', span: 'lg:col-span-7' },
-              { Icon: Rocket, title: 'Growth and go-to-market in difficult categories', trigger: "If you're entering a regulated category or repositioning a brand the easy playbook doesn't fit:", body: 'Regulated markets, new categories, repositioning, complex buyers, and brands that need to enter the market with force.', span: 'lg:col-span-5' },
-              { Icon: Megaphone, title: 'Executive narrative and thought leadership', trigger: 'If your founder, CMO, or category needs a sharper public argument:', body: 'Whitepapers, keynote logic, founder POV, category arguments, strategic essays, and internal alignment stories.', span: 'lg:col-span-12' },
-            ].map(({ Icon, title, trigger, body, span }, i) => (
-              <article key={i} className={`bg-[#F2EAD0] border border-[#C4B99A]/40 p-5 md:p-6 min-w-0 ${span}`}>
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="flex items-center justify-center w-9 h-9 border border-[#2D4A8F]/30 flex-shrink-0 bg-[#FAF8F4]">
-                    <Icon className="w-4 h-4 text-[#2D4A8F]" aria-hidden />
-                  </div>
-                  <h3 className="font-bold text-[#2D4A8F] text-base md:text-lg font-display">{title}</h3>
-                </div>
-                <p className="text-sm text-[#2D4A8F] italic mb-2 leading-snug">{trigger}</p>
-                <p className="t-body text-[#2D4A8F]">{body}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        {/* § 06 — Field Building (Rebrief Magazine) — cream paper bg with pink accents */}
+        {/* § 06 · Field Building (Rebrief Magazine) · cream paper bg with pink accents */}
         <section className="bg-[#F2EAD0] border-y border-[#2D4A8F]/20">
-          <div className="pk-container py-10 md:py-16">
-            <p className="text-xs uppercase tracking-[0.25em] text-[#FF66A8] mb-3 font-bold">§ 06 &nbsp;—&nbsp; Field building</p>
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-10 items-start">
-              <div className="lg:col-span-6">
+          <div className="pk-container py-8 md:py-12">
+            <p className="text-xs uppercase tracking-[0.25em] text-[#FF66A8] mb-3 font-bold">§ 06 &nbsp;·&nbsp; Field building</p>
+            <h2 className="font-display t-section font-bold text-[#2D4A8F] leading-tight max-w-4xl mb-6 md:mb-8">
+              Rebrief: A New Canadian Journal of Advertising.
+            </h2>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 md:gap-8 items-start">
+              <div className="lg:col-span-5">
                 <div className="border border-[#2D4A8F]/30 bg-[#FAF8F4] overflow-hidden">
-                  <img src="/images/background/Rebrief/hero-composite-desktop.png" alt="Rebrief Magazine — hero composite" className="w-full h-auto block" loading="lazy" />
+                  <img src="/images/background/Rebrief/hero-composite-desktop.png" alt="Rebrief Magazine · hero composite" className="w-full h-auto block" loading="lazy" />
                 </div>
-                <p className="mt-3 text-xs text-[#565D4F] italic font-ui">Rebrief Magazine — editorial composite, July 2026.</p>
               </div>
-              <div className="lg:col-span-6">
-                <h2 className="font-display t-section font-bold text-[#2D4A8F] leading-tight">
-                  Rebrief: A New Canadian Journal of Advertising.
-                </h2>
-                <div className="mt-5 md:mt-6 space-y-4 t-body text-[#2D4A8F] pk-prose">
+              <div className="lg:col-span-7">
+                <div className="space-y-3 text-[15px] md:text-base leading-relaxed text-[#2D4A8F]">
                   <p>In 2025, I helped found a new non-profit, the <a href="https://rebrief.ca" target="_blank" rel="noreferrer" className="underline decoration-[#FF66A8] underline-offset-4 decoration-2 hover:text-[#FF66A8] transition">Rebrief Magazine Society</a>, a new independent Canadian journal of advertising, with Carly Miller, Spencer MacEachern, Jon Crowley, Zoe Kim, and Vince Rozas. Our first issue drops <span className="bg-[#FF66A8]/70 text-[#2D4A8F] px-1">July 2026</span>.</p>
-                  <p>Rebrief gives Canadian advertising a place to think in public. We publish essays, fiction, interviews, and visual experiments from emerging and established voices across the country, asking what happens when the industry takes a second look at its own assumptions.</p>
+                  <p>Rebrief gives Canadian advertising a place to think in public. We publish essays, fiction, interviews, and visual experiments from emerging and established voices, asking what happens when the industry takes a second look at its own assumptions.</p>
                   <p>As founding editor, treasurer, and media sales lead, I help build the magazine as both an editorial project and an independent platform for the next wave of strategic thinking in Canada.</p>
                 </div>
-                <div className="mt-6 md:mt-8">
-                  <a href="https://rebrief.ca" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#2D4A8F] text-[#F2EAD0] px-4 py-2.5 text-sm hover:bg-[#FF66A8] hover:text-[#2D4A8F] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-150 ease-out tracking-wide">[ Visit rebrief.ca ↗ ]</a>
+                <div className="mt-5">
+                  <a href="https://rebrief.ca" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#2D4A8F] text-[#F2EAD0] px-4 py-2 text-sm hover:bg-[#FF66A8] hover:text-[#2D4A8F] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-150 ease-out tracking-wide">[ Visit rebrief.ca ↗ ]</a>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* § 07 — Core capabilities — INVERTED: federal blue bg, cream cells */}
+        {/* § 07 · Core capabilities · INVERTED: federal blue bg, cream cells */}
         <section id="capabilities" className="bg-[#2D4A8F]">
           <div className="pk-container py-10 md:py-16">
-            <p className="text-xs uppercase tracking-[0.25em] text-[#FF66A8] mb-3 font-bold">§ 07 &nbsp;—&nbsp; Capabilities</p>
+            <p className="text-xs uppercase tracking-[0.25em] text-[#FF66A8] mb-3 font-bold">§ 07 &nbsp;·&nbsp; Capabilities</p>
             <h2 className="font-display t-section font-bold text-[#F2EAD0] max-w-3xl">
               Core capabilities.
             </h2>
             <div className="mt-8 md:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#F2EAD0]/20 border border-[#F2EAD0]/20">
               {[
-                { Icon: Compass, title: 'Strategy Leadership', body: 'Agency strategy leadership, pitch leadership, senior client counsel, stakeholder alignment, team development, growth planning.' },
-                { Icon: Megaphone, title: 'Brand & Communications Strategy', body: 'Brand positioning, segmentation & targeting, brand architecture, campaign strategy, category strategy, messaging, narrative, go-to-market.' },
-                { Icon: Search, title: 'Research & Insights', body: 'Qualitative research, interviews, ethnography, social listening, cultural analysis, synthesis, consumer insight.' },
-                { Icon: Sparkles, title: 'Creative Strategy', body: 'Brief development, territory development, creative evaluation, voice, campaign platforms, research-to-creative translation.' },
-                { Icon: Share2, title: 'Connections, Media & Content', body: 'Social strategy, channel planning, creator strategy, content systems, media logic, platform behaviour.' },
-                { Icon: LineChart, title: 'Commercial & Effectiveness Strategy', body: 'Measurement logic, KPI development, scope protection, pitch conversion, case study development, growth storytelling.' },
-                { Icon: Radio, title: 'Subculture Analysis', body: 'Scene building, subculture dynamics, grassroots amplification, high-affinity brand architecture, digital ethnography, participant observation.' },
-                { Icon: AlertTriangle, title: 'Issues Management', body: 'Values-based stakeholder mapping, real-time issues monitoring, tactical opposition, media training, community engagement, stakeholder briefing.' },
-                { Icon: Activity, title: 'Hype Analysis', body: 'Contextual sentiment scoring, AI-powered qualitative legibility, digital ethnography, unstructured data translation.' },
-                { Icon: GraduationCap, title: 'Team Building', body: 'The Square-Shaped Strategist model, cross-disciplinary training, academic-to-agency translation, intellectual mentorship.' },
-                { Icon: Briefcase, title: 'Commercial Strategy', body: 'Pitch development, opportunity mapping, strategic due diligence, market-entry logic, first-line revenue generation.' },
-                { Icon: Palette, title: 'Brand Design', body: 'Audience analysis, design thinking, competitive mapping, naming, design territories, go-to-market.' },
+                { Icon: Compass, title: 'Strategy Leadership', body: 'Agency strategy leadership, pitch leadership, senior client counsel, stakeholder alignment, team development, growth planning, agency operating model design.' },
+                { Icon: Megaphone, title: 'Brand & Communications Strategy', body: 'Brand positioning, segmentation, brand architecture, strategic unlocks, brand purpose, campaign strategy, category strategy, narrative, go-to-market, naming, brand design, brand redesign.' },
+                { Icon: Microscope, title: 'Research & Insight', body: 'Qualitative research, interviews, ethnography, digital ethnography, audience segmentation studies, social listening, cultural analysis, subculture dynamics, hype and sentiment analysis, consumer insight synthesis.' },
+                { Icon: Sparkles, title: 'Creative & Connections Strategy', body: 'Brief development, territory development, creative evaluation, voice, campaign platforms, social and content systems, channel and media logic, platform behaviour, creator strategy, creative testing, optimization.' },
+                { Icon: LineChart, title: 'Commercial & Effectiveness Strategy', body: 'Measurement logic, KPI development, scope protection, pitch conversion, case study development, growth storytelling, opportunity mapping, first-line revenue generation, issues management.' },
+                { Icon: GraduationCap, title: 'Team Building & Strategic Leadership', body: 'Square-Shaped employee development model, cross-disciplinary training, mentorship, talent development.' },
               ].map(({ Icon, title, body }, i) => (
                 <div key={i} className="bg-[#F2EAD0] p-5 md:p-6 min-w-0">
                   <div className="flex items-center gap-2 mb-3">
@@ -664,10 +667,10 @@ export default function App() {
           </div>
         </section>
 
-        {/* § 07 — Backgrounder (background + case studies) — sage paper bg */}
+        {/* § 07 · Backgrounder (background + case studies) · sage paper bg */}
         <section id="backgrounder" className="bg-[#5C9D34] border-y border-[#2D4A8F]/30">
           <div className="pk-container py-10 md:py-16">
-            <p className="text-xs uppercase tracking-[0.25em] text-[#0D1929]/80 mb-3 font-bold">§ 08 &nbsp;—&nbsp; Backgrounder</p>
+            <p className="text-xs uppercase tracking-[0.25em] text-[#0D1929]/80 mb-3 font-bold">§ 08 &nbsp;·&nbsp; Backgrounder</p>
             <h2 className="font-display t-section font-bold text-[#2D4A8F] max-w-3xl mb-8 md:mb-10">
               Backgrounder.
             </h2>
@@ -729,19 +732,20 @@ export default function App() {
             </div>
           ))}
         </nav>
+
           </div>
         </section>
 
-        {/* § 08 — Closing CTA / Best fit — dark footnote zone */}
+        {/* § 08 · Closing CTA / Best fit · dark footnote zone */}
         <section id="contact" className="bg-[#2D4A8F] text-[#E0D3A8]">
           <div className="pk-container py-12 md:py-16">
-          <p className="text-xs uppercase tracking-[0.25em] text-[#C4B99A] mb-3">§ 09 &nbsp;—&nbsp; Footnote / Best fit</p>
+          <p className="text-xs uppercase tracking-[0.25em] text-[#C4B99A] mb-3">§ 09 &nbsp;·&nbsp; Footnote / Best fit</p>
           <h2 className="font-display text-2xl md:text-3xl font-bold text-[#FAF8F4] max-w-3xl mb-8 md:mb-10 leading-tight">
             Work with me.
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-            {/* Left column — senior leadership */}
+            {/* Left column · senior leadership */}
             <div>
               <p className="text-xs uppercase tracking-[0.2em] text-[#C4B99A] font-bold mb-3">Senior leadership</p>
               <p className="text-sm md:text-base text-[#E0D3A8] leading-relaxed mb-5">I am looking first for senior strategy leadership opportunities where I can help an agency or marketing organization make strategy more central to growth.</p>
@@ -759,7 +763,7 @@ export default function App() {
               </ul>
             </div>
 
-            {/* Right column — fractional/advisory */}
+            {/* Right column · fractional/advisory */}
             <div>
               <p className="text-xs uppercase tracking-[0.2em] text-[#C4B99A] font-bold mb-3">Fractional, advisory, project</p>
               <p className="text-sm md:text-base text-[#E0D3A8] leading-relaxed mb-4">I am also available for fractional, advisory, and project-based work when an agency, founder, or marketing team needs senior strategy support in a high-pressure moment.</p>
@@ -769,6 +773,15 @@ export default function App() {
 
           <div className="mt-10 md:mt-12 pt-6 border-t border-[#C4B99A]/30 flex flex-wrap items-center gap-x-6 gap-y-3">
             <a href="mailto:pklawton@gmail.com" className="inline-flex items-center gap-2 bg-[#FAF8F4] text-[#2D4A8F] px-4 py-2.5 text-sm hover:bg-[#E0D3A8] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-150 ease-out tracking-wide font-bold">[ Get in touch → ]</a>
+            <a
+              href="/PK_Lawton_2026_Resume.pdf"
+              download
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 border-2 border-[#FAF8F4] text-[#FAF8F4] px-4 py-2.5 text-sm hover:bg-[#FAF8F4] hover:text-[#2D4A8F] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-150 ease-out tracking-wide font-bold"
+            >
+              [ Download my full CV ↓ ]
+            </a>
             <a href="https://linkedin.com/in/paulklawton" target="_blank" rel="noreferrer" className="text-sm text-[#E0D3A8] underline decoration-[#C4B99A]/60 underline-offset-4 decoration-2 hover:decoration-[#DB3E36] transition">LinkedIn ↗</a>
             <a href="https://culturalcartography.substack.com" target="_blank" rel="noreferrer" className="text-sm text-[#E0D3A8] underline decoration-[#C4B99A]/60 underline-offset-4 decoration-2 hover:decoration-[#DB3E36] transition">Substack ↗</a>
           </div>
@@ -883,6 +896,23 @@ export default function App() {
 
         {view !== 'research-stack' && view !== 'project' && sectionContent[view] && (
           <>
+            {view === 'timeline' && (
+              <div className="mb-8 max-w-2xl border border-[#2D4A8F]/30 bg-[#F2EAD0] p-5 md:p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.22em] text-[#DB3E36] font-bold mb-1">Prefer the PDF?</p>
+                  <p className="text-sm text-[#0D1929] font-mono leading-relaxed">Full work history, dates, and references in a single document.</p>
+                </div>
+                <a
+                  href="/PK_Lawton_2026_Resume.pdf"
+                  download
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 bg-[#2D4A8F] text-[#FAF8F4] px-4 py-2.5 text-xs uppercase tracking-[0.15em] font-bold hover:bg-[#0D1929] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-150 ease-out whitespace-nowrap"
+                >
+                  [ Download my full CV ↓ ]
+                </a>
+              </div>
+            )}
             <ContentSection content={sectionContent[view]} />
             {/* Next section nav (mobile-friendly) */}
             {(() => {

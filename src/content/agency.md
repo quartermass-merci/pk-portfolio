@@ -12,7 +12,7 @@ logo: /images/background/agency/Sister-Merci-Square-Logo.png
 
 Sister Merci started from a conviction shared by all three founders: the toughest marketing environments produce the sharpest strategic thinking.
 
-Cannabis forced that discipline early. The Cannabis Act imposes restrictions comparable to tobacco: no lifestyle ads, no celebrity endorsements, limited media channels. We treated those constraints as design inputs. The disciplines we built — compliance-first creative development, ethnographic research as the basis for every brief, budtender ecosystems as distribution channels — transferred to every high-stakes category we entered.
+Cannabis forced that discipline early. The Cannabis Act imposes restrictions comparable to tobacco: no lifestyle ads, no celebrity endorsements, limited media channels. We treated those constraints as design inputs. The disciplines we built · compliance-first creative development, ethnographic research as the basis for every brief, budtender ecosystems as distribution channels · transferred to every high-stakes category we entered.
 
 The record over seven years: strategy work across 150+ cannabis brands. Clients include Manulife, Doodle, Organigram, MadeGood, Pangea, and the Cannabis Media Council. In 2023, we expanded into the U.S. cannabis industry by integrating Allison Disney's Chicago-based consultancy Receptor Brands. We hold 85%+ client retention on top-tier accounts over four years.
 
@@ -22,7 +22,7 @@ We grew from four founders to 30 staff across Toronto and Chicago on a model des
 
 **2019: The Experiment Begins**
 
-Three agency veterans — Katie Waterman (CEO), PK Lawton (CSO), and Amanda Wood (CCO) — leave established roles at major Canadian agencies to build something no one had attempted: a strategy-led creative agency focused on emerging, highly regulated categories like cannabis and iGaming. PK plays a key role in securing a $1.5M seed round from BlackShire Capital and partners with BlackShire and Canopy Rivers on strategic diligence — evaluating brand viability, audience alignment, and market-entry logic for U.S. companies entering Canada. The bet: regulatory constraint as creative advantage.
+Three agency veterans · Katie Waterman (CEO), PK Lawton (CSO), and Amanda Wood (CCO) · leave established roles at major Canadian agencies to build something no one had attempted: a strategy-led creative agency focused on emerging, highly regulated categories like cannabis and iGaming. PK plays a key role in securing a $1.5M seed round from BlackShire Capital and partners with BlackShire and Canopy Rivers on strategic diligence · evaluating brand viability, audience alignment, and market-entry logic for U.S. companies entering Canada. The bet: regulatory constraint as creative advantage.
 
 **2020: Don't Turn off the Lights…**
 
@@ -50,7 +50,7 @@ Hearst Media runs "I'm High Right Now" in its Super Bowl preview issue. Men's He
 
 **2025–2026: The Playbook Goes Public**
 
-Two major thought-leadership pieces on LBB Online. "I'm High Right Now" Phase 2 launches on Meta targeting 55+ audiences. Sister Merci expands into tech, health, and fintech brands, deploying our strategy-first approach to startups like MosaicAI, NiaHealth, and Doodle — the latter won through a global competitive pitch. Manulife comes on board in 2026, a relationship built on a decade of trust with their Head of Communications, who PK first worked with at Weber Shandwick. 85%+ client retention on top-tier accounts across the agency's history.
+Two major thought-leadership pieces on LBB Online. "I'm High Right Now" Phase 2 launches on Meta targeting 55+ audiences. Sister Merci expands into tech, health, and fintech brands, deploying our strategy-first approach to startups like MosaicAI, NiaHealth, and Doodle · the latter won through a global competitive pitch. Manulife comes on board in 2026, a relationship built on a decade of trust with their Head of Communications, who PK first worked with at Weber Shandwick. 85%+ client retention on top-tier accounts across the agency's history.
 
 #### Selected Firsts
 
@@ -61,18 +61,18 @@ Two major thought-leadership pieces on LBB Online. "I'm High Right Now" Phase 2 
 
 #### Selected Agency Awards
 
-- **Clio Cannabis** — Agency of the Year (2023)
-- **ADCANN** — Cannabis Agency of the Year (Canada) (2022)
-- **KIND Magazine** — Agency of the Year (2021)
-- **ADCANN** — Campaign of the Year — "I'm High Right Now" (2023)
-- **ADCANN** — Packaging of the Year — Wyld (2022)
-- **ADCANN** — Edible of the Year — Wyld (2022)
-- **Adweek** — Top 10 Cannabis Campaign — "I'm High Right Now" (2023)
-- **Clio Cannabis** — Silver: Digital/Mobile, Website/Microsite (2023)
-- **Clio Cannabis** — Bronze: Integrated Campaign (2023)
-- **Clio Cannabis** — Bronze: Print & OOH (2023)
-- **Clio Cannabis** — Bronze: Print & OOH Craft (2023)
-- **Clio Cannabis** — Bronze: Advocacy (2023)
+- **Clio Cannabis** · Agency of the Year (2023)
+- **ADCANN** · Cannabis Agency of the Year (Canada) (2022)
+- **KIND Magazine** · Agency of the Year (2021)
+- **ADCANN** · Campaign of the Year · "I'm High Right Now" (2023)
+- **ADCANN** · Packaging of the Year · Wyld (2022)
+- **ADCANN** · Edible of the Year · Wyld (2022)
+- **Adweek** · Top 10 Cannabis Campaign · "I'm High Right Now" (2023)
+- **Clio Cannabis** · Silver: Digital/Mobile, Website/Microsite (2023)
+- **Clio Cannabis** · Bronze: Integrated Campaign (2023)
+- **Clio Cannabis** · Bronze: Print & OOH (2023)
+- **Clio Cannabis** · Bronze: Print & OOH Craft (2023)
+- **Clio Cannabis** · Bronze: Advocacy (2023)
 
 #### As Covered In
 

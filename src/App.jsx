@@ -394,28 +394,24 @@ export default function App() {
 
         {/* HERO */}
         <section className="pk-container pt-4 md:pt-8 pb-10 md:pb-16">
-          <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="max-w-3xl">
-            <h1 className="font-display t-hero font-bold text-[#2D4A8F] text-balance">
+          <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
+            <h1 className="font-display t-hero font-bold text-[#2D4A8F] text-balance max-w-4xl">
               Strategy Loves Friction.
             </h1>
-            <p className="mt-6 md:mt-8 t-body text-[#2D4A8F] pk-prose">
-              I do not trust a strategy when it arrives too smoothly.
-            </p>
-            <p className="mt-4 t-body text-[#2D4A8F] pk-prose">
-              A smooth strategy often means the problem was cleaned too early. The customer has become a persona. The market has become a quadrant. Culture has become a trend slide. The brief has become a ritual object.
-            </p>
-            <p className="mt-4 t-body text-[#2D4A8F] pk-prose">
-              Everything looks strategic. Nothing has been forced to answer to the world.
-            </p>
-            <p className="mt-4 t-body text-[#2D4A8F] pk-prose">
-              My practice is to restore contact.
-            </p>
-            <p className="mt-4 t-body text-[#2D4A8F] pk-prose">
-              I trace the actors that make the problem move: behaviours, platforms, category rules, organizational habits, cultural tensions, sales realities, stakeholder anxieties, and executional limits. I look for the point of friction because friction shows where the work has something real to push against.
-            </p>
-            <p className="mt-4 t-body text-[#2D4A8F] pk-prose">
-              That is what I bring as a strategist: not faster answers, but better contact. Not more polish, but more consequence.
-            </p>
+            <div className="mt-6 md:mt-10 grid grid-cols-1 md:grid-cols-2 gap-x-8 md:gap-x-12 gap-y-4 max-w-5xl">
+              {/* Left column — the diagnosis */}
+              <div className="space-y-4">
+                <p className="t-body text-[#2D4A8F]">I do not trust a strategy when it arrives too smoothly.</p>
+                <p className="t-body text-[#2D4A8F]">A smooth strategy often means the problem was cleaned too early. The customer has become a persona. The market has become a quadrant. Culture has become a trend slide. The brief has become a ritual object.</p>
+                <p className="t-body text-[#2D4A8F]">Everything looks strategic. Nothing has been forced to answer to the world.</p>
+              </div>
+              {/* Right column — the practice */}
+              <div className="space-y-4 md:border-l md:border-[#2D4A8F]/30 md:pl-8 md:pl-12">
+                <p className="t-body text-[#2D4A8F]">My practice is to restore contact.</p>
+                <p className="t-body text-[#2D4A8F]">I trace the actors that make the problem move: behaviours, platforms, category rules, organizational habits, cultural tensions, sales realities, stakeholder anxieties, and executional limits. I look for the point of friction because friction shows where the work has something real to push against.</p>
+                <p className="t-body text-[#2D4A8F]">That is what I bring as a strategist: not faster answers, but better contact. Not more polish, but more consequence.</p>
+              </div>
+            </div>
             <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
               <a href="#work" className="inline-flex items-center gap-2 bg-[#2D4A8F] text-[#FAF8F4] px-4 py-2.5 text-sm hover:bg-[#4A3F35] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-150 ease-out tracking-wide">[ View the work → ]</a>
               <a href="mailto:pklawton@gmail.com" className="text-sm text-[#2D4A8F] underline decoration-[#C4B99A] underline-offset-4 decoration-2 hover:decoration-[#DB3E36] transition">Get in touch ↗</a>
@@ -459,13 +455,12 @@ export default function App() {
           <div className="mt-8 md:mt-10 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
             {/* Left col: story copy */}
             <div className="space-y-4 t-body text-[#0D1929]">
-              <p>I co-founded Sister Merci with Katie Waterman and Amanda Wood in 2019. We built it from four founders to 30+ staff across Toronto and Chicago.</p>
-              <p>In many ways, we treated Sister Merci like an experiment. We embraced the "hard mode" and vice categories. And in many ways, the eight years I spent building a real agency, with real stakes, was my PhD in advertising. In many ways, a real PhD is actually easier.</p>
-              <p>As Co-Founder and CSO, I led strategy across 150+ brands and helped shape an agency that treated every account like a brand lab.</p>
-              <p>SM continues, but as of May 2026, I have sold my stake in the company. <span className="italic">Sister for life.</span></p>
+              <p>I co-founded Sister Merci with Katie Waterman and Amanda Wood in 2019 after a successful capital raise with BlackShire Capital. Together, we built the agency from four founders to 30+ staff across Toronto and Chicago.</p>
+              <p>Our success with Sister Merci came from a sharp understanding that we needed to find new ways to build brands in regulated and vice categories. We operated the company as a "strategy-led creative agency," which meant we used category analysis and an ongoing, longitudinal study to continually deliver unique and exceptional brand design, go-to-market, and campaign strategy.</p>
+              <p>I had success working in large agencies, but in my mind, building and operating Sister Merci over the last seven years was equivalent to getting my PhD in brand and comms strategy. In many ways, the PhD program I did as a sociologist was easier.</p>
             </div>
 
-            {/* Right col: tenure bullets */}
+            {/* Right col: tenure bullets + footnote */}
             <div className="md:border-l md:border-[#0D1929]/30 md:pl-6 md:pl-10">
               <p className="text-xs uppercase tracking-[0.18em] text-[#0D1929]/80 font-bold mb-4">My tenure as CSO at Sister Merci</p>
               <ul className="space-y-2 text-sm text-[#0D1929]">
@@ -477,6 +472,10 @@ export default function App() {
                 <li className="flex gap-3"><span className="text-[#F2EAD0] mt-0.5 font-bold">→</span><span><span className="font-bold">85%+</span> pitch win rate and <span className="font-bold">85%+</span> tier-one client retention</span></li>
                 <li className="flex gap-3"><span className="text-[#F2EAD0] mt-0.5 font-bold">→</span><span>Press: <em>Adweek · Forbes · Ad Age · Strategy · Financial Post</em></span></li>
               </ul>
+              {/* Footnote */}
+              <p className="mt-6 pt-4 border-t border-[#0D1929]/30 text-xs text-[#0D1929]/80 italic leading-relaxed">
+                <span className="not-italic font-bold text-[#0D1929]">*</span> SM continues, but in May 2026, I sold my stake in the company and am ready for new challenges.
+              </p>
             </div>
           </div>
           </div>

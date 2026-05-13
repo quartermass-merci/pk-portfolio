@@ -404,16 +404,16 @@ export default function App() {
             <div className="mt-6 md:mt-10 grid grid-cols-1 md:grid-cols-2 gap-x-8 md:gap-x-12 gap-y-4 max-w-5xl">
               {/* Left column · the diagnosis */}
               <div className="space-y-4">
-                <p className="t-body text-[#2D4A8F]">It is so easy to make something look like a strategy. But without contact with real people, real communities, real stakes, that strategy often collapses on arrival.</p>
-                <p className="t-body text-[#2D4A8F]">There is only so much insight and life to extract from the screen.</p>
-                <p className="t-body text-[#2D4A8F]">My practice is to restore contact.</p>
+                <p className="t-body text-[#2D4A8F]">It's easy to make something look like a strategy. But my experience has been that, without contact with real people and real stakes, strategic thinking is liable to collapse on arrival. There is only so much life you can extract from a screen.</p>
               </div>
               {/* Right column · the practice */}
               <div className="space-y-4 md:border-l md:border-[#2D4A8F]/30 md:pl-8 md:pl-12">
-                <p className="t-body text-[#2D4A8F]">I trace the actors that make the problem move: behaviours, platforms, category rules, organizational habits, cultural tensions, sales realities, stakeholder anxieties, and executional limits. I look for the point of friction because friction shows where the work has something real to push against.</p>
-                <p className="t-body text-[#2D4A8F]">That is what I bring as a strategist: not faster answers, but better contact. Not more polish, but more consequence.</p>
+                <p className="t-body text-[#2D4A8F]">As I've developed my craft, I've learned efficient ways to restore contact with my work. I trace the actors that make a problem move: all the behaviours, category rules, cultural tensions, sales realities, stakeholder anxieties, and executional limits that drive the success (or failure) of a brand or campaign, and find where the work has something to push against.</p>
               </div>
             </div>
+            <p className="mt-6 md:mt-8 font-display text-2xl md:text-3xl font-bold text-[#2D4A8F] leading-tight max-w-4xl">
+              That's my offer: <span className="text-[#DB3E36]">contact over commentary.</span>
+            </p>
             <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
               <a href="#work" className="inline-flex items-center gap-2 bg-[#2D4A8F] text-[#FAF8F4] px-4 py-2.5 text-sm hover:bg-[#4A3F35] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-150 ease-out tracking-wide">[ View the work → ]</a>
               <a href="mailto:pklawton@gmail.com" className="text-sm text-[#2D4A8F] underline decoration-[#C4B99A] underline-offset-4 decoration-2 hover:decoration-[#DB3E36] transition">Get in touch ↗</a>
@@ -525,7 +525,7 @@ export default function App() {
                 { id: 'cmc', name: "CMC: I'm High Right Now", role: 'Campaign strategy', year: '2023–2026', eyebrowColor: '#DB3E36', summary: "First nationwide consumer campaign for the Cannabis Media Council. Featured Baby Boomers as confident, stylish users, repositioning an entire audience.", proof: ['256M+ earned impressions', '1st cannabis ad in Vanity Fair', 'Adweek Top 10 of the year'] },
                 { id: 'madegood', name: 'MadeGood: For All the Good Reasons', role: 'Brand architecture, US market entry', year: '2023–2024', eyebrowColor: '#5C9D34', summary: 'Year-long ethnographic research reframed a snack brand from lunchbox niche to values-led identity. Strategy informed every subsequent decision.', proof: ['26.9% sales increase in 2023', '#43 on Instacart\'s top emerging brands', 'Global operating framework'] },
                 { id: 'scotiabank', name: 'Scotiabank: Hockey 24', role: 'Sponsorship strategy', year: '2019–2020', eyebrowColor: '#FF66A8', summary: "Ethnographic research revealed hockey's deepest meaning is community, not competition. Reframed sponsorship from logo placement to cultural document.", proof: ['500K+ Canadian homes for premiere', '99% lift in brand awareness', 'CMA Gold Business Impact'] },
-                { id: 'tweed', name: "Tweed: Hi / Don't Drive High", role: 'Brand positioning, campaign platform', year: '2017–2019', eyebrowColor: '#DB3E36', summary: "Built Canada's most recognized cannabis brand. \"Hi.\" set the category bar; \"Don't Drive High\" introduced the first responsibility platform.", proof: ['700M+ media impressions', '38% lift in brand awareness', 'AToMiC Gold ×3'] },
+                { id: 'tweed', name: "Tweed: Hi / Don't Drive High", role: 'Brand positioning, campaign platform', year: '2017–2019', eyebrowColor: '#DB3E36', summary: "Strategically led Canada's most recognized cannabis brand into legalization. \"Hi.\" set the category bar; \"Don't Drive High\" (Tweed x MADD x Uber) was the industry's first responsible consumption platform.", proof: ['700M+ media impressions', '38% lift in brand awareness', 'AToMiC Gold ×3'] },
               ].map((c) => {
                 const project = portfolioData.find(p => p.id === c.id);
                 const videoUrl = project?.videos?.[0];
@@ -564,7 +564,7 @@ export default function App() {
                 );
               })}
             </div>
-            <p className="mt-6 md:mt-8 text-sm text-[#565D4F]"><a href="#backgrounder" className="underline decoration-[#C4B99A] underline-offset-4 decoration-2 hover:decoration-[#DB3E36] hover:text-[#2D4A8F] transition">Backgrounder below ↓</a></p>
+            <p className="mt-6 md:mt-8 text-sm text-[#565D4F]"><a href="#backgrounder" className="underline decoration-[#C4B99A] underline-offset-4 decoration-2 hover:decoration-[#DB3E36] hover:text-[#2D4A8F] transition">Case studies &amp; experience files below ↓</a></p>
           </div>
         </section>
 
@@ -600,7 +600,7 @@ export default function App() {
         {/* § 05 · Pull-quote testimonial · RISO GREEN POSTER */}
         <section className="bg-[#5C9D34] border-y border-[#2D4A8F]/30">
           <div className="pk-container py-12 md:py-20">
-            <p className="text-xs uppercase tracking-[0.25em] text-[#2D4A8F]/80 mb-6 font-bold">§ 05 &nbsp;·&nbsp; In the room</p>
+            <p className="text-xs uppercase tracking-[0.25em] text-[#2D4A8F]/80 mb-6 font-bold">§ 05 &nbsp;·&nbsp; But you don't have to take my word for it</p>
             <figure className="max-w-4xl">
               <blockquote className="font-display text-xl md:text-3xl leading-snug text-[#2D4A8F] tracking-tight">
                 <span className="text-[#FF66A8] mr-1">"</span>Paul brings both intellectual rigour and genuine curiosity to strategy. He has a way of digging beneath the obvious to understand the cultural and behavioural forces shaping a category, which consistently leads to <span className="bg-[#FF66A8]/70 text-[#2D4A8F] px-1">insights others miss</span>. Just as important, he is an <span className="bg-[#FF66A8]/70 text-[#2D4A8F] px-1">excellent partner</span>. He challenges thinking constructively and elevates the work through real collaboration.<span className="text-[#FF66A8] ml-1">"</span>
@@ -671,8 +671,8 @@ export default function App() {
         <section id="backgrounder" className="bg-[#5C9D34] border-y border-[#2D4A8F]/30">
           <div className="pk-container py-10 md:py-16">
             <p className="text-xs uppercase tracking-[0.25em] text-[#0D1929]/80 mb-3 font-bold">§ 08 &nbsp;·&nbsp; Backgrounder</p>
-            <h2 className="font-display t-section font-bold text-[#2D4A8F] max-w-3xl mb-8 md:mb-10">
-              Backgrounder.
+            <h2 className="font-display t-section font-bold text-[#2D4A8F] max-w-4xl mb-8 md:mb-10">
+              Case Studies and Experience Files.
             </h2>
           <nav className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-0 items-start text-[#0D1929]">
           {/* Background */}

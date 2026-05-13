@@ -455,7 +455,7 @@ export default function App() {
             {/* Left col: story copy */}
             <div className="space-y-4 t-body text-[#0D1929]">
               <p>I co-founded Sister Merci with Katie Waterman and Amanda Wood in 2019 after a successful capital raise with BlackShire Capital. Together, we built the agency from four founders to 30+ staff across Toronto and Chicago.</p>
-              <p>Our success with Sister Merci came from a sharp understanding that we needed to find new ways to build brands in regulated and vice categories. We operated the company as a "strategy-led creative agency," which meant we used category analysis and an ongoing, longitudinal study to continually deliver unique and exceptional brand design, go-to-market, and campaign strategy.</p>
+              <p>We positioned our agency as a strategy-led creative agency, which meant we invested in building a rolling category analysis and longitudinal audience studies that enabled us to consistently deliver award-winning brand design, go-to-market, and campaign strategy.</p>
               <p>I had success working in large agencies, but in my mind, building and operating Sister Merci over the last seven years was equivalent to getting my PhD in brand and comms strategy. In many ways, the PhD program I did as a sociologist was easier.</p>
             </div>
 
@@ -763,7 +763,7 @@ export default function App() {
             <div>
               <p className="text-xs uppercase tracking-[0.2em] text-[#C4B99A] font-bold mb-3">Fractional, advisory, project</p>
               <p className="text-sm md:text-base text-[#E0D3A8] leading-relaxed mb-4">I am also available for fractional, advisory, and project-based work when an agency, founder, or marketing team needs senior strategy support in a high-pressure moment.</p>
-              <p className="text-sm md:text-base text-[#E0D3A8] leading-relaxed">That can include pitch strategy, brand positioning, repositioning, category reframing, audience research, consumer insights, creative territory development, stakeholder alignment, communications planning, connections strategy, social and content strategy, measurement strategy, agency strategy transformation, or strategy team development.</p>
+              <p className="text-sm md:text-base text-[#E0D3A8] leading-relaxed">That can include pitch strategy, brand positioning, repositioning, category reframing, audience research, segmentation studies, consumer insights, creative territory development, stakeholder alignment, communications planning, connections strategy, social and content strategy, measurement strategy, agency strategy transformation, or strategy team development.</p>
             </div>
           </div>
 

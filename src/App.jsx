@@ -402,8 +402,9 @@ export default function App() {
               {/* Left column — the diagnosis */}
               <div className="space-y-4">
                 <p className="t-body text-[#2D4A8F]">I do not trust a strategy when it arrives too smoothly.</p>
-                <p className="t-body text-[#2D4A8F]">A smooth strategy often means the problem was cleaned too early. The customer has become a persona. The market has become a quadrant. Culture has become a trend slide. The brief has become a ritual object.</p>
-                <p className="t-body text-[#2D4A8F]">Everything looks strategic. Nothing has been forced to answer to the world.</p>
+                <p className="t-body text-[#2D4A8F]">Who asked for a frictionless strategy anyway? We've abstracted the work through frameworks, "best practices," and fiction, while also talking about the need for effectiveness. Without friction, effectiveness is a fever dream.</p>
+                <p className="t-body text-[#2D4A8F]">It is so easy to make something look like a strategy. But without contact with real people, real communities, real stakes, that strategy often collapses on arrival.</p>
+                <p className="t-body text-[#2D4A8F]">There is only so much insight and life to extract from the screen.</p>
               </div>
               {/* Right column — the practice */}
               <div className="space-y-4 md:border-l md:border-[#2D4A8F]/30 md:pl-8 md:pl-12">

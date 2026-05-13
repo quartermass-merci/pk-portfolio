@@ -8,7 +8,7 @@ import AnimatedLink from './components/AnimatedLink';
 import ContentSection from './components/ContentSection';
 import { VariableFontHoverByLetter } from './components/VariableFontHover';
 import { InfiniteSlider } from './components/InfiniteSlider';
-import { Zap, LineChart, Sparkles, MessageCircleQuestion, Compass, Network, Send, Shield, Microscope, Rocket, Users, Megaphone, Search, Share2, Handshake, Layers, Hammer } from 'lucide-react';
+import { Zap, LineChart, Sparkles, MessageCircleQuestion, Compass, Network, Send, Shield, Microscope, Rocket, Users, Megaphone, Search, Share2, Handshake, Layers, Hammer, Radio, AlertTriangle, Activity, GraduationCap, Briefcase, Palette } from 'lucide-react';
 
 // Editable content files — edit these .md files to update background sections
 import aboutContent from './content/about.md?raw';
@@ -401,14 +401,12 @@ export default function App() {
             <div className="mt-6 md:mt-10 grid grid-cols-1 md:grid-cols-2 gap-x-8 md:gap-x-12 gap-y-4 max-w-5xl">
               {/* Left column — the diagnosis */}
               <div className="space-y-4">
-                <p className="t-body text-[#2D4A8F]">I do not trust a strategy when it arrives too smoothly.</p>
-                <p className="t-body text-[#2D4A8F]">Who asked for a frictionless strategy anyway? We've abstracted the work through frameworks, "best practices," and fiction, while also talking about the need for effectiveness. Without friction, effectiveness is a fever dream.</p>
                 <p className="t-body text-[#2D4A8F]">It is so easy to make something look like a strategy. But without contact with real people, real communities, real stakes, that strategy often collapses on arrival.</p>
                 <p className="t-body text-[#2D4A8F]">There is only so much insight and life to extract from the screen.</p>
+                <p className="t-body text-[#2D4A8F]">My practice is to restore contact.</p>
               </div>
               {/* Right column — the practice */}
               <div className="space-y-4 md:border-l md:border-[#2D4A8F]/30 md:pl-8 md:pl-12">
-                <p className="t-body text-[#2D4A8F]">My practice is to restore contact.</p>
                 <p className="t-body text-[#2D4A8F]">I trace the actors that make the problem move: behaviours, platforms, category rules, organizational habits, cultural tensions, sales realities, stakeholder anxieties, and executional limits. I look for the point of friction because friction shows where the work has something real to push against.</p>
                 <p className="t-body text-[#2D4A8F]">That is what I bring as a strategist: not faster answers, but better contact. Not more polish, but more consequence.</p>
               </div>
@@ -642,11 +640,17 @@ export default function App() {
             <div className="mt-8 md:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#F2EAD0]/20 border border-[#F2EAD0]/20">
               {[
                 { Icon: Compass, title: 'Strategy Leadership', body: 'Agency strategy leadership, pitch leadership, senior client counsel, stakeholder alignment, team development, growth planning.' },
-                { Icon: Megaphone, title: 'Brand & Communications Strategy', body: 'Positioning, architecture, campaign strategy, category strategy, messaging, narrative, go-to-market.' },
+                { Icon: Megaphone, title: 'Brand & Communications Strategy', body: 'Brand positioning, segmentation & targeting, brand architecture, campaign strategy, category strategy, messaging, narrative, go-to-market.' },
                 { Icon: Search, title: 'Research & Insights', body: 'Qualitative research, interviews, ethnography, social listening, cultural analysis, synthesis, consumer insight.' },
                 { Icon: Sparkles, title: 'Creative Strategy', body: 'Brief development, territory development, creative evaluation, voice, campaign platforms, research-to-creative translation.' },
                 { Icon: Share2, title: 'Connections, Media & Content', body: 'Social strategy, channel planning, creator strategy, content systems, media logic, platform behaviour.' },
                 { Icon: LineChart, title: 'Commercial & Effectiveness Strategy', body: 'Measurement logic, KPI development, scope protection, pitch conversion, case study development, growth storytelling.' },
+                { Icon: Radio, title: 'Subculture Analysis', body: 'Scene building, subculture dynamics, grassroots amplification, high-affinity brand architecture, digital ethnography, participant observation.' },
+                { Icon: AlertTriangle, title: 'Issues Management', body: 'Values-based stakeholder mapping, real-time issues monitoring, tactical opposition, media training, community engagement, stakeholder briefing.' },
+                { Icon: Activity, title: 'Hype Analysis', body: 'Contextual sentiment scoring, AI-powered qualitative legibility, digital ethnography, unstructured data translation.' },
+                { Icon: GraduationCap, title: 'Team Building', body: 'The Square-Shaped Strategist model, cross-disciplinary training, academic-to-agency translation, intellectual mentorship.' },
+                { Icon: Briefcase, title: 'Commercial Strategy', body: 'Pitch development, opportunity mapping, strategic due diligence, market-entry logic, first-line revenue generation.' },
+                { Icon: Palette, title: 'Brand Design', body: 'Audience analysis, design thinking, competitive mapping, naming, design territories, go-to-market.' },
               ].map(({ Icon, title, body }, i) => (
                 <div key={i} className="bg-[#F2EAD0] p-5 md:p-6 min-w-0">
                   <div className="flex items-center gap-2 mb-3">

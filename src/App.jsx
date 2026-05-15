@@ -396,25 +396,28 @@ export default function App() {
         </header>
 
         {/* HERO */}
-        <section className="pk-container pt-4 md:pt-8 pb-10 md:pb-16">
+        <section className="pk-container pt-2 md:pt-4 pb-8 md:pb-12">
           <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <h1 className="font-display t-hero font-bold text-[#2D4A8F] text-balance max-w-4xl">
+            <h1 className="font-display t-hero font-bold text-[#2D4A8F] text-balance leading-[0.95] max-w-4xl">
               Strategy Loves Friction.
             </h1>
-            <div className="mt-6 md:mt-10 grid grid-cols-1 md:grid-cols-2 gap-x-8 md:gap-x-12 gap-y-4 max-w-5xl">
-              {/* Left column · the diagnosis */}
-              <div className="space-y-4">
-                <p className="t-body text-[#2D4A8F]">It's easy to make something look like a strategy. But my experience has been that, without contact with real people and real stakes, strategic thinking is liable to collapse on arrival. There is only so much life you can extract from a screen.</p>
-              </div>
-              {/* Right column · the practice */}
-              <div className="space-y-4 md:border-l md:border-[#2D4A8F]/30 md:pl-8 md:pl-12">
-                <p className="t-body text-[#2D4A8F]">As I've developed my craft, I've learned efficient ways to restore contact with my work. I trace the actors that make a problem move: all the behaviours, category rules, cultural tensions, sales realities, stakeholder anxieties, and executional limits that drive the success (or failure) of a brand or campaign, and find where the work has something to push against.</p>
-              </div>
-            </div>
-            <p className="mt-6 md:mt-8 font-display text-2xl md:text-3xl font-bold text-[#2D4A8F] leading-tight max-w-4xl">
-              That's my offer: <span className="text-[#DB3E36]">contact over commentary.</span>
+            <p className="font-display italic text-2xl md:text-4xl text-[#DB3E36] mt-2 md:mt-3 leading-tight max-w-4xl">
+              Without Friction, It's Fiction.
             </p>
-            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+            <div className="mt-6 md:mt-8 grid grid-cols-1 md:grid-cols-2 gap-x-8 md:gap-x-10 gap-y-3 max-w-5xl">
+              {/* Left column · the diagnosis */}
+              <p className="t-body text-[#2D4A8F]">Real strategy needs contact with real people, real stakes, and real constraints. Without that contact, the work is fiction. There is only so much life you can extract from a screen.</p>
+              {/* Right column · the practice */}
+              <p className="t-body text-[#2D4A8F] md:border-l md:border-[#2D4A8F]/30 md:pl-8 md:pl-10">I trace the actors that make a problem move: behaviours, category rules, cultural tensions, sales realities, stakeholder anxieties, and executional limits. That is where the work finds something to push against.</p>
+            </div>
+
+            {/* Triangulation + proof block */}
+            <div className="mt-7 md:mt-9 max-w-3xl border-l-2 border-[#DB3E36] pl-5 md:pl-6">
+              <p className="font-display italic text-xl md:text-2xl text-[#2D4A8F] leading-snug mb-2">A sociologist's training. An artist's taste. A founder's instincts.</p>
+              <p className="t-body text-[#2D4A8F]">Across 150+ brands in regulated categories, I help teams turn pressure into strategy people can make, sell, and defend.</p>
+            </div>
+
+            <div className="mt-7 md:mt-9 flex flex-wrap items-center gap-x-6 gap-y-3">
               <a href="#work" className="inline-flex items-center gap-2 bg-[#2D4A8F] text-[#FAF8F4] px-4 py-2.5 text-sm hover:bg-[#4A3F35] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-150 ease-out tracking-wide">[ View the work → ]</a>
               <a href="mailto:pklawton@gmail.com" className="text-sm text-[#2D4A8F] underline decoration-[#C4B99A] underline-offset-4 decoration-2 hover:decoration-[#DB3E36] transition">Get in touch ↗</a>
             </div>
@@ -422,7 +425,7 @@ export default function App() {
             {/* Currently · availability signal on dark bg, hero footnote */}
             <div className="mt-10 md:mt-12 bg-[#2D4A8F] text-[#E0D3A8] px-5 md:px-6 py-4 md:py-5 max-w-2xl">
               <p className="text-xs uppercase tracking-[0.22em] text-[#DB3E36] font-bold mb-2">Currently</p>
-              <p className="text-sm text-[#E0D3A8] leading-relaxed">Co-founded, scaled, and exited Sister Merci (2019–2026), and as of May 2026, I am available for senior strategy leadership (CSO / VP / Head of Strategy), fractional or advisory engagements, and category-defining consulting. Toronto + Chicago. Open to remote and cross-border.</p>
+              <p className="text-sm text-[#E0D3A8] leading-relaxed">I co-founded, scaled, and exited Sister Merci (2019–2026). I am now available for senior strategy leadership · CSO, Head of Strategy, or VP Strategy · alongside fractional engagements, advisory work, and category-defining consulting. Toronto + Chicago. Open to remote and cross-border.</p>
               <div className="mt-4 pt-4 border-t border-[#C4B99A]/30">
                 <a
                   href="/PK_Lawton_2026_Resume.pdf"
@@ -468,7 +471,7 @@ export default function App() {
           <div className="mt-8 md:mt-10 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
             {/* Left col: story copy */}
             <div className="space-y-4 t-body text-[#0D1929]">
-              <p>I co-founded Sister Merci with Katie Waterman and Amanda Wood in 2019 after a successful $1.5M capital raise from BlackShire Capital. Over seven years we built the agency from four founders to 30+ staff across Toronto and Chicago, with a strategy-led operating model designed for regulated and vice categories. I exited the company as of May 2026, but could not be more proud of what we built with our own hands and ambition.</p>
+              <p>I co-founded Sister Merci with Katie Waterman and Amanda Wood in 2019 after a successful $1.5M capital raise from BlackShire Capital. Over seven years we built the agency from four founders to 30+ staff across Toronto and Chicago, with a strategy-led operating model designed for regulated and vice categories. I exited the company in May 2026, proud of what we built by hand.</p>
             </div>
 
             {/* Right col: tenure bullets + footnote */}
@@ -491,23 +494,23 @@ export default function App() {
 
         {/* § 02 · What I bring into the work (with declarative beliefs) · warm white bg, cream cards */}
         <section id="approach" className="pk-container py-10 md:py-16">
-          <p className="text-xs uppercase tracking-[0.25em] text-[#565D4F] mb-3">§ 02 &nbsp;·&nbsp; A note on the working strategist</p>
+          <p className="text-xs uppercase tracking-[0.25em] text-[#565D4F] mb-3 font-bold">§ 02 &nbsp;·&nbsp; A note on the working strategist</p>
           <h2 className="font-display t-section font-bold text-[#2D4A8F] max-w-3xl">
-            What I bring into the work.
+            What I bring to the work.
           </h2>
           <div className="mt-8 md:mt-10 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
             {[
-              { Icon: Layers, title: 'Evidence, taste, and commercial instinct', belief: 'Too often, strategy is intelligence without judgment.', body: "I am skilled in all three: a sociologist's research training, the taste of a working artist, and the pattern recognition needed to run an agency in heavily regulated categories. I love the work of a strategist, and the deeper I get into my agency career, the more I love it." },
-              { Icon: Hammer, title: 'Bias toward making things real', belief: "Strategists who only critique are tourists. I've toured.", body: "I have lived the \"You can just do stuff, you know?\" ethos my whole life: I've run two indie labels, toured in garage bands, produced records, taught classes, raised VC capital, and launched an agency. I just want to make the world move." },
-              { Icon: Users, title: 'Pressure-tested judgment', belief: "Most strategy decks don't survive procurement. I make the ones that do.", body: "I know how to do the work and sell the work, and generally, that means that I work fast and enroll the team as a more efficient unit of operations. When we destroy our internal silos, we build organizational empathy, which improves both output and employee relations. Find me some dogs to run with and we will make a go of it!" },
+              { Icon: Layers, title: 'Trained as a sociologist', belief: 'Too often, strategy mistakes intelligence for judgment. I bring both.', body: "My work draws on three kinds of judgment: a sociologist's research training, the taste of a working artist, and the pattern recognition required to build in heavily regulated categories. I care about strategy because it changes what an organization can see, say, and do." },
+              { Icon: Hammer, title: 'Tested as an operator', belief: "Critique without contact is tourism. I do the work.", body: "I have spent my life making things under constraint: running indie labels, touring in garage bands, producing records, teaching, raising venture capital, and building an agency. That bias toward making keeps my strategy honest." },
+              { Icon: Users, title: 'Built as a founder', belief: "Most strategy collapses at the handoff. Mine is built to survive it.", body: "I know how to do the work and sell the work, and generally, that means that I work fast and enroll the team as a more efficient unit of operations. When we destroy our internal silos, we build organizational empathy, which improves both output and employee relations." },
             ].map(({ Icon, title, belief, body }, i) => (
               <article key={i} className="bg-[#F2EAD0] border border-[#C4B99A]/40 p-5 md:p-6 min-w-0">
-                <div className="flex items-center justify-center w-10 h-10 border border-[#2D4A8F]/30 mb-4 bg-[#FAF8F4]">
-                  <Icon className="w-4 h-4 text-[#2D4A8F]" aria-hidden />
+                <div className="flex items-start gap-2.5 mb-3">
+                  <Icon className="w-5 h-5 text-[#2D4A8F] flex-shrink-0 mt-1" aria-hidden />
+                  <h3 className="font-bold text-[#2D4A8F] text-lg md:text-xl font-display leading-tight">{title}</h3>
                 </div>
-                <h3 className="font-bold text-[#2D4A8F] text-base md:text-lg mb-3 font-display">{title}</h3>
-                <p className="font-bold text-[#2D4A8F] mb-3 italic text-sm md:text-base leading-snug">{belief}</p>
-                <p className="t-body text-[#2D4A8F]">{body}</p>
+                <p className="font-bold text-[#2D4A8F] mb-3 italic text-[15px] md:text-base leading-snug">{belief}</p>
+                <p className="text-[15px] md:text-base leading-relaxed text-[#2D4A8F]">{body}</p>
               </article>
             ))}
           </div>
@@ -516,13 +519,13 @@ export default function App() {
         {/* § 03 · Selected work · 2x2 card grid with autoplay videos */}
         <section id="work" className="bg-[#F2EAD0] border-y border-[#C4B99A]/40">
           <div className="pk-container py-10 md:py-16">
-            <p className="text-xs uppercase tracking-[0.25em] text-[#565D4F] mb-3">§ 03 &nbsp;·&nbsp; Selected work</p>
+            <p className="text-xs uppercase tracking-[0.25em] text-[#565D4F] mb-3 font-bold">§ 03 &nbsp;·&nbsp; Selected work</p>
             <h2 className="font-display t-section font-bold text-[#2D4A8F] max-w-3xl">
               The work.
             </h2>
             <div className="mt-8 md:mt-10 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               {[
-                { id: 'cmc', name: "CMC: I'm High Right Now", role: 'Campaign strategy', year: '2023–2026', eyebrowColor: '#DB3E36', summary: "First nationwide consumer campaign for the Cannabis Media Council. Featured Baby Boomers as confident, stylish users, repositioning an entire audience.", proof: ['256M+ earned impressions', '1st cannabis ad in Vanity Fair', 'Adweek Top 10 of the year'] },
+                { id: 'cmc', name: "CMC: I'm High Right Now", role: 'Campaign strategy', year: '2023–2026', eyebrowColor: '#DB3E36', summary: "First nationwide consumer campaign for the Cannabis Media Council. Featured Baby Boomers as confident, stylish users, repositioning an entire audience.", proof: ['256M+ earned impressions', 'First cannabis ad in Vanity Fair', 'Adweek Top 10 of the year'] },
                 { id: 'madegood', name: 'MadeGood: For All the Good Reasons', role: 'Brand architecture, US market entry', year: '2023–2024', eyebrowColor: '#5C9D34', summary: 'Year-long ethnographic research reframed a snack brand from lunchbox niche to values-led identity. Strategy informed every subsequent decision.', proof: ['26.9% sales increase in 2023', '#43 on Instacart\'s top emerging brands', 'Global operating framework'] },
                 { id: 'scotiabank', name: 'Scotiabank: Hockey 24', role: 'Sponsorship strategy', year: '2019–2020', eyebrowColor: '#FF66A8', summary: "Ethnographic research revealed hockey's deepest meaning is community, not competition. Reframed sponsorship from logo placement to cultural document.", proof: ['500K+ Canadian homes for premiere', '99% lift in brand awareness', 'CMA Gold Business Impact'] },
                 { id: 'tweed', name: "Tweed: Hi / Don't Drive High", role: 'Brand positioning, campaign platform', year: '2017–2019', eyebrowColor: '#DB3E36', summary: "Strategically led Canada's most recognized cannabis brand into legalization. \"Hi.\" set the category bar; \"Don't Drive High\" (Tweed x MADD x Uber) was the industry's first responsible consumption platform.", proof: ['700M+ media impressions', '38% lift in brand awareness', 'AToMiC Gold ×3'] },
@@ -555,8 +558,8 @@ export default function App() {
                       <h3 className="font-display text-xl md:text-2xl font-bold text-[#2D4A8F] leading-tight mb-2">{c.name}</h3>
                       <p className="text-sm text-[#565D4F] italic mb-3">{c.role} &nbsp;·&nbsp; {c.year}</p>
                       <p className="t-body text-[#2D4A8F] mb-4">{c.summary}</p>
-                      <ul className="space-y-1.5 text-sm text-[#2D4A8F] mb-5">
-                        {c.proof.map((p, j) => <li key={j} className="flex gap-2"><span className="text-[#C4B99A]">·</span><span>{p}</span></li>)}
+                      <ul className="space-y-1 text-sm text-[#2D4A8F] mb-5 font-bold">
+                        {c.proof.map((p, j) => <li key={j}>{p}</li>)}
                       </ul>
                       <button onClick={() => project && handleProjectClick(project)} className="mt-auto self-start inline-flex items-center gap-2 bg-[#2D4A8F] text-[#F2EAD0] px-4 py-2.5 text-sm hover:bg-[#4A3F35] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-150 ease-out tracking-wide">[ Read the full case → ]</button>
                     </div>
@@ -564,7 +567,7 @@ export default function App() {
                 );
               })}
             </div>
-            <p className="mt-6 md:mt-8 text-sm text-[#565D4F]"><a href="#backgrounder" className="underline decoration-[#C4B99A] underline-offset-4 decoration-2 hover:decoration-[#DB3E36] hover:text-[#2D4A8F] transition">Case studies &amp; experience files below ↓</a></p>
+            <p className="mt-6 md:mt-8 text-sm text-[#565D4F]"><a href="#backgrounder" className="underline decoration-[#C4B99A] underline-offset-4 decoration-2 hover:decoration-[#DB3E36] hover:text-[#2D4A8F] transition">Evidence files below ↓</a></p>
           </div>
         </section>
 
@@ -577,17 +580,17 @@ export default function App() {
             </h2>
             <div className="mt-6 md:mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
               {[
-                { Icon: Compass, title: 'Strategy leadership for agencies in transition', trigger: "If your strategy function isn't pulling its weight in pitches, account growth, or client confidence:", body: 'Pitch win rates, account growth, sharper briefs, stronger creative partnerships, and strategy embedded in the agency\'s growth system.' },
-                { Icon: Shield, title: 'Brand strategy under pressure', trigger: 'If your brand has lost its edge or your category just shifted under you:', body: 'Positioning, architecture, narrative, and category strategy when the organization needs sharper language and better decisions.' },
-                { Icon: Microscope, title: 'Research that makes the work harder to ignore', trigger: 'If your creative team needs sharper raw material to build from:', body: 'Fieldwork, interviews, community observation, cultural analysis, and synthesis that give creative and commercial teams something real to build from.' },
-                { Icon: Rocket, title: 'Growth and go-to-market in difficult categories', trigger: "If you're entering a regulated category or repositioning a brand the easy playbook doesn't fit:", body: 'Regulated markets, new categories, repositioning, complex buyers, and brands that need to enter the market with force.' },
-                { Icon: Megaphone, title: 'Executive narrative and thought leadership', trigger: 'If your founder, CMO, or category needs a sharper public argument:', body: 'Whitepapers, keynote logic, founder POV, category arguments, strategic essays, and internal alignment stories.' },
-                { Icon: Users, title: 'Strategy team building and coaching', trigger: "If your strategy team isn't operating at the level the work demands, or you need to build the function from scratch:", body: 'Strategy team design, development rubrics, coaching for strategy leadership, applied training and workshops, bespoke strategy learning agendas, and outside-agency-to-inside-agency translation for high-potential talent.' },
+                { Icon: Compass, title: 'Strategy leadership when the agency model is under pressure', trigger: "When the strategy function needs to drive growth, win pitches, and earn client confidence.", body: 'Pitch win rates, account growth, sharper briefs, stronger creative partnerships, and strategy embedded in the agency\'s growth system.' },
+                { Icon: Shield, title: 'Brand strategy under pressure', trigger: 'When your brand needs sharper language, sharper positioning, and better category decisions.', body: 'Positioning, architecture, narrative, and category strategy when the organization needs sharper language and better decisions.' },
+                { Icon: Microscope, title: 'Research that gives creative work real pressure and consequence', trigger: 'When your creative team needs sharper raw material to build from.', body: 'Fieldwork, interviews, community observation, cultural analysis, and synthesis that give creative and commercial teams something real to build from.' },
+                { Icon: Rocket, title: 'Growth and go-to-market in difficult categories', trigger: "When you need to enter a regulated category or reposition a brand the easy playbook doesn't fit.", body: 'Regulated markets, new categories, repositioning, complex buyers, and brands that need to enter the market with force.' },
+                { Icon: Megaphone, title: 'Executive narrative for leaders who need a sharper public argument', trigger: 'When your founder, CMO, or category needs a sharper public argument.', body: 'Whitepapers, keynote logic, founder POV, category arguments, strategic essays, and internal alignment stories.' },
+                { Icon: Users, title: 'Strategy team building and coaching', trigger: "When your strategy team needs to operate at the level the work demands, or you need to build the function from scratch.", body: 'Strategy team design, development rubrics, coaching for strategy leadership, applied training and workshops, bespoke strategy learning agendas, and outside-agency-to-inside-agency translation for high-potential talent.' },
               ].map(({ Icon, title, trigger, body }, i) => (
                 <article key={i} className="bg-[#FAF8F4] border border-[#2D4A8F]/30 p-4 md:p-5 min-w-0">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Icon className="w-4 h-4 text-[#2D4A8F] flex-shrink-0" aria-hidden />
-                    <h3 className="font-bold text-[#2D4A8F] text-sm md:text-base font-display leading-tight">{title}</h3>
+                  <div className="flex items-start gap-2 mb-2">
+                    <Icon className="w-4 h-4 text-[#2D4A8F] flex-shrink-0 mt-0.5" aria-hidden />
+                    <h3 className="font-bold text-[#2D4A8F] text-base md:text-lg font-display leading-tight">{title}</h3>
                   </div>
                   <p className="text-xs text-[#0D1929]/80 italic mb-2 leading-snug">{trigger}</p>
                   <p className="text-sm text-[#0D1929] leading-relaxed">{body}</p>
@@ -600,7 +603,7 @@ export default function App() {
         {/* § 05 · Pull-quote testimonial · RISO GREEN POSTER */}
         <section className="bg-[#5C9D34] border-y border-[#2D4A8F]/30">
           <div className="pk-container py-12 md:py-20">
-            <p className="text-xs uppercase tracking-[0.25em] text-[#2D4A8F]/80 mb-6 font-bold">§ 05 &nbsp;·&nbsp; But you don't have to take my word for it</p>
+            <p className="text-xs uppercase tracking-[0.25em] text-[#2D4A8F]/80 mb-6 font-bold">§ 05 &nbsp;·&nbsp; From the people who've been in the room</p>
             <figure className="max-w-4xl">
               <blockquote className="font-display text-xl md:text-3xl leading-snug text-[#2D4A8F] tracking-tight">
                 <span className="text-[#FF66A8] mr-1">"</span>Paul brings both intellectual rigour and genuine curiosity to strategy. He has a way of digging beneath the obvious to understand the cultural and behavioural forces shaping a category, which consistently leads to <span className="bg-[#FF66A8]/70 text-[#2D4A8F] px-1">insights others miss</span>. Just as important, he is an <span className="bg-[#FF66A8]/70 text-[#2D4A8F] px-1">excellent partner</span>. He challenges thinking constructively and elevates the work through real collaboration.<span className="text-[#FF66A8] ml-1">"</span>
@@ -626,6 +629,7 @@ export default function App() {
                 </div>
               </div>
               <div className="lg:col-span-7">
+                <p className="font-display italic text-xl md:text-2xl text-[#DB3E36] leading-snug mb-4">I also help build the field I work in.</p>
                 <div className="space-y-3 text-[15px] md:text-base leading-relaxed text-[#2D4A8F]">
                   <p>In 2025, I helped found a new non-profit, the <a href="https://rebrief.ca" target="_blank" rel="noreferrer" className="underline decoration-[#FF66A8] underline-offset-4 decoration-2 hover:text-[#FF66A8] transition">Rebrief Magazine Society</a>, a new independent Canadian journal of advertising, with Carly Miller, Spencer MacEachern, Jon Crowley, Zoe Kim, and Vince Rozas. Our first issue drops <span className="bg-[#FF66A8]/70 text-[#2D4A8F] px-1">July 2026</span>.</p>
                   <p>Rebrief gives Canadian advertising a place to think in public. We publish essays, fiction, interviews, and visual experiments from emerging and established voices, asking what happens when the industry takes a second look at its own assumptions.</p>
@@ -648,19 +652,19 @@ export default function App() {
             </h2>
             <div className="mt-8 md:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#F2EAD0]/20 border border-[#F2EAD0]/20">
               {[
-                { Icon: Compass, title: 'Strategy Leadership', body: 'Agency strategy leadership, pitch leadership, senior client counsel, stakeholder alignment, team development, growth planning, agency operating model design.' },
+                { Icon: Compass, title: 'Strategy Leadership', body: 'Agency strategy leadership, pitch leadership, senior client counsel, team development, agency operating model design.' },
                 { Icon: Megaphone, title: 'Brand & Communications Strategy', body: 'Brand positioning, segmentation, brand architecture, strategic unlocks, brand purpose, campaign strategy, category strategy, narrative, go-to-market, naming, brand design, brand redesign.' },
                 { Icon: Microscope, title: 'Research & Insight', body: 'Qualitative research, interviews, ethnography, digital ethnography, audience segmentation studies, social listening, cultural analysis, subculture dynamics, hype and sentiment analysis, consumer insight synthesis.' },
-                { Icon: Sparkles, title: 'Creative & Connections Strategy', body: 'Brief development, territory development, creative evaluation, voice, campaign platforms, social and content systems, channel and media logic, platform behaviour, creator strategy, creative testing, optimization.' },
-                { Icon: LineChart, title: 'Commercial & Effectiveness Strategy', body: 'Measurement logic, KPI development, scope protection, pitch conversion, case study development, growth storytelling, opportunity mapping, first-line revenue generation, issues management.' },
-                { Icon: GraduationCap, title: 'Team Building & Strategic Leadership', body: 'Square-Shaped employee development model, cross-disciplinary training, mentorship, talent development.' },
+                { Icon: Sparkles, title: 'Creative & Connections Strategy', body: 'Brief development, creative territory development, creative evaluation, voice, campaign platforms, social and content systems, channel and media logic, platform behaviour, creator strategy, creative testing.' },
+                { Icon: LineChart, title: 'Commercial & Effectiveness Strategy', body: 'Measurement logic, KPI development, pitch conversion, case study development, issues management.' },
+                { Icon: GraduationCap, title: 'Team Building & Strategic Leadership', body: 'Square-Shaped employee development model, strategy team design, cross-disciplinary training, mentorship, talent development.' },
               ].map(({ Icon, title, body }, i) => (
                 <div key={i} className="bg-[#F2EAD0] p-5 md:p-6 min-w-0">
                   <div className="flex items-center gap-2 mb-3">
-                    <Icon className="w-4 h-4 text-[#2D4A8F]" aria-hidden />
-                    <h3 className="font-bold text-[#2D4A8F] text-sm md:text-base font-display">{title}</h3>
+                    <Icon className="w-5 h-5 text-[#2D4A8F] flex-shrink-0" aria-hidden />
+                    <h3 className="font-bold text-[#2D4A8F] text-lg md:text-xl font-display leading-tight">{title}</h3>
                   </div>
-                  <p className="t-body text-[#2D4A8F]">{body}</p>
+                  <p className="text-[15px] md:text-base leading-relaxed text-[#2D4A8F]">{body}</p>
                 </div>
               ))}
             </div>
@@ -672,7 +676,7 @@ export default function App() {
           <div className="pk-container py-10 md:py-16">
             <p className="text-xs uppercase tracking-[0.25em] text-[#0D1929]/80 mb-3 font-bold">§ 08 &nbsp;·&nbsp; Backgrounder</p>
             <h2 className="font-display t-section font-bold text-[#2D4A8F] max-w-4xl mb-8 md:mb-10">
-              Case Studies and Experience Files.
+              Evidence files.
             </h2>
           <nav className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-0 items-start text-[#0D1929]">
           {/* Background */}
@@ -739,8 +743,8 @@ export default function App() {
         {/* § 08 · Closing CTA / Best fit · dark footnote zone */}
         <section id="contact" className="bg-[#2D4A8F] text-[#E0D3A8]">
           <div className="pk-container py-12 md:py-16">
-          <p className="text-xs uppercase tracking-[0.25em] text-[#C4B99A] mb-3">§ 09 &nbsp;·&nbsp; Footnote / Best fit</p>
-          <h2 className="font-display text-2xl md:text-3xl font-bold text-[#FAF8F4] max-w-3xl mb-8 md:mb-10 leading-tight">
+          <p className="text-xs uppercase tracking-[0.25em] text-[#C4B99A] mb-3 font-bold">§ 09 &nbsp;·&nbsp; Footnote / Best fit</p>
+          <h2 className="font-display t-section font-bold text-[#FAF8F4] max-w-3xl mb-8 md:mb-10">
             Work with me.
           </h2>
 
@@ -748,7 +752,7 @@ export default function App() {
             {/* Left column · senior leadership */}
             <div>
               <p className="text-xs uppercase tracking-[0.2em] text-[#C4B99A] font-bold mb-3">Senior leadership</p>
-              <p className="text-sm md:text-base text-[#E0D3A8] leading-relaxed mb-5">I am looking first for senior strategy leadership opportunities where I can help an agency or marketing organization make strategy more central to growth.</p>
+              <p className="text-sm md:text-base text-[#E0D3A8] leading-relaxed mb-5">I am focused first on senior strategy leadership roles where strategy needs to become more central to growth, decision-making, and organizational confidence.</p>
               <p className="text-xs uppercase tracking-[0.18em] text-[#C4B99A]/80 mb-3">Best-fit roles (depending on org structure)</p>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-1.5 text-sm text-[#E0D3A8]">
                 <li className="flex gap-2"><span className="text-[#DB3E36]">·</span><span>Chief Strategy Officer</span></li>
@@ -766,7 +770,7 @@ export default function App() {
             {/* Right column · fractional/advisory */}
             <div>
               <p className="text-xs uppercase tracking-[0.2em] text-[#C4B99A] font-bold mb-3">Fractional, advisory, project</p>
-              <p className="text-sm md:text-base text-[#E0D3A8] leading-relaxed mb-4">I am also available for fractional, advisory, and project-based work when an agency, founder, or marketing team needs senior strategy support in a high-pressure moment.</p>
+              <p className="text-sm md:text-base text-[#E0D3A8] leading-relaxed mb-4">I also take on fractional, advisory, and project work when an agency, founder, or marketing team hits a moment of pressure that requires senior strategic judgment.</p>
               <p className="text-sm md:text-base text-[#E0D3A8] leading-relaxed">That can include pitch strategy, brand positioning, repositioning, category reframing, audience research, segmentation studies, consumer insights, creative territory development, stakeholder alignment, communications planning, connections strategy, social and content strategy, measurement strategy, agency strategy transformation, or strategy team development.</p>
             </div>
           </div>

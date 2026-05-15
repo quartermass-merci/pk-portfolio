@@ -51,11 +51,12 @@ body {
   background-color: var(--pk-warm-white);
 }
 
-/* Type scale · fluid, per spec */
-.t-wordmark { font-size: clamp(44px, 8vw, 96px); line-height: 0.95; }
-.t-hero { font-size: clamp(40px, 6vw, 76px); line-height: 1.02; letter-spacing: -0.02em; }
-.t-section { font-size: clamp(28px, 4vw, 48px); line-height: 1.05; letter-spacing: -0.01em; }
-.t-body { font-size: clamp(19px, 1.45vw, 22px); line-height: 1.6; }
+/* Type scale · fluid · mobile floor tuned for monospace readability */
+.t-wordmark { font-size: clamp(36px, 7vw, 88px); line-height: 0.95; }
+.t-hero { font-size: clamp(38px, 6vw, 72px); line-height: 1.04; letter-spacing: -0.02em; }
+.t-section { font-size: clamp(26px, 3.6vw, 44px); line-height: 1.08; letter-spacing: -0.01em; }
+.t-body { font-size: clamp(16px, 1.8vw, 20px); line-height: 1.6; }
+.t-card-title { font-size: clamp(18px, 1.5vw, 22px); line-height: 1.2; letter-spacing: -0.005em; }
 .t-label { font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; }
 
 /* Page container · single source of truth */
